@@ -4,6 +4,8 @@
 	<meta charset="iso-8859-1"/>
 	<title>Prueba de personalidad</title>
 	<script type="text/javascript" src="TablaPerfilGeneralyEscalasValidez16PF.js"></script>
+	<script type="text/javascript" src="TablasBaremos16PF.js"></script>
+	<script type="text/javascript" src="TablaFactoresSecundarios16PF.js"></script>
 </head>
 <body>
 	<header>
@@ -1697,11 +1699,18 @@
 			<label for="C187">C.  No</label>
 		</div>
 
+		<div>
+			<button value="TablaRespuestas" onclick="mostrarOpcionSeleccionada()">Tabla de respuestas</button>
+			<button value="TablaPerfilGeneralyEscalasValidez" onclick="mostrarPerfilGeneralyEscalasValidez()">Tabla Perfil General y Escalas Validez</button>	
+			<button value="TablaBaremosMasculino" onclick="mostrarTablaBaremosMasculino()">Tabla Baremos Masculino</button>	
+			<button value="TablaBaremosFemenino" onclick="mostrarTablaBaremosFemenino()">Tabla Baremos Femenino</button>	
+			<button value="TablaFactoresSecundarios" onclick="mostrarTablaFactoresSecundarios()">Tabla Factores Secundarios</button>
+		</div>
+		
+		<div>
+			<button value="Resultados" onclick="mostrarResultados16PF()">Resultados</button>
+		</div>
 
-		<button value="TablaRespuestas" onclick="mostrarOpcionSeleccionada()">Tabla de respuestas</button>
-		<button value="TablaClavesCorreccion" onclick="mostrarPerfilGeneralyEscalasValidez()">Tabla claves correcci&oacute;n</button>
-		<button value="TablaClavesRespuestas" onclick="creacionBaremos()">Tabla Perfil General - Respuestas</button>	
-	
 	<script type="text/javascript">
 	function opcionSeleccionada(arrayRespuestas){
 		for (var j=1; j<188; j++){
@@ -1723,7 +1732,7 @@
 	</script>
 
 	<script type="text/javascript">
-	function correccion16PF(){
+	function mostrarResultados16PF(){
 		var arrayRespuestas = new Array();
 		
 		opcionSeleccionada(arrayRespuestas);
@@ -1771,8 +1780,186 @@
 			for (var j=0; j<5; j++){
 			document.write(arrayResultado[i][j] + "  ||  ");
 			}
-			document.write("<br/>")
+			document.write("<br/>");
 		}
+
+		var resultadoA = 0;
+		var resultadoB = 0;
+		var resultadoC = 0;
+		var resultadoE = 0;
+		var resultadoF = 0;
+		var resultadoG = 0;
+		var resultadoH = 0;
+		var resultadoI = 0;
+		var resultadoL = 0;
+		var resultadoM = 0;
+		var resultadoN = 0;
+		var resultadoO = 0;
+		var resultadoQ1 = 0;
+		var resultadoQ2 = 0;
+		var resultadoQ3 = 0;
+		var resultadoQ4 = 0;
+
+		for (var i=1; i<188; i++){
+
+			if (arrayResultado[i][3] == "A"){
+				resultadoA += arrayResultado[i][2];
+			}
+			else if (arrayResultado[i][3] == "B"){
+				resultadoB += arrayResultado[i][2];
+			}
+			else if (arrayResultado[i][3] == "C"){
+				resultadoC += arrayResultado[i][2];
+			}
+			else if (arrayResultado[i][3] == "E"){
+				resultadoE += arrayResultado[i][2];
+			}
+			else if (arrayResultado[i][3] == "F"){
+				resultadoF += arrayResultado[i][2];
+			}
+			else if (arrayResultado[i][3] == "G"){
+				resultadoG += arrayResultado[i][2];
+			}
+			else if (arrayResultado[i][3] == "H"){
+				resultadoH += arrayResultado[i][2];
+			}
+			else if (arrayResultado[i][3] == "I"){
+				resultadoI += arrayResultado[i][2];
+			}
+			else if (arrayResultado[i][3] == "L"){
+				resultadoL += arrayResultado[i][2];
+			}
+			else if (arrayResultado[i][3] == "M"){
+				resultadoM += arrayResultado[i][2];
+			}
+			else if (arrayResultado[i][3] == "N"){
+				resultadoN += arrayResultado[i][2];
+			}
+			else if (arrayResultado[i][3] == "O"){
+				resultadoO += arrayResultado[i][2];
+			}
+			else if (arrayResultado[i][3] == "Q1"){
+				resultadoQ1 += arrayResultado[i][2];
+			}
+			else if (arrayResultado[i][3] == "Q2"){
+				resultadoQ2 += arrayResultado[i][2];
+			}
+			else if (arrayResultado[i][3] == "Q3"){
+				resultadoQ3 += arrayResultado[i][2];
+			}
+			else if (arrayResultado[i][3] == "Q4"){
+				resultadoQ4 += arrayResultado[i][2];
+			}			
+		}
+		document.write("<br/> Total A = " + resultadoA + "<br/>");
+		document.write("Total B = " + resultadoB + "<br/>");
+		document.write("Total C = " + resultadoC + "<br/>");
+		document.write("Total E = " + resultadoE + "<br/>");
+		document.write("Total F = " + resultadoF + "<br/>");
+		document.write("Total G = " + resultadoG + "<br/>");
+		document.write("Total H = " + resultadoH + "<br/>");
+		document.write("Total I = " + resultadoI + "<br/>");
+		document.write("Total L = " + resultadoL + "<br/>");
+		document.write("Total M = " + resultadoM + "<br/>");
+		document.write("Total N = " + resultadoN + "<br/>");
+		document.write("Total O = " + resultadoO + "<br/>");
+		document.write("Total Q1 = " + resultadoQ1 + "<br/>");
+		document.write("Total Q2 = " + resultadoQ2 + "<br/>");
+		document.write("Total Q3 = " + resultadoQ3 + "<br/>");
+		document.write("Total Q4 = " + resultadoQ4 + "<br/>");
+
+		var decatipoA = 0;
+		var decatipoB = 0;
+		var decatipoC = 0;
+		var decatipoE = 0;
+		var decatipoF = 0;
+		var decatipoG = 0;
+		var decatipoH = 0;
+		var decatipoI = 0;
+		var decatipoL = 0;
+		var decatipoM = 0;
+		var decatipoN = 0;
+		var decatipoO = 0;
+		var decatipoQ1 = 0;
+		var decatipoQ2 = 0;
+		var decatipoQ3 = 0;
+		var decatipoQ4 = 0;
+
+		var matrizBaremos = new Array();
+			for (var a=1; a<372; a++){
+				matrizBaremos[a] = new Array(3);
+			}
+
+		creacionTablaBaremosMasculino(matrizBaremos);
+
+		for (var i=1; i<372; i++){
+
+			if (matrizBaremos[i][0] == "A" && matrizBaremos[i][1] == resultadoA){
+				decatipoA = matrizBaremos[i][2];
+			}
+			else if (matrizBaremos[i][0] == "B" && matrizBaremos[i][1] == resultadoB){
+				decatipoB = matrizBaremos[i][2];
+			}
+			else if (matrizBaremos[i][0] == "C" && matrizBaremos[i][1] == resultadoC){
+				decatipoC = matrizBaremos[i][2];
+			}
+			else if (matrizBaremos[i][0] == "E" && matrizBaremos[i][1] == resultadoE){
+				decatipoE = matrizBaremos[i][2];
+			}
+			else if (matrizBaremos[i][0] == "F" && matrizBaremos[i][1] == resultadoF){
+				decatipoF = matrizBaremos[i][2];
+			}
+			else if (matrizBaremos[i][0] == "G" && matrizBaremos[i][1] == resultadoG){
+				decatipoG = matrizBaremos[i][2];
+			}
+			else if (matrizBaremos[i][0] == "H" && matrizBaremos[i][1] == resultadoH){
+				decatipoH = matrizBaremos[i][2];
+			}
+			else if (matrizBaremos[i][0] == "I" && matrizBaremos[i][1] == resultadoI){
+				decatipoI = matrizBaremos[i][2];
+			}
+			else if (matrizBaremos[i][0] == "L" && matrizBaremos[i][1] == resultadoL){
+				decatipoL = matrizBaremos[i][2];
+			}
+			else if (matrizBaremos[i][0] == "M" && matrizBaremos[i][1] == resultadoM){
+				decatipoM = matrizBaremos[i][2];
+			}
+			else if (matrizBaremos[i][0] == "N" && matrizBaremos[i][1] == resultadoN){
+				decatipoN = matrizBaremos[i][2];
+			}
+			else if (matrizBaremos[i][0] == "O" && matrizBaremos[i][1] == resultadoO){
+				decatipoO = matrizBaremos[i][2];
+			}
+			else if (matrizBaremos[i][0] == "Q1" && matrizBaremos[i][1] == resultadoQ1){
+				decatipoQ1 = matrizBaremos[i][2];
+			}
+			else if (matrizBaremos[i][0] == "Q2" && matrizBaremos[i][1] == resultadoQ2){
+				decatipoQ2 = matrizBaremos[i][2];
+			}
+			else if (matrizBaremos[i][0] == "Q3" && matrizBaremos[i][1] == resultadoQ3){
+				decatipoQ3 = matrizBaremos[i][2];
+			}
+			else if (matrizBaremos[i][0] == "Q4" && matrizBaremos[i][1] == resultadoQ4){
+				decatipoQ4 = matrizBaremos[i][2];
+			}		
+		}
+		document.write("<br/> Decatipo A = " + decatipoA + "<br/>");
+		document.write("Decatipo B = " + decatipoB + "<br/>");
+		document.write("Decatipo C = " + decatipoC + "<br/>");
+		document.write("Decatipo E = " + decatipoE + "<br/>");
+		document.write("Decatipo F = " + decatipoF + "<br/>");
+		document.write("Decatipo G = " + decatipoG + "<br/>");
+		document.write("Decatipo H = " + decatipoH + "<br/>");
+		document.write("Decatipo I = " + decatipoI + "<br/>");
+		document.write("Decatipo L = " + decatipoL + "<br/>");
+		document.write("Decatipo M = " + decatipoM + "<br/>");
+		document.write("Decatipo N = " + decatipoN + "<br/>");
+		document.write("Decatipo O = " + decatipoO + "<br/>");
+		document.write("Decatipo Q1 = " + decatipoQ1 + "<br/>");
+		document.write("Decatipo Q2 = " + decatipoQ2 + "<br/>");
+		document.write("Decatipo Q3 = " + decatipoQ3 + "<br/>");
+		document.write("Decatipo Q4 = " + decatipoQ4 + "<br/>");
+
 	}
 
 	function mostrarOpcionSeleccionada(){
@@ -1799,32 +1986,59 @@
 			for (var j=0; j<4; j++){
 			document.write(arrayPerfilGeneralyValidez[i][j] + "  ||  ");
 			}
-			document.write("<br/>")
+			document.write("<br/>");
 		}
 	}
 
-	function creacionBaremos(){
+	function mostrarTablaBaremosMasculino(){
+
+		var matrizBaremos = new Array();
+		for (var a=1; a<372; a++){
+				matrizBaremos[a] = new Array(3);
+			}
 	
-		var arrayBaremos = new Array();
-		var l = 1;
-		for (var j=1; j<188; j++){
-				arrayBaremos[j] = new Array(3);
+		creacionTablaBaremosMasculino(matrizBaremos);
+
+		for (var i=1; i<372; i++){
+			for (var j=0; j<3; j++){
+			document.write(matrizBaremos[i][j] + "  ||  ");
 			}
-		for (var i=1; i<21 ; i++){
-			for (var k=0; k<3; k++){
-				if (k==0){
-					document.write("arrayBaremos[" + i + "][" + k + "] = Apppp <br/>");	
-				}
-				else if (k==1){
-					document.write("arrayBaremos[" + i + "][" + k + "] = " + l + "<br/>");
-				}
-				else if (k==2){
-					document.write("arrayBaremos[" + i + "][" + k + "] = ppppp <br/>");
-				}
-			}
-			l++;
+			document.write("<br/>");
 		}
-				
-	}	
+	}
+
+	function mostrarTablaBaremosFemenino(){
+
+		var matrizBaremos = new Array();
+		for (var a=1; a<372; a++){
+				matrizBaremos[a] = new Array(3);
+			}
+	
+		creacionTablaBaremosFemenino(matrizBaremos);
+
+		for (var i=1; i<372; i++){
+			for (var j=0; j<3; j++){
+			document.write(matrizBaremos[i][j] + "  ||  ");
+			}
+			document.write("<br/>");
+		}
+	}
+	
+	function mostrarTablaFactoresSecundarios(){
+		var matrizFactoresSecundarios = new Array();
+		for (var a=1; a<35; a++){
+				matrizFactoresSecundarios[a] = new Array(6);
+			}
+	
+		creacionTablaFactoresSecundarios(matrizFactoresSecundarios);
+
+		for (var i=1; i<35; i++){
+			for (var j=0; j<6; j++){
+			document.write(matrizFactoresSecundarios[i][j] + "  ||  ");
+			}
+			document.write("<br/>");
+		}
+	}
+
 	</script>
 </body>
