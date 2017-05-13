@@ -6,6 +6,7 @@
 	<script type="text/javascript" src="TablaPerfilGeneralyEscalasValidez16PF.js"></script>
 	<script type="text/javascript" src="TablasBaremos16PF.js"></script>
 	<script type="text/javascript" src="TablaFactoresSecundarios16PF.js"></script>
+	<script type="text/javascript" src="TablaResultados.js"></script>
 </head>
 <body>
 	<header>
@@ -1798,116 +1799,77 @@
 
 		for (var i=1; i<188; i++){
 			for (var j=0; j<5; j++){
-			document.write(arrayResultado[i][j] + "  ||  ");
+				document.write(arrayResultado[i][j] + "  ||  ");
 			}
 			document.write("<br/>");
 		}
 
-		var resultadoA = 0;
-		var resultadoB = 0;
-		var resultadoC = 0;
-		var resultadoE = 0;
-		var resultadoF = 0;
-		var resultadoG = 0;
-		var resultadoH = 0;
-		var resultadoI = 0;
-		var resultadoL = 0;
-		var resultadoM = 0;
-		var resultadoN = 0;
-		var resultadoO = 0;
-		var resultadoQ1 = 0;
-		var resultadoQ2 = 0;
-		var resultadoQ3 = 0;
-		var resultadoQ4 = 0;
+		var matrizResultados = new Array();
+
+		for (var b=1; b<17; b++){
+				matrizResultados[b] = new Array(3);
+			}
+
+		creacionTablaResultados(matrizResultados);	
 
 		for (var i=1; i<188; i++){
 
 			if (arrayResultado[i][3] == "A"){
-				resultadoA += arrayResultado[i][2];
+				matrizResultados[1][1] += arrayResultado[i][2];
 			}
 			else if (arrayResultado[i][3] == "B"){
-				resultadoB += arrayResultado[i][2];
+				matrizResultados[2][1] += arrayResultado[i][2];
 			}
 			else if (arrayResultado[i][3] == "C"){
-				resultadoC += arrayResultado[i][2];
+				matrizResultados[3][1] += arrayResultado[i][2];
 			}
 			else if (arrayResultado[i][3] == "E"){
-				resultadoE += arrayResultado[i][2];
+				matrizResultados[4][1] += arrayResultado[i][2];
 			}
 			else if (arrayResultado[i][3] == "F"){
-				resultadoF += arrayResultado[i][2];
+				matrizResultados[5][1] += arrayResultado[i][2];
 			}
 			else if (arrayResultado[i][3] == "G"){
-				resultadoG += arrayResultado[i][2];
+				matrizResultados[6][1] += arrayResultado[i][2];
 			}
 			else if (arrayResultado[i][3] == "H"){
-				resultadoH += arrayResultado[i][2];
+				matrizResultados[7][1] += arrayResultado[i][2];
 			}
 			else if (arrayResultado[i][3] == "I"){
-				resultadoI += arrayResultado[i][2];
+				matrizResultados[8][1] += arrayResultado[i][2];
 			}
 			else if (arrayResultado[i][3] == "L"){
-				resultadoL += arrayResultado[i][2];
+				matrizResultados[9][1] += arrayResultado[i][2];
 			}
 			else if (arrayResultado[i][3] == "M"){
-				resultadoM += arrayResultado[i][2];
+				matrizResultados[10][1] += arrayResultado[i][2];
 			}
 			else if (arrayResultado[i][3] == "N"){
-				resultadoN += arrayResultado[i][2];
+				matrizResultados[11][1] += arrayResultado[i][2];
 			}
 			else if (arrayResultado[i][3] == "O"){
-				resultadoO += arrayResultado[i][2];
+				matrizResultados[12][1] += arrayResultado[i][2];
 			}
 			else if (arrayResultado[i][3] == "Q1"){
-				resultadoQ1 += arrayResultado[i][2];
+				matrizResultados[13][1] += arrayResultado[i][2];
 			}
 			else if (arrayResultado[i][3] == "Q2"){
-				resultadoQ2 += arrayResultado[i][2];
+				matrizResultados[14][1] += arrayResultado[i][2];
 			}
 			else if (arrayResultado[i][3] == "Q3"){
-				resultadoQ3 += arrayResultado[i][2];
+				matrizResultados[15][1] += arrayResultado[i][2];
 			}
 			else if (arrayResultado[i][3] == "Q4"){
-				resultadoQ4 += arrayResultado[i][2];
+				matrizResultados[16][1] += arrayResultado[i][2];
 			}			
 		}
+		document.write ("<br/>");
 
-		document.write("<br/> Total A = " + resultadoA + "<br/>");
-		document.write("Total B = " + resultadoB + "<br/>");
-		document.write("Total C = " + resultadoC + "<br/>");
-		document.write("Total E = " + resultadoE + "<br/>");
-		document.write("Total F = " + resultadoF + "<br/>");
-		document.write("Total G = " + resultadoG + "<br/>");
-		document.write("Total H = " + resultadoH + "<br/>");
-		document.write("Total I = " + resultadoI + "<br/>");
-		document.write("Total L = " + resultadoL + "<br/>");
-		document.write("Total M = " + resultadoM + "<br/>");
-		document.write("Total N = " + resultadoN + "<br/>");
-		document.write("Total O = " + resultadoO + "<br/>");
-		document.write("Total Q1 = " + resultadoQ1 + "<br/>");
-		document.write("Total Q2 = " + resultadoQ2 + "<br/>");
-		document.write("Total Q3 = " + resultadoQ3 + "<br/>");
-		document.write("Total Q4 = " + resultadoQ4 + "<br/>");
+		for (i=1; i<17; i++){
+			document.write ("Puntuacion directa " +  matrizResultados[i][0] + " = " + matrizResultados[i][1] + "<br/>");
+		}
 
-		var decatipoA = 0;
-		var decatipoB = 0;
-		var decatipoC = 0;
-		var decatipoE = 0;
-		var decatipoF = 0;
-		var decatipoG = 0;
-		var decatipoH = 0;
-		var decatipoI = 0;
-		var decatipoL = 0;
-		var decatipoM = 0;
-		var decatipoN = 0;
-		var decatipoO = 0;
-		var decatipoQ1 = 0;
-		var decatipoQ2 = 0;
-		var decatipoQ3 = 0;
-		var decatipoQ4 = 0;
-		var genero = "F";
-
-
+		var genero = "M";
 
 		var matrizBaremos = new Array();
 			for (var a=1; a<372; a++){
@@ -1926,76 +1888,117 @@
 
 		for (var i=1; i<372; i++){
 
-			if (matrizBaremos[i][0] == "A" && matrizBaremos[i][1] == resultadoA){
-				decatipoA = matrizBaremos[i][2];
+			if (matrizBaremos[i][0] == "A" && matrizBaremos[i][1] == matrizResultados[1][1]){
+				matrizResultados[1][2] = matrizBaremos[i][2];
 			}
-			else if (matrizBaremos[i][0] == "B" && matrizBaremos[i][1] == resultadoB){
-				decatipoB = matrizBaremos[i][2];
+			else if (matrizBaremos[i][0] == "B" && matrizBaremos[i][1] == matrizResultados[2][1]){
+				matrizResultados[2][2] = matrizBaremos[i][2];
 			}
-			else if (matrizBaremos[i][0] == "C" && matrizBaremos[i][1] == resultadoC){
-				decatipoC = matrizBaremos[i][2];
+			else if (matrizBaremos[i][0] == "C" && matrizBaremos[i][1] == matrizResultados[3][1]){
+				matrizResultados[3][2] = matrizBaremos[i][2];
 			}
-			else if (matrizBaremos[i][0] == "E" && matrizBaremos[i][1] == resultadoE){
-				decatipoE = matrizBaremos[i][2];
+			else if (matrizBaremos[i][0] == "E" && matrizBaremos[i][1] == matrizResultados[4][1]){
+				matrizResultados[4][2] = matrizBaremos[i][2];
 			}
-			else if (matrizBaremos[i][0] == "F" && matrizBaremos[i][1] == resultadoF){
-				decatipoF = matrizBaremos[i][2];
+			else if (matrizBaremos[i][0] == "F" && matrizBaremos[i][1] == matrizResultados[5][1]){
+				matrizResultados[5][2] = matrizBaremos[i][2];
 			}
-			else if (matrizBaremos[i][0] == "G" && matrizBaremos[i][1] == resultadoG){
-				decatipoG = matrizBaremos[i][2];
+			else if (matrizBaremos[i][0] == "G" && matrizBaremos[i][1] == matrizResultados[6][1]){
+				matrizResultados[6][2] = matrizBaremos[i][2];
 			}
-			else if (matrizBaremos[i][0] == "H" && matrizBaremos[i][1] == resultadoH){
-				decatipoH = matrizBaremos[i][2];
+			else if (matrizBaremos[i][0] == "H" && matrizBaremos[i][1] == matrizResultados[7][1]){
+				matrizResultados[7][2] = matrizBaremos[i][2];
 			}
-			else if (matrizBaremos[i][0] == "I" && matrizBaremos[i][1] == resultadoI){
-				decatipoI = matrizBaremos[i][2];
+			else if (matrizBaremos[i][0] == "I" && matrizBaremos[i][1] == matrizResultados[8][1]){
+				matrizResultados[8][2] = matrizBaremos[i][2];
 			}
-			else if (matrizBaremos[i][0] == "L" && matrizBaremos[i][1] == resultadoL){
-				decatipoL = matrizBaremos[i][2];
+			else if (matrizBaremos[i][0] == "L" && matrizBaremos[i][1] == matrizResultados[9][1]){
+				matrizResultados[9][2] = matrizBaremos[i][2];
 			}
-			else if (matrizBaremos[i][0] == "M" && matrizBaremos[i][1] == resultadoM){
-				decatipoM = matrizBaremos[i][2];
+			else if (matrizBaremos[i][0] == "M" && matrizBaremos[i][1] == matrizResultados[10][1]){
+				matrizResultados[10][2] = matrizBaremos[i][2];
 			}
-			else if (matrizBaremos[i][0] == "N" && matrizBaremos[i][1] == resultadoN){
-				decatipoN = matrizBaremos[i][2];
+			else if (matrizBaremos[i][0] == "N" && matrizBaremos[i][1] == matrizResultados[11][1]){
+				matrizResultados[11][2] = matrizBaremos[i][2];
 			}
-			else if (matrizBaremos[i][0] == "O" && matrizBaremos[i][1] == resultadoO){
-				decatipoO = matrizBaremos[i][2];
+			else if (matrizBaremos[i][0] == "O" && matrizBaremos[i][1] == matrizResultados[12][1]){
+				matrizResultados[12][2] = matrizBaremos[i][2];
 			}
-			else if (matrizBaremos[i][0] == "Q1" && matrizBaremos[i][1] == resultadoQ1){
-				decatipoQ1 = matrizBaremos[i][2];
+			else if (matrizBaremos[i][0] == "Q1" && matrizBaremos[i][1] == matrizResultados[13][1]){
+				matrizResultados[13][2] = matrizBaremos[i][2];
 			}
-			else if (matrizBaremos[i][0] == "Q2" && matrizBaremos[i][1] == resultadoQ2){
-				decatipoQ2 = matrizBaremos[i][2];
+			else if (matrizBaremos[i][0] == "Q2" && matrizBaremos[i][1] == matrizResultados[14][1]){
+				matrizResultados[14][2] = matrizBaremos[i][2];
 			}
-			else if (matrizBaremos[i][0] == "Q3" && matrizBaremos[i][1] == resultadoQ3){
-				decatipoQ3 = matrizBaremos[i][2];
+			else if (matrizBaremos[i][0] == "Q3" && matrizBaremos[i][1] == matrizResultados[15][1]){
+				matrizResultados[15][2] = matrizBaremos[i][2];
 			}
-			else if (matrizBaremos[i][0] == "Q4" && matrizBaremos[i][1] == resultadoQ4){
-				decatipoQ4 = matrizBaremos[i][2];
+			else if (matrizBaremos[i][0] == "Q4" && matrizBaremos[i][1] == matrizResultados[16][1]){
+				matrizResultados[16][2] = matrizBaremos[i][2];
 			}		
 		}
-		document.write("<br/> Decatipo A = " + decatipoA + "<br/>");
-		document.write("Decatipo B = " + decatipoB + "<br/>");
-		document.write("Decatipo C = " + decatipoC + "<br/>");
-		document.write("Decatipo E = " + decatipoE + "<br/>");
-		document.write("Decatipo F = " + decatipoF + "<br/>");
-		document.write("Decatipo G = " + decatipoG + "<br/>");
-		document.write("Decatipo H = " + decatipoH + "<br/>");
-		document.write("Decatipo I = " + decatipoI + "<br/>");
-		document.write("Decatipo L = " + decatipoL + "<br/>");
-		document.write("Decatipo M = " + decatipoM + "<br/>");
-		document.write("Decatipo N = " + decatipoN + "<br/>");
-		document.write("Decatipo O = " + decatipoO + "<br/>");
-		document.write("Decatipo Q1 = " + decatipoQ1 + "<br/>");
-		document.write("Decatipo Q2 = " + decatipoQ2 + "<br/>");
-		document.write("Decatipo Q3 = " + decatipoQ3 + "<br/>");
-		document.write("Decatipo Q4 = " + decatipoQ4 + "<br/>");
+
+		document.write("<br/>");
+
+		for (i=1; i<17; i++){
+			document.write ("Decatipo " +  matrizResultados[i][0] + " = " + matrizResultados[i][2] + "<br/>");
+		}
 
 		document.write("<br/> Distorsion = " + distorsion + "<br/>");
 		document.write("Negacion = " + negacion + "<br/>");
 
-	}
+		var factorSecundario1 = 0;
+		var factorSecundario2 = 0;
+		var factorSecundario3 = 0;
+		var factorSecundario4 = 0;
+
+		var matrizFactoresSecundarios = new Array();
+		for (var a=1; a<35; a++){
+			matrizFactoresSecundarios[a] = new Array(6);
+			}
+
+		creacionTablaFactoresSecundarios(matrizFactoresSecundarios);
+
+		if (genero == "F"){
+			for (i=2; i<33; i+=2){
+				factorSecundario1 += matrizResultados[i/2][1] * matrizFactoresSecundarios[i][2];
+				factorSecundario2 += matrizResultados[i/2][1] * matrizFactoresSecundarios[i][3];
+				factorSecundario3 += matrizResultados[i/2][1] * matrizFactoresSecundarios[i][4];
+				factorSecundario4 += matrizResultados[i/2][1] * matrizFactoresSecundarios[i][5];
+			}
+
+		factorSecundario1 += matrizFactoresSecundarios[34][2];
+		factorSecundario2 += matrizFactoresSecundarios[34][3];
+		factorSecundario3 += matrizFactoresSecundarios[34][4];
+		factorSecundario4 += matrizFactoresSecundarios[34][5];
+		}
+
+		else if (genero == "M"){
+			for (i=1; i<33; i+=2){
+				var k = (i/2) + 0.5;
+				factorSecundario1 += matrizResultados[k][1] * matrizFactoresSecundarios[i][2];
+				factorSecundario2 += matrizResultados[k][1] * matrizFactoresSecundarios[i][3];
+				factorSecundario3 += matrizResultados[k][1] * matrizFactoresSecundarios[i][4];
+				factorSecundario4 += matrizResultados[k][1] * matrizFactoresSecundarios[i][5];
+			}
+
+		factorSecundario1 += matrizFactoresSecundarios[33][2];
+		factorSecundario2 += matrizFactoresSecundarios[33][3];
+		factorSecundario3 += matrizFactoresSecundarios[33][4];
+		factorSecundario4 += matrizFactoresSecundarios[33][5];
+		}
+
+		factorSecundario1 /= 10;
+		factorSecundario2 /= 10;
+		factorSecundario3 /= 10;
+		factorSecundario4 /= 10;		
+
+
+		document.write("<br/> Factor Secundario 1 = " + factorSecundario1 + "<br/>");
+		document.write("Factor Secundario 2 = " + factorSecundario2 + "<br/>");
+		document.write("Factor Secundario 3 = " + factorSecundario3 + "<br/>");
+		document.write("Factor Secundario 4 = " + factorSecundario4 + "<br/>");
+	}	
 
 	function mostrarOpcionSeleccionada(){
 
