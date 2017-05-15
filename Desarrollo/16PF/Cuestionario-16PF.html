@@ -15,6 +15,17 @@
 	</header>
 <!--Sección que incluye la bateria de preguntas -->	
 	<section>
+
+		<div id="CampoNombre">
+			<label for="Nombre">Por favor ingrese su nombre</label>
+			<input type="text" name="Nombres"; id="Nombre"> </input>
+		</div>
+		<div id="Generos">
+			<input type="radio" name="Genero" value="M"; id="Masculino"> </input>
+			<label for="Masculino">Hombre</label>
+			<input type="radio" name="Genero" value="F"; id="Femenino"> </input>
+			<label for="Femenino">Mujer</label>
+		</div>
 		<div id="Cuestionario1">
 			<p>1.	He comprendido bien las instrucciones para contestar este cuestionario:</p>
 			<input type="radio" name="Pregunta1" value="A"; id="A1"></input>
@@ -1734,6 +1745,17 @@
 
 	<script type="text/javascript">
 	function mostrarResultados16PF(){
+		
+		var genero = new Array(1);
+		genero[0] = "ND";
+        var capturaGenero = document.getElementsByName("Genero");
+
+        for(var i=0; i<capturaGenero.length; i++){
+            if(capturaGenero[i].checked == true){
+                genero[0] = capturaGenero[i].value;	
+            }
+        }
+        document.write(genero[0])
 		var arrayRespuestas = new Array();
 		
 		opcionSeleccionada(arrayRespuestas);
@@ -1869,17 +1891,15 @@
 			document.write ("Puntuacion directa " +  matrizResultados[i][0] + " = " + matrizResultados[i][1] + "<br/>");
 		}
 
-		var genero = "M";
-
 		var matrizBaremos = new Array();
 			for (var a=1; a<372; a++){
 				matrizBaremos[a] = new Array(3);
 			}
 
-		if (genero == "M"){
+		if (genero[0] == "M"){
 			creacionTablaBaremosMasculino(matrizBaremos);
 		}
-		else if (genero == "F"){
+		else if (genero[0] == "F"){
 			creacionTablaBaremosFemenino(matrizBaremos);
 		}
 		else{
@@ -1959,7 +1979,7 @@
 
 		creacionTablaFactoresSecundarios(matrizFactoresSecundarios);
 
-		if (genero == "F"){
+		if (genero[0] == "F"){
 			for (i=2; i<33; i+=2){
 				factorSecundario1 += matrizResultados[i/2][1] * matrizFactoresSecundarios[i][2];
 				factorSecundario2 += matrizResultados[i/2][1] * matrizFactoresSecundarios[i][3];
@@ -1973,7 +1993,7 @@
 		factorSecundario4 += matrizFactoresSecundarios[34][5];
 		}
 
-		else if (genero == "M"){
+		else if (genero[0] == "M"){
 			for (i=1; i<33; i+=2){
 				var k = (i/2) + 0.5;
 				factorSecundario1 += matrizResultados[k][1] * matrizFactoresSecundarios[i][2];
