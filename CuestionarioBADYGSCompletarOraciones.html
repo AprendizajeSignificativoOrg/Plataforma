@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Prueba BADYG S</title> 
+	<script type="text/javascript" src="RespuestasBADYGSCompletarOraciones.js"></script>
+</head>
+<body>
+<h1>Prueba Completar Oraciones</h1>
+<form action="" name="cuestionario" method="get" onsubmit="return compararRespuestas(this);">
+	<div class="Preguntas1"> 
+	<!--contenedor de los enunciados y opciones de respuesta-->
+		<p> 1. Nuestra historia debería enseñarnos ______ muchos errores en la actualidad.</p>	 
+		<input type="radio" name="pregunta1" value="p1">
+		<label>P. a conducir.</label>
+		<input type="radio" name="pregunta1" value="q1">
+		<label>Q. a dirigir.</label>
+		<input type="radio" name="pregunta1" value="r1">
+		<label>R. a constatar.</label>
+		<input type="radio" name="pregunta1" value="s1">
+		<label>S. a evitar.</label>
+		<input type="radio" name="pregunta1" value="t1">
+		<label>T. a cambiar.</label>
+	</div>
+
+	<div class="Preguntas2"> 
+	
+		<p> 2. ______ una enfermedad es mejor que tratar de curarla después.</p>	 
+		<input type="radio" name="pregunta2" value="v2">
+		<label>V. Diagnosticar.</label>
+		<input type="radio" name="pregunta2" value="w2">
+		<label>W. Medicar.</label>
+		<input type="radio" name="pregunta2" value="x2">
+		<label>X. Tratar.</label>
+		<input type="radio" name="pregunta2" value="y2">
+		<label>Y. Revisar.</label>
+		<input type="radio" name="pregunta2" value="z2">
+		<label>Z. Prevenir.</label>
+	</div>
+
+	<div class="Preguntas3"> 
+	
+		<p> 3. El inteligente comprende las cosas y el astuto intuye ______ de las personas. </p>	 
+		<input type="radio" name="pregunta3" value="a3">
+		<label>A. el pasado.</label>
+		<input type="radio" name="pregunta3" value="b3">
+		<label>B. la intención.</label>
+		<input type="radio" name="pregunta3" value="c3">
+		<label>C. la ilusión.</label>
+		<input type="radio" name="pregunta3" value="d3">
+		<label>D. el aspecto.</label>
+		<input type="radio" name="pregunta3" value="e3">
+		<label>E. los defectos.</label>
+	</div>
+
+	<div class="Preguntas4"> 
+		<p> 4. Practicar un deporte ______ una vida más sana.</p>	 
+		<input type="radio" name="pregunta4" value="f4">
+		<label>F. arraiga.</label>
+		<input type="radio" name="pregunta4" value="g4">
+		<label>G. anticipa.</label>
+		<input type="radio" name="pregunta4" value="h4">
+		<label>H. predetermina.</label>
+		<input type="radio" name="pregunta4" value="i4">
+		<label>I. propicia.</label>
+		<input type="radio" name="pregunta4" value="j4">
+		<label>J. selecciona.</label>
+	</div>
+
+	<div class="Preguntas5"> 
+		<p> 5. Mostró su disconformidad por el ______ confuso seguido en la votación.</p>	 
+		<input type="radio" name="pregunta5" value="k5">
+		<label>K. procedimiento.</label>
+		<input type="radio" name="pregunta5" value="l5">
+		<label>L. resultado.</label>
+		<input type="radio" name="pregunta5" value="m5">
+		<label>M. cambio.</label>
+		<input type="radio" name="pregunta5" value="n5">
+		<label>N. diálogo.</label>
+		<input type="radio" name="pregunta5" value="o5">
+		<label>O. aplazamiento.</label>
+	</div>
+
+	<div class="Preguntas6"> 
+		<p> 6. Toda acción humana tiene sus ______, como toda causa tiene sus efectos.</p>	 
+		<input type="radio" name="pregunta6" value="p6">
+		<label>P. orígenes.</label>
+		<input type="radio" name="pregunta6" value="q6">
+		<label>Q. límites.</label>
+		<input type="radio" name="pregunta6" value="r6">
+		<label>R. finalidades.</label>
+		<input type="radio" name="pregunta6" value="s6">
+		<label>S. consecuencias.</label>
+		<input type="radio" name="pregunta6" value="t6">
+		<label>T. matices.</label>
+	</div>
+
+	<div class="Preguntas7"> 
+		<p> 7. Para poder competir son imprescindibles otros ______.</p>	 
+		<input type="radio" name="pregunta7" value="v7">
+		<label>V. esfuerzos.</label>
+		<input type="radio" name="pregunta7" value="w7">
+		<label>W. planteamientos.</label>
+		<input type="radio" name="pregunta7" value="x7">
+		<label>X. rivales.</label>
+		<input type="radio" name="pregunta7" value="y7">
+		<label>Y. ánimos.</label>
+		<input type="radio" name="pregunta7" value="z7">
+		<label>Z. métodos.</label>
+	</div>
+
+	<div class="Preguntas8"> 
+		<p> 8. Serios errores en el pasado pueden ______ hondas decepciones en el futuro.</p>	 
+		<input type="radio" name="pregunta8" value="a8">
+		<label>A. aumentar.</label>
+		<input type="radio" name="pregunta8" value="b8">
+		<label>B. reproducir.</label>
+		<input type="radio" name="pregunta8" value="c8">
+		<label>C. hilvanar.</label>
+		<input type="radio" name="pregunta8" value="d8">
+		<label>D. decidir.</label>
+		<input type="radio" name="pregunta8" value="e8">
+		<label>E. conllevar.</label>
+	</div>
+
+	<div class="Preguntas9"> 
+		<p> 9. Ilusionarnos ______ nos impide ver objetivamente la  realidad.</p>	 
+		<input type="radio" name="pregunta9" value="f9">
+		<label>F. antes.</label>
+		<input type="radio" name="pregunta9" value="g9">
+		<label>G. previamente.</label>
+		<input type="radio" name="pregunta9" value="h9">
+		<label>H. en exceso.</label>
+		<input type="radio" name="pregunta9" value="i9">
+		<label>I. siempre.</label>
+		<input type="radio" name="pregunta9" value="j9">
+		<label>J. de lo imposible.</label>
+	</div>
+
+	<div class="Preguntas10"> 
+		<p> 10. Una experiencia negativa suele ______ intentar repetirla.</p>	 
+		<input type="radio" name="pregunta10" value="k10">
+		<label>K. terminar de.</label>
+		<input type="radio" name="pregunta10" value="l10">
+		<label>L. anticiparnos a.</label>
+		<input type="radio" name="pregunta10" value="m10">
+		<label>M. incitarnos a.</label>
+		<input type="radio" name="pregunta10" value="n10">
+		<label>N. prevenirnos de.</label>
+		<input type="radio" name="pregunta10" value="o10">
+		<label>O. desanimarnos de.</label>
+	</div>
+
+	<div class="Preguntas11"> 
+		<p> 11. Reconocer los errores propios es ______ de sabiduría.</p>	 
+		<input type="radio" name="pregunta11" value="p11">
+		<label>P. un pozo.</label>
+		<input type="radio" name="pregunta11" value="q11">
+		<label>Q. un talante.</label>
+		<input type="radio" name="pregunta11" value="r11">
+		<label>R. un precedente.</label>
+		<input type="radio" name="pregunta11" value="s11">
+		<label>S. un síntoma.</label>
+		<input type="radio" name="pregunta11" value="t11">
+		<label>T. un aumento.</label>
+	</div>
+
+	<div class="Preguntas12"> 
+		<p> 12. Traspasar los límites de ______ constituye un delito.</p>	 
+		<input type="radio" name="pregunta12" value="v12">
+		<label>V. lo prudente.</label>
+		<input type="radio" name="pregunta12" value="w12">
+		<label>W. la ilegalidad.</label>
+		<input type="radio" name="pregunta12" value="x12">
+		<label>X. la legalidad.</label>
+		<input type="radio" name="pregunta12" value="y12">
+		<label>Y. lo establecido.</label>
+		<input type="radio" name="pregunta12" value="z12">
+		<label>Z. lo privado.</label>
+	</div>
+
+	<div class="Preguntas13"> 
+		<p> 13. Si lo sometemos a _____ sabremos qué piensan los asistentes.</p>	 
+		<input type="radio" name="pregunta13" value="a13">
+		<label>A. examen.</label>
+		<input type="radio" name="pregunta13" value="b13">
+		<label>B. decisión.</label>
+		<input type="radio" name="pregunta13" value="c13">
+		<label>C. juicio.</label>
+		<input type="radio" name="pregunta13" value="d13">
+		<label>D. prueba.</label>
+		<input type="radio" name="pregunta13" value="e13">
+		<label>E. debate.</label>
+	</div>
+
+	<div class="Preguntas14"> 
+		<p> 14. Es inútil tratar de convencer a un ______.</p>	 
+		<input type="radio" name="pregunta14" value="f14">
+		<label>F. ilusionado.</label>
+		<input type="radio" name="pregunta14" value="g14">
+		<label>G. farsante.</label>
+		<input type="radio" name="pregunta14" value="h14">
+		<label>H. precavido.</label>
+		<input type="radio" name="pregunta14" value="i14">
+		<label>I. fanático.</label>
+		<input type="radio" name="pregunta14" value="j14">
+		<label>J. analfabeto.</label>
+	</div>
+
+	<div class="Preguntas15"> 
+		<p> 15. Paliar un desastre no suele ser ______ para prevenirlo en el futuro.</p>	 
+		<input type="radio" name="pregunta15" value="k15">
+		<label>K. suficiente.</label>
+		<input type="radio" name="pregunta15" value="l15">
+		<label>L. útil.</label>
+		<input type="radio" name="pregunta15" value="m15">
+		<label>M. motivo.</label>
+		<input type="radio" name="pregunta15" value="n15">
+		<label>N. conveniente.</label>
+		<input type="radio" name="pregunta15" value="o15">
+		<label>O. necesario.</label>
+	</div>
+
+	<div class="Preguntas16"> 
+		<p> 16. Acerca del pasado nunca podremos hacer ______.</p>	 
+		<input type="radio" name="pregunta16" value="p16">
+		<label>P. pronósticos.</label>
+		<input type="radio" name="pregunta16" value="q16">
+		<label>Q. indagaciones.</label>
+		<input type="radio" name="pregunta16" value="r16">
+		<label>R. sondeos.</label>
+		<input type="radio" name="pregunta16" value="s16">
+		<label>S. cálculos.</label>
+		<input type="radio" name="pregunta16" value="t16">
+		<label>T. ciencia.</label>
+	</div>
+
+	<div class="Preguntas17"> 
+		<p> 17. _______ siempre es consecuencia de un accidente.</p>	 
+		<input type="radio" name="pregunta17" value="v17">
+		<label>V. Una catástrofe.</label>
+		<input type="radio" name="pregunta17" value="w17">
+		<label>W. Un naufragio.</label>
+		<input type="radio" name="pregunta17" value="x17">
+		<label>X. Un sabotaje.</label>
+		<input type="radio" name="pregunta17" value="y17">
+		<label>Y. Un desastre.</label>
+		<input type="radio" name="pregunta17" value="z17">
+		<label>Z. Un alud.</label>
+	</div>
+
+	<div class="Preguntas18"> 
+		<p> 18. Las _____ nunca demuestran que lo que cuentan ocurrió históricamente.</p>	 
+		<input type="radio" name="pregunta18" value="a18">
+		<label>A. leyendas.</label>
+		<input type="radio" name="pregunta18" value="b18">
+		<label>B. anécdotas.</label>
+		<input type="radio" name="pregunta18" value="c18">
+		<label>C. biografías.</label>
+		<input type="radio" name="pregunta18" value="d18">
+		<label>D. investigaciones.</label>
+		<input type="radio" name="pregunta18" value="e18">
+		<label>E. novelas.</label>
+	</div>
+
+	<div class="Preguntas19"> 
+		<p> 19. _____ del tráfico es un problema de las grandes ciudades modernas.</p>	 
+		<input type="radio" name="pregunta19" value="f19">
+		<label>F. La previsión.</label>
+		<input type="radio" name="pregunta19" value="g19">
+		<label>G. La congestión.</label>
+		<input type="radio" name="pregunta19" value="h19">
+		<label>H. El estudio.</label>
+		<input type="radio" name="pregunta19" value="i19">
+		<label>I. El diseño.</label>
+		<input type="radio" name="pregunta19" value="j19">
+		<label>J. La información.</label>
+	</div>
+
+	<div class="Preguntas20"> 
+		<p> 20. Nada físicamente real puede ser tan pequeño que al menos no tenga  ______.</p>	 
+		<input type="radio" name="pregunta20" value="k20">
+		<label>K. masa.</label>
+		<input type="radio" name="pregunta20" value="l20">
+		<label>L. exteriorización.</label>
+		<input type="radio" name="pregunta20" value="m20">
+		<label>M. medida.</label>
+		<input type="radio" name="pregunta20" value="n20">
+		<label>N. comprobación.</label>
+		<input type="radio" name="pregunta20" value="o20">
+		<label>O. visibilidad.</label>
+	</div>
+
+	<div class="Preguntas21"> 
+		<p> 21. No puede haber diálogo cuando ______ no desea hablar.</p>	 
+		<input type="radio" name="pregunta21" value="p21">
+		<label>P. el amigo.</label>
+		<input type="radio" name="pregunta21" value="q21">
+		<label>Q. el superior.</label>
+		<input type="radio" name="pregunta21" value="r21">
+		<label>R. la parte.</label>
+		<input type="radio" name="pregunta21" value="s21">
+		<label>S. el interlocutor.</label>
+		<input type="radio" name="pregunta21" value="t21">
+		<label>T. el negligente.</label>
+	</div>
+
+	<div class="Preguntas22"> 
+		<p> 22. Seleccionar equivale a separar lo importante de lo _____.</p>	 
+		<input type="radio" name="pregunta22" value="v22">
+		<label>V. necesario.</label>
+		<input type="radio" name="pregunta22" value="w22">
+		<label>W. inseguro.</label>
+		<input type="radio" name="pregunta22" value="x22">
+		<label>X. válido.</label>
+		<input type="radio" name="pregunta22" value="y22">
+		<label>Y. accesorio.</label>
+		<input type="radio" name="pregunta22" value="z22">
+		<label>Z. esencial.</label>
+	</div>
+
+	<div class="Preguntas23"> 
+		<p> 23. La exageración es una forma de ______ la realidad.</p>	 
+		<input type="radio" name="pregunta23" value="a23">
+		<label>A. falsear.</label>
+		<input type="radio" name="pregunta23" value="b23">
+		<label>B. liberar.</label>
+		<input type="radio" name="pregunta23" value="c23">
+		<label>C. hablar de.</label>
+		<input type="radio" name="pregunta23" value="d23">
+		<label>D. insistir en.</label>
+		<input type="radio" name="pregunta23" value="e23">
+		<label>E. expresar.
+</label>
+	</div>
+
+	<div class="Preguntas24"> 
+		<p> 24. Ningún buen profesional admitiría _____ en su trabajo.</p>	 
+		<input type="radio" name="pregunta24" value="f24">
+		<label>F. regateos.</label>
+		<input type="radio" name="pregunta24" value="g24">
+		<label>G. pruebas.</label>
+		<input type="radio" name="pregunta24" value="h24">
+		<label>H. chapuzas.</label>
+		<input type="radio" name="pregunta24" value="i24">
+		<label>I. demoras.</label>
+		<input type="radio" name="pregunta24" value="j24">
+		<label>J. pérdidas.</label>
+	</div>
+
+	<div class="Preguntas25"> 
+		<p> 25. Nunca podremos demostrar, por contradictorio, que lo _____ sea irracional.</p>	 
+		<input type="radio" name="pregunta25" value="k25">
+		<label>K. demostrado.</label>
+		<input type="radio" name="pregunta25" value="l25">
+		<label>L. racional.</label>
+		<input type="radio" name="pregunta25" value="m25">
+		<label>M. humano.</label>
+		<input type="radio" name="pregunta25" value="n25">
+		<label>N. evidente.</label>
+		<input type="radio" name="pregunta25" value="o25">
+		<label>O. conseguido.</label>
+	</div>
+
+	<div class="Preguntas26"> 
+		<p> 26. ______ todo aquello que no hacemos en su momento.</p>	 
+		<input type="radio" name="pregunta26" value="p26">
+		<label>P. Deshacemos.</label>
+		<input type="radio" name="pregunta26" value="q26">
+		<label>Q. Aplazamos.</label>
+		<input type="radio" name="pregunta26" value="r26">
+		<label>R. Descuidamos.</label>
+		<input type="radio" name="pregunta26" value="s26">
+		<label>S. Queremos.</label>
+		<input type="radio" name="pregunta26" value="t26">
+		<label>T. Nos agobia.</label>
+	</div>
+
+	<div class="Preguntas27"> 
+		<p> 27. La esplendidez esta reñida con ______.</p>	 
+		<input type="radio" name="pregunta27" value="v27">
+		<label>V. la antipatía.</label>
+		<input type="radio" name="pregunta27" value="w27">
+		<label>W. la maldad.</label>
+		<input type="radio" name="pregunta27" value="x27">
+		<label>X. el despilfarro.</label>
+		<input type="radio" name="pregunta27" value="y27">
+		<label>Y. el sentido común.</label>
+		<input type="radio" name="pregunta27" value="z27">
+		<label>Z. la avaricia.</label>
+	</div>
+
+	<div class="Preguntas28"> 
+		<p> 28. Los _____ de un moderno edificio en ruinas, fueron absueltos.</p>	 
+		<input type="radio" name="pregunta28" value="a28">
+		<label>A. albañiles.</label>
+		<input type="radio" name="pregunta28" value="b28">
+		<label>B. dueños.</label>
+		<input type="radio" name="pregunta28" value="c28">
+		<label>C. inquilinos.</label>
+		<input type="radio" name="pregunta28" value="d28">
+		<label>D. ocupantes.</label>
+		<input type="radio" name="pregunta28" value="e28">
+		<label>E. promotores.</label>
+	</div>
+
+	<div class="Preguntas29"> 
+		<p> 29. Pertenecer a algún club deportivo ______ la práctica efectiva del deporte.</p>	 
+		<input type="radio" name="pregunta29" value="f29">
+		<label>F. atenúa.</label>
+		<input type="radio" name="pregunta29" value="g29">
+		<label>G. realza.</label>
+		<input type="radio" name="pregunta29" value="h29">
+		<label>H. predispone a.</label>
+		<input type="radio" name="pregunta29" value="i29">
+		<label>I. asegura.</label>
+		<input type="radio" name="pregunta29" value="j29">
+		<label>J. aconseja.</label>
+	</div>
+
+	<div class="Preguntas30"> 
+		<p> 30. Tener precaución es una manera de _____ algunas consecuencias indeseables.</p>	 
+		<input type="radio" name="pregunta30" value="k30">
+		<label>K. sortear.</label>
+		<input type="radio" name="pregunta30" value="l30">
+		<label>L. asumir.</label>
+		<input type="radio" name="pregunta30" value="m30">
+		<label>M. predecir.</label>
+		<input type="radio" name="pregunta30" value="n30">
+		<label>N. aclarar.</label>
+		<input type="radio" name="pregunta30" value="o30">
+		<label>O. valorar.</label>
+	</div>
+
+	<div class="Preguntas31"> 
+		<p> 31. Para construir en terreno no urbanizable, los gobernantes deben antes ______.</p>	 
+		<input type="radio" name="pregunta31" value="p31">
+		<label>P. prepararlo.</label>
+		<input type="radio" name="pregunta31" value="q31">
+		<label>Q. canalizarlo.</label>
+		<input type="radio" name="pregunta31" value="r31">
+		<label>R. recalificarlo.</label>
+		<input type="radio" name="pregunta31" value="s31">
+		<label>S. preverlo.</label>
+		<input type="radio" name="pregunta31" value="t31">
+		<label>T. urbanizarlo.</label>
+	</div>
+
+	<div class="Preguntas32"> 
+		<p> 32. El lastre de errores pasados puede hacernos ______ en el futuro.</p>	 
+		<input type="radio" name="pregunta32" value="v32">
+		<label>V. tranquilos.</label>
+		<input type="radio" name="pregunta32" value="w32">
+		<label>W. fracasar.</label>
+		<input type="radio" name="pregunta32" value="x32">
+		<label>X. deudores.</label>
+		<input type="radio" name="pregunta32" value="y32">
+		<label>Y. más prudentes.</label>
+		<input type="radio" name="pregunta32" value="z32">
+		<label>Z. mejorar.</label>
+	</div>
+	<input type="submit" name="btn" id="btn" value="enviar">
+</form>
+<script type="text/javascript">
+	//Algoritmo de captura de respuestas 
+	var correctas=0;
+	function respuestasCompletarOraciones(arregloRespuestas){//función de captura 
+		for (var j = 1; j < 33; j++) {//recorrido arreglo captura
+			var pregunta=document.getElementsByName("pregunta"+j);//captura de respuesta
+			for (var i = 0; i < pregunta.length; i++) {//recorrido de los  rb
+				if (pregunta[i].checked==true) {//rb seleccionado
+					alert("Respuesta Seleccionada "+pregunta[i].value);//imprime valor del rb
+					arregloRespuestas[j]=pregunta[i].value;//captura en arreglo del valor del rb
+				}					
+			}			
+		}
+	}
+	function compararRespuestas(){//funcción principal
+
+		var arregloRespuestas=new Array;//variable de creacion arreglo de captura de respuestas
+		respuestasCompletarOraciones(arregloRespuestas);//arreglo respuestas captura rb
+
+		for (var i = 1; i < 2; i++) {
+			
+			if (arregloRespuestas[1]=="s1") {//comparación de respuestas
+				correctas++;//aumento contador
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[2]=="z2") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[3]=="b3") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[4]=="i4") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[5]=="k5") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[6]=="s6") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[7]=="x7") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[8]=="e8") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[9]=="h9") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[10]=="o10") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[11]=="s11") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[12]=="x12") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[13]=="e13") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[14]=="i14") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[15]=="k15") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[16]=="p16") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[17]=="w17") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[18]=="a18") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[19]=="g19") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[20]=="k20") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[21]=="s21") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[22]=="y22") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[23]=="a23") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[24]=="h24") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[25]=="l25") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[26]=="q26") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[27]=="z27") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[28]=="e28") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[29]=="h29") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[30]=="k30") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[31]=="r31") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[32]=="w32") {
+				correctas++;
+			} else {
+				correctas;
+			}
+
+			document.write("Respuestas Correctas "+correctas+"<br>");//imprime respuestas correctas
+		}
+
+		//conversión del puntaje directo del estudiante a puntaje convertido baremación y escala
+		var baremacion,escala;//variables de baremación y escala para la matriz
+		var matrizBaremacion=new Array;//variable creación matriz baremacion
+		for (var i = 0; i < 34; i++) {
+			matrizBaremacion[i]=new Array(3);//creación matriz 33x3
+		}
+		matrizBaremacionCompletar(matrizBaremacion);//matriz baremación 
+
+
+		for (var j = 1; j < 2; j++) {
+			
+			if (correctas==matrizBaremacion[1][0]) {//comparacion de respuestas correctas para conversión de puntajes
+				baremacion=matrizBaremacion[1][1];//asignación del valor del puntaje convertido baremacion
+				escala=matrizBaremacion[1][2];//asignación del valor de la escala
+			} 
+			if (correctas==matrizBaremacion[2][0]) {
+				baremacion=matrizBaremacion[2][1];
+				escala=matrizBaremacion[2][2];
+			}
+			if (correctas==matrizBaremacion[3][0]) {
+				baremacion=matrizBaremacion[3][1];
+				escala=matrizBaremacion[3][2];
+			}
+			if (correctas==matrizBaremacion[4][0]) {
+				baremacion=matrizBaremacion[4][1];
+				escala=matrizBaremacion[4][2];
+			}
+			if (correctas==matrizBaremacion[5][0]) {
+				baremacion=matrizBaremacion[5][1];
+				escala=matrizBaremacion[5][2];
+			}
+			if (correctas==matrizBaremacion[6][0]) {
+				baremacion=matrizBaremacion[6][1];
+				escala=matrizBaremacion[6][2];
+			}
+			if (correctas==matrizBaremacion[7][0]) {
+				baremacion=matrizBaremacion[7][1];
+				escala=matrizBaremacion[7][2];
+			}
+			if (correctas==matrizBaremacion[8][0]) {
+				baremacion=matrizBaremacion[8][1];
+				escala=matrizBaremacion[8][2];
+			}
+			if (correctas==matrizBaremacion[9][0]) {
+				baremacion=matrizBaremacion[9][1];
+				escala=matrizBaremacion[9][2];
+			}
+			if (correctas==matrizBaremacion[10][0]) {
+				baremacion=matrizBaremacion[10][1];
+				escala=matrizBaremacion[10][2];
+			}
+			if (correctas==matrizBaremacion[11][0]) {
+				baremacion=matrizBaremacion[11][1];
+				escala=matrizBaremacion[11][2];
+			}
+			if (correctas==matrizBaremacion[12][0]) {
+				baremacion=matrizBaremacion[12][1];
+				escala=matrizBaremacion[12][2];
+			}
+			if (correctas==matrizBaremacion[13][0]) {
+				baremacion=matrizBaremacion[13][1];
+				escala=matrizBaremacion[13][2];
+			}
+			if (correctas==matrizBaremacion[14][0]) {
+				baremacion=matrizBaremacion[14][1];
+				escala=matrizBaremacion[14][2];
+			}
+			if (correctas==matrizBaremacion[15][0]) {
+				baremacion=matrizBaremacion[15][1];
+				escala=matrizBaremacion[15][2];
+			}
+			if (correctas==matrizBaremacion[16][0]) {
+				baremacion=matrizBaremacion[16][1];
+				escala=matrizBaremacion[16][2];
+			}
+			if (correctas==matrizBaremacion[17][0]) {
+				baremacion=matrizBaremacion[17][1];
+				escala=matrizBaremacion[17][2];
+			}
+			if (correctas==matrizBaremacion[18][0]) {
+				baremacion=matrizBaremacion[18][1];
+				escala=matrizBaremacion[18][2];
+			}
+			if (correctas==matrizBaremacion[19][0]) {
+				baremacion=matrizBaremacion[19][1];
+				escala=matrizBaremacion[19][2];
+			}
+			if (correctas==matrizBaremacion[20][0]) {
+				baremacion=matrizBaremacion[20][1];
+				escala=matrizBaremacion[20][2];
+			}
+			if (correctas==matrizBaremacion[21][0]) {
+				baremacion=matrizBaremacion[21][1];
+				escala=matrizBaremacion[21][2];
+			}
+			if (correctas==matrizBaremacion[22][0]) {
+				baremacion=matrizBaremacion[22][1];
+				escala=matrizBaremacion[22][2];
+			}
+			if (correctas==matrizBaremacion[23][0]) {
+				baremacion=matrizBaremacion[23][1];
+				escala=matrizBaremacion[23][2];
+			}
+			if (correctas==matrizBaremacion[24][0]) {
+				baremacion=matrizBaremacion[24][1];
+				escala=matrizBaremacion[24][2];
+			}
+			if (correctas==matrizBaremacion[25][0]) {
+				baremacion=matrizBaremacion[25][1];
+				escala=matrizBaremacion[25][2];
+			}
+			if (correctas==matrizBaremacion[26][0]) {
+				baremacion=matrizBaremacion[26][1];
+				escala=matrizBaremacion[26][2];
+			}
+			if (correctas==matrizBaremacion[27][0]) {
+				baremacion=matrizBaremacion[27][1];
+				escala=matrizBaremacion[27][2];
+			}
+			if (correctas==matrizBaremacion[28][0]) {
+				baremacion=matrizBaremacion[28][1];
+				escala=matrizBaremacion[28][2];
+			}
+			if (correctas==matrizBaremacion[29][0]) {
+				baremacion=matrizBaremacion[29][1];
+				escala=matrizBaremacion[29][2];
+			}
+			if (correctas==matrizBaremacion[30][0]) {
+				baremacion=matrizBaremacion[30][1];
+				escala=matrizBaremacion[30][2];
+			}
+			if (correctas==matrizBaremacion[31][0]) {
+				baremacion=matrizBaremacion[31][1];
+				escala=matrizBaremacion[31][2];
+			}
+			if (correctas==matrizBaremacion[32][0]) {
+				baremacion=matrizBaremacion[32][1];
+				escala=matrizBaremacion[32][2];
+			}
+			if (correctas==matrizBaremacion[33][0]) {
+				baremacion=matrizBaremacion[33][1];
+				escala=matrizBaremacion[33][2];
+			}
+			document.write("Puntaje Convertido "+baremacion+"% Escala "+escala+"<br><br>");
+		}
+		//Asignación del valor del arreglo de captura a la matriz respuestas
+		var matrizRespuestas=new Array();//variable creación matriz respuesta
+		for (var i = 0; i < 33; i++) {
+			matrizRespuestas[i]=new Array(3);//creación matriz 33x3
+		}
+		matrizRespuestasCompletar(matrizRespuestas);//matriz respuestas
+
+		matrizRespuestas[1][2]=arregloRespuestas[1];//asignación del valor a la matriz
+		matrizRespuestas[2][2]=arregloRespuestas[2];
+		matrizRespuestas[3][2]=arregloRespuestas[3];
+		matrizRespuestas[4][2]=arregloRespuestas[4];
+		matrizRespuestas[5][2]=arregloRespuestas[5];
+		matrizRespuestas[6][2]=arregloRespuestas[6];
+		matrizRespuestas[7][2]=arregloRespuestas[7];
+		matrizRespuestas[8][2]=arregloRespuestas[8];
+		matrizRespuestas[9][2]=arregloRespuestas[9];
+		matrizRespuestas[10][2]=arregloRespuestas[10];
+		matrizRespuestas[11][2]=arregloRespuestas[11];
+		matrizRespuestas[12][2]=arregloRespuestas[12];
+		matrizRespuestas[13][2]=arregloRespuestas[13];
+		matrizRespuestas[14][2]=arregloRespuestas[14];
+		matrizRespuestas[15][2]=arregloRespuestas[15];
+		matrizRespuestas[16][2]=arregloRespuestas[16];
+		matrizRespuestas[17][2]=arregloRespuestas[17];
+		matrizRespuestas[18][2]=arregloRespuestas[18];
+		matrizRespuestas[19][2]=arregloRespuestas[19];
+		matrizRespuestas[20][2]=arregloRespuestas[20];
+		matrizRespuestas[21][2]=arregloRespuestas[21];
+		matrizRespuestas[22][2]=arregloRespuestas[22];
+		matrizRespuestas[23][2]=arregloRespuestas[23];
+		matrizRespuestas[24][2]=arregloRespuestas[24];
+		matrizRespuestas[25][2]=arregloRespuestas[25];
+		matrizRespuestas[26][2]=arregloRespuestas[26];
+		matrizRespuestas[27][2]=arregloRespuestas[27];
+		matrizRespuestas[28][2]=arregloRespuestas[28];
+		matrizRespuestas[29][2]=arregloRespuestas[29];
+		matrizRespuestas[30][2]=arregloRespuestas[30];
+		matrizRespuestas[31][2]=arregloRespuestas[31];
+		matrizRespuestas[32][2]=arregloRespuestas[32];
+	
+	document.write("Matriz de Respuestas<br><br>")//
+	for (var i = 1; i < 33; i++) {//imprime matriz respuestas
+ 		for (var j = 0; j < 3; j++) {
+ 			 document.write("-"+matrizRespuestas[i][j]+"-");
+ 		}
+ 		document.write("<br>");
+ 	}
+
+	}
+</script>
+</body>
+</html>
