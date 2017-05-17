@@ -9,7 +9,7 @@
     if (pregunta1[i].checked) //comprobación de los radiobuttons seleccionados
       radioSelec=pregunta1[i].value;//obtención del valor de los radiobutons
                               
-      if (radioSelec=="m") {//comparación entre el valor obtenido del rb y la respuesta correcta
+      if (radioSelec=="m1") {//comparación entre el valor obtenido del rb y la respuesta correcta
         c++;//aumento del contador
         
       } else {
@@ -24,7 +24,7 @@
     if (pregunta2[i].checked) 
       radioSelec=pregunta2[i].value;
                               
-      if (radioSelec=="r") {
+      if (radioSelec=="r2") {
         c++;
         
       } else {
@@ -37,7 +37,7 @@
  for (var i = 0; i < 3; i++) {
     if (pregunta3[i].checked) {
       radioSelec=pregunta3[i].value;
-      if (radioSelec=="w") {
+      if (radioSelec=="w3") {
         c++;
 
       } else {
@@ -51,7 +51,7 @@ var pregunta4=document.getElementsByName('pregunta4');
 for (var i = 0; i < 3; i++) {
     if (pregunta4[i].checked) {
       radioSelec=pregunta4[i].value;
-      if (radioSelec=="c") {
+      if (radioSelec=="c4") {
         c++
       } else {
         c;
@@ -63,7 +63,7 @@ var pregunta5=document.getElementsByName('pregunta5');
 for (var i = 0; i < 3; i++) {
     if (pregunta5[i].checked) {
       radioSelec=pregunta5[i].value;
-      if (radioSelec=="g") {
+      if (radioSelec=="g5") {
         c++;
       } else {
         c;
@@ -75,7 +75,7 @@ for (var i = 0; i < 3; i++) {
  for (var i = 0; i < 3; i++) {
      if (pregunta6[i].checked) {
       radioSelec=pregunta6[i].value;
-      if (radioSelec=="kk") {
+      if (radioSelec=="k6") {
         c++;
       } else {
         c;
@@ -86,7 +86,7 @@ for (var i = 0; i < 3; i++) {
   for (var i = 0; i < 3; i++) {
       if (pregunta7[i].checked) {
         radioSelec=pregunta7[i].value;
-        if (radioSelec=="pp") {
+        if (radioSelec=="p7") {
           c++;
         } else {
           c;
@@ -98,7 +98,7 @@ var pregunta8=document.getElementsByName('pregunta8');
 for (var i = 0; i <3; i++) {
     if (pregunta8[i].checked) {
       radioSelec=pregunta8[i].value;
-      if (radioSelec=="ww") {
+      if (radioSelec=="w8") {
         c++;
       } else {
         c;
@@ -110,7 +110,7 @@ var pregunta9=document.getElementsByName('pregunta9');
 for (var i = 0; i < 3; i++) {
    if (pregunta9[i].checked) {
     radioSelec=pregunta9[i].value;
-    if (radioSelec=="bb") {
+    if (radioSelec=="b9") {
       c++;
     }else{
       c;
@@ -122,7 +122,7 @@ var pregunta10=document.getElementsByName('pregunta10');
 for (var i = 0; i < 3; i++) {
     if (pregunta10[i].checked) {
       radioSelec=pregunta10[i].value;
-      if (radioSelec=="ff") {
+      if (radioSelec=="f10") {
         c++;
       } else {
         c;
@@ -135,7 +135,7 @@ var pregunta11=document.getElementsByName('pregunta11');
 for (var i = 0; i < 3; i++) {
     if (pregunta11[i].checked) {
     radioSelec=pregunta11[i].value;
-    if (radioSelec=="lll") {
+    if (radioSelec=="l11") {
       c++;
     } else {
       c;
@@ -147,7 +147,7 @@ var pregunta12=document.getElementsByName('pregunta12');
 for (var i = 0; i < 3; i++) {
     if (pregunta12[i].checked) {
       radioSelec=pregunta12[i].value;
-      if (radioSelec=="rrr") {
+      if (radioSelec=="r12") {
         c++;
       } else {
         c;
@@ -159,7 +159,7 @@ for (var i = 0; i < 3; i++) {
  for (var i = 0; i < 3; i++) {
      if (pregunta13[i].checked) {
       radioSelec=pregunta13[i].value;
-      if (radioSelec=="vvv") {
+      if (radioSelec=="v13") {
         c++;
       } else {
         c;
@@ -171,7 +171,7 @@ for (var i = 0; i < 3; i++) {
  for (var i = 0; i < 3; i++) {
     if (pregunta14[i].checked) {
       radioSelec=pregunta14[i].value;
-      if (radioSelec=="ccc") {
+      if (radioSelec=="c14") {
         c++;
       } else {
         c;
@@ -184,7 +184,7 @@ for (var i = 0; i < 3; i++) {
  for (var i = 0; i < 3; i++) {
     if (pregunta15[i].checked) {
       radioSelec=pregunta15[i].value;
-      if (radioSelec=="ggg") {
+      if (radioSelec=="g15") {
         c++;
       } else {
         c;
@@ -196,7 +196,7 @@ for (var i = 0; i < 3; i++) {
  for (var i = 0; i < 3; i++) {
     if (pregunta16[i].checked) {
       radioSelec=pregunta16[i].value;
-      if (radioSelec=="kkkk") {
+      if (radioSelec=="k16") {
         c++;
       } else {
         c;
@@ -208,7 +208,7 @@ var pregunta17=document.getElementsByName('pregunta17');
 for (var i = 0; i < 3; i++) {
     if (pregunta17[i].checked) {
       radioSelec=pregunta17[i].value;
-      if (radioSelec=="qqqq") {
+      if (radioSelec=="q17") {
         c++;
       } else {
         c;
@@ -220,7 +220,7 @@ var pregunta18=document.getElementsByName('pregunta18');
 for (var i = 0; i < 3; i++) {
     if (pregunta18[i].checked) {
       radioSelec=pregunta18[i].value;
-      if (radioSelec=="xxxx") {
+      if (radioSelec=="x18") {
         c++;
       } else {
         c;
@@ -232,7 +232,7 @@ var pregunta19=document.getElementsByName('pregunta19');
 for (var i = 0; i < 3; i++) {
     if (pregunta19[i].checked) {
       radioSelec=pregunta19[i].value;
-      if (radioSelec=="cccc") {
+      if (radioSelec=="c19") {
         c++;
       }else{
         c;
@@ -244,7 +244,7 @@ var pregunta20=document.getElementsByName('pregunta20');
 for (var i = 0; i < 3; i++) {
     if (pregunta20[i].checked) {
       radioSelec=pregunta20[i].value;
-      if (radioSelec=="ffff") {
+      if (radioSelec=="f20") {
         c++;
       } else {
         c;
@@ -256,7 +256,7 @@ var pregunta21=document.getElementsByName('pregunta21');
 for (var i = 0; i < 3; i++) {
     if (pregunta21[i].checked) {
       radioSelec=pregunta21[i].value;
-      if (radioSelec=="kkkkk") {
+      if (radioSelec=="k21") {
         c++;
       } else {
         c;
@@ -268,7 +268,7 @@ var pregunta22=document.getElementsByName('pregunta22');
 for (var i = 0; i < 3; i++) {
     if (pregunta22[i].checked) {
       radioSelec=pregunta22[i].value;
-      if (radioSelec=="qqqqq") {
+      if (radioSelec=="q22") {
         c++;
       } else {
         c;
@@ -280,7 +280,7 @@ var pregunta23=document.getElementsByName('pregunta23');
 for (var i = 0; i < 3; i++) {
     if (pregunta23[i].checked) {
       radioSelec=pregunta23[i].value;
-      if (radioSelec=="vvvvv") {
+      if (radioSelec=="v23") {
         c++;
       } else {
         c;
@@ -292,7 +292,7 @@ var pregunta24=document.getElementsByName('pregunta24');
 for (var i = 0; i < 3; i++) {
     if (pregunta24[i].checked) {
       radioSelec=pregunta24[i].value;
-      if (radioSelec=="ccccc") {
+      if (radioSelec=="c24") {
         c++;
       } else {
         c;
@@ -304,7 +304,7 @@ var pregunta25=document.getElementsByName('pregunta25');
 for (var i = 0; i < 3; i++) {
     if (pregunta25[i].checked) {
       radioSelec=pregunta25[i].value;
-      if (radioSelec=="ggggg") {
+      if (radioSelec=="g25") {
         c++;
       } else {
         c;
@@ -316,7 +316,7 @@ var pregunta26=document.getElementsByName('pregunta26');
 for (var i = 0; i < 3; i++) {
     if (pregunta26[i].checked) {
       radioSelec=pregunta26[i].value;
-      if (radioSelec=="kkkkkk") {
+      if (radioSelec=="k26") {
         c++;
       } else {
         c;
@@ -328,7 +328,7 @@ var pregunta27=document.getElementsByName('pregunta27');
 for (var i = 0; i < 3; i++) {
     if (pregunta27[i].checked) {
       radioSelec=pregunta27[i].value;
-      if (radioSelec=="rrrrrr") {
+      if (radioSelec=="r27") {
         c++;
       } else {
         c;
@@ -340,7 +340,7 @@ var pregunta28=document.getElementsByName('pregunta28');
 for (var i = 0; i < 3; i++) {
     if (pregunta28[i].checked) {
       radioSelec=pregunta28[i].value;
-      if (radioSelec=="wwwwww") {
+      if (radioSelec=="w28") {
         c++;
       } else {
         c;
@@ -352,7 +352,7 @@ var pregunta29=document.getElementsByName('pregunta29');
 for (var i = 0; i < 3; i++) {
     if (pregunta29[i].checked) {
       radioSelec=pregunta29[i].value;
-      if (radioSelec=="cccccc") {
+      if (radioSelec=="c29") {
         c++;
       } else {
         c;
@@ -364,7 +364,7 @@ var pregunta30=document.getElementsByName('pregunta30');
 for (var i = 0; i < 3; i++) {
      if (pregunta30[i].checked) {
       radioSelec=pregunta30[i].value;
-      if (radioSelec=="ffffff") {
+      if (radioSelec=="f30") {
         c++;
       } else {
         c;
@@ -376,7 +376,7 @@ var pregunta31=document.getElementsByName('pregunta31');
 for (var i = 0; i < 3; i++) {
     if (pregunta31[i].checked) {
       radioSelec=pregunta31[i].value;
-      if (radioSelec=="kkkkkkk") {
+      if (radioSelec=="k31") {
         c++;
       } else {
         c;
@@ -388,7 +388,7 @@ var pregunta32=document.getElementsByName('pregunta32');
 for (var i = 0; i < 3; i++) {
     if (pregunta32[i].checked) {
       radioSelec=pregunta32[i].value;
-      if (radioSelec=="qqqqqqq") {
+      if (radioSelec=="q32") {
         c++;
       } else {
         c;
@@ -539,7 +539,7 @@ for (var i = 0; i < 3; i++) {
     }
 
 
-  alert("Puntaje Final "+puntajeConvertido+" Puntaje escala "+escala); // imprime
+  alert("Puntaje Final "+puntajeConvertido+"% Puntaje escala "+escala); // imprime
   }
   baremacionMemoria();//instanciamiento de la función
 }
