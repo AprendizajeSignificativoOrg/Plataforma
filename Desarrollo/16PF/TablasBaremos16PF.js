@@ -1,4 +1,32 @@
+
+/*En este archivo se encontraran dos (2) funciones: 
+				1). Función para llenar una matriz con los valores predeterminados de los baremos masculinos. (*Línea 7*) 
+				2). Función para llenar una matriz con los valores predeterminados de los baremos femeninos.  (*Línea 1160*) 
+*/
+
 function creacionTablaBaremosMasculino(matrizBaremos){
+
+	/* Función para llenar una matriz con los valores predeterminados de los baremos masculinos.
+		
+		Ejemplo (Puntuación directa 0 para el rasgo de personalidad "A"):
+   
+		Rasgo de personalidad .... matrizBaremos[1][0] = "A";
+		Puntuación directa ....... matrizBaremos[1][1] = 0;
+		Decatipo ................. matrizBaremos[1][2] = 1;
+	
+		* Cada puntuación directa en cada una de las escalas representa una fila en la columna de la tabla a imprimir (para este caso 3 líneas de código).
+
+		* El género se toma como predefinido ya que corresponde a un dato ingresado previamente.
+
+		* Para visualizar mejor el código se añadió una línea vacía al terminar la inclusión de los valores para cada rasgo de personalidad.
+	*/
+
+/* Cabecera de la matriz */
+	matrizBaremos[0][0] = "Rasgo de personalidad";
+	matrizBaremos[0][1] = "Puntuación directa";
+	matrizBaremos[0][2] = "Decatipo";
+
+/* Cuerpo de la matriz */
 	matrizBaremos[1][0] = "A";
 	matrizBaremos[1][1] = 0;
 	matrizBaremos[1][2] = 1;
@@ -1130,6 +1158,28 @@ function creacionTablaBaremosMasculino(matrizBaremos){
 	}	
 
 function creacionTablaBaremosFemenino(matrizBaremos){	
+
+	/* Función para llenar una matriz con los valores predeterminados de los baremos femeninos.
+		
+		Ejemplo (Puntuación directa 0 para el rasgo de personalidad "A"):
+   
+		Rasgo de personalidad .... matrizBaremos[1][0] = "A";
+		Puntuación directa ....... matrizBaremos[1][1] = 0;
+		Decatipo ................. matrizBaremos[1][2] = 1;
+
+		* Cada puntuación directa en cada una de las escalas representa una fila en la columna de la tabla a imprimir (para este caso 3 líneas de código).
+
+		* El género se toma como predefinido ya que corresponde a un dato ingresado previamente.
+
+		* Para visualizar mejor el código se añadió una línea vacía al terminar la inclusión de los valores para cada rasgo de personalidad.
+	*/
+
+/* Cabecera de la matriz */
+	matrizBaremos[0][0] = "Rasgo de personalidad";
+	matrizBaremos[0][1] = "Puntuación directa";
+	matrizBaremos[0][2] = "Decatipo";
+	
+/* Cuerpo de la matriz */
 
 	matrizBaremos[1][0] = "A";
 	matrizBaremos[1][1] = 0;
