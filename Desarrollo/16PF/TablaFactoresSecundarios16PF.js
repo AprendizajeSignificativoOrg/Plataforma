@@ -30,11 +30,11 @@ function creacionTablaFactoresSecundarios(matrizFactoresSecundarios){
 
 	/* Cabecera de la matriz */
 	matrizFactoresSecundarios[0][0] = "Genero";
-	matrizFactoresSecundarios[0][1] = "Rasgo de peronalidad";
-	matrizFactoresSecundarios[0][2] = "Factor Secundario 1";
-	matrizFactoresSecundarios[0][3] = "Factor Secundario 2";
-	matrizFactoresSecundarios[0][4] = "Factor Secundario 3";
-	matrizFactoresSecundarios[0][5] = "Factor Secundario 4";
+	matrizFactoresSecundarios[0][1] = "Rasgo de personalidad";
+	matrizFactoresSecundarios[0][2] = "Factor S.1";
+	matrizFactoresSecundarios[0][3] = "Factor S.2";
+	matrizFactoresSecundarios[0][4] = "Factor S.3";
+	matrizFactoresSecundarios[0][5] = "Factor S.4";
 
 	/* Cuerpo dela matriz */
 	matrizFactoresSecundarios[1][0] = 0;

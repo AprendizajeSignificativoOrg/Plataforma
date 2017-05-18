@@ -23,7 +23,7 @@ function creacionTablaBaremosMasculino(matrizBaremos){
 
 /* Cabecera de la matriz */
 	matrizBaremos[0][0] = "Rasgo de personalidad";
-	matrizBaremos[0][1] = "Puntuación directa";
+	matrizBaremos[0][1] = "Puntuaci\u00F3n directa";
 	matrizBaremos[0][2] = "Decatipo";
 
 /* Cuerpo de la matriz */
@@ -1176,7 +1176,7 @@ function creacionTablaBaremosFemenino(matrizBaremos){
 
 /* Cabecera de la matriz */
 	matrizBaremos[0][0] = "Rasgo de personalidad";
-	matrizBaremos[0][1] = "Puntuación directa";
+	matrizBaremos[0][1] = "Puntuaci\u00F3n directa";
 	matrizBaremos[0][2] = "Decatipo";
 	
 /* Cuerpo de la matriz */

@@ -3,7 +3,7 @@
 			1). Función que captura los valores correctos (de acuerdo a la opción seleccionada por el estudiante) de tabla matrizPerfilGeneralEscalasValidez y los guarda en una matriz de Respuestas mostrando tambien resultados parciales. (*Linea 6*) 
 */
 
-function creacionTablaResultadosParciales(matrizResultadosPerfilGeneralyValidez){
+function creacionTablaResultadosParciales(matrizResultadosPerfilGeneralyValidez, arregloRespuestas, matrizPerfilGeneralEscalasValidez){
 
 	/* Función que captura los valores correctos (de acuerdo a la opción seleccionada por el estudiante) de tabla matrizPerfilGeneralEscalasValidez y los guarda en una matriz de Respuestas mostrando tambien resultados parciales. 
 
@@ -11,22 +11,22 @@ function creacionTablaResultadosParciales(matrizResultadosPerfilGeneralyValidez)
 
 		Ítem ........................ matrizFactoresSecundarios[4][0] = 4;
 		Opción Seleccionada ......... matrizFactoresSecundarios[4][1] = "A";
-		Rasgo de personalidad ....... matrizFactoresSecundarios[4][2] = "C";
-		Escala de validez ........... matrizFactoresSecundarios[4][3] = "D";
+		Valor rasgo de personalidad.. matrizFactoresSecundarios[4][2] = "2";
+		Rasgo de personalidad ....... matrizFactoresSecundarios[4][3] = "C";
+		Escala de validez ........... matrizFactoresSecundarios[4][4] = "D";
  	*/
 
-
 	/* Declara e inicializa en 0 dos variables contador para lograr un total en las escalas de validez negación y distorsión */
-		var negacion = 0;
-		var distorsion = 0;
+	var negacion = 0;
+	var distorsion = 0;
 
 	/* For que recorre cada una de los Ítems con el fin de capturar las respuestas y los resultados del perfil general - escalas de validez*/
 	for (var m=1; m<188; m++){
 		/* Asigna el número de cada Ítem en la posición [x][0] de la matrizResultadosPerfilGeneralyValidez */
-		matrizResultadosPerfilGeneralyValidez[m][0] = l;
+		matrizResultadosPerfilGeneralyValidez[m][0] = m;
+
 		/*Asigna la respuesta que tuvo el estudiante en cada Ítem en la posición [x][1] de la matrizResultadosPerfilGeneralyValidez */
 		matrizResultadosPerfilGeneralyValidez[m][1] = arregloRespuestas[m];
-
 		/* Si la respuesta seleccionada por el estudiante es "C" se guarda en la matrizResultadosPerfilGeneralyValidez de la siguiente manera:
 
 				Rasgo de personalidad ................ matrizResultadosPerfilGeneralyValidez[(m*3)][1] 
@@ -87,13 +87,16 @@ function creacionTablaResultadosParciales(matrizResultadosPerfilGeneralyValidez)
 		}	
 	}
 
-
 	/* Imprime en pantalla matrizResultadosPerfilGeneralyValidez[i][j] la cual representa la tabla de resultados parcial */ 
+	document.write(" . . . . . . . \u00CDtem . . . . . . . . Opci\u00F3n Seleccionada . . . Valor Rasgo Perso . . . . Rasgo Personalidad . . . . . . Escala Validez <br/>");
 	for (var i=1; i<188; i++){
 		for (var j=0; j<5; j++){
-			document.write(matrizResultadosPerfilGeneralyValidez[i][j] + "  ||  ");
+				document.write(". . . .  . . . . ." + matrizResultadosPerfilGeneralyValidez[i][j] + " . . . . . . . . ||  ");
 		}
-		document.write("<br/>");
+	document.write("<br/>");
 	}
-	
+
+	/* Imprime en pantalla el resultado de las variables negacion y distorsion */
+	document.write("<br/> Distorsion = " + distorsion + "<br/>");
+	document.write("Negacion = " + negacion + "<br/>");
 }

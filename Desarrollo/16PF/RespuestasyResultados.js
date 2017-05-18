@@ -48,36 +48,35 @@ function mostrarResultados16PF(){
     /* Escribe en pantalla un saludo con el nombre del estudiante */
 	document.write("Hola " + nombre + " a continuaci\u00F3n podr\u00E1s ver tus resultados: <br/> <br/>");
 
-
 	/* Declara un arreglo inicial cuya matriz será pasada como parámetro a la función creacionPerfilGeneralyEscalasValidez() para recoger en esta la tabla de perfil general y escalas de validez */
 	var matrizPerfilGeneralEscalasValidez = new Array();
 	/* Declara una matriz utilizando el arreglo anterior:
-	   Para cada fila de la tabla se declara un arreglo con el número de columnas necesarias (para este caso 561 filas y 4 columnas)
+	   Para cada fila de la tabla se declara un arreglo con el número de columnas necesarias (para este caso 561 filas y 5 columnas)
 	   */
-	for (var a=1; a<562; a++){
-		matrizPerfilGeneralEscalasValidez[a] = new Array(4);
+	for (var a=0; a<562; a++){
+		matrizPerfilGeneralEscalasValidez[a] = new Array(5);
 	}
 	/* Llamado a la función creacionPerfilGeneralyEscalasValidez() */
 	creacionPerfilGeneralyEscalasValidez(matrizPerfilGeneralEscalasValidez);
-
-
+	
 	/* Declara un arreglo inicial cuya matriz será pasada como parámetro a la función creacionTablaResultadosParciales() para recoger los valores correctos (de acuerdo a la opción selecconada por el estudiante) de tabla matrizPerfilGeneralEscalasValidez */
 	var matrizResultadosPerfilGeneralyValidez = new Array();
 	/* Declara una matriz utilizando el arreglo anterior:
-	   Para cada fila de la tabla se declara un arreglo con el número de columnas necesarias (para este caso 187 filas y 3 columnas)
+	   Para cada fila de la tabla se declara un arreglo con el número de columnas necesarias (para este caso 187 filas y 5 columnas)
 	 */
 	for (var b=1; b<188; b++){
-		matrizResultadosPerfilGeneralyValidez[b] = new Array(3);
+		matrizResultadosPerfilGeneralyValidez[b] = new Array(5);
 	}
+
 	/* Llamado a la función creacionTablaResultadosParciales() */
-	creacionTablaResultadosParciales(matrizResultadosPerfilGeneralyValidez);
+	creacionTablaResultadosParciales(matrizResultadosPerfilGeneralyValidez, arregloRespuestas, matrizPerfilGeneralEscalasValidez);
 
 	/* Declara un arreglo inicial cuya matriz será pasada como parámetro a la función creacionTablaResultadosFinales() para recoger los resultados finales desde: matrizResultadosPerfilGeneralyValidez y matrizBaremos*/
 	var matrizResultados = new Array();
 	/* Declara una matriz utilizando el arreglo anterior:
 	   Para cada fila de la tabla se declara un arreglo con el número de columnas necesarias (para este caso 16 filas y 3 columnas)
 	 */
-	for (var b=1; b<17; b++){
+	for (var b=0; b<17; b++){
 		matrizResultados[b] = new Array(3);
 		}
 	/* Llamado a la función creacionTablaResultadosFinales() */
@@ -143,13 +142,12 @@ function mostrarResultados16PF(){
 		document.write ("Puntuacion directa " +  matrizResultados[i][0] + " = " + matrizResultados[i][1] + "<br/>");
 	}
 
-
 	/* Declara un arreglo inicial cuya matriz será pasada como parámetro a la función creacionTablaBaremosMasculino o creacionTablaBaremosFemenino de acuerdo al valor dela variable genero[0] */	
 	var matrizBaremos = new Array();
 	/* Declara una matriz utilizando el arreglo anterior:
 	   Para cada fila de la tabla se declara un arreglo con el número de columnas necesarias (para este caso 371 filas y 3 columnas)
 	 */
-	for (var a=1; a<372; a++){
+	for (var a=0; a<372; a++){
 		matrizBaremos[a] = new Array(3);
 	}
 
@@ -232,10 +230,6 @@ function mostrarResultados16PF(){
 			document.write ("Decatipo " +  matrizResultados[i][0] + " = " + matrizResultados[i][2] + "<br/>");
 		}
 
-	/* Imprime en pantalla el resultado de las variables negacion y distorsion */
-	document.write("<br/> Distorsion = " + distorsion + "<br/>");
-	document.write("Negacion = " + negacion + "<br/>");
-
 	/* Declaración las variables necesarias para cada factor secundario */
 	var factorSecundario1 = 0;
 	var factorSecundario2 = 0;
@@ -245,14 +239,14 @@ function mostrarResultados16PF(){
 	/* Declara un arreglo inicial cuya matriz será pasada como parámetro a la función creacionTablaFactoresSecundarios para generar la tabla de factores secundarios */	
 	var matrizFactoresSecundarios = new Array();
 	/* Declara una matriz utilizando el arreglo anterior:
-	   Para cada fila de la tabla se declara un arreglo con el número de columnas necesarias (para este caso 34 filas y 3 columnas)
+	   Para cada fila de la tabla se declara un arreglo con el número de columnas necesarias (para este caso 34 filas y 6 columnas)
 	 */
-	for (var a=1; a<35; a++){
+	for (var a=0; a<35; a++){
 		matrizFactoresSecundarios[a] = new Array(6);
 	}
 	/* Llamado a la función creacionTablaFactoresSecundarios() */
 	creacionTablaFactoresSecundarios(matrizFactoresSecundarios);
-	
+
 	/* Condición de acuerdo al valor de la variable genero */
 	if (genero[0] == "F"){
 		/* Este for comienza en dos y recorre la matrizFactoresSecundarios de a dos ya que en las posiciones pares se encuentran los valores para el género "F" */
@@ -302,5 +296,4 @@ function mostrarResultados16PF(){
 	document.write("Factor Secundario 2 = " + factorSecundario2 + "<br/>");
 	document.write("Factor Secundario 3 = " + factorSecundario3 + "<br/>");
 	document.write("Factor Secundario 4 = " + factorSecundario4 + "<br/>");
-	
-	}	
+}	

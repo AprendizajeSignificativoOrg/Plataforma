@@ -1,10 +1,10 @@
 
 /*En este archivo se encontraran cinco (5) funciones: 
 			1). Imprime tabla opciones seleccionadas. (*Línea 10*) 
-			2). Imprime tabla perfil general y escalas de validez (*Línea 21*)
-			3). Imprime tabla baremos masculinos. (*Línea 37*) 
-			4). Imprime tabla baremos femeninos (*Línea 53*)
-			5). Imprime tabla de Factores secundarios (*Línea 69*)
+			2). Imprime tabla perfil general y escalas de validez (*Línea 22*)
+			3). Imprime tabla baremos masculinos. (*Línea 47*) 
+			4). Imprime tabla baremos femeninos (*Línea 72*)
+			5). Imprime tabla de Factores secundarios (*Línea 97*)
 */
 
 function mostrarOpcionSeleccionada(){
@@ -13,8 +13,9 @@ function mostrarOpcionSeleccionada(){
 	/* Llamada a función opcionSeleccionada() */
 	opcionSeleccionada(arregloRespuestas);
 	/* For para recorrer e imprimir el arreglo */
+	document.write(". . . \u00CDtem . . . . . Respuesta <br/>");
 	for (var x=1; x<188; x++){
-		document.write(x + ". " + arregloRespuestas[x] + "<br/>");
+		document.write(". . . . . " + x + ". . . . || . . . . . " + arregloRespuestas[x] + "<br/>");
 	}
 }
 
@@ -24,15 +25,20 @@ function mostrarPerfilGeneralyEscalasValidez(){
 	var matrizPerfilGeneralEscalasValidez = new Array();
 	/* Declara una matriz utilizando el arreglo anterior:
 	   Para cada fila de la tabla se declara un arreglo con el número de columnas necesarias (para este caso 561 filas y 4 columnas) */
-	for (var a=1; a<562; a++){
+	for (var a=0; a<562; a++){
 			matrizPerfilGeneralEscalasValidez[a] = new Array(3);
 		}
 	/* Llamada a función creacionPerfilGeneralyEscalasValidez() */
 	creacionPerfilGeneralyEscalasValidez(matrizPerfilGeneralEscalasValidez);
 	/* Doble for para imprimir matrizPerfilGeneralEscalasValidez */
-	for (var i=1; i<562; i++){
-		for (var j=0; j<4; j++){
-		document.write(matrizPerfilGeneralEscalasValidez[i][j] + "  ||  ");
+	for (var i=0; i<562; i++){
+		for (var j=0; j<5; j++){
+			if (i==0){
+				document.write(". . ." + matrizPerfilGeneralEscalasValidez[i][j] + " . . . . . . . . ");
+			}
+			else{
+				document.write(" . . . . " + matrizPerfilGeneralEscalasValidez[i][j] + " . . . . . . . . . . ||");
+			}
 		}
 		document.write("<br/>");
 	}
@@ -52,7 +58,12 @@ function mostrarTablaBaremosMasculino(){
 	/* Doble for para imprimir matrizBaremos */	
 	for (var i=0; i<372; i++){
 		for (var j=0; j<3; j++){
-		document.write(matrizBaremos[i][j] + "  ||  ");
+			if (i == 0){
+				document.write(" . " + matrizBaremos[i][j] + " . . ");
+			}
+			else{
+				document.write(" . . . . " + matrizBaremos[i][j] + " . . . . . . . . . . . . . ||  ");
+			}
 		}
 		document.write("<br/>");
 	}
@@ -72,9 +83,14 @@ function mostrarTablaBaremosFemenino(){
 	/* Doble for para imprimir matrizBaremos */
 	for (var i=0; i<372; i++){
 		for (var j=0; j<3; j++){
-		document.write(matrizBaremos[i][j] + "  ||  ");
+			if (i == 0){
+				document.write(" . " + matrizBaremos[i][j] + " . . ");
+			}
+			else{
+				document.write(" . . . . " + matrizBaremos[i][j] + " . . . . . . . . . . . . . ||  ");
+			}
 		}
-		document.write("<br/>");
+	document.write("<br/>");
 	}
 }
 
@@ -93,7 +109,12 @@ function mostrarTablaFactoresSecundarios(){
 	/* Doble for para imprimir matrizFactoresSecundarios */
 	for (var i=0; i<35; i++){
 		for (var j=0; j<6; j++){
-		document.write(matrizFactoresSecundarios[i][j] + "  ||  ");
+			if (i == 0){
+				document.write(" . . . . . " + matrizFactoresSecundarios[i][j] + " . . . ");
+			}
+			else{
+				document.write(" . . . . . . . . " + matrizFactoresSecundarios[i][j] + " . . . . . . . . ||  ");
+			}
 		}
 		document.write("<br/>");
 	}

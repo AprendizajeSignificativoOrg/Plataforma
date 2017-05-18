@@ -31,8 +31,8 @@
 		matrizPerfilGeneralEscalasValidez[0][0] = "Item";
 		matrizPerfilGeneralEscalasValidez[0][1] = "Respuesta";
 		matrizPerfilGeneralEscalasValidez[0][2] = "Valor";
-		matrizPerfilGeneralEscalasValidez[0][3] = "E. Validez";
-		matrizPerfilGeneralEscalasValidez[0][4] = "R. Personalidad";
+		matrizPerfilGeneralEscalasValidez[0][3] = "R. Personalidad";
+		matrizPerfilGeneralEscalasValidez[0][4] = "E. Validez";
 
 	/* Cuerpo de la matriz */
 		matrizPerfilGeneralEscalasValidez[1][0] = 1;
