@@ -4,9 +4,16 @@
 	<meta charset="utf-8">
 	<title>Prueba BADYG S</title> 
 	<script type="text/javascript" src="RespuestasBADYGSCompletarOraciones.js"></script>
+	<script type="text/javascript" src="C:\BADYGS\cronometro.js"></script>
+	<script type="text/javascript" src="C:\BADYGS\CapturaRespuestas.js"></script>
 </head>
-<body>
+<body onload="tiempo();"><!--inicia la función con la apertura de la pag-->
 <h1>Prueba Completar Oraciones</h1>
+<form name="form" align="right">
+	<input type="text" size="1" class="form_input" name="minute" disabled>:
+
+	<input type="text" size="1" class="form_input" name="second" disabled>
+</form>
 <form action="" name="cuestionario" method="get" onsubmit="return compararRespuestas(this);">
 	<div class="Preguntas1"> 
 	<!--contenedor de los enunciados y opciones de respuesta-->
@@ -462,23 +469,17 @@
 	<input type="submit" name="btn" id="btn" value="enviar">
 </form>
 <script type="text/javascript">
+function despedida(){
+	window.open("Despedida.html");
+}
 	//Algoritmo de captura de respuestas 
 	var correctas=0;
-	function respuestasCompletarOraciones(arregloRespuestas){//función de captura 
-		for (var j = 1; j < 33; j++) {//recorrido arreglo captura
-			var pregunta=document.getElementsByName("pregunta"+j);//captura de respuesta
-			for (var i = 0; i < pregunta.length; i++) {//recorrido de los  rb
-				if (pregunta[i].checked==true) {//rb seleccionado
-					alert("Respuesta Seleccionada "+pregunta[i].value);//imprime valor del rb
-					arregloRespuestas[j]=pregunta[i].value;//captura en arreglo del valor del rb
-				}					
-			}			
-		}
-	}
+
 	function compararRespuestas(){//funcción principal
+		despedida();
 
 		var arregloRespuestas=new Array;//variable de creacion arreglo de captura de respuestas
-		respuestasCompletarOraciones(arregloRespuestas);//arreglo respuestas captura rb
+		respuestaPrueba(arregloRespuestas);//arreglo respuestas captura rb
 
 		for (var i = 1; i < 2; i++) {
 			
