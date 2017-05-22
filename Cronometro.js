@@ -17,14 +17,14 @@ var tiempos=function(){//función de control cronometro
 	form.minute.value=minutos;//imprime minutos
 	if(minutos<0)//ciclo para finalizar cronometro
 	{
-		form.second.value=0;//impreime variable en 0
+		form.second.value=0;//imprime variable en 0
 		form.minute.value=0;//imprime variable en 0
 	}else{
 		setTimeout(tiempos,1000);// tiempo de recorrido del ciclo cronometro
 	}
 	
-	if (segundos==0 && minutos==0) {//cmparar tiempo para finalizar y accionar el botón
-		btn.onclick=compararRespuestas(this);//accciona el boton enviar
+	if (segundos==0 && minutos==0) {//comparar tiempo para finalizar y accionar el botón
+		btn.onclick=compararRespuestas(this);//acciona el boton enviar
 		btn.click();
 	}
 
