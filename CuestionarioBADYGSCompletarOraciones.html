@@ -4,10 +4,10 @@
 	<meta charset="utf-8">
 	<title>Prueba BADYG S</title> 
 	<script type="text/javascript" src="RespuestasBADYGSCompletarOraciones.js"></script>
-	<script type="text/javascript" src="C:\BADYGS\cronometro.js"></script>
+	<script type="text/javascript" src="C:\BADYGS\Cronometro.js"></script>
 	<script type="text/javascript" src="C:\BADYGS\CapturaRespuestas.js"></script>
 </head>
-<body onload="tiempo();"><!--inicia la función con la apertura de la pag-->
+<body onload="tiempo(8);"><!--inicia la función con la apertura de la pag-->
 <h1>Prueba Completar Oraciones</h1>
 <form name="form" align="right">
 	<input type="text" size="1" class="form_input" name="minute" disabled>:
@@ -644,7 +644,7 @@ function despedida(){
 				correctas;
 			}
 
-			document.write("Respuestas Correctas "+correctas+"<br>");//imprime respuestas correctas
+			document.write("Puntaje Directo Obtenido por el estudiante "+correctas+"<br>");//imprime respuestas correctas
 		}
 
 		//conversión del puntaje directo del estudiante a puntaje convertido baremación y escala
