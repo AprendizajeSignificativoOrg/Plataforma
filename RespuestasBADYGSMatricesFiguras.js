@@ -1,9 +1,9 @@
 //Matriz de respuestas matrices figuras
 function matrizRespuestasMatrices(matrizRespuestas){
 
-	matrizRespuestas[1][0]="1";
-	matrizRespuestas[1][1]="l1";
-	matrizRespuestas[1][2]="";
+	matrizRespuestas[1][0]="1";//item pregunta
+	matrizRespuestas[1][1]="l1";//respuesta correcta
+	matrizRespuestas[1][2]="";//respuesta estudiante
 
 	matrizRespuestas[2][0]="2";
 	matrizRespuestas[2][1]="s2";
@@ -132,9 +132,9 @@ function matrizRespuestasMatrices(matrizRespuestas){
 //Matriz de baremación matrices figuras
 function matrizBaremacionMatrices(matrizBaremacion){
 
-	matrizBaremacion[1][0]="0";
-	matrizBaremacion[1][1]="1";
-	matrizBaremacion[1][2]="Muy Bajo";
+	matrizBaremacion[1][0]="0";//respuestas correctas/puntaje directo
+	matrizBaremacion[1][1]="1";//puntaje convertido baremación
+	matrizBaremacion[1][2]="Muy Bajo";//puntaje convertido escala
 
 	matrizBaremacion[2][0]="1";
 	matrizBaremacion[2][1]="1";
