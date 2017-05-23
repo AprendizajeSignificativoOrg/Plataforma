@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pruebas BADYG S</title>
+	<script type="text/javascript" src="RespuestasBADYGSMatricesFiguras.js"></script>
+	<script type="text/javascript" src="C:\BADYGS\CapturaRespuestas.js"></script>
+	<script type="text/javascript" src="C:\BADYGS\Cronometro.js"></script>
+</head>
+<body onload="tiempo(11)"><!--Inicia el cronometro al cargar la pagina-->
+<h1>Prueba Matrices </h1>
+<form name="form" align="right">
+	<input type="text" size="1" class="form_input" name="minute" disabled>:
+	<input type="text" size="1" class="form_input" name="second" disabled>
+</form>
+<form action="" name="cuestionario" method="get" onsubmit="return compararRespuestas(this);">
+<!--Contenedor de enunciados y opciones de respuesta-->
+	<div class="Preguntas1"> 
+		<p>1.</p>		 
+		<input type="radio" name="pregunta1" value="k1">K
+		<label></label>
+		<input type="radio" name="pregunta1" value="l1">L
+		<label></label>
+		<input type="radio" name="pregunta1" value="m1">M
+		<label></label>
+		<input type="radio" name="pregunta1" value="n1">N
+		<label></label>
+		<input type="radio" name="pregunta1" value="o1">O
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>2.</p>		 
+		<input type="radio" name="pregunta2" value="p2">P
+		<label></label>
+		<input type="radio" name="pregunta2" value="q2">Q
+		<label></label>
+		<input type="radio" name="pregunta2" value="r2">R
+		<label></label>
+		<input type="radio" name="pregunta2" value="s2">S
+		<label></label>
+		<input type="radio" name="pregunta2" value="t2">T
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>3.</p>		 
+		<input type="radio" name="pregunta3" value="v3">V
+		<label></label>
+		<input type="radio" name="pregunta3" value="w3">W
+		<label></label>
+		<input type="radio" name="pregunta3" value="x3">X
+		<label></label>
+		<input type="radio" name="pregunta3" value="y3">Y
+		<label></label>
+		<input type="radio" name="pregunta3" value="z3">Z
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>4.</p>		 
+		<input type="radio" name="pregunta4" value="a4">A
+		<label></label>
+		<input type="radio" name="pregunta4" value="b4">B
+		<label></label>
+		<input type="radio" name="pregunta4" value="c4">C
+		<label></label>
+		<input type="radio" name="pregunta4" value="d4">D
+		<label></label>
+		<input type="radio" name="pregunta4" value="e4">E
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>5.</p>		 
+		<input type="radio" name="pregunta5" value="f5">F
+		<label></label>
+		<input type="radio" name="pregunta5" value="g5">G
+		<label></label>
+		<input type="radio" name="pregunta5" value="h5">H
+		<label></label>
+		<input type="radio" name="pregunta5" value="i5">I
+		<label></label>
+		<input type="radio" name="pregunta5" value="j5">J
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>6.</p>		 
+		<input type="radio" name="pregunta6" value="k6">K
+		<label></label>
+		<input type="radio" name="pregunta6" value="l6">L
+		<label></label>
+		<input type="radio" name="pregunta6" value="m6">M
+		<label></label>
+		<input type="radio" name="pregunta6" value="n6">N
+		<label></label>
+		<input type="radio" name="pregunta6" value="o6">O
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>7.</p>		 
+		<input type="radio" name="pregunta7" value="p7">P
+		<label></label>
+		<input type="radio" name="pregunta7" value="q7">Q
+		<label></label>
+		<input type="radio" name="pregunta7" value="r7">R
+		<label></label>
+		<input type="radio" name="pregunta7" value="s7">S
+		<label></label>
+		<input type="radio" name="pregunta7" value="t7">T
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>8.</p>		 
+		<input type="radio" name="pregunta8" value="v8">V
+		<label></label>
+		<input type="radio" name="pregunta8" value="w8">W
+		<label></label>
+		<input type="radio" name="pregunta8" value="x8">X
+		<label></label>
+		<input type="radio" name="pregunta8" value="y8">Y
+		<label></label>
+		<input type="radio" name="pregunta8" value="z8">Z
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>9.</p>		 
+		<input type="radio" name="pregunta9" value="a9">A
+		<label></label>
+		<input type="radio" name="pregunta9" value="b9">B
+		<label></label>
+		<input type="radio" name="pregunta9" value="c9">C
+		<label></label>
+		<input type="radio" name="pregunta9" value="d9">D
+		<label></label>
+		<input type="radio" name="pregunta9" value="e9">E
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>10.</p>		 
+		<input type="radio" name="pregunta10" value="f10">F
+		<label></label>
+		<input type="radio" name="pregunta10" value="g10">G
+		<label></label>
+		<input type="radio" name="pregunta10" value="h10">H
+		<label></label>
+		<input type="radio" name="pregunta10" value="i10">I
+		<label></label>
+		<input type="radio" name="pregunta10" value="j10">J
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>11.</p>		 
+		<input type="radio" name="pregunta11" value="k11">K
+		<label></label>
+		<input type="radio" name="pregunta11" value="l11">L
+		<label></label>
+		<input type="radio" name="pregunta11" value="m11">M
+		<label></label>
+		<input type="radio" name="pregunta11" value="n11">N
+		<label></label>
+		<input type="radio" name="pregunta11" value="o11">O
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>12.</p>		 
+		<input type="radio" name="pregunta12" value="p12">P
+		<label></label>
+		<input type="radio" name="pregunta12" value="q12">Q
+		<label></label>
+		<input type="radio" name="pregunta12" value="r12">R
+		<label></label>
+		<input type="radio" name="pregunta12" value="s12">S
+		<label></label>
+		<input type="radio" name="pregunta12" value="t12">T
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>13.</p>		 
+		<input type="radio" name="pregunta13" value="v13">V
+		<label></label>
+		<input type="radio" name="pregunta13" value="w13">W
+		<label></label>
+		<input type="radio" name="pregunta13" value="x13">X
+		<label></label>
+		<input type="radio" name="pregunta13" value="y13">Y
+		<label></label>
+		<input type="radio" name="pregunta13" value="z13">Z
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>14.</p>		 
+		<input type="radio" name="pregunta14" value="a14">A
+		<label></label>
+		<input type="radio" name="pregunta14" value="b14">B
+		<label></label>
+		<input type="radio" name="pregunta14" value="c14">C
+		<label></label>
+		<input type="radio" name="pregunta14" value="d14">D
+		<label></label>
+		<input type="radio" name="pregunta14" value="e14">E
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>15.</p>		 
+		<input type="radio" name="pregunta15" value="f15">F
+		<label></label>
+		<input type="radio" name="pregunta15" value="g15">G
+		<label></label>
+		<input type="radio" name="pregunta15" value="h15">H
+		<label></label>
+		<input type="radio" name="pregunta15" value="i15">I
+		<label></label>
+		<input type="radio" name="pregunta15" value="j15">J
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>16.</p>		 
+		<input type="radio" name="pregunta16" value="k16">K
+		<label></label>
+		<input type="radio" name="pregunta16" value="l16">L
+		<label></label>
+		<input type="radio" name="pregunta16" value="m16">M
+		<label></label>
+		<input type="radio" name="pregunta16" value="n16">N
+		<label></label>
+		<input type="radio" name="pregunta16" value="o16">O
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>17.</p>		 
+		<input type="radio" name="pregunta17" value="p17">P
+		<label></label>
+		<input type="radio" name="pregunta17" value="q17">Q
+		<label></label>
+		<input type="radio" name="pregunta17" value="r17">R
+		<label></label>
+		<input type="radio" name="pregunta17" value="s17">S
+		<label></label>
+		<input type="radio" name="pregunta17" value="t17">T
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>18.</p>		 
+		<input type="radio" name="pregunta18" value="v18">V
+		<label></label>
+		<input type="radio" name="pregunta18" value="w18">W
+		<label></label>
+		<input type="radio" name="pregunta18" value="x18">X
+		<label></label>
+		<input type="radio" name="pregunta18" value="y18">Y
+		<label></label>
+		<input type="radio" name="pregunta18" value="z18">Z
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>19.</p>		 
+		<input type="radio" name="pregunta19" value="a19">A
+		<label></label>
+		<input type="radio" name="pregunta19" value="b19">B
+		<label></label>
+		<input type="radio" name="pregunta19" value="c19">C
+		<label></label>
+		<input type="radio" name="pregunta19" value="d19">D
+		<label></label>
+		<input type="radio" name="pregunta19" value="e19">E
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>20.</p>		 
+		<input type="radio" name="pregunta20" value="f20">F
+		<label></label>
+		<input type="radio" name="pregunta20" value="g20">G
+		<label></label>
+		<input type="radio" name="pregunta20" value="h20">H
+		<label></label>
+		<input type="radio" name="pregunta20" value="i20">I
+		<label></label>
+		<input type="radio" name="pregunta20" value="j20">J
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>21.</p>		 
+		<input type="radio" name="pregunta21" value="k21">K
+		<label></label>
+		<input type="radio" name="pregunta21" value="l21">L
+		<label></label>
+		<input type="radio" name="pregunta21" value="m21">M
+		<label></label>
+		<input type="radio" name="pregunta21" value="n21">N
+		<label></label>
+		<input type="radio" name="pregunta21" value="o21">O
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>22.</p>		 
+		<input type="radio" name="pregunta22" value="p22">P
+		<label></label>
+		<input type="radio" name="pregunta22" value="q22">Q
+		<label></label>
+		<input type="radio" name="pregunta22" value="r22">R
+		<label></label>
+		<input type="radio" name="pregunta22" value="s22">S
+		<label></label>
+		<input type="radio" name="pregunta22" value="t22">T
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>23.</p>		 
+		<input type="radio" name="pregunta23" value="v23">V
+		<label></label>
+		<input type="radio" name="pregunta23" value="w23">W
+		<label></label>
+		<input type="radio" name="pregunta23" value="x23">X
+		<label></label>
+		<input type="radio" name="pregunta23" value="y23">Y
+		<label></label>
+		<input type="radio" name="pregunta23" value="z23">Z
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>24.</p>		 
+		<input type="radio" name="pregunta24" value="a24">A
+		<label></label>
+		<input type="radio" name="pregunta24" value="b24">B
+		<label></label>
+		<input type="radio" name="pregunta24" value="c24">C
+		<label></label>
+		<input type="radio" name="pregunta24" value="d24">D
+		<label></label>
+		<input type="radio" name="pregunta24" value="e24">E
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>25.</p>		 
+		<input type="radio" name="pregunta25" value="f25">F
+		<label></label>
+		<input type="radio" name="pregunta25" value="g25">G
+		<label></label>
+		<input type="radio" name="pregunta25" value="h25">H
+		<label></label>
+		<input type="radio" name="pregunta25" value="i25">I
+		<label></label>
+		<input type="radio" name="pregunta25" value="j25">J
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>26.</p>		 
+		<input type="radio" name="pregunta26" value="k26">K
+		<label></label>
+		<input type="radio" name="pregunta26" value="l26">L
+		<label></label>
+		<input type="radio" name="pregunta26" value="m26">M
+		<label></label>
+		<input type="radio" name="pregunta26" value="n26">N
+		<label></label>
+		<input type="radio" name="pregunta26" value="o26">O
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>27.</p>		 
+		<input type="radio" name="pregunta27" value="p27">P
+		<label></label>
+		<input type="radio" name="pregunta27" value="q27">Q
+		<label></label>
+		<input type="radio" name="pregunta27" value="r27">R
+		<label></label>
+		<input type="radio" name="pregunta27" value="s27">S
+		<label></label>
+		<input type="radio" name="pregunta27" value="t27">T
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>28.</p>		 
+		<input type="radio" name="pregunta28" value="v28">V
+		<label></label>
+		<input type="radio" name="pregunta28" value="w28">W
+		<label></label>
+		<input type="radio" name="pregunta28" value="x28">X
+		<label></label>
+		<input type="radio" name="pregunta28" value="y28">Y
+		<label></label>
+		<input type="radio" name="pregunta28" value="z28">Z
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>29.</p>		 
+		<input type="radio" name="pregunta29" value="a29">A
+		<label></label>
+		<input type="radio" name="pregunta29" value="b29">B
+		<label></label>
+		<input type="radio" name="pregunta29" value="c29">C
+		<label></label>
+		<input type="radio" name="pregunta29" value="d29">D
+		<label></label>
+		<input type="radio" name="pregunta29" value="e29">E
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>30.</p>		 
+		<input type="radio" name="pregunta30" value="f30">F
+		<label></label>
+		<input type="radio" name="pregunta30" value="g30">G
+		<label></label>
+		<input type="radio" name="pregunta30" value="h30">H
+		<label></label>
+		<input type="radio" name="pregunta30" value="i30">I
+		<label></label>
+		<input type="radio" name="pregunta30" value="j30">J
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>31.</p>		 
+		<input type="radio" name="pregunta31" value="k31">K
+		<label></label>
+		<input type="radio" name="pregunta31" value="l31">L
+		<label></label>
+		<input type="radio" name="pregunta31" value="m31">M
+		<label></label>
+		<input type="radio" name="pregunta31" value="n31">N
+		<label></label>
+		<input type="radio" name="pregunta31" value="o31">O
+		<label></label>
+	</div>
+	<div class="Preguntas1"> 
+		<p>32.</p>		 
+		<input type="radio" name="pregunta32" value="p32">P
+		<label></label>
+		<input type="radio" name="pregunta32" value="q32">Q
+		<label></label>
+		<input type="radio" name="pregunta32" value="r32">R
+		<label></label>
+		<input type="radio" name="pregunta32" value="s32">S
+		<label></label>
+		<input type="radio" name="pregunta32" value="t32">T
+		<label></label>
+	</div>
+
+ 	<input type="submit" name="btn" id="btn" value="enviar">
+</form>
+<script type="text/javascript">
+//function despedida(){
+//	window.open("Despedida.html");
+//}
+	//Algoritmo de captura de respuestas 
+	var correctas=0;
+
+	function compararRespuestas(){//funcción principal
+//		despedida();
+
+		var arregloRespuestas=new Array;//variable de creacion arreglo de captura de respuestas
+		respuestaPrueba(arregloRespuestas);//arreglo respuestas captura rb
+
+		for (var i = 1; i < 2; i++) {
+			
+			if (arregloRespuestas[1]=="l1") {//comparación de respuestas
+				correctas++;//aumento contador
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[2]=="s2") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[3]=="y3") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[4]=="c4") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[5]=="j5") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[6]=="m6") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[7]=="q7") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[8]=="z8") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[9]=="c9") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[10]=="f10") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[11]=="k11") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[12]=="s12") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[13]=="z13") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[14]=="a14") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[15]=="h15") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[16]=="k16") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[17]=="t17") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[18]=="v18") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[19]=="e19") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[20]=="j20") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[21]=="n21") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[22]=="q22") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[23]=="z23") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[24]=="a24") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[25]=="h25") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[26]=="n26") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[27]=="q27") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[28]=="x28") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[29]=="a29") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[30]=="g30") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[31]=="n31") {
+				correctas++;
+			} else {
+				correctas;
+			}
+			if (arregloRespuestas[32]=="q32") {
+				correctas++;
+			} else {
+				correctas;
+			}
+
+			document.write("Puntaje Directo Obtenido por el estudiante "+correctas+"<br>");//imprime respuestas correctas
+		}
+
+		//conversión del puntaje directo del estudiante a puntaje convertido baremación y escala
+		var baremacion,escala;//variables de baremación y escala para la matriz
+		var matrizBaremacion=new Array;//variable creación matriz baremacion
+		for (var i = 0; i < 34; i++) {
+			matrizBaremacion[i]=new Array(3);//creación matriz 33x3
+		}
+		matrizBaremacionMatrices(matrizBaremacion);//matriz baremación 
+
+
+		for (var j = 1; j < 2; j++) {
+			
+			if (correctas==matrizBaremacion[1][0]) {//comparacion de respuestas correctas para conversión de puntajes
+				baremacion=matrizBaremacion[1][1];//asignación del valor del puntaje convertido baremacion
+				escala=matrizBaremacion[1][2];//asignación del valor de la escala
+			} 
+			if (correctas==matrizBaremacion[2][0]) {
+				baremacion=matrizBaremacion[2][1];
+				escala=matrizBaremacion[2][2];
+			}
+			if (correctas==matrizBaremacion[3][0]) {
+				baremacion=matrizBaremacion[3][1];
+				escala=matrizBaremacion[3][2];
+			}
+			if (correctas==matrizBaremacion[4][0]) {
+				baremacion=matrizBaremacion[4][1];
+				escala=matrizBaremacion[4][2];
+			}
+			if (correctas==matrizBaremacion[5][0]) {
+				baremacion=matrizBaremacion[5][1];
+				escala=matrizBaremacion[5][2];
+			}
+			if (correctas==matrizBaremacion[6][0]) {
+				baremacion=matrizBaremacion[6][1];
+				escala=matrizBaremacion[6][2];
+			}
+			if (correctas==matrizBaremacion[7][0]) {
+				baremacion=matrizBaremacion[7][1];
+				escala=matrizBaremacion[7][2];
+			}
+			if (correctas==matrizBaremacion[8][0]) {
+				baremacion=matrizBaremacion[8][1];
+				escala=matrizBaremacion[8][2];
+			}
+			if (correctas==matrizBaremacion[9][0]) {
+				baremacion=matrizBaremacion[9][1];
+				escala=matrizBaremacion[9][2];
+			}
+			if (correctas==matrizBaremacion[10][0]) {
+				baremacion=matrizBaremacion[10][1];
+				escala=matrizBaremacion[10][2];
+			}
+			if (correctas==matrizBaremacion[11][0]) {
+				baremacion=matrizBaremacion[11][1];
+				escala=matrizBaremacion[11][2];
+			}
+			if (correctas==matrizBaremacion[12][0]) {
+				baremacion=matrizBaremacion[12][1];
+				escala=matrizBaremacion[12][2];
+			}
+			if (correctas==matrizBaremacion[13][0]) {
+				baremacion=matrizBaremacion[13][1];
+				escala=matrizBaremacion[13][2];
+			}
+			if (correctas==matrizBaremacion[14][0]) {
+				baremacion=matrizBaremacion[14][1];
+				escala=matrizBaremacion[14][2];
+			}
+			if (correctas==matrizBaremacion[15][0]) {
+				baremacion=matrizBaremacion[15][1];
+				escala=matrizBaremacion[15][2];
+			}
+			if (correctas==matrizBaremacion[16][0]) {
+				baremacion=matrizBaremacion[16][1];
+				escala=matrizBaremacion[16][2];
+			}
+			if (correctas==matrizBaremacion[17][0]) {
+				baremacion=matrizBaremacion[17][1];
+				escala=matrizBaremacion[17][2];
+			}
+			if (correctas==matrizBaremacion[18][0]) {
+				baremacion=matrizBaremacion[18][1];
+				escala=matrizBaremacion[18][2];
+			}
+			if (correctas==matrizBaremacion[19][0]) {
+				baremacion=matrizBaremacion[19][1];
+				escala=matrizBaremacion[19][2];
+			}
+			if (correctas==matrizBaremacion[20][0]) {
+				baremacion=matrizBaremacion[20][1];
+				escala=matrizBaremacion[20][2];
+			}
+			if (correctas==matrizBaremacion[21][0]) {
+				baremacion=matrizBaremacion[21][1];
+				escala=matrizBaremacion[21][2];
+			}
+			if (correctas==matrizBaremacion[22][0]) {
+				baremacion=matrizBaremacion[22][1];
+				escala=matrizBaremacion[22][2];
+			}
+			if (correctas==matrizBaremacion[23][0]) {
+				baremacion=matrizBaremacion[23][1];
+				escala=matrizBaremacion[23][2];
+			}
+			if (correctas==matrizBaremacion[24][0]) {
+				baremacion=matrizBaremacion[24][1];
+				escala=matrizBaremacion[24][2];
+			}
+			if (correctas==matrizBaremacion[25][0]) {
+				baremacion=matrizBaremacion[25][1];
+				escala=matrizBaremacion[25][2];
+			}
+			if (correctas==matrizBaremacion[26][0]) {
+				baremacion=matrizBaremacion[26][1];
+				escala=matrizBaremacion[26][2];
+			}
+			if (correctas==matrizBaremacion[27][0]) {
+				baremacion=matrizBaremacion[27][1];
+				escala=matrizBaremacion[27][2];
+			}
+			if (correctas==matrizBaremacion[28][0]) {
+				baremacion=matrizBaremacion[28][1];
+				escala=matrizBaremacion[28][2];
+			}
+			if (correctas==matrizBaremacion[29][0]) {
+				baremacion=matrizBaremacion[29][1];
+				escala=matrizBaremacion[29][2];
+			}
+			if (correctas==matrizBaremacion[30][0]) {
+				baremacion=matrizBaremacion[30][1];
+				escala=matrizBaremacion[30][2];
+			}
+			if (correctas==matrizBaremacion[31][0]) {
+				baremacion=matrizBaremacion[31][1];
+				escala=matrizBaremacion[31][2];
+			}
+			if (correctas==matrizBaremacion[32][0]) {
+				baremacion=matrizBaremacion[32][1];
+				escala=matrizBaremacion[32][2];
+			}
+			if (correctas==matrizBaremacion[33][0]) {
+				baremacion=matrizBaremacion[33][1];
+				escala=matrizBaremacion[33][2];
+			}
+			document.write("Puntaje Convertido "+baremacion+"% Escala "+escala+"<br><br>");
+		}
+		//Asignación del valor del arreglo de captura a la matriz respuestas
+		var matrizRespuestas=new Array();//variable creación matriz respuesta
+		for (var i = 0; i < 33; i++) {
+			matrizRespuestas[i]=new Array(3);//creación matriz 33x3
+		}
+		matrizRespuestasMatrices(matrizRespuestas);//matriz respuestas
+
+		matrizRespuestas[1][2]=arregloRespuestas[1];//asignación del valor a la matriz
+		matrizRespuestas[2][2]=arregloRespuestas[2];
+		matrizRespuestas[3][2]=arregloRespuestas[3];
+		matrizRespuestas[4][2]=arregloRespuestas[4];
+		matrizRespuestas[5][2]=arregloRespuestas[5];
+		matrizRespuestas[6][2]=arregloRespuestas[6];
+		matrizRespuestas[7][2]=arregloRespuestas[7];
+		matrizRespuestas[8][2]=arregloRespuestas[8];
+		matrizRespuestas[9][2]=arregloRespuestas[9];
+		matrizRespuestas[10][2]=arregloRespuestas[10];
+		matrizRespuestas[11][2]=arregloRespuestas[11];
+		matrizRespuestas[12][2]=arregloRespuestas[12];
+		matrizRespuestas[13][2]=arregloRespuestas[13];
+		matrizRespuestas[14][2]=arregloRespuestas[14];
+		matrizRespuestas[15][2]=arregloRespuestas[15];
+		matrizRespuestas[16][2]=arregloRespuestas[16];
+		matrizRespuestas[17][2]=arregloRespuestas[17];
+		matrizRespuestas[18][2]=arregloRespuestas[18];
+		matrizRespuestas[19][2]=arregloRespuestas[19];
+		matrizRespuestas[20][2]=arregloRespuestas[20];
+		matrizRespuestas[21][2]=arregloRespuestas[21];
+		matrizRespuestas[22][2]=arregloRespuestas[22];
+		matrizRespuestas[23][2]=arregloRespuestas[23];
+		matrizRespuestas[24][2]=arregloRespuestas[24];
+		matrizRespuestas[25][2]=arregloRespuestas[25];
+		matrizRespuestas[26][2]=arregloRespuestas[26];
+		matrizRespuestas[27][2]=arregloRespuestas[27];
+		matrizRespuestas[28][2]=arregloRespuestas[28];
+		matrizRespuestas[29][2]=arregloRespuestas[29];
+		matrizRespuestas[30][2]=arregloRespuestas[30];
+		matrizRespuestas[31][2]=arregloRespuestas[31];
+		matrizRespuestas[32][2]=arregloRespuestas[32];
+	
+	document.write("Matriz de Respuestas<br><br>")//
+	for (var i = 1; i < 33; i++) {//imprime matriz respuestas
+ 		for (var j = 0; j < 3; j++) {
+ 			 document.write("-"+matrizRespuestas[i][j]+"-");
+ 		}
+ 		document.write("<br>");
+ 	}
+
+	}
+</script>
+</body>
+</html>
