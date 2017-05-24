@@ -253,11 +253,11 @@ function mostrarResultados16PF(){
 		for (i=2; i<33; i+=2){
 			/* [i/2] = La variable i se divide en dos ya que la matrizFactoresSecundarios es dos veces más grande que la matrizResultados */
 			
-			/* Sumatoria de: Puntuación directa de cada rasgo de personalidad (matrizResultados[i/2][1]) multiplicada por el valor correspondiente de los cuatro factores secundarios (matrizFactoresSecundarios[i][2]) */
-			factorSecundario1 += matrizResultados[i/2][1] * matrizFactoresSecundarios[i][2];
-			factorSecundario2 += matrizResultados[i/2][1] * matrizFactoresSecundarios[i][3];
-			factorSecundario3 += matrizResultados[i/2][1] * matrizFactoresSecundarios[i][4];
-			factorSecundario4 += matrizResultados[i/2][1] * matrizFactoresSecundarios[i][5];
+			/* Sumatoria de: Decatipo de cada rasgo de personalidad (matrizResultados[i/2][0]) multiplicada por el valor correspondiente de los cuatro factores secundarios (matrizFactoresSecundarios[i][2]) */
+			factorSecundario1 += matrizResultados[i/2][2] * matrizFactoresSecundarios[i][2];
+			factorSecundario2 += matrizResultados[i/2][2] * matrizFactoresSecundarios[i][3];
+			factorSecundario3 += matrizResultados[i/2][2] * matrizFactoresSecundarios[i][4];
+			factorSecundario4 += matrizResultados[i/2][2] * matrizFactoresSecundarios[i][5];
 		}
 		/* A cada factor secundario se le suma la variable k correspondiente a su género (matrizFactoresSecundarios[34][2])*/
 		factorSecundario1 += matrizFactoresSecundarios[34][2];
@@ -272,11 +272,11 @@ function mostrarResultados16PF(){
 			var w = (i/2) + 0.5;
 			/* w = La variable i se divide en dos ya que la matrizFactoresSecundarios es dos veces más grande que la matrizResultados y debido a que el valor resultante no es número entero se le suma 0.5 */
 			
-			/* Sumatoria de: Puntuación directa de cada rasgo de personalidad (matrizResultados[i/2][1]) multiplicada por el valor correspondiente de los cuatro factores secundarios (matrizFactoresSecundarios[i][2]) */
-			factorSecundario1 += matrizResultados[w][1] * matrizFactoresSecundarios[i][2];
-			factorSecundario2 += matrizResultados[w][1] * matrizFactoresSecundarios[i][3];
-			factorSecundario3 += matrizResultados[w][1] * matrizFactoresSecundarios[i][4];
-			factorSecundario4 += matrizResultados[w][1] * matrizFactoresSecundarios[i][5];
+			/* Sumatoria de: Decatipo de cada rasgo de personalidad (matrizResultados[i/2][1]) multiplicada por el valor correspondiente de los cuatro factores secundarios (matrizFactoresSecundarios[i][2]) */
+			factorSecundario1 += matrizResultados[w][2] * matrizFactoresSecundarios[i][2];
+			factorSecundario2 += matrizResultados[w][2] * matrizFactoresSecundarios[i][3];
+			factorSecundario3 += matrizResultados[w][2] * matrizFactoresSecundarios[i][4];
+			factorSecundario4 += matrizResultados[w][2] * matrizFactoresSecundarios[i][5];
 		}
 		/* A cada factor secundario se le suma la variable k correspondiente a su género (matrizFactoresSecundarios[34][2])*/
 		factorSecundario1 += matrizFactoresSecundarios[33][2];
