@@ -303,15 +303,16 @@
 	<input type="submit" name="btn" id="btn" value="enviar">
 </form>
 <script type="text/javascript">
-//function despedida(){
-//	window.open("Despedida.html");
-//}
+function despedida(){
+		window.open("C:/BADYGS/encajarFiguras/BienvenidaEncajarFiguras.html");
+	//window.close(this);
+}
 	//Algoritmo de captura de respuestas
 	var correctas=0;//contador respuestas
 
 
 	function compararRespuestas(){//función principal
-//		despedida();
+		despedida();
 	//comparación de respuestas estudiante y respuesta correcta con contador
 		var arregloRespuestas=new Array;//variable de creacion arreglo de captura de respuestas
 		respuestaPrueba(arregloRespuestas);//arreglo respuestas captura rb
@@ -537,7 +538,7 @@
 				escala=matrizBaremacion[11][2];
 			}
 			if (correctas==matrizBaremacion[12][0]) {
-				baremacion==matrizBaremacion[12][1];
+				baremacion=matrizBaremacion[12][1];
 				escala=matrizBaremacion[12][2];
 			}
 			if (correctas==matrizBaremacion[13][0]) {
@@ -550,7 +551,7 @@
 			}
 			if (correctas==matrizBaremacion[15][0]) {
 				baremacion=matrizBaremacion[15][1];
-				escala=matrizBaremacion[15][0];
+				escala=matrizBaremacion[15][2];
 			}
 			if (correctas==matrizBaremacion[16][0]) {
 				baremacion=matrizBaremacion[16][1];
@@ -625,7 +626,7 @@
 				escala=matrizBaremacion[33][2];
 			}
 
-			document.write("Puntaje Convertido "+baremacion+"% Escala "+escala+"<br><br>");//impresión de puntaje baremacion y escala
+			document.write(" Puntaje Convertido "+baremacion+"% Escala "+escala+"<br><br>");//impresión de puntaje baremacion y escala
 		}
 
 		//asignación de los valores obtenidos en el arreglo de captura a la matriz respuestas
