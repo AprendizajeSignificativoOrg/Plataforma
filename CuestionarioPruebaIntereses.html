@@ -5,31 +5,71 @@
 
 	<!--Librerias importadas-->
 	<script type="text/javascript" src="jquery-3.2.1.js"></script>
-
+	<script type="text/javascript" src="jquery-ui.js"></script>
+	<script type="text/javascript" src="jquery-ui.min.js"></script>
+	<script type="text/javascript" src="Respuestas.js"></script>
+	<link rel="stylesheet" type="text/css" href="EstilosCuestionario.css"/>
+	<script type="text/javascript">	
+  		$( function() {
+    		$( ".Pregunta" ).draggable();
+    		$( "#Contenedor6" ).droppable({
+      			drop: function( event, ui ) {
+      				var item = ui.draggable.attr("id");
+      				recogeRespuestasContenedores(item);
+    			} 		
+    		});
+  		} );
+	</script>	
 </head>
 <body>
-<form>
+
 	<div>
 		<p>PREFIERO UNA ACTIVIDAD EN LA CUAL TENGA QUE:</p>
 	</div>
-	<div>
+	<div class = "Pregunta" id="Pregunta1">
 		<P>A. Explicar matemática y físicamente los probables resultados de un diseño cualquiera<P>
-	</div>
-		<div>
+	</div >
+	<div class = "Pregunta" id="Pregunta2">
 		<P>B. Conocer técnicas de siembra y recolección de frutas <P>
 	</div>
-		<div>
+	<div class = "Pregunta" id="Pregunta3">
 		<P>C. Observar y conocer cómo actúan los reactivos químicos<P>
 	</div>
-		<div>
+	<div class = "Pregunta" id="Pregunta4">
 		<P>D. Vigilar los rendimientos económicos de una empresa <P>
 	</div>
-		<div>
+	<div class = "Pregunta" id="Pregunta5">
 		<P>E. Conocer el comportamiento humano y las causas que lo motivan<P>
 	</div>
-		<div>
+	<div class = "Pregunta" id="Pregunta6">
 		<P>F. Seleccionar la música más adecuada para una película <P>
 	</div>
-</form>
+
+<table>
+	<tr>
+		<td> 6 </td>
+		<td> <div class = "Contenedor" id="Contenedor6"></div></td>
+	</tr>
+	<tr>
+		<td> 5 </td>
+		<td> <div class = "Contenedor" id="Contenedor1-5"></div> </td> 
+	</tr>
+	<tr>
+		<td> 4 </td>
+		<td> <div class = "Contenedor" id="Contenedor1-4"></div> </td>
+	</tr>
+	<tr>
+		<td> 3 </td>
+		<td> <div class = "Contenedor" id="Contenedor1-3"></div> </td>
+	</tr>
+	<tr>
+		<td> 2 </td>
+		<td> <div class = "Contenedor" id="Contenedor1-2"></div> </td>
+	</tr>
+	<tr>
+		<td> 1 </td>
+		<td>  <div class = "Contenedor" id="Contenedor1"></div> </td>
+	</tr>
+</table>
 </body>
 </html>
