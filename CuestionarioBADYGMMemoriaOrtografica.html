@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title> Pruebas BADYG M</title>
+	<script type="text/javascript" src="RespuestasBADYGMMemoriaOrtografica.js">
+	</script>
+	<script type="text/javascript" src="C:\BADYGM\Cronometro.js"></script>
+	<script type="text/javascript" src="C:\BADYGM\CapturaRespuestas.js"></script>
+</head>
+<body onload="tiempo(4);">
+<h1> Prueba Memoria Visual Ortográfica</h1>
+<form name="form" align="right">
+
+	<input type="text" size="1" class="form_input" name="minute" disabled>:
+	<input type="text" size="1" class="form_input" name="second" disabled>
+</form>
+	<form action="" name="cuestionario" method="get" onsubmit="return compararRespuestas(this);">
+		<div class="Preguntas1"> 
+		<!--contenedor de las opciones de respuesta-->
+
+			<p> 1. </p>	 
+			<input type="radio" name="pregunta1"  value="k">
+			<label>K. barbilla.</label>
+			<input type="radio" name="pregunta1"  value="l">
+			<label>L. revivir.</label>
+			<input type="radio" name="pregunta1"  value="m">
+			<label>M. alcool.</label>
+		</div>
+
+		<div class="Preguntas2"> 
+			<p> 2. </p>	 
+			<input type="radio" name="pregunta2"  value="p">
+			<label>P. pavimento.</label>
+			<input type="radio" name="pregunta2"  value="q">
+			<label>Q. diván.</label>
+			<input type="radio" name="pregunta2"  value="r">
+			<label>R. hobispo.</label>
+		</div>
+
+		<div class="Preguntas3"> 
+			<p> 3. </p>	 
+			<input type="radio" name="pregunta3"  value="v">
+			<label>V. provocar.</label>
+			<input type="radio" name="pregunta3"  value="w">
+			<label>W. venevolencia.</label>
+			<input type="radio" name="pregunta3"  value="x">
+			<label>X. bahía.</label>
+		</div>
+
+		<div class="Preguntas4"> 
+			<p> 4. </p>	 
+			<input type="radio" name="pregunta4"  value="a">
+			<label>A. convexo.</label>
+			<input type="radio" name="pregunta4"  value="b">
+			<label>B. benigno.</label>
+			<input type="radio" name="pregunta4"  value="c">
+			<label>C. halergia.</label>
+		</div>
+
+		<div class="Preguntas5"> 
+			<p> 5. </p>	 
+			<input type="radio" name="pregunta5"  value="f">
+			<label>F. entubiar.</label>
+			<input type="radio" name="pregunta5"  value="g">
+			<label>G. flecsible.</label>
+			<input type="radio" name="pregunta5"  value="h">
+			<label>H. carabela.</label>
+		</div>
+
+		<div class="Preguntas6"> 
+			<p> 6. </p>	 
+			<input type="radio" name="pregunta6"  value="k">
+			<label>K. hoyente.</label>
+			<input type="radio" name="pregunta6"  value="l">
+			<label>L. vigía.</label>
+			<input type="radio" name="pregunta6"  value="m">
+			<label>M. hospedaje.</label>
+		</div>
+
+		<div class="Preguntas7"> 
+			<p> 7. </p>	 
+			<input type="radio" name="pregunta7"  value="p">
+			<label>P. axfixia.</label>
+			<input type="radio" name="pregunta7"  value="q">
+			<label>Q. exclusivo.</label>
+			<input type="radio" name="pregunta7"  value="r">
+			<label>R. estrenar.</label>
+		</div>
+
+		<div class="Preguntas8"> 
+			<p> 8. </p>	 
+			<input type="radio" name="pregunta8"  value="v">
+			<label>V. injerto.</label>
+			<input type="radio" name="pregunta8"  value="w">
+			<label>W. objetibo.</label>
+			<input type="radio" name="pregunta8"  value="x">
+			<label>X. hondo.</label>
+		</divx>
+
+		<div class="Preguntas9"> 
+			<p> 9. </p>	 
+			<input type="radio" name="pregunta9"  value="a">
+			<label>A. inolvidable.</label>
+			<input type="radio" name="pregunta9"  value="b">
+			<label>B. rebés.</label>
+			<input type="radio" name="pregunta9"  value="c">
+			<label>C. jubilarse.</label>
+		</divc>
+
+		<div class="Preguntas10"> 
+			<p> 10. </p>	 
+			<input type="radio" name="pregunta10" value="f" >
+			<label>F. hóvalo.</label>
+			<input type="radio" name="pregunta10" value="g" >
+			<label>G. ondular.</label>
+			<input type="radio" name="pregunta10" value="h" >
+			<label>H. elíptico.</label>
+		</divh>
+		
+		<div class="Preguntas11"> 
+			<p> 11. </p>	 
+			<input type="radio" name="pregunta11" value="k" >
+			<label>K. advertir.</label>
+			<input type="radio" name="pregunta11" value="l" >
+			<label>L. microvio.</label>
+			<input type="radio" name="pregunta11" value="m" >
+			<label>M. joya.</label>
+		</div>
+
+		<div class="Preguntas12"> 
+			<p> 12. </p>	 
+			<input type="radio" name="pregunta12" value="p" >
+			<label>P. abedul.</label>
+			<input type="radio" name="pregunta12" value="q" >
+			<label>Q. lobezno.</label>
+			<input type="radio" name="pregunta12" value="r" >
+			<label>R. bocavulario.</label>
+		</div>
+
+		<div class="Preguntas13"> 
+			<p> 13. </p>	 
+			<input type="radio" name="pregunta13" value="v" >
+			<label>V. robólver.</label>
+			<input type="radio" name="pregunta13" value="w" >
+			<label>W. acceso.</label>
+			<input type="radio" name="pregunta13" value="x" >
+			<label>X. ahogar.</label>
+		</div>
+
+		<div class="Preguntas14"> 
+			<p> 14. </p>	 
+			<input type="radio" name="pregunta14" value="a" >
+			<label>A. disolver.</label>
+			<input type="radio" name="pregunta14" value="b" >
+			<label>B. ardor.</label>
+			<input type="radio" name="pregunta14" value="c" >
+			<label>C. lóvulo.</label>
+		</div>
+
+		<div class="Preguntas15"> 
+			<p> 15. </p>	 
+			<input type="radio" name="pregunta15" value="f" >
+			<label>F. abdomen.</label>
+			<input type="radio" name="pregunta15" value="g" >
+			<label>G. cerbeza.</label>
+			<input type="radio" name="pregunta15" value="h" >
+			<label>H. valija.</label>
+		</div>
+
+		<div class="Preguntas16"> 
+			<p> 16. </p>	 
+			<input type="radio" name="pregunta16" value="k" >
+			<label>K. elavorar.</label>
+			<input type="radio" name="pregunta16" value="l" >
+			<label>L. divisar.</label>
+			<input type="radio" name="pregunta16" value="m" >
+			<label>M. extraviar.</label>
+		</div>
+
+		<div class="Preguntas17"> 
+			<p> 17. </p>	 
+			<input type="radio" name="pregunta17" value="p" >
+			<label>P. atrayente.</label>
+			<input type="radio" name="pregunta17" value="q" >
+			<label>Q. hebanista.</label>
+			<input type="radio" name="pregunta17" value="r" >
+			<label>R. envasar.</label>
+		</div>
+
+		<div class="Preguntas18"> 
+			<p> 18. </p>	 
+			<input type="radio" name="pregunta18" value="v">
+			<label>V. viveza.</label>
+			<input type="radio" name="pregunta18" value="w">
+			<label>W. bisabuelo.</label>
+			<input type="radio" name="pregunta18" value="x">
+			<label>X. bálbula.</label>
+		</div>
+
+		<div class="Preguntas19"> 
+			<p> 19. </p>	 
+			<input type="radio" name="pregunta19" value="a" >
+			<label>A. vaho.</label>
+			<input type="radio" name="pregunta19" value="b" >
+			<label>B. biombo.</label>
+			<input type="radio" name="pregunta19" value="c" >
+			<label>C. trivunal.</label>
+		</div>
+
+		<div class="Preguntas20"> 
+			<p> 20. </p>	 
+			<input type="radio" name="pregunta20" value="f" >
+			<label>F. allazgo.</label>
+			<input type="radio" name="pregunta20" value="g" >
+			<label>G. ahondar.</label>
+			<input type="radio" name="pregunta20" value="h" >
+			<label>H. abordar.</label>
+		</div>
+
+		<div class="Preguntas21"> 
+			<p> 21. </p>	 
+			<input type="radio" name="pregunta21" value="k" >
+			<label>K. ipnotizar.</label>
+			<input type="radio" name="pregunta21" value="l" >
+			<label>L. innovar.</label>
+			<input type="radio" name="pregunta21" value="m" >
+			<label>M. anhelar.</label>
+		</div>
+
+		<div class="Preguntas22"> 
+			<p> 22. </p>	 
+			<input type="radio" name="pregunta22" value="p" >
+			<label>P. rebelde.</label>
+			<input type="radio" name="pregunta22" value="q" >
+			<label>Q. ábil.</label>
+			<input type="radio" name="pregunta22" value="r" >
+			<label>R. encaje.</label>
+		</div>
+
+		<div class="Preguntas23"> 
+			<p> 23. </p>	 
+			<input type="radio" name="pregunta23" value="v" >
+			<label>V. harpón.</label>
+			<input type="radio" name="pregunta23" value="w" >
+			<label>W. arpa.</label>
+			<input type="radio" name="pregunta23" value="x" >
+			<label>X. halcón</label>
+		</div>
+
+		<div class="Preguntas24"> 
+			<p> 24. </p>	 
+			<input type="radio" name="pregunta24" value="a" >
+			<label>A. deshonra.</label>
+			<input type="radio" name="pregunta24" value="b" >
+			<label>B. diversidad.</label>
+			<input type="radio" name="pregunta24" value="c" >
+			<label>C. desbán.</label>
+		</div>
+
+		<div class="Preguntas25"> 
+			<p> 25. </p>	 
+			<input type="radio" name="pregunta25" value="f" >
+			<label>F. lavabo.</label>
+			<input type="radio" name="pregunta25" value="g" >
+			<label>G. cabidad.</label>
+			<input type="radio" name="pregunta25" value="h" >
+			<label>H. balanvolea.</label>
+		</div>
+
+		<div class="Preguntas26"> 
+			<p> 26. </p>	 
+			<input type="radio" name="pregunta26" value="k" >
+			<label>K. dirijible.</label>
+			<input type="radio" name="pregunta26" value="l" >
+			<label>L. imagen.</label>
+			<input type="radio" name="pregunta26" value="m" >
+			<label>M. pingajo.</label>
+		</div>
+
+		<div class="Preguntas27"> 
+			<p> 27. </p>	 
+			<input type="radio" name="pregunta27" value="p" >
+			<label>P. embalaje.</label>
+			<input type="radio" name="pregunta27" value="q" >
+			<label>Q. divergente.</label>
+			<input type="radio" name="pregunta27" value="r" >
+			<label>R. javalí.</label>
+		</div>
+
+		<div class="Preguntas28"> 
+			<p> 28. </p>	 
+			<input type="radio" name="pregunta28" value="v" >
+			<label>V. homenajear.</label>
+			<input type="radio" name="pregunta28" value="w" >
+			<label>W. olgazán.</label>
+			<input type="radio" name="pregunta28" value="x" >
+			<label>X. obesidad.</label>
+		</div>
+
+		<div class="Preguntas29"> 
+			<p> 29. </p>	 
+			<input type="radio" name="pregunta29" value="a" >
+			<label>A. glóbulo.</label>
+			<input type="radio" name="pregunta29" value="b" >
+			<label>B. clavija.</label>
+			<input type="radio" name="pregunta29" value="c" >
+			<label>C. homnívoro.</label>
+		</div>
+
+		<div class="Preguntas30"> 
+			<p> 30. </p>	 
+			<input type="radio" name="pregunta30" value="f">
+			<label>F. emorragia.</label>
+			<input type="radio" name="pregunta30" value="g" >
+			<label>G. expirar.</label>
+			<input type="radio" name="pregunta30" value="h" >
+			<label>H. malhechor.</label>
+		</div>
+
+		<div class="Preguntas31"> 
+			<p> 31. </p>	 
+			<input type="radio" name="pregunta31" value="k" >
+			<label>K. avalanzar.</label>
+			<input type="radio" name="pregunta31" value="l" >
+			<label>L. través.</label>
+			<input type="radio" name="pregunta31" value="m" >
+			<label>M. divorcio.</label>
+		</div>
+
+		<div class="Preguntas32"> 
+			<p> 32. </p>	 
+			<input type="radio" name="pregunta32" value="p" >
+			<label>P. rebasar.</label>
+			<input type="radio" name="pregunta32" value="q" >
+			<label>Q. esquibar.</label>
+			<input type="radio" name="pregunta32" value="r" >
+			<label>R. haba.</label>
+		</div>
+		<input type="submit" name="btn" id="btn" value="enviar">
+	</form>
+	<script type="text/javascript">
+		//ALGORITMO DE CAPTURA DE RESPUESTAS MEMORIA RELATO ORAL
+	function despedida(){
+		window.open("C:/BADYGM/discriminarDiferencias/BienvenidaBADYGMDiscriminarDiferencias.html");
+	//window.close(this);
+}
+	var  correctas=0;//contador
+	
+function compararRespuestas(){//función principal
+	despedida();
+	var arregloRespuestas=new Array();//variable arreglo de captura
+	
+	respuestaPrueba(arregloRespuestas);//arreglo de captura
+
+	for (var i = 1; i < 2; i++) {//recorrido del arreglo
+		if (arregloRespuestas[1]=="m") {//comparación de respuestas
+			correctas++;//contador en aumento
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[2]=="r") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[3]=="w") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[4]=="c") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[5]=="g") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[6]=="k") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[7]=="p") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[8]=="w") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[9]=="b") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[10]=="f") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[11]=="l") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[12]=="r") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[13]=="v") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[14]=="c") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[15]=="g") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[16]=="k") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[17]=="q") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[18]=="x") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[19]=="c") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[20]=="f") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[21]=="k") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[22]=="q") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[23]=="v") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[24]=="c") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[25]=="g") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[26]=="k") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[27]=="r") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[28]=="w") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[29]=="c") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[30]=="f") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[31]=="k") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[32]=="q") {
+			correctas++;
+		} else {
+			correctas;
+		}
+
+		document.write("Puntaje Directo Obtenido por el estudiante "+correctas+"<br>");//imprime contador de respuestas correctas
+	}
+	var baremacion,escala;//variables baremación y escala
+
+	var matrizBaremacion=new Array();//variable matriz baremación
+	for (var i = 0; i < 34; i++) {
+		matrizBaremacion[i]=new Array(3);//creación matriz 33x3
+	}
+
+	matrizBaremacionMemoria(matrizBaremacion);//matriz baremación
+
+	for (var j = 1; j < 2; j++) {//recorrido matriz
+		
+		if (correctas==matrizBaremacion[1][0]) {//comparación de matriz y respuestas correctas
+			baremacion=matrizBaremacion[1][1];//asignación del valor de la matriz del puntaje convertido
+			escala=matrizBaremacion[1][2];//asignación del valor de la matriz de la Escala
+		}
+
+		if (correctas==matrizBaremacion[2][0]) {
+			baremacion=matrizBaremacion[2][1];
+			escala=matrizBaremacion[2][2];
+		}
+		if (correctas==matrizBaremacion[3][0]) {
+			baremacion=matrizBaremacion[3][1];
+			escala=matrizBaremacion[3][2];
+		}
+
+		if (correctas==matrizBaremacion[4][0]) {
+			baremacion=matrizBaremacion[4][1];
+			escala=matrizBaremacion[4][2];
+		}
+		if (correctas==matrizBaremacion[5][0]) {
+			baremacion=matrizBaremacion[5][1];
+			escala=matrizBaremacion[5][2];
+		}
+		if (correctas==matrizBaremacion[6][0]) {
+			baremacion=matrizBaremacion[6][1];
+			escala=matrizBaremacion[6][2];
+		}
+
+		if (correctas==matrizBaremacion[7][0]) {
+			baremacion=matrizBaremacion[7][1];
+			escala=matrizBaremacion[7][2];
+		}
+		if (correctas==matrizBaremacion[8][0]) {
+			baremacion=matrizBaremacion[8][1];
+			escala=matrizBaremacion[8][2];
+		}
+
+		if (correctas==matrizBaremacion[9][0]) {
+			baremacion=matrizBaremacion[9][1];
+			escala=matrizBaremacion[9][2];
+		}
+
+		if (correctas==matrizBaremacion[10][0]) {
+			baremacion=matrizBaremacion[10][1];
+			escala=matrizBaremacion[10][2];
+		}
+
+		if (correctas==matrizBaremacion[11][0]) {
+			baremacion=matrizBaremacion[11][1];
+			escala=matrizBaremacion[11][2];
+		}
+		if (correctas==matrizBaremacion[12][0]) {
+			baremacion=matrizBaremacion[12][1];
+			escala=matrizBaremacion[12][2];
+		}
+
+		if (correctas==matrizBaremacion[13][0]) {
+			baremacion=matrizBaremacion[13][1];
+			escala=matrizBaremacion[13][2];
+		}
+		if (correctas==matrizBaremacion[14][0]) {
+			baremacion=matrizBaremacion[14][1];
+			escala=matrizBaremacion[14][2];
+		}
+		if (correctas==matrizBaremacion[15][0]) {
+			baremacion=matrizBaremacion[15][1];
+			escala=matrizBaremacion[15][2];
+		}
+
+		if (correctas==matrizBaremacion[16][0]) {
+			baremacion=matrizBaremacion[16][1];
+			escala=matrizBaremacion[16][2];
+		}
+		if (correctas==matrizBaremacion[17][0]) {
+			baremacion=matrizBaremacion[17][1];
+			escala=matrizBaremacion[17][2];
+		}
+
+		if (correctas==matrizBaremacion[18][0]) {
+			baremacion=matrizBaremacion[18][1];
+			escala=matrizBaremacion[18][2];
+		}
+
+		if (correctas==matrizBaremacion[19][0]) {
+			baremacion=matrizBaremacion[19][1];
+			escala=matrizBaremacion[19][2];
+		}
+
+		if (correctas==matrizBaremacion[20][0]) {
+			baremacion=matrizBaremacion[20][1];
+			escala=matrizBaremacion[20][2];
+		}
+		if (correctas==matrizBaremacion[21][0]) {
+			baremacion=matrizBaremacion[21][1];
+			escala=matrizBaremacion[21][2];
+		}
+
+		if (correctas==matrizBaremacion[22][0]) {
+			baremacion=matrizBaremacion[22][1];
+			escala=matrizBaremacion[22][2];
+		}
+		if (correctas==matrizBaremacion[23][0]) {
+			baremacion=matrizBaremacion[23][1];
+			escala=matrizBaremacion[23][2];
+		}
+		if (correctas==matrizBaremacion[24][0]) {
+			baremacion=matrizBaremacion[24][1];
+			escala=matrizBaremacion[24][2];
+		}
+
+		if (correctas==matrizBaremacion[25][0]) {
+			baremacion=matrizBaremacion[25][1];
+			escala=matrizBaremacion[25][2];
+		}
+		if (correctas==matrizBaremacion[26][0]) {
+			baremacion=matrizBaremacion[26][1];
+			escala=matrizBaremacion[26][2];
+		}
+
+		if (correctas==matrizBaremacion[27][0]) {
+			baremacion=matrizBaremacion[27][1];
+			escala=matrizBaremacion[27][2];
+		}
+
+		if (correctas==matrizBaremacion[28][0]) {
+			baremacion=matrizBaremacion[28][1];
+			escala=matrizBaremacion[28][2];
+		}
+		if (correctas==matrizBaremacion[29][0]) {
+			baremacion=matrizBaremacion[29][1];
+			escala=matrizBaremacion[29][2];
+		}
+		if (correctas==matrizBaremacion[30][0]) {
+			baremacion=matrizBaremacion[30][1];
+			escala=matrizBaremacion[30][2];
+		}
+
+		if (correctas==matrizBaremacion[31][0]) {
+			baremacion=matrizBaremacion[31][1];
+			escala=matrizBaremacion[31][2];
+		}
+		if (correctas==matrizBaremacion[32][0]) {
+			baremacion=matrizBaremacion[32][1];
+			escala=matrizBaremacion[32][2];
+		}
+
+		if (correctas==matrizBaremacion[33][0]) {
+			baremacion=matrizBaremacion[33][1];
+			escala=matrizBaremacion[33][2];
+		}
+		document.write(" Puntaje convertido "+baremacion+"% Escala "+escala+"<br><br>");//imprime puntaje convertido y escala
+	}
+
+	var matrizRespuestas=new Array();//variable matriz respuestas
+	for (var i = 0; i < 33; i++) {//
+		matrizRespuestas[i]=new Array(3);//creacion martriz 32x3
+	}
+	matrizRespuestasMemoria(matrizRespuestas);//matriz respuestas
+
+	matrizRespuestas[1][2]=arregloRespuestas[1];//asignación de respuestas estudiante a la matriz por indice
+	matrizRespuestas[2][2]=arregloRespuestas[2];
+	matrizRespuestas[3][2]=arregloRespuestas[3];
+	matrizRespuestas[4][2]=arregloRespuestas[4];
+	matrizRespuestas[5][2]=arregloRespuestas[5];
+	matrizRespuestas[6][2]=arregloRespuestas[6];
+	matrizRespuestas[7][2]=arregloRespuestas[7];
+	matrizRespuestas[8][2]=arregloRespuestas[8];
+	matrizRespuestas[9][2]=arregloRespuestas[9];
+	matrizRespuestas[10][2]=arregloRespuestas[10];
+	matrizRespuestas[11][2]=arregloRespuestas[11];
+	matrizRespuestas[12][2]=arregloRespuestas[12];
+	matrizRespuestas[13][2]=arregloRespuestas[13];
+	matrizRespuestas[14][2]=arregloRespuestas[14];
+	matrizRespuestas[15][2]=arregloRespuestas[15];
+	matrizRespuestas[16][2]=arregloRespuestas[16];
+	matrizRespuestas[17][2]=arregloRespuestas[17];
+	matrizRespuestas[18][2]=arregloRespuestas[18];
+	matrizRespuestas[19][2]=arregloRespuestas[19];
+	matrizRespuestas[20][2]=arregloRespuestas[20];
+	matrizRespuestas[21][2]=arregloRespuestas[21];
+	matrizRespuestas[22][2]=arregloRespuestas[22];
+	matrizRespuestas[23][2]=arregloRespuestas[23];
+	matrizRespuestas[24][2]=arregloRespuestas[24];
+	matrizRespuestas[25][2]=arregloRespuestas[25];
+	matrizRespuestas[26][2]=arregloRespuestas[26];
+	matrizRespuestas[27][2]=arregloRespuestas[27];
+	matrizRespuestas[28][2]=arregloRespuestas[28];
+	matrizRespuestas[29][2]=arregloRespuestas[29];
+	matrizRespuestas[30][2]=arregloRespuestas[30];
+	matrizRespuestas[31][2]=arregloRespuestas[31];
+	matrizRespuestas[32][2]=arregloRespuestas[32];
+
+	/*document.write("Matriz de Respuestas<br><br>")//
+	for (var i = 1; i < 33; i++) {//imprime matriz
+ 		for (var j = 0; j < 3; j++) {
+ 			 document.write(" -"+matrizRespuestas[i][j]+"- ");
+ 		}
+ 		document.write("<br>");
+ 	}*/
+
+}
+
+	</script>
+</body>
+</html>
