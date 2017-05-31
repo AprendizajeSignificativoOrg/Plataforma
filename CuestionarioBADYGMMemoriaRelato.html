@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Prueba BADYG M </title>
+	<script type="text/javascript" src="RespuestasBADYGMMemoriaRelato.js"></script>
+	<script type="text/javascript" src="C:\BADYGM\Cronometro.js"></script>
+	<script type="text/javascript" src="C:\BADYGM\CapturaRespuestas.js"></script>
+</head>
+<body onload="tiempo(6);">
+<h1>Prueba Memoria de Relato Oral</h1>
+<form name="form" align="right">
+	<input type="text" size="1" class="form_input" name="minute" disabled>:
+	<input type="text" size="1" class="form_input" name="second" disabled>
+</form>
+<form action="" name="cuestionario" method="get" onsubmit="return compararRespuestas(this);">
+	<div class="Preguntas1">
+	<!--contenedor de las preguntas con enunciado y las respuestas--> 
+	
+		<p> 1. ¿En qué día, mes y año se sitúa este relato? </p>	 
+		<input type="radio" name="pregunta1" value="f">
+		<label>F. A Un día de octubre de 1776.</label>
+		<input type="radio" name="pregunta1" value="g">
+		<label>G. A 25 de octubre de 1776.</label>
+		<input type="radio" name="pregunta1" value="h">
+		<label>H. Un día de agosto de 1980.</label>
+	</div>
+
+	<div class="Preguntas2"> 
+		<p> 2. ¿Por qué no avanzaban apenas aquel día?</p>	 
+		<input type="radio" name="pregunta2" value="k">
+		<label>K. Por la fuerte tormenta.</label>
+		<input type="radio" name="pregunta2" value="l">
+		<label>L. Por ausencia de viento.</label>
+		<input type="radio" name="pregunta2" value="m">
+		<label>M. Por la niebla y lluvia.</label>
+	</div>
+
+	<div class="Preguntas3"> 
+		<p> 3. ¿Dónde estaba matriculado el barco con el que se cruzaron?</p>	 
+		<input type="radio" name="pregunta3" value="p">
+		<label>P. En Londres.</label>
+		<input type="radio" name="pregunta3" value="q">
+		<label>Q. En París.</label>
+		<input type="radio" name="pregunta3" value="r">
+		<label>R. En Quebec.</label>
+	</div>
+
+	<div class="Preguntas4"> 
+		<p> 4. ¿Qué tenía el capitán del Victoria en lugar del brazo?</p>	 
+		<input type="radio" name="pregunta4" value="v">
+		<label>V. Un hueso a modo garfio.</label>
+		<input type="radio" name="pregunta4" value="w">
+		<label>W. Un brazo artificial de madera.</label>
+		<input type="radio" name="pregunta4" value="x">
+		<label>X. Un hueso de cachalote.</label>
+	</div>
+
+	<div class="Preguntas5"> 
+		<p> 5. ¿Qué miembro había perdido el capitán Philip?</p>	 
+		<input type="radio" name="pregunta5" value="a">
+		<label>A. Una pierna.</label>
+		<input type="radio" name="pregunta5" value="b">
+		<label>B. Un brazo.</label>
+		<input type="radio" name="pregunta5" value="c">
+		<label>C. Un brazo y una pierna.</label>
+	</div>
+
+	<div class="Preguntas6">
+		<p> 6. ¿En qué pasaron al barco?</p>	 
+		<input type="radio" name="pregunta6" value="f">
+		<label>F. Remando, en una balsa.</label>
+		<input type="radio" name="pregunta6" value="g">
+		<label>G. En una pequena lancha auxiliar.</label>
+		<input type="radio" name="pregunta6" value="h">
+		<label>H. En un bote de remos.</label>
+	</div>
+
+	<div class="Preguntas7"> 
+		<p> 7. ¿Quiénes llevaron al capitán Philip al Victoria?</p>	 
+		<input type="radio" name="pregunta7" value="k">
+		<label>K. Sus hombres de confianza.</label>
+		<input type="radio" name="pregunta7" value="l">
+		<label>L. Cuatro remeros.</label>
+		<input type="radio" name="pregunta7" value="m">
+		<label>M. Cuatro de sus oficiales.</label>
+	</div>
+
+	<div class="Preguntas8"> 
+		<p> 8. ¿Qué hicieron a modo de saludo ambos capitanes?</p>	 
+		<input type="radio" name="pregunta8" value="p">
+		<label>P. Nada, no eran ceremoniosos.</label>
+		<input type="radio" name="pregunta8" value="q">
+		<label>Q. Un apretón de manos.</label>
+		<input type="radio" name="pregunta8" value="r">
+		<label>R. Entrechocaron los huesos.</label>
+	</div>
+
+	<div class="Preguntas9"> 
+		<p> 9. ¿En qué zona tuvo lugar el encuentro con Moby Dick?</p>	 
+		<input type="radio" name="pregunta9" value="v">
+		<label>V. No se precisa en el relato.</label>
+		<input type="radio" name="pregunta9" value="w">
+		<label>W. En el Ecuador.</label>
+		<input type="radio" name="pregunta9" value="x">
+		<label>X. En alta mar.</label>
+	</div>
+
+	<div class="Preguntas10"> 
+		<p> 10. ¿Cuándo se había encontrado con Moby Dick?</p>	 
+		<input type="radio" name="pregunta10" value="a">
+		<label>A. La temorada pasada.</label>
+		<input type="radio" name="pregunta10" value="b">
+		<label>B. Hacía unos pocos meses.</label>
+		<input type="radio" name="pregunta10" value="c">
+		<label>C. Hacía ya mucho tiempo.</label>
+	</div>
+
+	<div class="Preguntas11">
+		<p> 11. ¿Qué hicieron al ver los cinco cachalotes?</p>	 
+		<input type="radio" name="pregunta11" value="f">
+		<label>F. Seguir adelante buscando ballenas.</label>
+		<input type="radio" name="pregunta11" value="g">
+		<label>G. Salir en persecución.</label>
+		<input type="radio" name="pregunta11" value="h">
+		<label>H. Esperar a ver a Moby Dick.</label>
+	</div>
+
+	<div class="Preguntas12"> 
+		<p> 12. ¿Cuántas veces había pescado en aquella zona?</p>	 
+		<input type="radio" name="pregunta12" value="k">
+		<label>K. Era la primera vez.</label>
+		<input type="radio" name="pregunta12" value="l">
+		<label>L. A menudo.</label>
+		<input type="radio" name="pregunta12" value="m">
+		<label>M. Dos temporadas.</label>
+	</div>
+
+	<div class="Preguntas13"> 
+		<p> 13. ¿A quién habían clavado el primer arpón?</p>	 
+		<input type="radio" name="pregunta13" value="p">
+		<label>P. A Moby Dick.</label>
+		<input type="radio" name="pregunta13" value="q">
+		<label>Q. A una enorme ballena.</label>
+		<input type="radio" name="pregunta13" value="r">
+		<label>R. A uno de los cachalotes.</label>
+	</div>
+
+	<div class="Preguntas14"> 
+		<p> 14. ¿De dónde surgió Moby Dick?</p>
+		<input type="radio" name="pregunta14" value="v">
+		<label>V. De entre los cachalotes.</label>
+		<input type="radio" name="pregunta14" value="w">
+		<label>W. Del fondo del mar.</label>
+		<input type="radio" name="pregunta14" value="x">
+		<label>X. De las profundidades.</label>
+	</div>
+
+	<div class="Preguntas15"> 
+		<p> 15. ¿Cómo se describe a Moby Dick?</p>	 
+		<input type="radio" name="pregunta15" value="a">
+		<label>A. Enorme, blanca, con joroba y callosidades.</label>
+		<input type="radio" name="pregunta15" value="b">
+		<label>B. Con joroba, feroz, asesina.</label>
+		<input type="radio" name="pregunta15" value="c">
+		<label>C. Con manchas negras y callosidades.</label>
+	</div>
+
+	<div class="Preguntas16">
+		<p> 16. ¿Qué se le enredó a Moby Dick?</p>	 
+		<input type="radio" name="pregunta16" value="f">
+		<label>F. Las redes.</label>
+		<input type="radio" name="pregunta16" value="g">
+		<label>G. Un cable.</label>
+		<input type="radio" name="pregunta16" value="h">
+		<label>H. Varios arpones.</label>
+	</div>
+
+	<div class="Preguntas17"> 
+		<p> 17. ¿Dónde se le habia enredado?</p>	 
+		<input type="radio" name="pregunta17" value="k">
+		<label>K. Entre sus callosidades y joroba.</label>
+		<input type="radio" name="pregunta17" value="l">
+		<label>L. Entre los arpones que tenia clavados.</label>
+		<input type="radio" name="pregunta17" value="m">
+		<label>M. Entre los dientes.</label>
+	</div>
+
+	<div class="Preguntas18"> 
+		<p> 18. ¿Quién lanzó el arpón a Moby Dick?</p>	 
+		<input type="radio" name="pregunta18" value="p">
+		<label>P. Un marinero.</label>
+		<input type="radio" name="pregunta18" value="q">
+		<label>Q. El capitán.</label>
+		<input type="radio" name="pregunta18" value="r">
+		<label>R. El primer oficial.</label>
+	</div>
+
+	<div class="Preguntas19"> 
+		<p> 19. ¿Reconoció el capitán a Moby Dick?</p>	 
+		<input type="radio" name="pregunta19" value="v">
+		<label>V. Era la primera vez que lo veía.</label>
+		<input type="radio" name="pregunta19" value="w">
+		<label>W. La reconoció enseguida.</label>
+		<input type="radio" name="pregunta19" value="x">
+		<label>X. Ya la había visto otra vez.</label>
+	</div>
+
+	<div class="Preguntas20"> 
+		<p> 20. ¿Qué hizo Moby Dick con la cola?</p>	 
+		<input type="radio" name="pregunta20" value="a">
+		<label>A. Hirió al capitán en el brazo.</label>
+		<input type="radio" name="pregunta20" value="b">
+		<label>B. Tiró a los que iban en el primer bote.</label>
+		<input type="radio" name="pregunta20" value="c">
+		<label>C. Partió el bote en dos.</label>
+	</div>
+
+	<div class="Preguntas21">
+		<p> 21. ¿Qué tenía Moby Dick en diversas partes del cuerpo?</p>	 
+		<input type="radio" name="pregunta21" value="f">
+		<label>F. Manchas blancas.</label>
+		<input type="radio" name="pregunta21" value="g">
+		<label>G. Otros arpones clavados.</label>
+		<input type="radio" name="pregunta21" value="h">
+		<label>H. Manchas de antiguas heridas.</label>
+	</div>
+
+	<div class="Preguntas22"> 
+		<p> 22. ¿Con qué se compara cuando estuvo agarrado del arpón?</p>	 
+		<input type="radio" name="pregunta22" value="k">
+		<label>K. A la oscilación del péndulo de en reloj.</label>
+		<input type="radio" name="pregunta22" value="l">
+		<label>L. A lo embravecido del movimienro de las olas.</label>
+		<input type="radio" name="pregunta22" value="m">
+		<label>M. A la trayectoria del arpón.</label>
+	</div>
+
+	<div class="Preguntas23"> 
+		<p> 23. ¿Dónde se agarró el capitán?</p>	 
+		<input type="radio" name="pregunta23" value="p">
+		<label>P. A unas tablas del bote.</label>
+		<input type="radio" name="pregunta23" value="q">
+		<label>Q. Al arpón que él mismo había clavado.</label>
+		<input type="radio" name="pregunta23" value="r">
+		<label>R. Al bote del primer oficial.</label>
+	</div>
+
+	<div class="Preguntas24"> 
+		<p> 24. ¿Cuánto tiempo estuvo agarrado?</p>	 
+		<input type="radio" name="pregunta24" value="v">
+		<label>V. Unos instantes.</label>
+		<input type="radio" name="pregunta24" value="w">
+		<label>W. Varios minutos.</label>
+		<input type="radio" name="pregunta24" value="x">
+		<label>X. Mientras le arrastraba.</label>
+	</div>
+
+	<div class="Preguntas25"> 
+		<p> 25. ¿Quién cuenta los detalles de la herida?</p>	 
+		<input type="radio" name="pregunta25" value="a">
+		<label>A. El narrados, en tercera persona.</label>
+		<input type="radio" name="pregunta25" value="b">
+		<label>B. El propio capitán.</label>
+		<input type="radio" name="pregunta25" value="c">
+		<label>C. El doctor.</label>
+	</div>
+
+	<div class="Preguntas26">
+		<p> 26. ¿Qué le recomendó inicialmenre el doctor al capitán?</p>	 
+		<input type="radio" name="pregunta26" value="f">
+		<label>F. Evitar la gangrena.</label>
+		<input type="radio" name="pregunta26" value="g">
+		<label>G. Cortar el brazo.</label>
+		<input type="radio" name="pregunta26" value="h">
+		<label>H. Poner rumbo a la tierra más cercana.</label>
+	</div>
+
+	<div class="Preguntas27"> 
+		<p> 27. ¿Cuándo se enteró el capitán del Victoria de la fama de ferocidad de Moby Dick? </p>	 
+		<input type="radio" name="pregunta27" value="k">
+		<label>K. Al cabo de unos meses.</label>
+		<input type="radio" name="pregunta27" value="l">
+		<label>L. En ese mismo instante.</label>
+		<input type="radio" name="pregunta27" value="m">
+		<label>M. A los pocos días.</label>
+	</div>
+
+	<div class="Preguntas28"> 
+		<p> 28. ¿Vio a Moby Dick alguna vez más el capitán del Victoria?</p>	 
+		<input type="radio" name="pregunta28" value="p">
+		<label>P. Un par de veces.</label>
+		<input type="radio" name="pregunta28" value="q">
+		<label>Q. Una sola vez más.</label>
+		<input type="radio" name="pregunta28" value="r">
+		<label>R. Solo los días siguientes.</label>
+	</div>
+
+	<div class="Preguntas29"> 
+		<p> 29. ¿Dónde la vio por última vez?</p>	 
+		<input type="radio" name="pregunta29" value="v">
+		<label>V. Cerca de las islas Fároe.</label>
+		<input type="radio" name="pregunta29" value="w">
+		<label>W. En el Ecuador.</label>
+		<input type="radio" name="pregunta29" value="x">
+		<label>X. Cerca del archipiélago de Madeira.</label>
+	</div>
+
+	<div class="Preguntas30"> 
+		<p> 30. ¿Cómo se llamaba el barco del capitán Philip?</p>	 
+		<input type="radio" name="pregunta30" value="a">
+		<label>A. El Pequod.</label>
+		<input type="radio" name="pregunta30" value="b">
+		<label>B. El Victoria.</label>
+		<input type="radio" name="pregunta30" value="c">
+		<label>C. El Bella Vista.</label>
+	</div>
+
+	<div class="Preguntas31">
+		<p> 31. ¿Qué rumbo tomó el capitán Philip para continuar la búsqueda?</p>	 
+		<input type="radio" name="pregunta31" value="f">
+		<label>F. Al Norte.</label>
+		<input type="radio" name="pregunta31" value="g">
+		<label>G. Al Este.</label>
+		<input type="radio" name="pregunta31" value="h">
+		<label>H. Al Sur.</label>
+	</div>
+
+	<div class="Preguntas32"> 
+		<p> 32. ¿Por qué el capitán del Victoria no quería seguir buscando a Moby Dick?</p> 
+		<input type="radio" name="pregunta32" value="k">
+		<label>K. Lo consideraba ya inútil.</label>
+		<input type="radio" name="pregunta32" value="l">
+		<label>L. Si queria, para vengarse.</label>
+		<input type="radio" name="pregunta32" value="m">
+		<label>M. Para no arriesgar vidas humanas.</label>
+	</div>
+	<input type="submit" name="btn" id="btn" value="enviar">
+	</form>
+	<script type="text/javascript">
+		//ALGORITMO DE CAPTURA DE RESPUESTAS MEMORIA RELATO ORAL
+	function despedida(){
+		window.open("C:/BADYGM/memoriaVisualOrtografica/BienvenidaBADYGMMemoriaOrtografica.html");
+	//window.close(this);
+}
+	var  correctas=0;//contador
+	
+function compararRespuestas(){//función principal
+	despedida();
+	var arregloRespuestas=new Array();//variable arreglo de captura
+	
+	respuestaPrueba(arregloRespuestas);//arreglo de captura
+
+	for (var i = 1; i < 2; i++) {//recorrido del arreglo
+		if (arregloRespuestas[1]=="f") {//comparación de respuestas
+			correctas++;//contador en aumento
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[2]=="l") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[3]=="p") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[4]=="x") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[5]=="a") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[6]=="h") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[7]=="l") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[8]=="r") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[9]=="w") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[10]=="a") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[11]=="g") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[12]=="k") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[13]=="r") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[14]=="x") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[15]=="a") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[16]=="g") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[17]=="m") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[18]=="q") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[19]=="v") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[20]=="c") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[21]=="g") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[22]=="k") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[23]=="q") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[24]=="w") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[25]=="c") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[26]=="h") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[27]=="k") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[28]=="p") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[29]=="x") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[30]=="a") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[31]=="g") {
+			correctas++;
+		} else {
+			correctas;
+		}
+		if (arregloRespuestas[32]=="m") {
+			correctas++;
+		} else {
+			correctas;
+		}
+
+		document.write("Puntaje Directo Obtenido por el estudiante "+correctas+"<br>");//imprime contador de respuestas correctas
+	}
+	var baremacion,escala;//variables baremación y escala
+
+	var matrizBaremacion=new Array();//variable matriz baremación
+	for (var i = 0; i < 34; i++) {
+		matrizBaremacion[i]=new Array(3);//creación matriz 33x3
+	}
+
+	matrizBaremacionMemoria(matrizBaremacion);//matriz baremación
+
+	for (var j = 1; j < 2; j++) {//recorrido matriz
+		
+		if (correctas==matrizBaremacion[1][0]) {//comparación de matriz y respuestas correctas
+			baremacion=matrizBaremacion[1][1];//asignación del valor de la matriz del puntaje convertido
+			escala=matrizBaremacion[1][2];//asignación del valor de la matriz de la Escala
+		}
+
+		if (correctas==matrizBaremacion[2][0]) {
+			baremacion=matrizBaremacion[2][1];
+			escala=matrizBaremacion[2][2];
+		}
+		if (correctas==matrizBaremacion[3][0]) {
+			baremacion=matrizBaremacion[3][1];
+			escala=matrizBaremacion[3][2];
+		}
+
+		if (correctas==matrizBaremacion[4][0]) {
+			baremacion=matrizBaremacion[4][1];
+			escala=matrizBaremacion[4][2];
+		}
+		if (correctas==matrizBaremacion[5][0]) {
+			baremacion=matrizBaremacion[5][1];
+			escala=matrizBaremacion[5][2];
+		}
+		if (correctas==matrizBaremacion[6][0]) {
+			baremacion=matrizBaremacion[6][1];
+			escala=matrizBaremacion[6][2];
+		}
+
+		if (correctas==matrizBaremacion[7][0]) {
+			baremacion=matrizBaremacion[7][1];
+			escala=matrizBaremacion[7][2];
+		}
+		if (correctas==matrizBaremacion[8][0]) {
+			baremacion=matrizBaremacion[8][1];
+			escala=matrizBaremacion[8][2];
+		}
+
+		if (correctas==matrizBaremacion[9][0]) {
+			baremacion=matrizBaremacion[9][1];
+			escala=matrizBaremacion[9][2];
+		}
+
+		if (correctas==matrizBaremacion[10][0]) {
+			baremacion=matrizBaremacion[10][1];
+			escala=matrizBaremacion[10][2];
+		}
+
+		if (correctas==matrizBaremacion[11][0]) {
+			baremacion=matrizBaremacion[11][1];
+			escala=matrizBaremacion[11][2];
+		}
+		if (correctas==matrizBaremacion[12][0]) {
+			baremacion=matrizBaremacion[12][1];
+			escala=matrizBaremacion[12][2];
+		}
+
+		if (correctas==matrizBaremacion[13][0]) {
+			baremacion=matrizBaremacion[13][1];
+			escala=matrizBaremacion[13][2];
+		}
+		if (correctas==matrizBaremacion[14][0]) {
+			baremacion=matrizBaremacion[14][1];
+			escala=matrizBaremacion[14][2];
+		}
+		if (correctas==matrizBaremacion[15][0]) {
+			baremacion=matrizBaremacion[15][1];
+			escala=matrizBaremacion[15][2];
+		}
+
+		if (correctas==matrizBaremacion[16][0]) {
+			baremacion=matrizBaremacion[16][1];
+			escala=matrizBaremacion[16][2];
+		}
+		if (correctas==matrizBaremacion[17][0]) {
+			baremacion=matrizBaremacion[17][1];
+			escala=matrizBaremacion[17][2];
+		}
+
+		if (correctas==matrizBaremacion[18][0]) {
+			baremacion=matrizBaremacion[18][1];
+			escala=matrizBaremacion[18][2];
+		}
+
+		if (correctas==matrizBaremacion[19][0]) {
+			baremacion=matrizBaremacion[19][1];
+			escala=matrizBaremacion[19][2];
+		}
+
+		if (correctas==matrizBaremacion[20][0]) {
+			baremacion=matrizBaremacion[20][1];
+			escala=matrizBaremacion[20][2];
+		}
+		if (correctas==matrizBaremacion[21][0]) {
+			baremacion=matrizBaremacion[21][1];
+			escala=matrizBaremacion[21][2];
+		}
+
+		if (correctas==matrizBaremacion[22][0]) {
+			baremacion=matrizBaremacion[22][1];
+			escala=matrizBaremacion[22][2];
+		}
+		if (correctas==matrizBaremacion[23][0]) {
+			baremacion=matrizBaremacion[23][1];
+			escala=matrizBaremacion[23][2];
+		}
+		if (correctas==matrizBaremacion[24][0]) {
+			baremacion=matrizBaremacion[24][1];
+			escala=matrizBaremacion[24][2];
+		}
+
+		if (correctas==matrizBaremacion[25][0]) {
+			baremacion=matrizBaremacion[25][1];
+			escala=matrizBaremacion[25][2];
+		}
+		if (correctas==matrizBaremacion[26][0]) {
+			baremacion=matrizBaremacion[26][1];
+			escala=matrizBaremacion[26][2];
+		}
+
+		if (correctas==matrizBaremacion[27][0]) {
+			baremacion=matrizBaremacion[27][1];
+			escala=matrizBaremacion[27][2];
+		}
+
+		if (correctas==matrizBaremacion[28][0]) {
+			baremacion=matrizBaremacion[28][1];
+			escala=matrizBaremacion[28][2];
+		}
+		if (correctas==matrizBaremacion[29][0]) {
+			baremacion=matrizBaremacion[29][1];
+			escala=matrizBaremacion[29][2];
+		}
+		if (correctas==matrizBaremacion[30][0]) {
+			baremacion=matrizBaremacion[30][1];
+			escala=matrizBaremacion[30][2];
+		}
+
+		if (correctas==matrizBaremacion[31][0]) {
+			baremacion=matrizBaremacion[31][1];
+			escala=matrizBaremacion[31][2];
+		}
+		if (correctas==matrizBaremacion[32][0]) {
+			baremacion=matrizBaremacion[32][1];
+			escala=matrizBaremacion[32][2];
+		}
+
+		if (correctas==matrizBaremacion[33][0]) {
+			baremacion=matrizBaremacion[33][1];
+			escala=matrizBaremacion[33][2];
+		}
+		document.write(" Puntaje convertido "+baremacion+"% Escala "+escala+"<br><br>");//imprime puntaje convertido y escala
+	}
+
+	var matrizRespuestas=new Array();//variable matriz respuestas
+	for (var i = 0; i < 33; i++) {//
+		matrizRespuestas[i]=new Array(3);//creacion martriz 32x3
+	}
+	matrizRespuestasMemoria(matrizRespuestas);//matriz respuestas
+
+	matrizRespuestas[1][2]=arregloRespuestas[1];//asignación de respuestas estudiante a la matriz por indice
+	matrizRespuestas[2][2]=arregloRespuestas[2];
+	matrizRespuestas[3][2]=arregloRespuestas[3];
+	matrizRespuestas[4][2]=arregloRespuestas[4];
+	matrizRespuestas[5][2]=arregloRespuestas[5];
+	matrizRespuestas[6][2]=arregloRespuestas[6];
+	matrizRespuestas[7][2]=arregloRespuestas[7];
+	matrizRespuestas[8][2]=arregloRespuestas[8];
+	matrizRespuestas[9][2]=arregloRespuestas[9];
+	matrizRespuestas[10][2]=arregloRespuestas[10];
+	matrizRespuestas[11][2]=arregloRespuestas[11];
+	matrizRespuestas[12][2]=arregloRespuestas[12];
+	matrizRespuestas[13][2]=arregloRespuestas[13];
+	matrizRespuestas[14][2]=arregloRespuestas[14];
+	matrizRespuestas[15][2]=arregloRespuestas[15];
+	matrizRespuestas[16][2]=arregloRespuestas[16];
+	matrizRespuestas[17][2]=arregloRespuestas[17];
+	matrizRespuestas[18][2]=arregloRespuestas[18];
+	matrizRespuestas[19][2]=arregloRespuestas[19];
+	matrizRespuestas[20][2]=arregloRespuestas[20];
+	matrizRespuestas[21][2]=arregloRespuestas[21];
+	matrizRespuestas[22][2]=arregloRespuestas[22];
+	matrizRespuestas[23][2]=arregloRespuestas[23];
+	matrizRespuestas[24][2]=arregloRespuestas[24];
+	matrizRespuestas[25][2]=arregloRespuestas[25];
+	matrizRespuestas[26][2]=arregloRespuestas[26];
+	matrizRespuestas[27][2]=arregloRespuestas[27];
+	matrizRespuestas[28][2]=arregloRespuestas[28];
+	matrizRespuestas[29][2]=arregloRespuestas[29];
+	matrizRespuestas[30][2]=arregloRespuestas[30];
+	matrizRespuestas[31][2]=arregloRespuestas[31];
+	matrizRespuestas[32][2]=arregloRespuestas[32];
+
+	/*document.write("Matriz de Respuestas<br><br>")//
+	for (var i = 1; i < 33; i++) {//imprime matriz
+ 		for (var j = 0; j < 3; j++) {
+ 			 document.write(" -"+matrizRespuestas[i][j]+"- ");
+ 		}
+ 		document.write("<br>");
+ 	}*/
+
+}
+
+	</script>
+</body>
+</html>
