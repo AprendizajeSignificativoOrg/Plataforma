@@ -2,18 +2,19 @@
 <html>
 <head>
 	<title>Pruebas BADYG S</title>
-	<script type="text/javascript" src="RespuestasBADYGSMatricesFiguras.js"></script>
+	<script type="text/javascript" src="RespuestasBADYGSMatricesFiguras.js"></script><!--archivos .js-->
 	<script type="text/javascript" src="C:\BADYGS\CapturaRespuestas.js"></script>
 	<script type="text/javascript" src="C:\BADYGS\Cronometro.js"></script>
-	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> 
+	<script type="text/javascript" src="PuntajesBADYGSMatricesFiguras.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> <!--link referencia jQuery-->
 <script type="text/javascript">	
-	$(document).ready(function(){
+	$(document).ready(function(){//acciona la función ready cuando el documento de carga
 
-	$(".Preguntas").hide();
-	$("#sig").on('click',function(){
-		$("#Preguntas1").next().show();
-		$("#Preguntas1").hide();
-	});
+	$(".Preguntas").hide();//Oculta los contenedores div solo muestra el primero llamandolos por su class
+	$("#sig").on('click',function(){//asigna función on click al botón por su id para accionarla
+		$("#Preguntas1").next().show();//muestra el contenedor siguiente al actual llamandolo por la id del actual
+		$("#Preguntas1").hide();//oculta el contenedor actual por su id
+	});//fin función on click
 	$("#sig2").on('click',function(){
 		$("#Preguntas2").next().show();
 		$("#Preguntas2").hide();
@@ -258,15 +259,15 @@
 		$("#Preguntas32").prev().show();
 		$("#Preguntas32").hide();
 	});
-	});
+	});//fin función ready
 </script>
 <script type="text/javascript">
-	$(document).ready(function(){
-		$(".Preguntas").hide();
-		$("input[name=pregunta1]").click(function(){
-			$("#Preguntas1").next().show();
-			$("#Preguntas1").hide();
-		});
+	$(document).ready(function(){//acciona la función cuando el documento de carga
+		$(".Preguntas").hide();//Oculta los contenedores div solo muestra el primero llamandolos por su class
+		$("input[name=pregunta1]").click(function(){//asigna la función  click al grupo de radiobuttons llamados por su nombre
+			$("#Preguntas1").next().show();//muestra el contenedor siguiente al actual llamado por el id del actual
+			$("#Preguntas1").hide();//oculta el contenedor actual por su id
+		});//fin función click
 		$("input[name=pregunta2]").click(function(){
 			$("#Preguntas2").next().show();
 			$("#Preguntas2").hide();
@@ -326,6 +327,8 @@
 		$("input[name=pregunta16]").click(function(){
 			$("#Preguntas16").next().show();
 			$("#Preguntas16").hide();
+			$("#Barra2").show();//muestra el contenedor de la barra de preguntas siguiente por id
+			$("#Barra1").hide();//oculta el contenedor de la barra de preguntas actual por id
 		});
 		$("input[name=pregunta17]").click(function(){
 			$("#Preguntas17").next().show();
@@ -387,21 +390,193 @@
 			$("#Preguntas31").next().show();
 			$("#Preguntas31").hide();
 		});
-	});
+	});//fin función ready
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){//acciona la función cuando el documento de carga
+		$("#Barra2").hide();//oculta el contenedor de la barra de preguntas según su id
+		$("#b1").click(function(){//asigna la función click al enlace según su id para accionar la función
+			$("#Barra2").show();//muestra el contenedor de barra de preguntas según su id
+			$("#Barra1").hide();//oculta el contenedor de barra de preguntas según su id
+		});//fin función click
+		$("#b2").click(function(){
+			$("#Barra1").show();
+			$("#Barra2").hide();
+		});
+		$("#p1").click(function(){//asigna la función click al enlace según su id para accionar la función
+			$("#Preguntas1").show();//muestra el contenedor de barra de preguntas según su id
+			$(".Preguntas").hide();//oculta los contenedores de barra de preguntas según su class
+		});//fin función click
+		$("#p2").click(function(){//asigna la función click al enlace según su id para accionar la función
+			$(".Preguntas").hide();//oculta los contenedores de barra de preguntas según su class
+			$("#Preguntas2").show();//muestra el contenedor de barra de preguntas según su id
+			$(".Preguntas1").hide();//oculta los contenedores de barra de preguntas según su class
+		});//fin función click
+		$("#p3").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas3").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p4").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas4").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p5").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas5").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p6").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas6").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p7").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas7").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p8").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas8").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p9").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas9").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p10").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas10").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p11").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas11").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p12").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas12").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p13").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas13").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p14").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas14").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p15").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas15").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p16").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas16").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p17").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas17").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p18").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas18").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p19").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas19").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p20").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas20").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p21").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas21").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p22").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas22").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p23").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas23").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p24").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas24").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p25").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas25").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p26").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas26").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p27").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas27").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p28").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas28").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p29").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas29").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p30").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas30").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p31").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas31").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p32").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas32").show();
+			$(".Preguntas1").hide();
+		});
+	});//fin función ready
 </script>
 </head>
-<body onload="tiempo(11)"><!--Inicia el cronometro al cargar la pagina-->
+<body onload="tiempo(11)"><!--inicia el cronometro según parametro dado el la función-->
 <h1 align="center">Prueba Matrices de Figuras</h1>
-<form name="form" align="right">
-	<input type="text" size="1" class="form_input" name="minute" disabled>:
-	<input type="text" size="1" class="form_input" name="second" disabled>
+<form name="form" align="right"><!--espacio de cronometro-->
+	<input type="text" size="1" class="form_input" name="minute" disabled>:<!--minutos-->
+	<input type="text" size="1" class="form_input" name="second" disabled><!--segundos-->
 </form>
 <form action="" name="cuestionario" method="get" onsubmit="return compararRespuestas(this);">
 <!--Contenedor de enunciados y opciones de respuesta-->
 	<div class="Preguntas1" id="Preguntas1"> 
-		<p>1.<img src="imagen.jpg"></p>		 
-		<input type="radio" name="pregunta1" value="k1">K
-		<img src="imagen.jpg">
+		<p>1.<img src="imagen.jpg"></p><!--Item y enunciado de la pregunta --> 
+		<input type="radio" name="pregunta1" value="k1">K<!--radiobutton de opción de respuesta-->
+		<img src="imagen.jpg"><!--imagen de opciones de respuestas-->
 		<input type="radio" name="pregunta1" value="l1">L
 		<img src="">
 		<input type="radio" name="pregunta1" value="m1">M
@@ -410,7 +585,7 @@
 		<img src="">
 		<input type="radio" name="pregunta1" value="o1">O
 		<img src="">
-		<br><br><input type="button" name="sig" id="sig" value="Siguiente">
+		<br><br><input type="button" name="sig" id="sig" value="Siguiente"><!--botones para pasar pregunta-->
 	</div>
 	<div class="Preguntas" id="Preguntas2"> 
 		<p>2.<img src=""></p>		 
@@ -425,7 +600,7 @@
 		<input type="radio" name="pregunta2" value="t2">T
 		<img src="">
 		<br><br><input type="button" name="ant" id="ant" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig2" id="sig2" value="Siguiente">
+		&nbsp&nbsp<input type="button" name="sig2" id="sig2" value="Siguiente"><!--botones para pasar pregunta-->
 	</div>
 	<div class="Preguntas" id="Preguntas3"> 
 		<p>3.<img src=""></p>		 
@@ -876,383 +1051,46 @@
 		<img src="">
 		<br><br><input type="button" name="ant31" id="ant31" value="Anterior">
 	</div>
+	<div class="Barra" id="Barra1"> <!--contenedores de barra de preguntas-->
+		<a href="#" id="p1">1.</a><!--Referencias para cambiar de preguntas-->
+		<a href="#" id="p2">2.</a>
+		<a href="#" id="p3">3.</a>
+		<a href="#" id="p4">4.</a>
+		<a href="#" id="p5">5.</a>
+		<a href="#" id="p6">6.</a>
+		<a href="#" id="p7">7.</a>
+		<a href="#" id="p8">8.</a>
+		<a href="#" id="p9">9.</a>
+		<a href="#" id="p10">10.</a>
+		<a href="#" id="p11">11.</a>
+		<a href="#" id="p12">12.</a>
+		<a href="#" id="p13">13.</a>
+		<a href="#" id="p14">14.</a>
+		<a href="#" id="p15">15.</a>
+		<a href="#" id="p16">16.</a>
+		<a href="#" id="b1">>></a>
+	</div>
+	<div class="Barra" id="Barra2">
+		<a href="#" id="b2"><<</a>
+		<a href="#" id="p17">17.</a>
+		<a href="#" id="p18">18.</a>
+		<a href="#" id="p19">19.</a>
+		<a href="#" id="p20">20.</a>
+		<a href="#" id="p21">21.</a>
+		<a href="#" id="p22">22.</a>
+		<a href="#" id="p23">23.</a>
+		<a href="#" id="p24">24.</a>
+		<a href="#" id="p25">25.</a>
+		<a href="#" id="p26">26.</a>
+		<a href="#" id="p27">27.</a>
+		<a href="#" id="p28">28.</a>
+		<a href="#" id="p29">29.</a>
+		<a href="#" id="p30">30.</a>
+		<a href="#" id="p31">31.</a>
+		<a href="#" id="p32">32.</a>
+	</div>
 	<br>
- 	<input type="submit" name="btn" id="btn" value="enviar">
+ 	<input type="submit" name="btn" id="btn" value="enviar"><!--botón de enviar activa la funcion de compararRespuestas-->
 </form>
-<script type="text/javascript">
-function despedida(){
-		window.open("C:/BADYGS/completarOraciones/BienvenidaCompletarOraciones.html");
-	//window.close(this);
-}
-	//Algoritmo de captura de respuestas 
-	var correctas=0;
-
-	function compararRespuestas(){//funcción principal
-		despedida();
-
-		var arregloRespuestas=new Array;//variable de creacion arreglo de captura de respuestas
-		respuestaPrueba(arregloRespuestas);//arreglo respuestas captura rb
-
-		for (var i = 1; i < 2; i++) {
-			
-			if (arregloRespuestas[1]=="l1") {//comparación de respuestas
-				correctas++;//aumento contador
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[2]=="s2") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[3]=="y3") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[4]=="c4") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[5]=="j5") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[6]=="m6") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[7]=="q7") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[8]=="z8") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[9]=="c9") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[10]=="f10") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[11]=="k11") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[12]=="s12") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[13]=="z13") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[14]=="a14") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[15]=="h15") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[16]=="k16") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[17]=="t17") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[18]=="v18") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[19]=="e19") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[20]=="j20") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[21]=="n21") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[22]=="q22") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[23]=="z23") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[24]=="a24") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[25]=="h25") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[26]=="n26") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[27]=="q27") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[28]=="x28") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[29]=="a29") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[30]=="g30") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[31]=="n31") {
-				correctas++;
-			} else {
-				correctas;
-			}
-			if (arregloRespuestas[32]=="q32") {
-				correctas++;
-			} else {
-				correctas;
-			}
-
-			document.write("Puntaje Directo Obtenido por el estudiante "+correctas+"<br>");//imprime respuestas correctas
-		}
-
-		//conversión del puntaje directo del estudiante a puntaje convertido baremación y escala
-		var baremacion,escala;//variables de baremación y escala para la matriz
-		var matrizBaremacion=new Array;//variable creación matriz baremacion
-		for (var i = 0; i < 34; i++) {
-			matrizBaremacion[i]=new Array(3);//creación matriz 33x3
-		}
-		matrizBaremacionMatrices(matrizBaremacion);//matriz baremación 
-
-
-		for (var j = 1; j < 2; j++) {
-			
-			if (correctas==matrizBaremacion[1][0]) {//comparacion de respuestas correctas para conversión de puntajes
-				baremacion=matrizBaremacion[1][1];//asignación del valor del puntaje convertido baremacion
-				escala=matrizBaremacion[1][2];//asignación del valor de la escala
-			} 
-			if (correctas==matrizBaremacion[2][0]) {
-				baremacion=matrizBaremacion[2][1];
-				escala=matrizBaremacion[2][2];
-			}
-			if (correctas==matrizBaremacion[3][0]) {
-				baremacion=matrizBaremacion[3][1];
-				escala=matrizBaremacion[3][2];
-			}
-			if (correctas==matrizBaremacion[4][0]) {
-				baremacion=matrizBaremacion[4][1];
-				escala=matrizBaremacion[4][2];
-			}
-			if (correctas==matrizBaremacion[5][0]) {
-				baremacion=matrizBaremacion[5][1];
-				escala=matrizBaremacion[5][2];
-			}
-			if (correctas==matrizBaremacion[6][0]) {
-				baremacion=matrizBaremacion[6][1];
-				escala=matrizBaremacion[6][2];
-			}
-			if (correctas==matrizBaremacion[7][0]) {
-				baremacion=matrizBaremacion[7][1];
-				escala=matrizBaremacion[7][2];
-			}
-			if (correctas==matrizBaremacion[8][0]) {
-				baremacion=matrizBaremacion[8][1];
-				escala=matrizBaremacion[8][2];
-			}
-			if (correctas==matrizBaremacion[9][0]) {
-				baremacion=matrizBaremacion[9][1];
-				escala=matrizBaremacion[9][2];
-			}
-			if (correctas==matrizBaremacion[10][0]) {
-				baremacion=matrizBaremacion[10][1];
-				escala=matrizBaremacion[10][2];
-			}
-			if (correctas==matrizBaremacion[11][0]) {
-				baremacion=matrizBaremacion[11][1];
-				escala=matrizBaremacion[11][2];
-			}
-			if (correctas==matrizBaremacion[12][0]) {
-				baremacion=matrizBaremacion[12][1];
-				escala=matrizBaremacion[12][2];
-			}
-			if (correctas==matrizBaremacion[13][0]) {
-				baremacion=matrizBaremacion[13][1];
-				escala=matrizBaremacion[13][2];
-			}
-			if (correctas==matrizBaremacion[14][0]) {
-				baremacion=matrizBaremacion[14][1];
-				escala=matrizBaremacion[14][2];
-			}
-			if (correctas==matrizBaremacion[15][0]) {
-				baremacion=matrizBaremacion[15][1];
-				escala=matrizBaremacion[15][2];
-			}
-			if (correctas==matrizBaremacion[16][0]) {
-				baremacion=matrizBaremacion[16][1];
-				escala=matrizBaremacion[16][2];
-			}
-			if (correctas==matrizBaremacion[17][0]) {
-				baremacion=matrizBaremacion[17][1];
-				escala=matrizBaremacion[17][2];
-			}
-			if (correctas==matrizBaremacion[18][0]) {
-				baremacion=matrizBaremacion[18][1];
-				escala=matrizBaremacion[18][2];
-			}
-			if (correctas==matrizBaremacion[19][0]) {
-				baremacion=matrizBaremacion[19][1];
-				escala=matrizBaremacion[19][2];
-			}
-			if (correctas==matrizBaremacion[20][0]) {
-				baremacion=matrizBaremacion[20][1];
-				escala=matrizBaremacion[20][2];
-			}
-			if (correctas==matrizBaremacion[21][0]) {
-				baremacion=matrizBaremacion[21][1];
-				escala=matrizBaremacion[21][2];
-			}
-			if (correctas==matrizBaremacion[22][0]) {
-				baremacion=matrizBaremacion[22][1];
-				escala=matrizBaremacion[22][2];
-			}
-			if (correctas==matrizBaremacion[23][0]) {
-				baremacion=matrizBaremacion[23][1];
-				escala=matrizBaremacion[23][2];
-			}
-			if (correctas==matrizBaremacion[24][0]) {
-				baremacion=matrizBaremacion[24][1];
-				escala=matrizBaremacion[24][2];
-			}
-			if (correctas==matrizBaremacion[25][0]) {
-				baremacion=matrizBaremacion[25][1];
-				escala=matrizBaremacion[25][2];
-			}
-			if (correctas==matrizBaremacion[26][0]) {
-				baremacion=matrizBaremacion[26][1];
-				escala=matrizBaremacion[26][2];
-			}
-			if (correctas==matrizBaremacion[27][0]) {
-				baremacion=matrizBaremacion[27][1];
-				escala=matrizBaremacion[27][2];
-			}
-			if (correctas==matrizBaremacion[28][0]) {
-				baremacion=matrizBaremacion[28][1];
-				escala=matrizBaremacion[28][2];
-			}
-			if (correctas==matrizBaremacion[29][0]) {
-				baremacion=matrizBaremacion[29][1];
-				escala=matrizBaremacion[29][2];
-			}
-			if (correctas==matrizBaremacion[30][0]) {
-				baremacion=matrizBaremacion[30][1];
-				escala=matrizBaremacion[30][2];
-			}
-			if (correctas==matrizBaremacion[31][0]) {
-				baremacion=matrizBaremacion[31][1];
-				escala=matrizBaremacion[31][2];
-			}
-			if (correctas==matrizBaremacion[32][0]) {
-				baremacion=matrizBaremacion[32][1];
-				escala=matrizBaremacion[32][2];
-			}
-			if (correctas==matrizBaremacion[33][0]) {
-				baremacion=matrizBaremacion[33][1];
-				escala=matrizBaremacion[33][2];
-			}
-			document.write(" Puntaje Convertido "+baremacion+"% Escala "+escala+"<br><br>");
-		}
-		//Asignación del valor del arreglo de captura a la matriz respuestas
-		var matrizRespuestas=new Array();//variable creación matriz respuesta
-		for (var i = 0; i < 33; i++) {
-			matrizRespuestas[i]=new Array(3);//creación matriz 33x3
-		}
-		matrizRespuestasMatrices(matrizRespuestas);//matriz respuestas
-
-		matrizRespuestas[1][2]=arregloRespuestas[1];//asignación del valor a la matriz
-		matrizRespuestas[2][2]=arregloRespuestas[2];
-		matrizRespuestas[3][2]=arregloRespuestas[3];
-		matrizRespuestas[4][2]=arregloRespuestas[4];
-		matrizRespuestas[5][2]=arregloRespuestas[5];
-		matrizRespuestas[6][2]=arregloRespuestas[6];
-		matrizRespuestas[7][2]=arregloRespuestas[7];
-		matrizRespuestas[8][2]=arregloRespuestas[8];
-		matrizRespuestas[9][2]=arregloRespuestas[9];
-		matrizRespuestas[10][2]=arregloRespuestas[10];
-		matrizRespuestas[11][2]=arregloRespuestas[11];
-		matrizRespuestas[12][2]=arregloRespuestas[12];
-		matrizRespuestas[13][2]=arregloRespuestas[13];
-		matrizRespuestas[14][2]=arregloRespuestas[14];
-		matrizRespuestas[15][2]=arregloRespuestas[15];
-		matrizRespuestas[16][2]=arregloRespuestas[16];
-		matrizRespuestas[17][2]=arregloRespuestas[17];
-		matrizRespuestas[18][2]=arregloRespuestas[18];
-		matrizRespuestas[19][2]=arregloRespuestas[19];
-		matrizRespuestas[20][2]=arregloRespuestas[20];
-		matrizRespuestas[21][2]=arregloRespuestas[21];
-		matrizRespuestas[22][2]=arregloRespuestas[22];
-		matrizRespuestas[23][2]=arregloRespuestas[23];
-		matrizRespuestas[24][2]=arregloRespuestas[24];
-		matrizRespuestas[25][2]=arregloRespuestas[25];
-		matrizRespuestas[26][2]=arregloRespuestas[26];
-		matrizRespuestas[27][2]=arregloRespuestas[27];
-		matrizRespuestas[28][2]=arregloRespuestas[28];
-		matrizRespuestas[29][2]=arregloRespuestas[29];
-		matrizRespuestas[30][2]=arregloRespuestas[30];
-		matrizRespuestas[31][2]=arregloRespuestas[31];
-		matrizRespuestas[32][2]=arregloRespuestas[32];
-	
-	/*document.write("Matriz de Respuestas<br><br>")//
-	for (var i = 1; i < 33; i++) {//imprime matriz respuestas
- 		for (var j = 0; j < 3; j++) {
- 			 document.write("-"+matrizRespuestas[i][j]+"-");
- 		}
- 		document.write("<br>");
- 	}*/
-
-	}
-</script>
 </body>
 </html>
