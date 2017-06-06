@@ -4,13 +4,15 @@
 	<meta charset="utf-8">
 	<title> Pruebas BADYG M</title>
 	<script type="text/javascript" src="RespuestasBADYGMMemoriaOrtografica.js">
-	</script><!--archivos .js-->
+	</script>
 	<script type="text/javascript" src="C:\BADYGM\Cronometro.js"></script>
 	<script type="text/javascript" src="C:\BADYGM\CapturaRespuestas.js"></script>
 	<script type="text/javascript" src="PuntajesBADYGMMemoriaOrtografica.js"></script>
-	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> <!--link referencia jQuery-->
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script><!--link referencia jQuery-->
 <script type="text/javascript">	
+//función para pasar de preguntas por medio de botones
 	$(document).ready(function(){//acciona la función ready cuando el documento de carga
+
 	$(".Preguntas").hide();//Oculta los contenedores div solo muestra el primero llamandolos por su class
 	$("#sig").on('click',function(){//asigna función on click al botón por su id para accionarla
 		$("#Preguntas1").next().show();//muestra el contenedor siguiente al actual llamandolo por la id del actual
@@ -263,7 +265,8 @@
 	});//fin función ready
 </script>
 <script type="text/javascript">
-	$(document).ready(function(){//acciona la función cuando el documento de carga
+//función para pasar preguntas por medio de los radiobuttons
+	$(document).ready(function(){//acciona la función ready cuando el documento de carga
 		$(".Preguntas").hide();//Oculta los contenedores div solo muestra el primero llamandolos por su class
 		$("input[name=pregunta1]").click(function(){//asigna la función  click al grupo de radiobuttons llamados por su nombre
 			$("#Preguntas1").next().show();//muestra el contenedor siguiente al actual llamado por el id del actual
@@ -394,7 +397,8 @@
 	});//fin función ready
 </script>
 <script type="text/javascript">
-	$(document).ready(function(){//acciona la función cuando el documento de carga
+//función barra de preguntas
+	$(document).ready(function(){//acciona la función ready cuando el documento de carga
 		$("#Barra2").hide();//oculta el contenedor de la barra de preguntas según su id
 		$("#b1").click(function(){//asigna la función click al enlace según su id para accionar la función
 			$("#Barra2").show();//muestra el contenedor de barra de preguntas según su id
@@ -574,7 +578,7 @@
 </form>
 	<form action="" name="cuestionario" method="get" onsubmit="return compararRespuestas(this);">
 		<div class="Preguntas1" id="Preguntas1"> 
-		<!--contenedor de las opciones de respuesta-->
+		<!--contenedores de las opciones de respuesta-->
 
 			<p> 1. </p>	 
 			<input type="radio" name="pregunta1"  value="k">
@@ -583,6 +587,7 @@
 			<label>L. revivir.</label>
 			<input type="radio" name="pregunta1"  value="m">
 			<label>M. alcool.</label>
+		<br><br><input type="button" name="sig" id="sig" value="Siguiente"><!--botones para pasar pregunta-->
 		</div>
 
 		<div class="Preguntas" id="Preguntas2"> 
@@ -593,6 +598,8 @@
 			<label>Q. diván.</label>
 			<input type="radio" name="pregunta2"  value="r">
 			<label>R. hobispo.</label>
+		<br><br><input type="button" name="ant" id="ant" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig2" id="sig2" value="Siguiente"><!--botones para pasar pregunta-->
 		</div>
 
 		<div class="Preguntas" id="Preguntas3"> 
@@ -603,6 +610,8 @@
 			<label>W. venevolencia.</label>
 			<input type="radio" name="pregunta3"  value="x">
 			<label>X. bahía.</label>
+		<br><br><input type="button" name="ant2" id="ant2" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig3" id="sig3" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas4"> 
@@ -613,6 +622,8 @@
 			<label>B. benigno.</label>
 			<input type="radio" name="pregunta4"  value="c">
 			<label>C. halergia.</label>
+		<br><br><input type="button" name="ant3" id="ant3" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig4" id="sig4" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas5"> 
@@ -623,6 +634,8 @@
 			<label>G. flecsible.</label>
 			<input type="radio" name="pregunta5"  value="h">
 			<label>H. carabela.</label>
+		<br><br><input type="button" name="ant4" id="ant4" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig5" id="sig5" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas6"> 
@@ -633,6 +646,8 @@
 			<label>L. vigía.</label>
 			<input type="radio" name="pregunta6"  value="m">
 			<label>M. hospedaje.</label>
+		<br><br><input type="button" name="ant5" id="ant5" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig6" id="sig6" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas7"> 
@@ -643,6 +658,8 @@
 			<label>Q. exclusivo.</label>
 			<input type="radio" name="pregunta7"  value="r">
 			<label>R. estrenar.</label>
+		<br><br><input type="button" name="ant6" id="ant6" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig7" id="sig7" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas8"> 
@@ -653,6 +670,8 @@
 			<label>W. objetibo.</label>
 			<input type="radio" name="pregunta8"  value="x">
 			<label>X. hondo.</label>
+		<br><br><input type="button" name="ant7" id="ant7" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig8" id="sig8" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas9"> 
@@ -663,6 +682,8 @@
 			<label>B. rebés.</label>
 			<input type="radio" name="pregunta9"  value="c">
 			<label>C. jubilarse.</label>
+		<br><br><input type="button" name="ant8" id="ant8" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig9" id="sig9" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas10"> 
@@ -673,6 +694,8 @@
 			<label>G. ondular.</label>
 			<input type="radio" name="pregunta10" value="h" >
 			<label>H. elíptico.</label>
+		<br><br><input type="button" name="ant9" id="ant9" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig10" id="sig10" value="Siguiente">
 		</div>
 		
 		<div class="Preguntas" id="Preguntas11"> 
@@ -683,6 +706,8 @@
 			<label>L. microvio.</label>
 			<input type="radio" name="pregunta11" value="m" >
 			<label>M. joya.</label>
+		<br><br><input type="button" name="ant10" id="ant10" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig11" id="sig11" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas12"> 
@@ -693,6 +718,8 @@
 			<label>Q. lobezno.</label>
 			<input type="radio" name="pregunta12" value="r" >
 			<label>R. bocavulario.</label>
+		<br><br><input type="button" name="ant11" id="ant11" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig12" id="sig12" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas13"> 
@@ -703,6 +730,8 @@
 			<label>W. acceso.</label>
 			<input type="radio" name="pregunta13" value="x" >
 			<label>X. ahogar.</label>
+		<br><br><input type="button" name="ant12" id="ant12" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig13" id="sig13" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas14"> 
@@ -713,6 +742,8 @@
 			<label>B. ardor.</label>
 			<input type="radio" name="pregunta14" value="c" >
 			<label>C. lóvulo.</label>
+		<br><br><input type="button" name="ant13" id="ant13" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig14" id="sig14" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas15"> 
@@ -723,6 +754,8 @@
 			<label>G. cerbeza.</label>
 			<input type="radio" name="pregunta15" value="h" >
 			<label>H. valija.</label>
+		<br><br><input type="button" name="ant14" id="ant14" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig15" id="sig15" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas16"> 
@@ -733,6 +766,8 @@
 			<label>L. divisar.</label>
 			<input type="radio" name="pregunta16" value="m" >
 			<label>M. extraviar.</label>
+		<br><br><input type="button" name="ant15" id="ant15" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig16" id="sig16" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas17"> 
@@ -743,6 +778,8 @@
 			<label>Q. hebanista.</label>
 			<input type="radio" name="pregunta17" value="r" >
 			<label>R. envasar.</label>
+		<br><br><input type="button" name="ant16" id="ant16" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig17" id="sig17" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas18"> 
@@ -753,6 +790,8 @@
 			<label>W. bisabuelo.</label>
 			<input type="radio" name="pregunta18" value="x">
 			<label>X. bálbula.</label>
+		<br><br><input type="button" name="ant17" id="ant17" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig18" id="sig18" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas19"> 
@@ -763,6 +802,8 @@
 			<label>B. biombo.</label>
 			<input type="radio" name="pregunta19" value="c" >
 			<label>C. trivunal.</label>
+		<br><br><input type="button" name="ant18" id="ant18" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig19" id="sig19" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas20"> 
@@ -773,6 +814,8 @@
 			<label>G. ahondar.</label>
 			<input type="radio" name="pregunta20" value="h" >
 			<label>H. abordar.</label>
+		<br><br><input type="button" name="ant19" id="ant19" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig20" id="sig20" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas21"> 
@@ -783,6 +826,8 @@
 			<label>L. innovar.</label>
 			<input type="radio" name="pregunta21" value="m" >
 			<label>M. anhelar.</label>
+		<br><br><input type="button" name="ant20" id="ant20" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig21" id="sig21" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas22"> 
@@ -793,6 +838,8 @@
 			<label>Q. ábil.</label>
 			<input type="radio" name="pregunta22" value="r" >
 			<label>R. encaje.</label>
+		<br><br><input type="button" name="ant21" id="ant21" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig22" id="sig22" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas23"> 
@@ -803,6 +850,8 @@
 			<label>W. arpa.</label>
 			<input type="radio" name="pregunta23" value="x" >
 			<label>X. halcón</label>
+		<br><br><input type="button" name="ant22" id="ant22" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig23" id="sig23" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas24"> 
@@ -813,6 +862,8 @@
 			<label>B. diversidad.</label>
 			<input type="radio" name="pregunta24" value="c" >
 			<label>C. desbán.</label>
+		<br><br><input type="button" name="ant23" id="ant23" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig24" id="sig24" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas25"> 
@@ -823,6 +874,8 @@
 			<label>G. cabidad.</label>
 			<input type="radio" name="pregunta25" value="h" >
 			<label>H. balanvolea.</label>
+		<br><br><input type="button" name="ant24" id="ant24" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig25" id="sig25" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas26"> 
@@ -833,6 +886,8 @@
 			<label>L. imagen.</label>
 			<input type="radio" name="pregunta26" value="m" >
 			<label>M. pingajo.</label>
+		<br><br><input type="button" name="ant25" id="ant25" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig26" id="sig26" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas27"> 
@@ -843,6 +898,8 @@
 			<label>Q. divergente.</label>
 			<input type="radio" name="pregunta27" value="r" >
 			<label>R. javalí.</label>
+		<br><br><input type="button" name="ant26" id="ant26" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig27" id="sig27" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas28"> 
@@ -853,6 +910,8 @@
 			<label>W. olgazán.</label>
 			<input type="radio" name="pregunta28" value="x" >
 			<label>X. obesidad.</label>
+		<br><br><input type="button" name="ant27" id="ant27" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig28" id="sig28" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas29"> 
@@ -863,9 +922,11 @@
 			<label>B. clavija.</label>
 			<input type="radio" name="pregunta29" value="c" >
 			<label>C. homnívoro.</label>
+		<br><br><input type="button" name="ant28" id="ant28" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig29" id="sig29" value="Siguiente">
 		</div>
 
-		<div class="Preguntas" id="Preguntas30">  
+		<div class="Preguntas" id="Preguntas30"> 
 			<p> 30. </p>	 
 			<input type="radio" name="pregunta30" value="f">
 			<label>F. emorragia.</label>
@@ -873,6 +934,8 @@
 			<label>G. expirar.</label>
 			<input type="radio" name="pregunta30" value="h" >
 			<label>H. malhechor.</label>
+		<br><br><input type="button" name="ant29" id="ant29" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig30" id="sig30" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas31"> 
@@ -883,6 +946,8 @@
 			<label>L. través.</label>
 			<input type="radio" name="pregunta31" value="m" >
 			<label>M. divorcio.</label>
+		<br><br><input type="button" name="ant30" id="ant30" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig31" id="sig31" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas32"> 
@@ -893,8 +958,10 @@
 			<label>Q. esquibar.</label>
 			<input type="radio" name="pregunta32" value="r" >
 			<label>R. haba.</label>
+		<br><br><input type="button" name="ant31" id="ant31" value="Anterior">
 		</div>
-		<div class="Barra" id="Barra1"> <!--contenedores de barra de preguntas-->
+		<!--contenedores barra de respuestas-->
+	<div class="Barra" id="Barra1"> <!--contenedores de barra de preguntas-->
 		<a href="#" id="p1">1.</a><!--Referencias para cambiar de preguntas-->
 		<a href="#" id="p2">2.</a>
 		<a href="#" id="p3">3.</a>
@@ -935,396 +1002,5 @@
 	<br>
 		<input type="submit" name="btn" id="btn" value="enviar"><!--botón de enviar activa la funcion de compararRespuestas-->
 	</form>
-	<script type="text/javascript">
-		//ALGORITMO DE CAPTURA DE RESPUESTAS MEMORIA RELATO ORAL
-	function despedida(){
-		window.open("C:/BADYGM/discriminarDiferencias/BienvenidaBADYGMDiscriminarDiferencias.html");
-	//window.close(this);
-}
-	var  correctas=0;//contador
-	
-function compararRespuestas(){//función principal
-	despedida();
-	var arregloRespuestas=new Array();//variable arreglo de captura
-	
-	respuestaPrueba(arregloRespuestas);//arreglo de captura
-
-	for (var i = 1; i < 2; i++) {//recorrido del arreglo
-		if (arregloRespuestas[1]=="m") {//comparación de respuestas
-			correctas++;//contador en aumento
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[2]=="r") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[3]=="w") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[4]=="c") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[5]=="g") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[6]=="k") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[7]=="p") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[8]=="w") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[9]=="b") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[10]=="f") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[11]=="l") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[12]=="r") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[13]=="v") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[14]=="c") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[15]=="g") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[16]=="k") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[17]=="q") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[18]=="x") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[19]=="c") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[20]=="f") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[21]=="k") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[22]=="q") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[23]=="v") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[24]=="c") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[25]=="g") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[26]=="k") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[27]=="r") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[28]=="w") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[29]=="c") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[30]=="f") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[31]=="k") {
-			correctas++;
-		} else {
-			correctas;
-		}
-		if (arregloRespuestas[32]=="q") {
-			correctas++;
-		} else {
-			correctas;
-		}
-
-		document.write("Puntaje Directo Obtenido por el estudiante "+correctas+"<br>");//imprime contador de respuestas correctas
-	}
-	var baremacion,escala;//variables baremación y escala
-
-	var matrizBaremacion=new Array();//variable matriz baremación
-	for (var i = 0; i < 34; i++) {
-		matrizBaremacion[i]=new Array(3);//creación matriz 33x3
-	}
-
-	matrizBaremacionMemoria(matrizBaremacion);//matriz baremación
-
-	for (var j = 1; j < 2; j++) {//recorrido matriz
-		
-		if (correctas==matrizBaremacion[1][0]) {//comparación de matriz y respuestas correctas
-			baremacion=matrizBaremacion[1][1];//asignación del valor de la matriz del puntaje convertido
-			escala=matrizBaremacion[1][2];//asignación del valor de la matriz de la Escala
-		}
-
-		if (correctas==matrizBaremacion[2][0]) {
-			baremacion=matrizBaremacion[2][1];
-			escala=matrizBaremacion[2][2];
-		}
-		if (correctas==matrizBaremacion[3][0]) {
-			baremacion=matrizBaremacion[3][1];
-			escala=matrizBaremacion[3][2];
-		}
-
-		if (correctas==matrizBaremacion[4][0]) {
-			baremacion=matrizBaremacion[4][1];
-			escala=matrizBaremacion[4][2];
-		}
-		if (correctas==matrizBaremacion[5][0]) {
-			baremacion=matrizBaremacion[5][1];
-			escala=matrizBaremacion[5][2];
-		}
-		if (correctas==matrizBaremacion[6][0]) {
-			baremacion=matrizBaremacion[6][1];
-			escala=matrizBaremacion[6][2];
-		}
-
-		if (correctas==matrizBaremacion[7][0]) {
-			baremacion=matrizBaremacion[7][1];
-			escala=matrizBaremacion[7][2];
-		}
-		if (correctas==matrizBaremacion[8][0]) {
-			baremacion=matrizBaremacion[8][1];
-			escala=matrizBaremacion[8][2];
-		}
-
-		if (correctas==matrizBaremacion[9][0]) {
-			baremacion=matrizBaremacion[9][1];
-			escala=matrizBaremacion[9][2];
-		}
-
-		if (correctas==matrizBaremacion[10][0]) {
-			baremacion=matrizBaremacion[10][1];
-			escala=matrizBaremacion[10][2];
-		}
-
-		if (correctas==matrizBaremacion[11][0]) {
-			baremacion=matrizBaremacion[11][1];
-			escala=matrizBaremacion[11][2];
-		}
-		if (correctas==matrizBaremacion[12][0]) {
-			baremacion=matrizBaremacion[12][1];
-			escala=matrizBaremacion[12][2];
-		}
-
-		if (correctas==matrizBaremacion[13][0]) {
-			baremacion=matrizBaremacion[13][1];
-			escala=matrizBaremacion[13][2];
-		}
-		if (correctas==matrizBaremacion[14][0]) {
-			baremacion=matrizBaremacion[14][1];
-			escala=matrizBaremacion[14][2];
-		}
-		if (correctas==matrizBaremacion[15][0]) {
-			baremacion=matrizBaremacion[15][1];
-			escala=matrizBaremacion[15][2];
-		}
-
-		if (correctas==matrizBaremacion[16][0]) {
-			baremacion=matrizBaremacion[16][1];
-			escala=matrizBaremacion[16][2];
-		}
-		if (correctas==matrizBaremacion[17][0]) {
-			baremacion=matrizBaremacion[17][1];
-			escala=matrizBaremacion[17][2];
-		}
-
-		if (correctas==matrizBaremacion[18][0]) {
-			baremacion=matrizBaremacion[18][1];
-			escala=matrizBaremacion[18][2];
-		}
-
-		if (correctas==matrizBaremacion[19][0]) {
-			baremacion=matrizBaremacion[19][1];
-			escala=matrizBaremacion[19][2];
-		}
-
-		if (correctas==matrizBaremacion[20][0]) {
-			baremacion=matrizBaremacion[20][1];
-			escala=matrizBaremacion[20][2];
-		}
-		if (correctas==matrizBaremacion[21][0]) {
-			baremacion=matrizBaremacion[21][1];
-			escala=matrizBaremacion[21][2];
-		}
-
-		if (correctas==matrizBaremacion[22][0]) {
-			baremacion=matrizBaremacion[22][1];
-			escala=matrizBaremacion[22][2];
-		}
-		if (correctas==matrizBaremacion[23][0]) {
-			baremacion=matrizBaremacion[23][1];
-			escala=matrizBaremacion[23][2];
-		}
-		if (correctas==matrizBaremacion[24][0]) {
-			baremacion=matrizBaremacion[24][1];
-			escala=matrizBaremacion[24][2];
-		}
-
-		if (correctas==matrizBaremacion[25][0]) {
-			baremacion=matrizBaremacion[25][1];
-			escala=matrizBaremacion[25][2];
-		}
-		if (correctas==matrizBaremacion[26][0]) {
-			baremacion=matrizBaremacion[26][1];
-			escala=matrizBaremacion[26][2];
-		}
-
-		if (correctas==matrizBaremacion[27][0]) {
-			baremacion=matrizBaremacion[27][1];
-			escala=matrizBaremacion[27][2];
-		}
-
-		if (correctas==matrizBaremacion[28][0]) {
-			baremacion=matrizBaremacion[28][1];
-			escala=matrizBaremacion[28][2];
-		}
-		if (correctas==matrizBaremacion[29][0]) {
-			baremacion=matrizBaremacion[29][1];
-			escala=matrizBaremacion[29][2];
-		}
-		if (correctas==matrizBaremacion[30][0]) {
-			baremacion=matrizBaremacion[30][1];
-			escala=matrizBaremacion[30][2];
-		}
-
-		if (correctas==matrizBaremacion[31][0]) {
-			baremacion=matrizBaremacion[31][1];
-			escala=matrizBaremacion[31][2];
-		}
-		if (correctas==matrizBaremacion[32][0]) {
-			baremacion=matrizBaremacion[32][1];
-			escala=matrizBaremacion[32][2];
-		}
-
-		if (correctas==matrizBaremacion[33][0]) {
-			baremacion=matrizBaremacion[33][1];
-			escala=matrizBaremacion[33][2];
-		}
-		document.write(" Puntaje convertido "+baremacion+"% Escala "+escala+"<br><br>");//imprime puntaje convertido y escala
-	}
-
-	var matrizRespuestas=new Array();//variable matriz respuestas
-	for (var i = 0; i < 33; i++) {//
-		matrizRespuestas[i]=new Array(3);//creacion martriz 32x3
-	}
-	matrizRespuestasMemoria(matrizRespuestas);//matriz respuestas
-
-	matrizRespuestas[1][2]=arregloRespuestas[1];//asignación de respuestas estudiante a la matriz por indice
-	matrizRespuestas[2][2]=arregloRespuestas[2];
-	matrizRespuestas[3][2]=arregloRespuestas[3];
-	matrizRespuestas[4][2]=arregloRespuestas[4];
-	matrizRespuestas[5][2]=arregloRespuestas[5];
-	matrizRespuestas[6][2]=arregloRespuestas[6];
-	matrizRespuestas[7][2]=arregloRespuestas[7];
-	matrizRespuestas[8][2]=arregloRespuestas[8];
-	matrizRespuestas[9][2]=arregloRespuestas[9];
-	matrizRespuestas[10][2]=arregloRespuestas[10];
-	matrizRespuestas[11][2]=arregloRespuestas[11];
-	matrizRespuestas[12][2]=arregloRespuestas[12];
-	matrizRespuestas[13][2]=arregloRespuestas[13];
-	matrizRespuestas[14][2]=arregloRespuestas[14];
-	matrizRespuestas[15][2]=arregloRespuestas[15];
-	matrizRespuestas[16][2]=arregloRespuestas[16];
-	matrizRespuestas[17][2]=arregloRespuestas[17];
-	matrizRespuestas[18][2]=arregloRespuestas[18];
-	matrizRespuestas[19][2]=arregloRespuestas[19];
-	matrizRespuestas[20][2]=arregloRespuestas[20];
-	matrizRespuestas[21][2]=arregloRespuestas[21];
-	matrizRespuestas[22][2]=arregloRespuestas[22];
-	matrizRespuestas[23][2]=arregloRespuestas[23];
-	matrizRespuestas[24][2]=arregloRespuestas[24];
-	matrizRespuestas[25][2]=arregloRespuestas[25];
-	matrizRespuestas[26][2]=arregloRespuestas[26];
-	matrizRespuestas[27][2]=arregloRespuestas[27];
-	matrizRespuestas[28][2]=arregloRespuestas[28];
-	matrizRespuestas[29][2]=arregloRespuestas[29];
-	matrizRespuestas[30][2]=arregloRespuestas[30];
-	matrizRespuestas[31][2]=arregloRespuestas[31];
-	matrizRespuestas[32][2]=arregloRespuestas[32];
-
-	/*document.write("Matriz de Respuestas<br><br>")//
-	for (var i = 1; i < 33; i++) {//imprime matriz
- 		for (var j = 0; j < 3; j++) {
- 			 document.write(" -"+matrizRespuestas[i][j]+"- ");
- 		}
- 		document.write("<br>");
- 	}*/
-
-}
-
-	</script>
-</body>
+	</body>
 </html>

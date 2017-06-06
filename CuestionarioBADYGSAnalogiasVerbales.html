@@ -8,8 +8,9 @@
 	<script type="text/javascript" src="C:\BADYGS\Cronometro.js"></script>
 	<script type="text/javascript" src="C:\BADYGS\CapturaRespuestas.js"></script>
 	<script type="text/javascript" src="PuntajesBADYGSAnalogiasVerbales.js"></script>
-	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> <!--link referencia jQuery-->
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script><!--link referencia jQuery-->
 <script type="text/javascript">	
+//función para pasar preguntas por medio de los botones
 	$(document).ready(function(){//acciona la función ready cuando el documento de carga
 
 	$(".Preguntas").hide();//Oculta los contenedores div solo muestra el primero llamandolos por su class
@@ -264,7 +265,8 @@
 	});//fin función ready
 </script>
 <script type="text/javascript">
-	$(document).ready(function(){//acciona la función cuando el documento de carga
+//función para pasar preguntas por medio de los radiobuttons
+	$(document).ready(function(){//acciona la función ready cuando el documento de carga
 		$(".Preguntas").hide();//Oculta los contenedores div solo muestra el primero llamandolos por su class
 		$("input[name=pregunta1]").click(function(){//asigna la función  click al grupo de radiobuttons llamados por su nombre
 			$("#Preguntas1").next().show();//muestra el contenedor siguiente al actual llamado por el id del actual
@@ -395,7 +397,8 @@
 	});//fin función ready
 </script>
 <script type="text/javascript">
-	$(document).ready(function(){//acciona la función cuando el documento de carga
+//función barra de preguntas
+	$(document).ready(function(){//acciona la función ready cuando el documento de carga
 		$("#Barra2").hide();//oculta el contenedor de la barra de preguntas según su id
 		$("#b1").click(function(){//asigna la función click al enlace según su id para accionar la función
 			$("#Barra2").show();//muestra el contenedor de barra de preguntas según su id
@@ -1089,7 +1092,8 @@
 		<input type="radio" name="pregunta32" value="j32">
 		<label>J. superación.</label>
 		<br><br><input type="button" name="ant31" id="ant31" value="Anterior">
-	</div>
+	</div> 
+	<!--contenedor barra de preguntas-->
 	<div class="Barra" id="Barra1"> <!--contenedores de barra de preguntas-->
 		<a href="#" id="p1">1.</a><!--Referencias para cambiar de preguntas-->
 		<a href="#" id="p2">2.</a>
