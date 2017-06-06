@@ -4,19 +4,576 @@
 	<meta charset="utf-8">
 	<title> Pruebas BADYG M</title>
 	<script type="text/javascript" src="RespuestasBADYGMMemoriaOrtografica.js">
-	</script>
+	</script><!--archivos .js-->
 	<script type="text/javascript" src="C:\BADYGM\Cronometro.js"></script>
 	<script type="text/javascript" src="C:\BADYGM\CapturaRespuestas.js"></script>
+	<script type="text/javascript" src="PuntajesBADYGSAnalogiasVerbales.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> <!--link referencia jQuery-->
+<script type="text/javascript">	
+	$(document).ready(function(){//acciona la función ready cuando el documento de carga
+	$(".Preguntas").hide();//Oculta los contenedores div solo muestra el primero llamandolos por su class
+	$("#sig").on('click',function(){//asigna función on click al botón por su id para accionarla
+		$("#Preguntas1").next().show();//muestra el contenedor siguiente al actual llamandolo por la id del actual
+		$("#Preguntas1").hide();//oculta el contenedor actual por su id
+	});//fin función on click
+	$("#sig2").on('click',function(){
+		$("#Preguntas2").next().show();
+		$("#Preguntas2").hide();
+	});
+	$("#ant").on('click',function(){
+		$("#Preguntas2").prev().show();
+		$("#Preguntas2").hide();
+	});
+	$("#sig3").on('click',function(){
+		$("#Preguntas3").next().show();
+		$("#Preguntas3").hide();
+	});
+	$("#ant2").on('click',function(){
+		$("#Preguntas3").prev().show();
+		$("#Preguntas3").hide();
+	});
+	$("#sig4").on('click',function(){
+		$("#Preguntas4").next().show();
+		$("#Preguntas4").hide();
+	});
+	$("#ant3").on('click',function(){
+		$("#Preguntas4").prev().show();
+		$("#Preguntas4").hide();
+	});
+	$("#sig5").on('click',function(){
+		$("#Preguntas5").next().show();
+		$("#Preguntas5").hide();
+	});
+	$("#ant4").on('click',function(){
+		$("#Preguntas5").prev().show();
+		$("#Preguntas5").hide();
+	});
+	$("#sig6").on('click',function(){
+		$("#Preguntas6").next().show();
+		$("#Preguntas6").hide();
+	});
+	$("#ant5").on('click',function(){
+		$("#Preguntas6").prev().show();
+		$("#Preguntas6").hide();
+	});
+	$("#sig7").on('click',function(){
+		$("#Preguntas7").next().show();
+		$("#Preguntas7").hide();
+	});
+	$("#ant6").on('click',function(){
+		$("#Preguntas7").prev().show();
+		$("#Preguntas7").hide();
+	});
+	$("#sig8").on('click',function(){
+		$("#Preguntas8").next().show();
+		$("#Preguntas8").hide();
+	});
+	$("#ant7").on('click',function(){
+		$("#Preguntas8").prev().show();
+		$("#Preguntas8").hide();
+	});
+	$("#sig9").on('click',function(){
+		$("#Preguntas9").next().show();
+		$("#Preguntas9").hide();
+	});
+	$("#ant8").on('click',function(){
+		$("#Preguntas9").prev().show();
+		$("#Preguntas9").hide();
+	});
+	$("#sig10").on('click',function(){
+		$("#Preguntas10").next().show();
+		$("#Preguntas10").hide();
+	});
+	$("#ant9").on('click',function(){
+		$("#Preguntas10").prev().show();
+		$("#Preguntas10").hide();
+	});
+	$("#sig11").on('click',function(){
+		$("#Preguntas11").next().show();
+		$("#Preguntas11").hide();
+	});
+	$("#ant10").on('click',function(){
+		$("#Preguntas11").prev().show();
+		$("#Preguntas11").hide();
+	});
+	$("#sig12").on('click',function(){
+		$("#Preguntas12").next().show();
+		$("#Preguntas12").hide();
+	});
+	$("#ant11").on('click',function(){
+		$("#Preguntas12").prev().show();
+		$("#Preguntas12").hide();
+	});
+	$("#sig13").on('click',function(){
+		$("#Preguntas13").next().show();
+		$("#Preguntas13").hide();
+	});
+	$("#ant12").on('click',function(){
+		$("#Preguntas13").prev().show();
+		$("#Preguntas13").hide();
+	});
+	$("#sig14").on('click',function(){
+		$("#Preguntas14").next().show();
+		$("#Preguntas14").hide();
+	});
+	$("#ant13").on('click',function(){
+		$("#Preguntas14").prev().show();
+		$("#Preguntas14").hide();
+	});
+	$("#sig15").on('click',function(){
+		$("#Preguntas15").next().show();
+		$("#Preguntas15").hide();
+	});
+	$("#ant14").on('click',function(){
+		$("#Preguntas15").prev().show();
+		$("#Preguntas15").hide();
+	});
+	$("#sig16").on('click',function(){
+		$("#Preguntas16").next().show();
+		$("#Preguntas16").hide();
+	});
+	$("#ant15").on('click',function(){
+		$("#Preguntas16").prev().show();
+		$("#Preguntas16").hide();
+	});
+	$("#sig17").on('click',function(){
+		$("#Preguntas17").next().show();
+		$("#Preguntas17").hide();
+	});
+	$("#ant16").on('click',function(){
+		$("#Preguntas17").prev().show();
+		$("#Preguntas17").hide();
+	});
+	$("#sig18").on('click',function(){
+		$("#Preguntas18").next().show();
+		$("#Preguntas18").hide();
+	});
+	$("#ant17").on('click',function(){
+		$("#Preguntas18").prev().show();
+		$("#Preguntas18").hide();
+	});
+	$("#sig19").on('click',function(){
+		$("#Preguntas19").next().show();
+		$("#Preguntas19").hide();
+	});
+	$("#ant18").on('click',function(){
+		$("#Preguntas19").prev().show();
+		$("#Preguntas19").hide();
+	});
+	$("#sig20").on('click',function(){
+		$("#Preguntas20").next().show();
+		$("#Preguntas20").hide();
+	});
+	$("#ant19").on('click',function(){
+		$("#Preguntas20").prev().show();
+		$("#Preguntas20").hide();
+	});
+	$("#sig21").on('click',function(){
+		$("#Preguntas21").next().show();
+		$("#Preguntas21").hide();
+	});
+	$("#ant20").on('click',function(){
+		$("#Preguntas21").prev().show();
+		$("#Preguntas21").hide();
+	});
+	$("#sig22").on('click',function(){
+		$("#Preguntas22").next().show();
+		$("#Preguntas22").hide();
+	});
+	$("#ant21").on('click',function(){
+		$("#Preguntas22").prev().show();
+		$("#Preguntas22").hide();
+	});
+	$("#sig23").on('click',function(){
+		$("#Preguntas23").next().show();
+		$("#Preguntas23").hide();
+	});
+	$("#ant22").on('click',function(){
+		$("#Preguntas23").prev().show();
+		$("#Preguntas23").hide();
+	});
+	$("#sig24").on('click',function(){
+		$("#Preguntas24").next().show();
+		$("#Preguntas24").hide();
+	});
+	$("#ant23").on('click',function(){
+		$("#Preguntas24").prev().show();
+		$("#Preguntas24").hide();
+	});
+	$("#sig25").on('click',function(){
+		$("#Preguntas25").next().show();
+		$("#Preguntas25").hide();
+	});
+	$("#ant24").on('click',function(){
+		$("#Preguntas25").prev().show();
+		$("#Preguntas25").hide();
+	});
+	$("#sig26").on('click',function(){
+		$("#Preguntas26").next().show();
+		$("#Preguntas26").hide();
+	});
+	$("#ant25").on('click',function(){
+		$("#Preguntas26").prev().show();
+		$("#Preguntas26").hide();
+	});
+	$("#sig27").on('click',function(){
+		$("#Preguntas27").next().show();
+		$("#Preguntas27").hide();
+	});
+	$("#ant26").on('click',function(){
+		$("#Preguntas27").prev().show();
+		$("#Preguntas27").hide();
+	});
+	$("#sig28").on('click',function(){
+		$("#Preguntas28").next().show();
+		$("#Preguntas28").hide();
+	});
+	$("#ant27").on('click',function(){
+		$("#Preguntas28").prev().show();
+		$("#Preguntas28").hide();
+	});
+	$("#sig29").on('click',function(){
+		$("#Preguntas29").next().show();
+		$("#Preguntas29").hide();
+	});	
+	$("#ant28").on('click',function(){
+		$("#Preguntas29").prev().show();
+		$("#Preguntas29").hide();
+	});
+	$("#sig30").on('click',function(){
+		$("#Preguntas30").next().show();
+		$("#Preguntas30").hide();
+	});
+	$("#ant29").on('click',function(){
+		$("#Preguntas30").prev().show();
+		$("#Preguntas30").hide();
+	});
+	$("#sig31").on('click',function(){
+		$("#Preguntas31").next().show();
+		$("#Preguntas31").hide();
+	});	
+	$("#ant30").on('click',function(){
+		$("#Preguntas31").prev().show();
+		$("#Preguntas31").hide();
+	});	
+	$("#ant31").on('click',function(){
+		$("#Preguntas32").prev().show();
+		$("#Preguntas32").hide();
+	});
+	});//fin función ready
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){//acciona la función cuando el documento de carga
+		$(".Preguntas").hide();//Oculta los contenedores div solo muestra el primero llamandolos por su class
+		$("input[name=pregunta1]").click(function(){//asigna la función  click al grupo de radiobuttons llamados por su nombre
+			$("#Preguntas1").next().show();//muestra el contenedor siguiente al actual llamado por el id del actual
+			$("#Preguntas1").hide();//oculta el contenedor actual por su id
+		});//fin función click
+		$("input[name=pregunta2]").click(function(){
+			$("#Preguntas2").next().show();
+			$("#Preguntas2").hide();
+		});
+		$("input[name=pregunta3]").click(function(){
+			$("#Preguntas3").next().show();
+			$("#Preguntas3").hide();
+		});
+		$("input[name=pregunta4]").click(function(){
+			$("#Preguntas4").next().show();
+			$("#Preguntas4").hide();
+		});
+		$("input[name=pregunta5]").click(function(){
+			$("#Preguntas5").next().show();
+			$("#Preguntas5").hide();
+		});
+		$("input[name=pregunta6]").click(function(){
+			$("#Preguntas6").next().show();
+			$("#Preguntas6").hide();
+		});
+		$("input[name=pregunta7]").click(function(){
+			$("#Preguntas7").next().show();
+			$("#Preguntas7").hide();
+		});
+		$("input[name=pregunta8]").click(function(){
+			$("#Preguntas8").next().show();
+			$("#Preguntas8").hide();
+		});
+		$("input[name=pregunta9]").click(function(){
+			$("#Preguntas9").next().show();
+			$("#Preguntas9").hide();
+		});
+		$("input[name=pregunta10]").click(function(){
+			$("#Preguntas10").next().show();
+			$("#Preguntas10").hide();
+		});
+		$("input[name=pregunta11]").click(function(){
+			$("#Preguntas11").next().show();
+			$("#Preguntas11").hide();
+		});
+		$("input[name=pregunta12]").click(function(){
+			$("#Preguntas12").next().show();
+			$("#Preguntas12").hide();
+		});		
+		$("input[name=pregunta13]").click(function(){
+			$("#Preguntas13").next().show();
+			$("#Preguntas13").hide();
+		});
+		$("input[name=pregunta14]").click(function(){
+			$("#Preguntas14").next().show();
+			$("#Preguntas14").hide();
+		});
+		$("input[name=pregunta15]").click(function(){
+			$("#Preguntas15").next().show();
+			$("#Preguntas15").hide();
+		});
+		$("input[name=pregunta16]").click(function(){
+			$("#Preguntas16").next().show();
+			$("#Preguntas16").hide();
+			$("#Barra2").show();//muestra el contenedor de la barra de preguntas siguiente por id
+			$("#Barra1").hide();//oculta el contenedor de la barra de preguntas actual por id
+		});
+		$("input[name=pregunta17]").click(function(){
+			$("#Preguntas17").next().show();
+			$("#Preguntas17").hide();
+		});
+		$("input[name=pregunta18]").click(function(){
+			$("#Preguntas18").next().show();
+			$("#Preguntas18").hide();
+		});
+		$("input[name=pregunta19]").click(function(){
+			$("#Preguntas19").next().show();
+			$("#Preguntas19").hide();
+		});
+		$("input[name=pregunta20]").click(function(){
+			$("#Preguntas20").next().show();
+			$("#Preguntas20").hide();
+		});
+		$("input[name=pregunta21]").click(function(){
+			$("#Preguntas21").next().show();
+			$("#Preguntas21").hide();
+		});
+		$("input[name=pregunta22]").click(function(){
+			$("#Preguntas22").next().show();
+			$("#Preguntas22").hide();
+		});
+		$("input[name=pregunta23]").click(function(){
+			$("#Preguntas23").next().show();
+			$("#Preguntas23").hide();
+		});
+		$("input[name=pregunta24]").click(function(){
+			$("#Preguntas24").next().show();
+			$("#Preguntas24").hide();
+		});
+		$("input[name=pregunta25]").click(function(){
+			$("#Preguntas25").next().show();
+			$("#Preguntas25").hide();
+		});
+		$("input[name=pregunta26]").click(function(){
+			$("#Preguntas26").next().show();
+			$("#Preguntas26").hide();
+		});
+		$("input[name=pregunta27]").click(function(){
+			$("#Preguntas27").next().show();
+			$("#Preguntas27").hide();
+		});
+		$("input[name=pregunta28]").click(function(){
+			$("#Preguntas28").next().show();
+			$("#Preguntas28").hide();
+		});
+		$("input[name=pregunta29]").click(function(){
+			$("#Preguntas29").next().show();
+			$("#Preguntas29").hide();
+		});
+		$("input[name=pregunta30]").click(function(){
+			$("#Preguntas30").next().show();
+			$("#Preguntas30").hide();
+		});
+		$("input[name=pregunta31]").click(function(){
+			$("#Preguntas31").next().show();
+			$("#Preguntas31").hide();
+		});
+	});//fin función ready
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){//acciona la función cuando el documento de carga
+		$("#Barra2").hide();//oculta el contenedor de la barra de preguntas según su id
+		$("#b1").click(function(){//asigna la función click al enlace según su id para accionar la función
+			$("#Barra2").show();//muestra el contenedor de barra de preguntas según su id
+			$("#Barra1").hide();//oculta el contenedor de barra de preguntas según su id
+		});//fin función click
+		$("#b2").click(function(){
+			$("#Barra1").show();
+			$("#Barra2").hide();
+		});
+		$("#p1").click(function(){//asigna la función click al enlace según su id para accionar la función
+			$("#Preguntas1").show();//muestra el contenedor de barra de preguntas según su id
+			$(".Preguntas").hide();//oculta los contenedores de barra de preguntas según su class
+		});//fin función click
+		$("#p2").click(function(){//asigna la función click al enlace según su id para accionar la función
+			$(".Preguntas").hide();//oculta los contenedores de barra de preguntas según su class
+			$("#Preguntas2").show();//muestra el contenedor de barra de preguntas según su id
+			$(".Preguntas1").hide();//oculta los contenedores de barra de preguntas según su class
+		});//fin función click
+		$("#p3").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas3").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p4").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas4").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p5").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas5").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p6").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas6").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p7").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas7").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p8").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas8").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p9").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas9").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p10").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas10").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p11").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas11").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p12").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas12").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p13").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas13").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p14").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas14").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p15").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas15").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p16").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas16").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p17").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas17").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p18").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas18").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p19").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas19").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p20").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas20").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p21").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas21").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p22").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas22").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p23").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas23").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p24").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas24").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p25").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas25").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p26").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas26").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p27").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas27").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p28").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas28").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p29").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas29").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p30").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas30").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p31").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas31").show();
+			$(".Preguntas1").hide();
+		});
+		$("#p32").click(function(){
+			$(".Preguntas").hide();
+			$("#Preguntas32").show();
+			$(".Preguntas1").hide();
+		});
+	});//fin función ready
+</script>
 </head>
 <body onload="tiempo(4);">
 <h1> Prueba Memoria Visual Ortográfica</h1>
-<form name="form" align="right">
-
-	<input type="text" size="1" class="form_input" name="minute" disabled>:
-	<input type="text" size="1" class="form_input" name="second" disabled>
+<form name="form" align="right"><!--espacio de cronometro-->
+	<input type="text" size="1" class="form_input" name="minute" disabled>:<!--minutos-->
+	<input type="text" size="1" class="form_input" name="second" disabled><!--segundos-->
 </form>
 	<form action="" name="cuestionario" method="get" onsubmit="return compararRespuestas(this);">
-		<div class="Preguntas1"> 
+		<div class="Preguntas1" id="Preguntas1"> 
 		<!--contenedor de las opciones de respuesta-->
 
 			<p> 1. </p>	 
@@ -28,7 +585,7 @@
 			<label>M. alcool.</label>
 		</div>
 
-		<div class="Preguntas2"> 
+		<div class="Preguntas" id="Preguntas2"> 
 			<p> 2. </p>	 
 			<input type="radio" name="pregunta2"  value="p">
 			<label>P. pavimento.</label>
@@ -38,7 +595,7 @@
 			<label>R. hobispo.</label>
 		</div>
 
-		<div class="Preguntas3"> 
+		<div class="Preguntas" id="Preguntas3"> 
 			<p> 3. </p>	 
 			<input type="radio" name="pregunta3"  value="v">
 			<label>V. provocar.</label>
@@ -48,7 +605,7 @@
 			<label>X. bahía.</label>
 		</div>
 
-		<div class="Preguntas4"> 
+		<div class="Preguntas" id="Preguntas4"> 
 			<p> 4. </p>	 
 			<input type="radio" name="pregunta4"  value="a">
 			<label>A. convexo.</label>
@@ -58,7 +615,7 @@
 			<label>C. halergia.</label>
 		</div>
 
-		<div class="Preguntas5"> 
+		<div class="Preguntas" id="Preguntas5"> 
 			<p> 5. </p>	 
 			<input type="radio" name="pregunta5"  value="f">
 			<label>F. entubiar.</label>
@@ -68,7 +625,7 @@
 			<label>H. carabela.</label>
 		</div>
 
-		<div class="Preguntas6"> 
+		<div class="Preguntas" id="Preguntas6"> 
 			<p> 6. </p>	 
 			<input type="radio" name="pregunta6"  value="k">
 			<label>K. hoyente.</label>
@@ -78,7 +635,7 @@
 			<label>M. hospedaje.</label>
 		</div>
 
-		<div class="Preguntas7"> 
+		<div class="Preguntas" id="Preguntas7"> 
 			<p> 7. </p>	 
 			<input type="radio" name="pregunta7"  value="p">
 			<label>P. axfixia.</label>
@@ -88,7 +645,7 @@
 			<label>R. estrenar.</label>
 		</div>
 
-		<div class="Preguntas8"> 
+		<div class="Preguntas" id="Preguntas8"> 
 			<p> 8. </p>	 
 			<input type="radio" name="pregunta8"  value="v">
 			<label>V. injerto.</label>
@@ -96,9 +653,9 @@
 			<label>W. objetibo.</label>
 			<input type="radio" name="pregunta8"  value="x">
 			<label>X. hondo.</label>
-		</divx>
+		</div>
 
-		<div class="Preguntas9"> 
+		<div class="Preguntas" id="Preguntas9"> 
 			<p> 9. </p>	 
 			<input type="radio" name="pregunta9"  value="a">
 			<label>A. inolvidable.</label>
@@ -106,9 +663,9 @@
 			<label>B. rebés.</label>
 			<input type="radio" name="pregunta9"  value="c">
 			<label>C. jubilarse.</label>
-		</divc>
+		</div>
 
-		<div class="Preguntas10"> 
+		<div class="Preguntas" id="Preguntas10"> 
 			<p> 10. </p>	 
 			<input type="radio" name="pregunta10" value="f" >
 			<label>F. hóvalo.</label>
@@ -116,9 +673,9 @@
 			<label>G. ondular.</label>
 			<input type="radio" name="pregunta10" value="h" >
 			<label>H. elíptico.</label>
-		</divh>
+		</div>
 		
-		<div class="Preguntas11"> 
+		<div class="Preguntas" id="Preguntas11"> 
 			<p> 11. </p>	 
 			<input type="radio" name="pregunta11" value="k" >
 			<label>K. advertir.</label>
@@ -128,7 +685,7 @@
 			<label>M. joya.</label>
 		</div>
 
-		<div class="Preguntas12"> 
+		<div class="Preguntas" id="Preguntas12"> 
 			<p> 12. </p>	 
 			<input type="radio" name="pregunta12" value="p" >
 			<label>P. abedul.</label>
@@ -138,7 +695,7 @@
 			<label>R. bocavulario.</label>
 		</div>
 
-		<div class="Preguntas13"> 
+		<div class="Preguntas" id="Preguntas13"> 
 			<p> 13. </p>	 
 			<input type="radio" name="pregunta13" value="v" >
 			<label>V. robólver.</label>
@@ -148,7 +705,7 @@
 			<label>X. ahogar.</label>
 		</div>
 
-		<div class="Preguntas14"> 
+		<div class="Preguntas" id="Preguntas14"> 
 			<p> 14. </p>	 
 			<input type="radio" name="pregunta14" value="a" >
 			<label>A. disolver.</label>
@@ -158,7 +715,7 @@
 			<label>C. lóvulo.</label>
 		</div>
 
-		<div class="Preguntas15"> 
+		<div class="Preguntas" id="Preguntas15"> 
 			<p> 15. </p>	 
 			<input type="radio" name="pregunta15" value="f" >
 			<label>F. abdomen.</label>
@@ -168,7 +725,7 @@
 			<label>H. valija.</label>
 		</div>
 
-		<div class="Preguntas16"> 
+		<div class="Preguntas" id="Preguntas16"> 
 			<p> 16. </p>	 
 			<input type="radio" name="pregunta16" value="k" >
 			<label>K. elavorar.</label>
@@ -178,7 +735,7 @@
 			<label>M. extraviar.</label>
 		</div>
 
-		<div class="Preguntas17"> 
+		<div class="Preguntas" id="Preguntas17"> 
 			<p> 17. </p>	 
 			<input type="radio" name="pregunta17" value="p" >
 			<label>P. atrayente.</label>
@@ -188,7 +745,7 @@
 			<label>R. envasar.</label>
 		</div>
 
-		<div class="Preguntas18"> 
+		<div class="Preguntas" id="Preguntas18"> 
 			<p> 18. </p>	 
 			<input type="radio" name="pregunta18" value="v">
 			<label>V. viveza.</label>
@@ -198,7 +755,7 @@
 			<label>X. bálbula.</label>
 		</div>
 
-		<div class="Preguntas19"> 
+		<div class="Preguntas" id="Preguntas19"> 
 			<p> 19. </p>	 
 			<input type="radio" name="pregunta19" value="a" >
 			<label>A. vaho.</label>
@@ -208,7 +765,7 @@
 			<label>C. trivunal.</label>
 		</div>
 
-		<div class="Preguntas20"> 
+		<div class="Preguntas" id="Preguntas20"> 
 			<p> 20. </p>	 
 			<input type="radio" name="pregunta20" value="f" >
 			<label>F. allazgo.</label>
@@ -218,7 +775,7 @@
 			<label>H. abordar.</label>
 		</div>
 
-		<div class="Preguntas21"> 
+		<div class="Preguntas" id="Preguntas21"> 
 			<p> 21. </p>	 
 			<input type="radio" name="pregunta21" value="k" >
 			<label>K. ipnotizar.</label>
@@ -228,7 +785,7 @@
 			<label>M. anhelar.</label>
 		</div>
 
-		<div class="Preguntas22"> 
+		<div class="Preguntas" id="Preguntas22"> 
 			<p> 22. </p>	 
 			<input type="radio" name="pregunta22" value="p" >
 			<label>P. rebelde.</label>
@@ -238,7 +795,7 @@
 			<label>R. encaje.</label>
 		</div>
 
-		<div class="Preguntas23"> 
+		<div class="Preguntas" id="Preguntas23"> 
 			<p> 23. </p>	 
 			<input type="radio" name="pregunta23" value="v" >
 			<label>V. harpón.</label>
@@ -248,7 +805,7 @@
 			<label>X. halcón</label>
 		</div>
 
-		<div class="Preguntas24"> 
+		<div class="Preguntas" id="Preguntas24"> 
 			<p> 24. </p>	 
 			<input type="radio" name="pregunta24" value="a" >
 			<label>A. deshonra.</label>
@@ -258,7 +815,7 @@
 			<label>C. desbán.</label>
 		</div>
 
-		<div class="Preguntas25"> 
+		<div class="Preguntas" id="Preguntas25"> 
 			<p> 25. </p>	 
 			<input type="radio" name="pregunta25" value="f" >
 			<label>F. lavabo.</label>
@@ -268,7 +825,7 @@
 			<label>H. balanvolea.</label>
 		</div>
 
-		<div class="Preguntas26"> 
+		<div class="Preguntas" id="Preguntas26"> 
 			<p> 26. </p>	 
 			<input type="radio" name="pregunta26" value="k" >
 			<label>K. dirijible.</label>
@@ -278,7 +835,7 @@
 			<label>M. pingajo.</label>
 		</div>
 
-		<div class="Preguntas27"> 
+		<div class="Preguntas" id="Preguntas27"> 
 			<p> 27. </p>	 
 			<input type="radio" name="pregunta27" value="p" >
 			<label>P. embalaje.</label>
@@ -288,7 +845,7 @@
 			<label>R. javalí.</label>
 		</div>
 
-		<div class="Preguntas28"> 
+		<div class="Preguntas" id="Preguntas28"> 
 			<p> 28. </p>	 
 			<input type="radio" name="pregunta28" value="v" >
 			<label>V. homenajear.</label>
@@ -298,7 +855,7 @@
 			<label>X. obesidad.</label>
 		</div>
 
-		<div class="Preguntas29"> 
+		<div class="Preguntas" id="Preguntas29"> 
 			<p> 29. </p>	 
 			<input type="radio" name="pregunta29" value="a" >
 			<label>A. glóbulo.</label>
@@ -308,7 +865,7 @@
 			<label>C. homnívoro.</label>
 		</div>
 
-		<div class="Preguntas30"> 
+		<div class="Preguntas" id="Preguntas30">  
 			<p> 30. </p>	 
 			<input type="radio" name="pregunta30" value="f">
 			<label>F. emorragia.</label>
@@ -318,7 +875,7 @@
 			<label>H. malhechor.</label>
 		</div>
 
-		<div class="Preguntas31"> 
+		<div class="Preguntas" id="Preguntas31"> 
 			<p> 31. </p>	 
 			<input type="radio" name="pregunta31" value="k" >
 			<label>K. avalanzar.</label>
@@ -328,7 +885,7 @@
 			<label>M. divorcio.</label>
 		</div>
 
-		<div class="Preguntas32"> 
+		<div class="Preguntas" id="Preguntas32"> 
 			<p> 32. </p>	 
 			<input type="radio" name="pregunta32" value="p" >
 			<label>P. rebasar.</label>
@@ -337,7 +894,46 @@
 			<input type="radio" name="pregunta32" value="r" >
 			<label>R. haba.</label>
 		</div>
-		<input type="submit" name="btn" id="btn" value="enviar">
+		<div class="Barra" id="Barra1"> <!--contenedores de barra de preguntas-->
+		<a href="#" id="p1">1.</a><!--Referencias para cambiar de preguntas-->
+		<a href="#" id="p2">2.</a>
+		<a href="#" id="p3">3.</a>
+		<a href="#" id="p4">4.</a>
+		<a href="#" id="p5">5.</a>
+		<a href="#" id="p6">6.</a>
+		<a href="#" id="p7">7.</a>
+		<a href="#" id="p8">8.</a>
+		<a href="#" id="p9">9.</a>
+		<a href="#" id="p10">10.</a>
+		<a href="#" id="p11">11.</a>
+		<a href="#" id="p12">12.</a>
+		<a href="#" id="p13">13.</a>
+		<a href="#" id="p14">14.</a>
+		<a href="#" id="p15">15.</a>
+		<a href="#" id="p16">16.</a>
+		<a href="#" id="b1">>></a>
+	</div>
+	<div class="Barra" id="Barra2">
+		<a href="#" id="b2"><<</a>
+		<a href="#" id="p17">17.</a>
+		<a href="#" id="p18">18.</a>
+		<a href="#" id="p19">19.</a>
+		<a href="#" id="p20">20.</a>
+		<a href="#" id="p21">21.</a>
+		<a href="#" id="p22">22.</a>
+		<a href="#" id="p23">23.</a>
+		<a href="#" id="p24">24.</a>
+		<a href="#" id="p25">25.</a>
+		<a href="#" id="p26">26.</a>
+		<a href="#" id="p27">27.</a>
+		<a href="#" id="p28">28.</a>
+		<a href="#" id="p29">29.</a>
+		<a href="#" id="p30">30.</a>
+		<a href="#" id="p31">31.</a>
+		<a href="#" id="p32">32.</a>
+	</div>
+	<br>
+		<input type="submit" name="btn" id="btn" value="enviar"><!--botón de enviar activa la funcion de compararRespuestas-->
 	</form>
 	<script type="text/javascript">
 		//ALGORITMO DE CAPTURA DE RESPUESTAS MEMORIA RELATO ORAL
