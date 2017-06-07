@@ -10,15 +10,29 @@
 	<script type="text/javascript" src="Respuestas.js"></script>
 	<link rel="stylesheet" type="text/css" href="EstilosCuestionario.css"/>
 	<script type="text/javascript">	
+
+
+	var respuestas new Array();
+
   		$( function() {
     		$( ".Pregunta" ).draggable();
-    		$( "#Contenedor6" ).droppable({
+    		$( ".Contenedor" ).droppable({
+    			accept: ".Pregunta",
+    			tolerance: "touch"
       			drop: function( event, ui ) {
       				var item = ui.draggable.attr("id");
-      				recogeRespuestasContenedores(item);
+      				var respuesta = $(this).attr("id");
+      				respuestas = recogeRespuestasContenedores(item, respuesta);
     			} 		
     		});
-  		} );
+  		});
+
+  	for (i=1; i<7; i++){
+  		document.write(respuestas[i]);
+  	}	
+
+
+
 	</script>	
 </head>
 <body>
@@ -45,31 +59,34 @@
 		<P>F. Seleccionar la música más adecuada para una película <P>
 	</div>
 
-<table>
-	<tr>
-		<td> 6 </td>
-		<td> <div class = "Contenedor" id="Contenedor6"></div></td>
-	</tr>
-	<tr>
-		<td> 5 </td>
-		<td> <div class = "Contenedor" id="Contenedor1-5"></div> </td> 
-	</tr>
-	<tr>
-		<td> 4 </td>
-		<td> <div class = "Contenedor" id="Contenedor1-4"></div> </td>
-	</tr>
-	<tr>
-		<td> 3 </td>
-		<td> <div class = "Contenedor" id="Contenedor1-3"></div> </td>
-	</tr>
-	<tr>
-		<td> 2 </td>
-		<td> <div class = "Contenedor" id="Contenedor1-2"></div> </td>
-	</tr>
-	<tr>
-		<td> 1 </td>
-		<td>  <div class = "Contenedor" id="Contenedor1"></div> </td>
-	</tr>
-</table>
+	<table>
+		<tr>
+			<td> 6 </td>
+			<td> <div class = "Contenedor" id="Contenedor6"></div></td>
+		</tr>
+		<tr>
+			<td> 5 </td>
+			<td> <div class = "Contenedor" id="Contenedor1-5"></div> </td> 
+		</tr>
+		<tr>
+			<td> 4 </td>
+			<td> <div class = "Contenedor" id="Contenedor1-4"></div> </td>
+		</tr>
+		<tr>
+			<td> 3 </td>
+			<td> <div class = "Contenedor" id="Contenedor1-3"></div> </td>
+		</tr>
+		<tr>
+			<td> 2 </td>
+			<td> <div class = "Contenedor" id="Contenedor1-2"></div> </td>
+		</tr>
+		<tr>
+			<td> 1 </td>
+			<td>  <div class = "Contenedor" id="Contenedor1"></div> </td>
+		</tr>
+	</table>
+	<div>
+	<button onclick="recogeRespuestasContenedores()">Enviar Respuestas</button>
+	</div>
 </body>
 </html>
