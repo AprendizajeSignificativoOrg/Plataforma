@@ -1,32 +1,48 @@
 
-function recogeRespuestasContenedores (pregunta, respuesta){
+function recogeRespuestasContenedores (pregunta, respuesta, respuestas){ 
 
-var respuestas new Array(); 
+    var cadenaPregunta = new Array ();
+    cadenaPregunta = pregunta.split('a');
+    var numeroPregunta = Number(cadenaPregunta[1]);
 
-switch (pregunta){
-  case Pregunta1:
-  respuestas[1] = respuesta;
-  break;
-
-  case Pregunta2:
-  respuestas[2] = respuesta;
-  break;
-
-  case Pregunta3:
-  respuestas[3] = respuesta;
-  break;
-
-  case Pregunta4:
-  respuestas[4] = respuesta;
-  break;
-
-  case Pregunta5:
-  respuestas[5] = respuesta;
-  break;
-
-  case Pregunta6:
-  respuestas[6] = respuesta;
-  break;
+    respuestas[numeroPregunta] = cambiaContenedorxValor(respuesta);
 }
-return respuestas;
+
+function cambiaContenedorxValor (respuesta){
+    switch (respuesta){
+
+      case 'Contenedor1':
+        respuesta = 1;
+        break;  
+
+      case 'Contenedor2':
+        respuesta = 2;
+        break;  
+
+      case 'Contenedor3':
+        respuesta = 3;
+        break;  
+
+      case 'Contenedor4':
+        respuesta = 4;
+        break;  
+
+      case 'Contenedor5':
+        respuesta = 5;
+        break;  
+
+      case 'Contenedor6':
+        respuesta = 6;
+        break;
+  }
+  return respuesta;
 }
+
+
+function imprimeRespuestas(respuestas){
+  for (i=1; i<7; i++){
+      document.write(i + " . ");
+      document.write(respuestas[i] + "<br/>");
+    }
+} 
+     

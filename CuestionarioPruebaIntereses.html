@@ -9,28 +9,30 @@
 	<script type="text/javascript" src="jquery-ui.min.js"></script>
 	<script type="text/javascript" src="Respuestas.js"></script>
 	<link rel="stylesheet" type="text/css" href="EstilosCuestionario.css"/>
-	<script type="text/javascript">	
+	
+	<script type="text/javascript">
+	
+	$(document).ready(function(){//Ejecuta la función ready cuando el documento carga.
 
+		$(".Preguntas").hide();//Oculta los contenedores div de los grupos de preguntas
 
-	var respuestas new Array();
+		$("#Preguntas1").show();//Muestra el primer contenedor llamandolo por su id
 
+	});
+
+	var respuestas = new Array();
   		$( function() {
     		$( ".Pregunta" ).draggable();
     		$( ".Contenedor" ).droppable({
     			accept: ".Pregunta",
-    			tolerance: "touch"
+    			tolerance: "touch",
       			drop: function( event, ui ) {
       				var item = ui.draggable.attr("id");
       				var respuesta = $(this).attr("id");
-      				respuestas = recogeRespuestasContenedores(item, respuesta);
+      				recogeRespuestasContenedores(item, respuesta, respuestas);
     			} 		
     		});
   		});
-
-  	for (i=1; i<7; i++){
-  		document.write(respuestas[i]);
-  	}	
-
 
 
 	</script>	
@@ -40,23 +42,230 @@
 	<div>
 		<p>PREFIERO UNA ACTIVIDAD EN LA CUAL TENGA QUE:</p>
 	</div>
-	<div class = "Pregunta" id="Pregunta1">
-		<P>A. Explicar matemática y físicamente los probables resultados de un diseño cualquiera<P>
-	</div >
-	<div class = "Pregunta" id="Pregunta2">
-		<P>B. Conocer técnicas de siembra y recolección de frutas <P>
+
+	<div class="Preguntas" id="Preguntas1">	
+		<div class = "Pregunta" id="Pregunta1">
+			<P>A. Explicar matemática y físicamente los probables resultados de un diseño cualquiera<P>
+		</div >
+		<div class = "Pregunta" id="Pregunta2">
+			<P>B. Conocer técnicas de siembra y recolección de frutas</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta3">
+			<P>C. Observar y conocer cómo actúan los reactivos químicos</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta4">
+			<P>D. Vigilar los rendimientos económicos de una empresa</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta5">
+			<P>E. Conocer el comportamiento humano y las causas que lo motivan</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta6">
+			<P>F. Seleccionar la música más adecuada para una película</p>
+		</div>
 	</div>
-	<div class = "Pregunta" id="Pregunta3">
-		<P>C. Observar y conocer cómo actúan los reactivos químicos<P>
+
+
+	<div class="Preguntas">	
+		<div class = "Pregunta" id="Pregunta7">
+			<P>A. Probar nuevos programas computacionales para realizar operaciones numéricas<P>
+		</div >
+		<div class = "Pregunta" id="Pregunta8">
+			<P>B. Conocer la vida religiosa y artística de las tribus indígenas de nuestro país</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta9">
+			<P>C. Conocer técnicas de mejoramiento de semillas y ganado</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta10">
+			<P>D. Tener un despacho para asesorar empresas en el mejoramiento de su administración</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta11">
+			<P>E. Manejar los productos químicos adecuados a la conservación de alimentos</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta12">
+			<P>F. Participar en programas educativos que ayuden a evitar el alcoholismo y la drogadicción</p>
+		</div>
 	</div>
-	<div class = "Pregunta" id="Pregunta4">
-		<P>D. Vigilar los rendimientos económicos de una empresa <P>
+
+
+	<div class="Preguntas">	
+		<div class = "Pregunta" id="Pregunta13">
+			<P>A. Conocer las causas de la extinción de algunos organismos vivos y cómo evitarla<P>
+		</div >
+		<div class = "Pregunta" id="Pregunta14">
+			<P>B. Determinar a través del análisis químico, la presencia de alguna enfermedad</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta15">
+			<P>C. Conocer las causas, consecuencias y soluciones del divorcio</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta16">
+			<P>D. Saber cuáles son las diferencias y semejanzas entre la música y las artesanías de los distintos grupos culturales</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta17">
+			<P>E. Calcular áreas, perímetros y volumen</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta18">
+			<P>F. Hacer las declaraciones fiscales a una pequeña cámara de comerciantes</p>
+		</div>
 	</div>
-	<div class = "Pregunta" id="Pregunta5">
-		<P>E. Conocer el comportamiento humano y las causas que lo motivan<P>
+
+
+	<div class="Preguntas">	
+		<div class = "Pregunta" id="Pregunta19">
+			<P>A. Conocer las causas del suicido colectivo en algunas especies<P>
+		</div >
+		<div class = "Pregunta" id="Pregunta20">
+			<P>B. Analizar los elementos químicos de algunas sustancias</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta21">
+			<P>C. Diseñar fórmulas matemáticas y físicas, aplicables a una labor cualquiera </p>
+		</div>
+		<div class = "Pregunta" id="Pregunta22">
+			<P>D. Ayudar a una persona que pasa por momentos difíciles</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta23">
+			<P>E. Investigar por qué y para qué existe el hombre</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta24">
+			<P>F. Organizar y dirigir una empresa turística</p>
+		</div>
 	</div>
-	<div class = "Pregunta" id="Pregunta6">
-		<P>F. Seleccionar la música más adecuada para una película <P>
+
+
+	<div class="Preguntas">	
+		<div class = "Pregunta" id="Pregunta25">
+			<P>A. Hacer experimentos en el laboratorio de química<P>
+		</div >
+		<div class = "Pregunta" id="Pregunta26">
+			<P>B. Idear nuevas técnicas de pintura, escultura y grabado</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta27">
+			<P>C. Conocer la estructura y las funciones de la anatomía infantil</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta28">
+			<P>D. Participar en campañas de educación y concientización política</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta29">
+			<P>E. Llevar el inventario de productos que tiene una bodega, a través de un programa electrónico</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta30">
+			<P>F. Usar modelos matemáticos y físicos para realizar un trabajo</p>
+		</div>
+	</div>
+
+
+	<div class="Preguntas">	
+		<div class = "Pregunta" id="Pregunta31">
+			<P>A. Conocer cómo funciona la reproducción bacteriana<P>
+		</div >
+		<div class = "Pregunta" id="Pregunta32">
+			<P>B. Investigar las costumbres de vida entre las clases sociales y sus diferencias</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta33">
+			<P>C. Producir y dirigir audiovisuales, teatro y películas</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta34">
+			<P>D. Ser hábil para obtener nuevos compuestos químicos</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta35">
+			<P>E. Determinar los elementos sociales que estimulan los procesos económicos inflacionarios</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta36">
+			<P>F. Calcular matemáticamente, a través de una computadora, la posibilidad de éxito en un proyecto cualquiera</p>
+		</div>
+	</div>
+
+
+	<div class="Preguntas">	
+		<div class = "Pregunta" id="Pregunta37">
+			<P>A. Calcular fuerzas y resultantes físicas<P>
+		</div >
+		<div class = "Pregunta" id="Pregunta38">
+			<P>B. Aplicar los principios de la cadena alimenticia entre las especies, para su conservación</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta39">
+			<P>C. Estudiar a fondo los efectos de la quimioterapia en el hombre</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta40">
+			<P>D. Determinar las funciones de los empleados de una empresa</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta41">
+			<P>E. Hacer programas para educación de los huérfanos de la casa-hogar</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta42">
+			<P>F. Conocer como eran nuestros antepasados a través de las pinturas, esculturas y danzas</p>
+		</div>
+	</div>
+
+
+	<div class="Preguntas">	
+		<div class = "Pregunta" id="Pregunta43">
+			<P>A. Aplicar los principios y leyes de la física<P>
+		</div >
+		<div class = "Pregunta" id="Pregunta44">
+			<P>B. Manejar con habilidad las cámaras de fotografía y cine</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta45">
+			<P>C. Conocer a fondo los problemas ecológicos</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta46">
+			<P>D. Hacer análisis químicos de agua (su potabilidad)</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta47">
+			<P>E. Conocer las causas que intervienen en la desintegración familiar</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta48">
+			<P>F. Determinar la relación entre inversión y utilidad de una empresa</p>
+		</div>
+	</div>
+
+
+
+	<div class="Preguntas">	
+		<div class = "Pregunta" id="Pregunta49">
+			<P>A. Diseñar la escenografita de un programa televisivo<P>
+		</div >
+		<div class = "Pregunta" id="Pregunta50">
+			<P>B. Usar una calculadora electrónica</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta51">
+			<P>C. Participar en una operación medica</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta52">
+			<P>D. Manejar instrumentos y aparatos para elaborar productos químicos</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta53">
+			<P>E. Organizar los detalles de venta al público en un almacén</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta54">
+			<P>F. Ayudar a la rehabilitación de los presos</p>
+		</div>
+	</div>
+
+
+	<div class="Preguntas">	
+		<div class = "Pregunta" id="Pregunta55">
+			<P>A. Resolver operaciones matemáticas<P>
+		</div >
+		<div class = "Pregunta" id="Pregunta56">
+			<P>B. Conocer los compuestos químicos de las sustancias</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta57">
+			<P>C. Hacer inventarios de los que hay en un almacén</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta58">
+			<P>D. Ayudar a un grupo de campesinos a organizarse</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta59">
+			<P>E. Participar en un jurado que calificara un concurso teatral</p>
+		</div>
+		<div class = "Pregunta" id="Pregunta60">
+			<P>F. Convivir con animales de todo tipo</p>
+		</div>
+	</div>
+
+
+	<div class="Preguntas">	
+		<p>FIN DE LA PRUEBA</p>
 	</div>
 
 	<table>
@@ -66,19 +275,19 @@
 		</tr>
 		<tr>
 			<td> 5 </td>
-			<td> <div class = "Contenedor" id="Contenedor1-5"></div> </td> 
+			<td> <div class = "Contenedor" id="Contenedor5"></div> </td> 
 		</tr>
 		<tr>
 			<td> 4 </td>
-			<td> <div class = "Contenedor" id="Contenedor1-4"></div> </td>
+			<td> <div class = "Contenedor" id="Contenedor4"></div> </td>
 		</tr>
 		<tr>
 			<td> 3 </td>
-			<td> <div class = "Contenedor" id="Contenedor1-3"></div> </td>
+			<td> <div class = "Contenedor" id="Contenedor3"></div> </td>
 		</tr>
 		<tr>
 			<td> 2 </td>
-			<td> <div class = "Contenedor" id="Contenedor1-2"></div> </td>
+			<td> <div class = "Contenedor" id="Contenedor2"></div> </td>
 		</tr>
 		<tr>
 			<td> 1 </td>
@@ -86,7 +295,7 @@
 		</tr>
 	</table>
 	<div>
-	<button onclick="recogeRespuestasContenedores()">Enviar Respuestas</button>
+	<button onclick="imprimeRespuestas(respuestas)">Enviar Respuestas</button>
 	</div>
 </body>
 </html>
