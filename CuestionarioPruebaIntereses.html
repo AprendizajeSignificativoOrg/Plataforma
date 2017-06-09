@@ -8,31 +8,33 @@
 	<script type="text/javascript" src="jquery-ui.js"></script>
 	<script type="text/javascript" src="jquery-ui.min.js"></script>
 	<script type="text/javascript" src="Respuestas.js"></script>
+	<script type="text/javascript" src="CambioPreguntasConBotones.js"></script>
 	<link rel="stylesheet" type="text/css" href="EstilosCuestionario.css"/>
 	
 	<script type="text/javascript">
 	
-	$(document).ready(function(){//Ejecuta la función ready cuando el documento carga.
+	$(document).ready(function(){ //Ejecuta la función ready cuando el documento carga.
 
-		$(".Preguntas").hide();//Oculta los contenedores div de los grupos de preguntas
-
-		$("#Preguntas1").show();//Muestra el primer contenedor llamandolo por su id
-
+		cambioPreguntasBotones(10);
+		
 	});
 
-	var respuestas = new Array();
+
+	var respuestas = new Array(); // Arreglo para recoger las respuestas.
   		$( function() {
-    		$( ".Pregunta" ).draggable();
-    		$( ".Contenedor" ).droppable({
-    			accept: ".Pregunta",
-    			tolerance: "touch",
-      			drop: function( event, ui ) {
-      				var item = ui.draggable.attr("id");
-      				var respuesta = $(this).attr("id");
-      				recogeRespuestasContenedores(item, respuesta, respuestas);
+    		$( ".Pregunta" ).draggable(); // Hace deslizables los ítems de preguntas - class = Pregunta.
+    		$( ".Contenedor" ).droppable({ //Convierte en contenedores las opciones con class = Contenedor.
+    			accept: ".Pregunta", //Elemnetos draggable aceptados.
+    			tolerance: "touch", //Tolerancia = con una parte del drag dentro del contenedor se ejecuta la función.
+      			drop: function( event, ui ) { //Función al soltar draggable en el droppable.
+      				var item = ui.draggable.attr("id"); //Obtiene id del ítem (Pregunta).
+      				var respuesta = $(this).attr("id"); //Obtiene id del contenedor ("Respuesta")
+      				recogeRespuestasContenedores(item, respuesta, respuestas); //Llama función para recoger respuestas.
     			} 		
     		});
-  		});
+  		}); 
+
+
 
 
 	</script>	
@@ -65,7 +67,7 @@
 	</div>
 
 
-	<div class="Preguntas">	
+	<div class="Preguntas" id="Preguntas2">	
 		<div class = "Pregunta" id="Pregunta7">
 			<P>A. Probar nuevos programas computacionales para realizar operaciones numéricas<P>
 		</div >
@@ -87,7 +89,7 @@
 	</div>
 
 
-	<div class="Preguntas">	
+	<div class="Preguntas" id="Preguntas3">	
 		<div class = "Pregunta" id="Pregunta13">
 			<P>A. Conocer las causas de la extinción de algunos organismos vivos y cómo evitarla<P>
 		</div >
@@ -109,7 +111,7 @@
 	</div>
 
 
-	<div class="Preguntas">	
+	<div class="Preguntas" id="Preguntas4">	
 		<div class = "Pregunta" id="Pregunta19">
 			<P>A. Conocer las causas del suicido colectivo en algunas especies<P>
 		</div >
@@ -131,7 +133,7 @@
 	</div>
 
 
-	<div class="Preguntas">	
+	<div class="Preguntas" id="Preguntas5">	
 		<div class = "Pregunta" id="Pregunta25">
 			<P>A. Hacer experimentos en el laboratorio de química<P>
 		</div >
@@ -153,7 +155,7 @@
 	</div>
 
 
-	<div class="Preguntas">	
+	<div class="Preguntas" id="Preguntas6">	
 		<div class = "Pregunta" id="Pregunta31">
 			<P>A. Conocer cómo funciona la reproducción bacteriana<P>
 		</div >
@@ -175,7 +177,7 @@
 	</div>
 
 
-	<div class="Preguntas">	
+	<div class="Preguntas" id="Preguntas7">	
 		<div class = "Pregunta" id="Pregunta37">
 			<P>A. Calcular fuerzas y resultantes físicas<P>
 		</div >
@@ -197,7 +199,7 @@
 	</div>
 
 
-	<div class="Preguntas">	
+	<div class="Preguntas" id="Preguntas8">	
 		<div class = "Pregunta" id="Pregunta43">
 			<P>A. Aplicar los principios y leyes de la física<P>
 		</div >
@@ -220,7 +222,7 @@
 
 
 
-	<div class="Preguntas">	
+	<div class="Preguntas" id="Preguntas9">	
 		<div class = "Pregunta" id="Pregunta49">
 			<P>A. Diseñar la escenografita de un programa televisivo<P>
 		</div >
@@ -242,7 +244,7 @@
 	</div>
 
 
-	<div class="Preguntas">	
+	<div class="Preguntas" id="Preguntas10">	
 		<div class = "Pregunta" id="Pregunta55">
 			<P>A. Resolver operaciones matemáticas<P>
 		</div >
@@ -267,6 +269,7 @@
 	<div class="Preguntas">	
 		<p>FIN DE LA PRUEBA</p>
 	</div>
+
 
 	<table>
 		<tr>
@@ -295,7 +298,11 @@
 		</tr>
 	</table>
 	<div>
-	<button onclick="imprimeRespuestas(respuestas)">Enviar Respuestas</button>
+		<button id = anterior>Anterior</button>
+		<button id = siguiente>Siguiente</button>
 	</div>
+	<div>
+		<button id = enviarRespuestas onclick="imprimeRespuestas(respuestas)">Enviar Respuestas</button>
+	</div>	
 </body>
 </html>
