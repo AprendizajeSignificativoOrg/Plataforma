@@ -1,550 +1,271 @@
-//ALGORITMO DE CAPTURA DE RESPUESTAS---
+//Matriz de respuestas correctas y respondidas
+function matrizRespuestasMemoria(matrizRespuestas){
 
-  var c=0;//variable contador de preguntas correctas
-  function respuestas(){//funcion de verificación de las preguntas
-  var pregunta1=document.getElementsByName('pregunta1');//obtiene el elemento de html
-        var radioSelec;//variable de los valores del radiobutton Seleccionado
-    for (var i = 0; i < 3; i++) {//recorrido del rdiobutton
-              
-    if (pregunta1[i].checked) //comprobación de los radiobuttons seleccionados
-      radioSelec=pregunta1[i].value;//obtención del valor de los radiobutons
-                              
-      if (radioSelec=="m1") {//comparación entre el valor obtenido del rb y la respuesta correcta
-        c++;//aumento del contador
-        
-      } else {
-        c;
-      }
-      
- }
+  matrizRespuestas[1][0]="1";//item
+  matrizRespuestas[1][1]="m1";//respuesta correcta
+  matrizRespuestas[1][2]="";//respuesta estudiante
 
- var pregunta2=document.getElementsByName('pregunta2');
- for (var i = 0; i < 3; i++) {
-              
-    if (pregunta2[i].checked) 
-      radioSelec=pregunta2[i].value;
-                              
-      if (radioSelec=="r2") {
-        c++;
-        
-      } else {
-        c;
-      }
-      
- }
+  matrizRespuestas[2][0]="2";
+  matrizRespuestas[2][1]="r2";
+  matrizRespuestas[2][2]="";
 
- var pregunta3=document.getElementsByName('pregunta3');
- for (var i = 0; i < 3; i++) {
-    if (pregunta3[i].checked) {
-      radioSelec=pregunta3[i].value;
-      if (radioSelec=="w3") {
-        c++;
+  matrizRespuestas[3][0]="3";
+  matrizRespuestas[3][1]="w3";
+    matrizRespuestas[3][2]="";
 
-      } else {
-        c;
-      }
-    }
+  matrizRespuestas[4][0]="4";
+  matrizRespuestas[4][1]="c4";
+  matrizRespuestas[4][2]="";
 
-  }
+  matrizRespuestas[5][0]="5";
+  matrizRespuestas[5][1]="g5";
+  matrizRespuestas[5][2]="";
 
-var pregunta4=document.getElementsByName('pregunta4');
-for (var i = 0; i < 3; i++) {
-    if (pregunta4[i].checked) {
-      radioSelec=pregunta4[i].value;
-      if (radioSelec=="c4") {
-        c++
-      } else {
-        c;
-      }
-    } 
-}
+  matrizRespuestas[6][0]="6";   
+  matrizRespuestas[6][1]="k6";
+  matrizRespuestas[6][2]="";
 
-var pregunta5=document.getElementsByName('pregunta5');
-for (var i = 0; i < 3; i++) {
-    if (pregunta5[i].checked) {
-      radioSelec=pregunta5[i].value;
-      if (radioSelec=="g5") {
-        c++;
-      } else {
-        c;
-      }
-    }
-}
+  matrizRespuestas[7][0]="7";
+  matrizRespuestas[7][1]="p7";
+  matrizRespuestas[7][2]="";
+
+    matrizRespuestas[8][0]="8";
+  matrizRespuestas[8][1]="w8";
+  matrizRespuestas[8][2]="";
+
+  matrizRespuestas[9][0]="9";
+  matrizRespuestas[9][1]="b9";
+  matrizRespuestas[9][2]="";
+
+  matrizRespuestas[10][0]="10";
+  matrizRespuestas[10][1]="f10";
+  matrizRespuestas[10][2]="";
   
- var pregunta6=document.getElementsByName('pregunta6');
- for (var i = 0; i < 3; i++) {
-     if (pregunta6[i].checked) {
-      radioSelec=pregunta6[i].value;
-      if (radioSelec=="k6") {
-        c++;
-      } else {
-        c;
-      }
-     }     
-  }
-  var pregunta7=document.getElementsByName('pregunta7');
-  for (var i = 0; i < 3; i++) {
-      if (pregunta7[i].checked) {
-        radioSelec=pregunta7[i].value;
-        if (radioSelec=="p7") {
-          c++;
-        } else {
-          c;
-        }
-      }
-  }
-
-var pregunta8=document.getElementsByName('pregunta8');
-for (var i = 0; i <3; i++) {
-    if (pregunta8[i].checked) {
-      radioSelec=pregunta8[i].value;
-      if (radioSelec=="w8") {
-        c++;
-      } else {
-        c;
-      }
-    }  
-}
-
-var pregunta9=document.getElementsByName('pregunta9');
-for (var i = 0; i < 3; i++) {
-   if (pregunta9[i].checked) {
-    radioSelec=pregunta9[i].value;
-    if (radioSelec=="b9") {
-      c++;
-    }else{
-      c;
-    }
-   }
-}
-
-var pregunta10=document.getElementsByName('pregunta10');
-for (var i = 0; i < 3; i++) {
-    if (pregunta10[i].checked) {
-      radioSelec=pregunta10[i].value;
-      if (radioSelec=="f10") {
-        c++;
-      } else {
-        c;
-      }
-    }
+  matrizRespuestas[11][0]="11";
+  matrizRespuestas[11][1]="l11";
+  matrizRespuestas[11][2]="";
   
-}
+  matrizRespuestas[12][0]="12";
+  matrizRespuestas[12][1]="r12";
+  matrizRespuestas[12][2]="";
 
-var pregunta11=document.getElementsByName('pregunta11');
-for (var i = 0; i < 3; i++) {
-    if (pregunta11[i].checked) {
-    radioSelec=pregunta11[i].value;
-    if (radioSelec=="l11") {
-      c++;
-    } else {
-      c;
-    }
-  }
-}
+  matrizRespuestas[13][0]="13";
+  matrizRespuestas[13][1]="v13";
+  matrizRespuestas[13][2]="";
 
-var pregunta12=document.getElementsByName('pregunta12');
-for (var i = 0; i < 3; i++) {
-    if (pregunta12[i].checked) {
-      radioSelec=pregunta12[i].value;
-      if (radioSelec=="r12") {
-        c++;
-      } else {
-        c;
-      }
-    }
-}
+  matrizRespuestas[14][0]="14";
+  matrizRespuestas[14][1]="c14";
+  matrizRespuestas[14][2]="";
 
- var pregunta13=document.getElementsByName('pregunta13');
- for (var i = 0; i < 3; i++) {
-     if (pregunta13[i].checked) {
-      radioSelec=pregunta13[i].value;
-      if (radioSelec=="v13") {
-        c++;
-      } else {
-        c;
-      }
-     }
- }
+  matrizRespuestas[15][0]="15";
+  matrizRespuestas[15][1]="g15";
+  matrizRespuestas[15][2]="";
 
- var pregunta14=document.getElementsByName('pregunta14');
- for (var i = 0; i < 3; i++) {
-    if (pregunta14[i].checked) {
-      radioSelec=pregunta14[i].value;
-      if (radioSelec=="c14") {
-        c++;
-      } else {
-        c;
-      }
-    }
-   
- }
+  matrizRespuestas[16][0]="16";
+  matrizRespuestas[16][1]="k16";
+  matrizRespuestas[16][2]="";
 
- var pregunta15=document.getElementsByName('pregunta15');
- for (var i = 0; i < 3; i++) {
-    if (pregunta15[i].checked) {
-      radioSelec=pregunta15[i].value;
-      if (radioSelec=="g15") {
-        c++;
-      } else {
-        c;
-      }
-    }   
- }
+  matrizRespuestas[17][0]="17";
+  matrizRespuestas[17][1]="q17";
+  matrizRespuestas[17][2]="";
 
- var pregunta16=document.getElementsByName('pregunta16');
- for (var i = 0; i < 3; i++) {
-    if (pregunta16[i].checked) {
-      radioSelec=pregunta16[i].value;
-      if (radioSelec=="k16") {
-        c++;
-      } else {
-        c;
-      }
-    }
- }
+  matrizRespuestas[18][0]="18";
+  matrizRespuestas[18][1]="x18";
+  matrizRespuestas[18][2]="";
 
-var pregunta17=document.getElementsByName('pregunta17');
-for (var i = 0; i < 3; i++) {
-    if (pregunta17[i].checked) {
-      radioSelec=pregunta17[i].value;
-      if (radioSelec=="q17") {
-        c++;
-      } else {
-        c;
-      }
-    }
-}
+  matrizRespuestas[19][0]="19";
+  matrizRespuestas[19][1]="c19";
+  matrizRespuestas[19][2]="";
 
-var pregunta18=document.getElementsByName('pregunta18');
-for (var i = 0; i < 3; i++) {
-    if (pregunta18[i].checked) {
-      radioSelec=pregunta18[i].value;
-      if (radioSelec=="x18") {
-        c++;
-      } else {
-        c;
-      }
-    }
-}
+  matrizRespuestas[20][0]="20";
+  matrizRespuestas[20][1]="f20";
+  matrizRespuestas[20][2]="";
 
-var pregunta19=document.getElementsByName('pregunta19');
-for (var i = 0; i < 3; i++) {
-    if (pregunta19[i].checked) {
-      radioSelec=pregunta19[i].value;
-      if (radioSelec=="c19") {
-        c++;
-      }else{
-        c;
-      }
-    }
-}
+  matrizRespuestas[21][0]="21";
+  matrizRespuestas[21][1]="k21";
+  matrizRespuestas[21][2]="";
 
-var pregunta20=document.getElementsByName('pregunta20');
-for (var i = 0; i < 3; i++) {
-    if (pregunta20[i].checked) {
-      radioSelec=pregunta20[i].value;
-      if (radioSelec=="f20") {
-        c++;
-      } else {
-        c;
-      }
-    }
-}
+  matrizRespuestas[22][0]="22";
+  matrizRespuestas[22][1]="q22";
+  matrizRespuestas[22][2]="";
 
-var pregunta21=document.getElementsByName('pregunta21');
-for (var i = 0; i < 3; i++) {
-    if (pregunta21[i].checked) {
-      radioSelec=pregunta21[i].value;
-      if (radioSelec=="k21") {
-        c++;
-      } else {
-        c;
-      }
-    }
-}
+  matrizRespuestas[23][0]="23";
+  matrizRespuestas[23][1]="v23";
+  matrizRespuestas[23][2]="";
 
-var pregunta22=document.getElementsByName('pregunta22');
-for (var i = 0; i < 3; i++) {
-    if (pregunta22[i].checked) {
-      radioSelec=pregunta22[i].value;
-      if (radioSelec=="q22") {
-        c++;
-      } else {
-        c;
-      }
-    }
-}
+  matrizRespuestas[24][0]="24";
+  matrizRespuestas[24][1]="c24";
+  matrizRespuestas[24][2]="";
 
-var pregunta23=document.getElementsByName('pregunta23');
-for (var i = 0; i < 3; i++) {
-    if (pregunta23[i].checked) {
-      radioSelec=pregunta23[i].value;
-      if (radioSelec=="v23") {
-        c++;
-      } else {
-        c;
-      }   
-    }
-}
-
-var pregunta24=document.getElementsByName('pregunta24');
-for (var i = 0; i < 3; i++) {
-    if (pregunta24[i].checked) {
-      radioSelec=pregunta24[i].value;
-      if (radioSelec=="c24") {
-        c++;
-      } else {
-        c;
-      }
-    }
-}
-
-var pregunta25=document.getElementsByName('pregunta25');
-for (var i = 0; i < 3; i++) {
-    if (pregunta25[i].checked) {
-      radioSelec=pregunta25[i].value;
-      if (radioSelec=="g25") {
-        c++;
-      } else {
-        c;
-      }
-    }
-}
-
-var pregunta26=document.getElementsByName('pregunta26');
-for (var i = 0; i < 3; i++) {
-    if (pregunta26[i].checked) {
-      radioSelec=pregunta26[i].value;
-      if (radioSelec=="k26") {
-        c++;
-      } else {
-        c;
-      }
-    }
-}
-
-var pregunta27=document.getElementsByName('pregunta27');
-for (var i = 0; i < 3; i++) {
-    if (pregunta27[i].checked) {
-      radioSelec=pregunta27[i].value;
-      if (radioSelec=="r27") {
-        c++;
-      } else {
-        c;
-      }
-    }
-}
-
-var pregunta28=document.getElementsByName('pregunta28');
-for (var i = 0; i < 3; i++) {
-    if (pregunta28[i].checked) {
-      radioSelec=pregunta28[i].value;
-      if (radioSelec=="w28") {
-        c++;
-      } else {
-        c;
-      }
-    }
-}
-
-var pregunta29=document.getElementsByName('pregunta29');
-for (var i = 0; i < 3; i++) {
-    if (pregunta29[i].checked) {
-      radioSelec=pregunta29[i].value;
-      if (radioSelec=="c29") {
-        c++;
-      } else {
-        c;
-      }
-    }
-}
-
-var pregunta30=document.getElementsByName('pregunta30');
-for (var i = 0; i < 3; i++) {
-     if (pregunta30[i].checked) {
-      radioSelec=pregunta30[i].value;
-      if (radioSelec=="f30") {
-        c++;
-      } else {
-        c;
-      }
-     } 
-}
-
-var pregunta31=document.getElementsByName('pregunta31');
-for (var i = 0; i < 3; i++) {
-    if (pregunta31[i].checked) {
-      radioSelec=pregunta31[i].value;
-      if (radioSelec=="k31") {
-        c++;
-      } else {
-        c;
-      }
-    }
-}
-
-var pregunta32=document.getElementsByName('pregunta32');
-for (var i = 0; i < 3; i++) {
-    if (pregunta32[i].checked) {
-      radioSelec=pregunta32[i].value;
-      if (radioSelec=="q32") {
-        c++;
-      } else {
-        c;
-      }
-    }
-}
-
-  alert("Preguntas correctas "+c);//imprime 
-//return respuestas();
+  matrizRespuestas[25][0]="25";
+  matrizRespuestas[25][1]="g25";
+  matrizRespuestas[25][2]="";
   
-//FUNCIÓN DE COMPARACIÓN DE LA BAREMACIÓN
+  matrizRespuestas[26][0]="26";
+  matrizRespuestas[26][1]="k26";
+  matrizRespuestas[26][2]="";
 
-  function baremacionMemoria(){//funcion de comparación de puntajes
-  var puntajeConvertido;//variable de puntaje convertido
-  var escala;//variable de escala
-    if (c<=5) {//comparación de respuestas correctas con el puntaje directo
-    puntajeConvertido=1;//puntaje dado según comparación de baremación 
-    escala="Muy Bajo";//puntaje de acuerdo a la escala
-    }
-    if (c==6 || c==7) {
-      puntajeConvertido=2;
-      escala="Muy Bajo";
-    }
+  matrizRespuestas[27][0]="27";
+  matrizRespuestas[27][1]="r27";
+  matrizRespuestas[27][2]="";
 
-    if (c==8) {
-      puntajeConvertido=3;
-      escala="Muy Bajo";
-    }
+  matrizRespuestas[28][0]="28";
+  matrizRespuestas[28][1]="w28";
+  matrizRespuestas[28][2]="";
 
-    if (c==9) {
-      puntajeConvertido=4;
-      escala="Muy Bajo";
-    }
+  matrizRespuestas[29][0]="29";
+  matrizRespuestas[29][1]="c29";
+  matrizRespuestas[29][2]="";
 
-    if (c==10) {
-      puntajeConvertido=6;
-      escala="Bajo";
-    }
+  matrizRespuestas[30][0]="30";
+  matrizRespuestas[30][1]="f30";
+  matrizRespuestas[30][2]="";
 
-    if (c==11) {
-      puntajeConvertido=9;
-      escala="Bajo";
-    }
+  matrizRespuestas[31][0]="31";
+  matrizRespuestas[31][1]="k31";
+  matrizRespuestas[31][2]="";
 
-    if (c==12) {
-      puntajeConvertido=13;
-      escala="Bajo";
-    }
-
-    if (c==13) {
-      puntajeConvertido=15;
-      escala="Medio Bajo";
-    }
-
-    if (c==14) {
-      puntajeConvertido=20;
-      escala="Medio Bajo";
-    }
-
-    if (c==15) {
-      puntajeConvertido=23;
-      escala="Medio Bajo";
-    }
-
-    if (c==16) {
-      puntajeConvertido=30;
-      escala="Medio";
-    }
-
-    if (c==17) {
-      puntajeConvertido=38;
-      escala="Medio";
-    }  
-
-    if (c==18) {
-      puntajeConvertido=41;
-      escala="Medio";
-    }
-
-    if (c==19) {
-      puntajeConvertido=50;
-      escala="Medio";
-    }
-
-    if (c==20) {
-      puntajeConvertido=54;
-      escala="Medio";
-    }
-
-    if (c==21) {
-      puntajeConvertido=59;
-      escala="Medio";
-    }
-
-    if (c==22) {
-      puntajeConvertido=62;
-      escala="Medio";
-    }
-
-    if (c==23) {
-      puntajeConvertido=70;
-      escala="Medio Alto";
-    }
-
-    if (c==24) {
-      puntajeConvertido=73;
-      escala="Medio Alto";
-    }
-
-    if (c==25) {
-      puntajeConvertido=80;
-      escala="Medio Alto";
-    }
-
-    if (c==26) {
-      puntajeConvertido=82;
-      escala="Medio Alto";
-    }
-
-    if (c==27) {
-      puntajeConvertido=87;
-      escala="Alto";
-    }
-
-    if (c==28) {
-      puntajeConvertido=89;
-      escala="Alto";
-    }
-
-    if (c==29) {
-      puntajeConvertido=94;
-      escala="Muy Alto";
-    }
-
-    if (c==30) {
-      puntajeConvertido=96;
-      escala="Muy Alto";
-    }
-
-    if (c==31) {
-      puntajeConvertido=98;
-      escala="Muy Alto";
-    }
-
-    if (c==32) {
-      puntajeConvertido=100;
-      escala="Muy Alto";
-    }
-
-
-  alert("Puntaje Final "+puntajeConvertido+"% Puntaje escala "+escala); // imprime
-  }
-  baremacionMemoria();//instanciamiento de la función
-}
-
-
-
+  matrizRespuestas[32][0]="32";
+  matrizRespuestas[32][1]="q32";
+  matrizRespuestas[32][2]="";
   
+  
+ }
+
+//Matriz Baremacion 
+ function matrizBaremacionMemoria(matrizBaremacion){
+
+  matrizBaremacion[1][0]="0";//respuestas correctas obtenidas
+  matrizBaremacion[1][1]="1";//puntaje convertido
+  matrizBaremacion[1][2]="Muy Bajo";//escala
+
+  matrizBaremacion[2][0]="1";
+  matrizBaremacion[2][1]="1";
+  matrizBaremacion[2][2]="Muy Bajo";
+
+  matrizBaremacion[3][0]="2";
+  matrizBaremacion[3][1]="1";
+    matrizBaremacion[3][2]="Muy Bajo";
+
+  matrizBaremacion[4][0]="3";
+  matrizBaremacion[4][1]="1";
+  matrizBaremacion[4][2]="Muy Bajo";
+
+  matrizBaremacion[5][0]="4";
+  matrizBaremacion[5][1]="1";
+  matrizBaremacion[5][2]="Muy Bajo";
+
+  matrizBaremacion[6][0]="5";   
+  matrizBaremacion[6][1]="1";
+  matrizBaremacion[6][2]="Muy Bajo";
+
+  matrizBaremacion[7][0]="6";
+  matrizBaremacion[7][1]="2";
+  matrizBaremacion[7][2]="Muy Bajo";
+
+    matrizBaremacion[8][0]="7";
+  matrizBaremacion[8][1]="2";
+  matrizBaremacion[8][2]="Muy Bajo";
+
+  matrizBaremacion[9][0]="8";
+  matrizBaremacion[9][1]="3";
+  matrizBaremacion[9][2]="Muy Bajo";
+
+  matrizBaremacion[10][0]="9";
+  matrizBaremacion[10][1]="4";
+  matrizBaremacion[10][2]="Muy Bajo";
+  
+  matrizBaremacion[11][0]="10";
+  matrizBaremacion[11][1]="6";
+  matrizBaremacion[11][2]="Muy Bajo";
+  
+  matrizBaremacion[12][0]="11";
+  matrizBaremacion[12][1]="9";
+  matrizBaremacion[12][2]="Bajo";
+
+  matrizBaremacion[13][0]="12";
+  matrizBaremacion[13][1]="13";
+  matrizBaremacion[13][2]="Bajo";
+
+  matrizBaremacion[14][0]="13";
+  matrizBaremacion[14][1]="15";
+  matrizBaremacion[14][2]="Medio Bajo";
+
+  matrizBaremacion[15][0]="14";
+  matrizBaremacion[15][1]="20";
+  matrizBaremacion[15][2]="Medio bajo";
+
+  matrizBaremacion[16][0]="15";
+  matrizBaremacion[16][1]="23";
+  matrizBaremacion[16][2]="Medio bajo";
+
+  matrizBaremacion[17][0]="16";
+  matrizBaremacion[17][1]="30";
+  matrizBaremacion[17][2]="Medio";
+
+  matrizBaremacion[18][0]="17";
+  matrizBaremacion[18][1]="38";
+  matrizBaremacion[18][2]="Medio";
+
+  matrizBaremacion[19][0]="18";
+  matrizBaremacion[19][1]="41";
+  matrizBaremacion[19][2]="Medio";
+
+  matrizBaremacion[20][0]="19";
+  matrizBaremacion[20][1]="50";
+  matrizBaremacion[20][2]="Medio";
+
+  matrizBaremacion[21][0]="20";
+  matrizBaremacion[21][1]="54";
+  matrizBaremacion[21][2]="Medio";
+
+  matrizBaremacion[22][0]="21";
+  matrizBaremacion[22][1]="59";
+  matrizBaremacion[22][2]="Medio";
+
+  matrizBaremacion[23][0]="22";
+  matrizBaremacion[23][1]="62";
+  matrizBaremacion[23][2]="Medio";
+
+  matrizBaremacion[24][0]="23";
+  matrizBaremacion[24][1]="70";
+  matrizBaremacion[24][2]="Medio Alto";
+
+  matrizBaremacion[25][0]="24";
+  matrizBaremacion[25][1]="73";
+  matrizBaremacion[25][2]="Medio Alto";
+  
+  matrizBaremacion[26][0]="25";
+  matrizBaremacion[26][1]="80";
+  matrizBaremacion[26][2]="Medio Alto";
+
+  matrizBaremacion[27][0]="26";
+  matrizBaremacion[27][1]="82";
+  matrizBaremacion[27][2]="Medio Alto";
+
+  matrizBaremacion[28][0]="27";
+  matrizBaremacion[28][1]="87";
+  matrizBaremacion[28][2]="Alto";
+
+  matrizBaremacion[29][0]="28";
+  matrizBaremacion[29][1]="89";
+  matrizBaremacion[29][2]="Alto";
+
+  matrizBaremacion[30][0]="29";
+  matrizBaremacion[30][1]="94";
+  matrizBaremacion[30][2]="Muy Alto";
+
+  matrizBaremacion[31][0]="30";
+  matrizBaremacion[31][1]="96";
+  matrizBaremacion[31][2]="Muy Alto";
+
+  matrizBaremacion[32][0]="31";
+  matrizBaremacion[32][1]="98";
+  matrizBaremacion[32][2]="Muy Alto";
+
+  matrizBaremacion[33][0]="32";
+  matrizBaremacion[33][1]="100";
+  matrizBaremacion[33][2]="Muy Alto";
+  
+ }
 

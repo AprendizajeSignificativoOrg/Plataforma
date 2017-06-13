@@ -1,6 +1,6 @@
 
 function despedida(){
-		window.open("C:/BADYGS/encajarFiguras/BienvenidaEncajarFiguras.html");//función para abrir el cuestionario siguiente
+		window.location="http://localhost/BADYGS/encajarFiguras/BienvenidaEncajarFiguras.html";//función para abrir el cuestionario siguiente
 	//window.close(this);
 }
 	//Algoritmo de captura de respuestas
@@ -8,7 +8,7 @@ function despedida(){
 
 
 	function compararRespuestas(){//función principal
-		despedida();//llamada de función siguente cuestionario
+		
 	//comparación de respuestas estudiante y respuesta correcta con contador
 		var arregloRespuestas=new Array;//variable de creacion arreglo de captura de respuestas
 		respuestaPrueba(arregloRespuestas);//arreglo respuestas captura rb
@@ -176,7 +176,7 @@ function despedida(){
 				correctas;
 			}
 
-			document.write("Puntaje Directo Obtenido por el estudiante "+correctas+"<br>");//imprime respuestas correctas
+			//document.write("Puntaje Directo Obtenido por el estudiante "+correctas+"<br>");//imprime respuestas correctas
 		}
 
 		//conversión del puntaje directo del estudiante a puntaje convertido baremación y escala
@@ -322,7 +322,7 @@ function despedida(){
 				escala=matrizBaremacion[33][2];
 			}
 
-			document.write(" Puntaje Convertido "+baremacion+"% Escala "+escala+"<br><br>");//impresión de puntaje baremacion y escala
+			//document.write(" Puntaje Convertido "+baremacion+"% Escala "+escala+"<br><br>");//impresión de puntaje baremacion y escala
 		}
 
 		//asignación de los valores obtenidos en el arreglo de captura a la matriz respuestas
@@ -365,11 +365,7 @@ function despedida(){
 		matrizRespuestas[31][2]=arregloRespuestas[31];
 		matrizRespuestas[32][2]=arregloRespuestas[32];
 
-	/*document.write("Matriz de Respuestas<br><br>")//
-	for (var i = 1; i < 33; i++) {//imprime matriz respuestas
- 		for (var j = 0; j < 3; j++) {
- 			 document.write("-"+matrizRespuestas[i][j]+"-");
- 		}
- 		document.write("<br>");
- 	}*/
+	document.cookie="CorrPN ="+correctas;
+	document.cookie="BarePN ="+baremacion;
+	document.cookie="EsclPN ="+escala;
 	}
