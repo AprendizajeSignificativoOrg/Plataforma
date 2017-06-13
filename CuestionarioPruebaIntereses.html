@@ -17,23 +17,37 @@
 
 		cambioPreguntasBotones(10);
 		
-	});
-
+  	});
 
 	var respuestas = new Array(); // Arreglo para recoger las respuestas.
   		$( function() {
-    		$( ".Pregunta" ).draggable(); // Hace deslizables los ítems de preguntas - class = Pregunta.
+    		$( ".Pregunta" ).draggable ({  // Hace deslizables los ítems de preguntas - class = Pregunta.
+    			revert: "invalid", //El ítem recupera la posición que tenía (antes de ser lanzado) si no es soltado en un contenedor.
+    		});
     		$( ".Contenedor" ).droppable({ //Convierte en contenedores las opciones con class = Contenedor.
-    			accept: ".Pregunta", //Elemnetos draggable aceptados.
-    			tolerance: "touch", //Tolerancia = con una parte del drag dentro del contenedor se ejecuta la función.
+    			accept: ".Pregunta", //Elementos draggable aceptados.
+    			tolerance: "intersect", //Tolerancia = con el 50% del drag dentro del contenedor se ejecuta la función.
       			drop: function( event, ui ) { //Función al soltar draggable en el droppable.
       				var item = ui.draggable.attr("id"); //Obtiene id del ítem (Pregunta).
       				var respuesta = $(this).attr("id"); //Obtiene id del contenedor ("Respuesta")
       				recogeRespuestasContenedores(item, respuesta, respuestas); //Llama función para recoger respuestas.
-    			} 		
+      				//Centra automaticamente el ítem en el contenedor
+      				var contenedor = $(this);
+    				ui.draggable.position({
+      					my: "center",
+      					at: "center",
+      					of: contenedor,
+      				using: function(pos) {
+        				$(this).animate(pos, 200, "linear");
+        			},
+        			});
+    			},
+    			//Intercambia posiciones si el contenedor esta lleno;
+        		out: function(event, ui){
+        			alert ("saliendo locas");
+				}
     		});
   		}); 
-
 
 
 

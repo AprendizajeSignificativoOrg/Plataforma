@@ -5,18 +5,19 @@
 */
 
 //FUNCIÓN PRINCIPAL: Recibe como parámetro el id de la pregunta, el id del contenedor (Respuesta) y el arreglo que almacena las respuestas.   
-function recogeRespuestasContenedores (pregunta, respuesta, respuestas){ 
+function recogeRespuestasContenedores (pregunta, respuesta, respuestas, contenedorLleno){ 
 
     var cadenaPregunta = new Array (); //Crea arreglo para guardar split.
     cadenaPregunta = pregunta.split('a'); //Divide en dos la cadena "cadenaPregunta" antes de 'a' y después de 'a'
     var numeroPregunta = Number(cadenaPregunta[1]);//Convierte cadena a número (Obtiene número ítem).
 
     respuestas[numeroPregunta] = cambiaContenedorxValor(respuesta); //Llamado función para obtener el valor del contenedor (Respuesta).
+
 }
 
 //Función para obtener el valor del contenedor (Respuesta)
 function cambiaContenedorxValor (respuesta){
-  // Switch: de acuerdo al contenedor recogido se le asigna el valor a la respuesta de la pregunta. 
+  // Switch: De acuerdo al contenedor recogido se le asigna el valor a la respuesta de la pregunta. 
     switch (respuesta){
 
       case 'Contenedor1':
