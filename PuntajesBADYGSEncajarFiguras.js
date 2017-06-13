@@ -1,12 +1,11 @@
 function despedida(){
-		window.open("C:/BADYGS/memoriaRelatoOral/BienvenidaMemoriaRelato.html");//función para abrir el cuestionario siguiente
-	//window.close(this);
+		window.location="http://localhost/BADYGS/memoriaRelatoOral/BienvenidaMemoriaRelato.html";//función para abrir el cuestionario siguiente
 }
 	//Algoritmo de captura de respuestas 
 	var correctas=0;//contador respuestas correctas
 	//comparación de respuestas estudiante y respuesta correcta con contador
 	function compararRespuestas(){//funcción principal
-		despedida();//llamada de función siguente cuestionario
+		
 
 		var arregloRespuestas=new Array;//variable de creacion arreglo de captura de respuestas
 		respuestaPrueba(arregloRespuestas);//arreglo respuestas captura rb
@@ -174,7 +173,7 @@ function despedida(){
 				correctas;
 			}
 
-			document.write("Puntaje Directo Obtenido por el estudiante "+correctas+"<br>");//imprime respuestas correctas
+			//document.write("Puntaje Directo Obtenido por el estudiante "+correctas+"<br>");//imprime respuestas correctas
 		}
 
 		//conversión del puntaje directo del estudiante a puntaje convertido baremación y escala
@@ -320,7 +319,7 @@ function despedida(){
 				baremacion=matrizBaremacion[33][1];
 				escala=matrizBaremacion[33][2];
 			}
-			document.write(" Puntaje Convertido "+baremacion+"% Escala "+escala+"<br><br>");
+			//document.write(" Puntaje Convertido "+baremacion+"% Escala "+escala+"<br><br>");
 		}
 		//Asignación del valor del arreglo de captura a la matriz respuestas
 		var matrizRespuestas=new Array();//variable creación matriz respuesta
@@ -362,12 +361,8 @@ function despedida(){
 		matrizRespuestas[31][2]=arregloRespuestas[31];
 		matrizRespuestas[32][2]=arregloRespuestas[32];
 	
-	/*document.write("Matriz de Respuestas<br><br>")//
-	for (var i = 1; i < 33; i++) {//imprime matriz respuestas
- 		for (var j = 0; j < 3; j++) {
- 			 document.write("-"+matrizRespuestas[i][j]+"-");
- 		}
- 		document.write("<br>");
- 	}*/
+	document.cookie="CorrEF ="+correctas;
+	document.cookie="BareEF ="+baremacion;
+	document.cookie="EsclEF ="+escala;
 
 	}
