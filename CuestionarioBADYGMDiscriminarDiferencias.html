@@ -3,12 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<title>Prueba BADYG M</title>
-	<link rel="stylesheet" type="text/css" href="C:\\BADYGS\Estilos.css"><!--hoja de estilos documento css-->
-	<script type="text/javascript" src="C:\BADYGM\Cronometro.js"></script><!--archivos .js-->
-	<script type="text/javascript" src="RespuestasBADYGMDiscriminarDiferencias.js"></script>
-	<script type="text/javascript" src="C:\BADYGM\CapturaRespuestas.js"></script>
-	<script type="text/javascript" src="PuntajesBADYGMDiscriminarDiferencias.js"></script>
-	<script type="text/javascript" src="C:\BADYGM\CambioPreguntasBADYG.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://localhost/BADYGM/Estilos.css"><!--hoja de estilos documento css-->
+	<script type="text/javascript" src="http://localhost/BADYGM/Cronometro.js"></script><!--archivos .js-->
+	<script type="text/javascript" src="http://localhost/BADYGM/discriminarDiferencias/RespuestasBADYGMDiscriminarDiferencias.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGM/CapturaRespuestas.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGM/discriminarDiferencias/PuntajesBADYGMDiscriminarDiferencias.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGM/CambioPreguntasBADYG.js"></script>
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script><!--link referencia jQuery-->
 <script type="text/javascript">	
 	$(document).ready(mostrar());//llamado función para cambio de preguntas
@@ -22,7 +22,7 @@
 	<br><br>
 	<progress id="barraProgreso" name="barraProgreso" max="100" value="" ></progress><!--Barra de progreso-->
 </form>
-<form action="" name="cuestionario" method="get" onsubmit="return compararRespuestas(this);">
+<form action="" name="cuestionario" method="">
 		<!--Contenedores  de enunciados y opciones de repspuesta-->
 	<div class="Preguntas1" id="Preguntas1"> 
 		<p>1. <img src=""></p>		  <!--Item y enunciado de la pregunta -->
@@ -414,7 +414,9 @@
 		<a href="#" id="p32">32.</a>
 	</div>
 	<br>
-	<input type="submit" name="btn" id="btn" value="enviar"><!--botón de enviar activa la funcion de compararRespuestas-->
+	<input type="submit" name="btn" id="btn" value="enviar" onclick="compararRespuestas()"><!--botón de enviar activa la funcion de compararRespuestas-->
+	<br>
+	<input type="button" name="btn2" id="btn2" value="Ver Resultados" onclick="despedida()">
 </form>
 </body>
 </html>

@@ -6,6 +6,15 @@
 i{
     
     color: #0C9F1B;
+    font-size: 13px;
     
     
+}
+#ant{
+	align-items:center;
+}
+
+a{
+	color: black;
+	text-decoration: none;
 }

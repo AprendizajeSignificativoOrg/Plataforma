@@ -1,174 +1,174 @@
-	function despedida(){
-		window.location="http://localhost/BADYGM/ResultadosBADYGM.html";//función para cambiar al cuestionario siguiente
-	
+function despedida(){
+	window.location='http://localhost/BADYGM/seriesNumericas/BienvenidaBADYGMSeriesNumericas.html';
 }
-//ALGORITMO DE RESPUESTAS CORRECTAS Y PUNTAJES DE BAREMACION
-var correctas=0;
+	//Algoritmo de captura de respuestas
+	var correctas=0;//contador respuestas correctas
+
 
 	function compararRespuestas(){//función principal
-
-		//comparar respuestas del  estudiante con las respuestas correctas
+	
+	//comparación de respuestas estudiante y respuesta correcta con contador
 		var arregloRespuestas=new Array;//variable de creacion arreglo de captura de respuestas
 		respuestaPrueba(arregloRespuestas);//arreglo respuestas captura rb
 
 		for (var i = 1; i < 2; i++) {
 			
-			if (arregloRespuestas[1]=="r") {//comparación de respuestas estudiante/correcta
+			if (arregloRespuestas[1]=="b") {//comparación de respuestas estudiante/correcta
 				correctas++;//aumento contador
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[2]=="v") {
+			if (arregloRespuestas[2]=="h") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[3]=="b") {
+			if (arregloRespuestas[3]=="k") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[4]=="h") {
+			if (arregloRespuestas[4]=="s") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[5]=="k") {
+			if (arregloRespuestas[5]=="z") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[6]=="q") {
+			if (arregloRespuestas[6]=="c") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[7]=="w") {
+			if (arregloRespuestas[7]=="g") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[8]=="b") {
+			if (arregloRespuestas[8]=="o") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[9]=="h") {
+			if (arregloRespuestas[9]=="s") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[10]=="l") {
+			if (arregloRespuestas[10]=="v") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[11]=="p") {
+			if (arregloRespuestas[11]=="b") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[12]=="x") {
+			if (arregloRespuestas[12]=="j") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[13]=="a") {
+			if (arregloRespuestas[13]=="k") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[14]=="f") {
+			if (arregloRespuestas[14]=="r") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[15]=="m") {
+			if (arregloRespuestas[15]=="w") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[16]=="r") {
+			if (arregloRespuestas[16]=="d") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[17]=="v") {
+			if (arregloRespuestas[17]=="j") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[18]=="c") {
+			if (arregloRespuestas[18]=="k") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[19]=="g") {
+			if (arregloRespuestas[19]=="s") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[20]=="l") {
+			if (arregloRespuestas[20]=="x") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[21]=="p") {
+			if (arregloRespuestas[21]=="b") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[22]=="x") {
+			if (arregloRespuestas[22]=="g") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[23]=="b") {
+			if (arregloRespuestas[23]=="k") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[24]=="g") {
+			if (arregloRespuestas[24]=="r") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[25]=="m") {
+			if (arregloRespuestas[25]=="y") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[26]=="p") {
+			if (arregloRespuestas[26]=="e") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[27]=="v") {
+			if (arregloRespuestas[27]=="g") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[28]=="b") {
+			if (arregloRespuestas[28]=="n") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[29]=="f") {
+			if (arregloRespuestas[29]=="r") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[30]=="m") {
+			if (arregloRespuestas[30]=="z") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[31]=="p") {
+			if (arregloRespuestas[31]=="a") {
 				correctas++;
 			} else {
 				correctas;
 			}
-			if (arregloRespuestas[32]=="x") {
+			if (arregloRespuestas[32]=="h") {
 				correctas++;
 			} else {
 				correctas;
@@ -183,8 +183,7 @@ var correctas=0;
 		for (var i = 0; i < 34; i++) {
 			matrizBaremacion[i]=new Array(3);//creación matriz 33x3
 		}
-		matrizBaremacionDiferencias(matrizBaremacion);//matriz baremación 
-
+		matrizBaremacionAnalogias(matrizBaremacion);//matriz baremación 
 
 		for (var j = 1; j < 2; j++) {
 			
@@ -309,7 +308,7 @@ var correctas=0;
 				escala=matrizBaremacion[30][2];
 			}
 			if (correctas==matrizBaremacion[31][0]) {
-				baremacion=matrizBaremacion[31][1];
+				baremacion=matrizBaremacion[31][0];
 				escala=matrizBaremacion[31][2];
 			}
 			if (correctas==matrizBaremacion[32][0]) {
@@ -320,16 +319,18 @@ var correctas=0;
 				baremacion=matrizBaremacion[33][1];
 				escala=matrizBaremacion[33][2];
 			}
-			//document.write(" Puntaje Convertido "+baremacion+"% Escala "+escala+"<br><br>");
+
+			//document.write(" Puntaje Convertido "+baremacion+"% Escala "+escala+"<br><br>");//impresión de puntaje baremacion y escala
 		}
-		//Asignación del valor del arreglo de captura a la matriz respuestas
-		var matrizRespuestas=new Array();//variable creación matriz respuesta
+
+		//asignación de los valores obtenidos en el arreglo de captura a la matriz respuestas
+		var matrizRespuestas=new Array();//variable creación matriz respuestas
 		for (var i = 0; i < 33; i++) {
 			matrizRespuestas[i]=new Array(3);//creación matriz 33x3
 		}
-		matrizRespuestasDiferencias(matrizRespuestas);//matriz respuestas
+		matrizRespuestasAnalogias(matrizRespuestas);//matriz respuestas
 
-		matrizRespuestas[1][2]=arregloRespuestas[1];//asignación del valor a la matriz
+		matrizRespuestas[1][2]=arregloRespuestas[1];//asignación de valor de la respuesta estudiante a la matriz respuestas
 		matrizRespuestas[2][2]=arregloRespuestas[2];
 		matrizRespuestas[3][2]=arregloRespuestas[3];
 		matrizRespuestas[4][2]=arregloRespuestas[4];
@@ -361,10 +362,11 @@ var correctas=0;
 		matrizRespuestas[30][2]=arregloRespuestas[30];
 		matrizRespuestas[31][2]=arregloRespuestas[31];
 		matrizRespuestas[32][2]=arregloRespuestas[32];
-	
-	
-	document.cookie="CorrDD ="+correctas;
-	document.cookie="BareDD ="+baremacion;
-	document.cookie="EsclDD ="+escala;
 
+	
+	document.cookie="CorrAV ="+correctas;
+	document.cookie="BareAV ="+baremacion;
+	document.cookie="EsclAV ="+escala;
+ 	
 	}
+ 	
