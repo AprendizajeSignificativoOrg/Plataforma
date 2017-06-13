@@ -1,12 +1,12 @@
 //ALGORITMO DE CAPTURA DE RESPUESTAS MEMORIA RELATO ORAL
 	function despedida(){
-		window.open("C:/BADYGM/memoriaVisualOrtografica/BienvenidaBADYGMMemoriaOrtografica.html");//Función para abrir el siguiente cuestionario
-	//window.close(this);
+		window.location="http://localhost/BADYGM/memoriaVisualOrtografica/BienvenidaBADYGMMemoriaOrtografica.html";//Función para abrir el siguiente cuestionario
+	
 }
 	var  correctas=0;//contador respuestas correctas
 	
 function compararRespuestas(){//función principal
-	despedida();//llamada función
+
 	var arregloRespuestas=new Array();//variable arreglo de captura
 	
 	respuestaPrueba(arregloRespuestas);//arreglo de captura
@@ -173,7 +173,7 @@ function compararRespuestas(){//función principal
 			correctas;
 		}
 
-		document.write("Puntaje Directo Obtenido por el estudiante "+correctas+"<br>");//imprime contador de respuestas correctas
+		//document.write("Puntaje Directo Obtenido por el estudiante "+correctas+"<br>");//imprime contador de respuestas correctas
 	}
 	var baremacion,escala;//variables baremación y escala
 
@@ -335,7 +335,7 @@ function compararRespuestas(){//función principal
 			baremacion=matrizBaremacion[33][1];
 			escala=matrizBaremacion[33][2];
 		}
-		document.write(" Puntaje convertido "+baremacion+"% Escala "+escala+"<br><br>");//imprime puntaje convertido y escala
+		//document.write(" Puntaje convertido "+baremacion+"% Escala "+escala+"<br><br>");//imprime puntaje convertido y escala
 	}
 
 	var matrizRespuestas=new Array();//variable matriz respuestas
@@ -377,13 +377,9 @@ function compararRespuestas(){//función principal
 	matrizRespuestas[31][2]=arregloRespuestas[31];
 	matrizRespuestas[32][2]=arregloRespuestas[32];
 
-	/*document.write("Matriz de Respuestas<br><br>")//
-	for (var i = 1; i < 33; i++) {//imprime matriz
- 		for (var j = 0; j < 3; j++) {
- 			 document.write(" -"+matrizRespuestas[i][j]+"- ");
- 		}
- 		document.write("<br>");
- 	}*/
+	document.cookie="CorrMR ="+correctas;
+	document.cookie="BareMR ="+baremacion;
+	document.cookie="EsclMR ="+escala;
 
 }
 
