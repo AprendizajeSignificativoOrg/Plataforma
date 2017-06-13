@@ -3,188 +3,16 @@
 <head>
 	<meta charset="utf-8">
 	<title>Prueba BADYG S</title> 
-	<link rel="stylesheet" type="text/css" href="C:\\BADYGS\Estilos.css"><!--hoja de estilos documento css-->
-	<script type="text/javascript" src="RespuestasBADYGSCompletarOraciones.js"></script><!--archivos .js-->
-	<script type="text/javascript" src="C:\BADYGS\Cronometro.js"></script>
-	<script type="text/javascript" src="C:\BADYGS\CapturaRespuestas.js"></script>
-	<script type="text/javascript" src="PuntajesBADYGSCompletarOraciones.js"></script>
-	<script type="text/javascript" src="C:\BADYGM\CambioPreguntasBADYG.js"></script>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="http://localhost/BADYGS/Estilos.css"><!--hoja de estilos documento css-->
+	<script type="text/javascript" src="http://localhost/BADYGS/completarOraciones/RespuestasBADYGSCompletarOraciones.js"></script><!--archivos .js-->
+	<script type="text/javascript" src="http://localhost/BADYGS/Cronometro.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGS/CapturaRespuestas.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGS/completarOraciones/PuntajesBADYGSCompletarOraciones.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGS/CambioPreguntasBADYG.js"></script>
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script><!--link referencia jQuery-->
 <script type="text/javascript">	
 	$(document).ready(mostrar());//llamado función para cambio de preguntas
-</script>
-<script type="text/javascript">
-//función barra de preguntas
-	$(document).ready(function(){//acciona la función cuando el documento de carga
-		$("#Barra2").hide();//oculta el contenedor de la barra de preguntas según su id
-		$("#b1").click(function(){//asigna la función click al enlace según su id para accionar la función
-			$("#Barra2").show();//muestra el contenedor de barra de preguntas según su id
-			$("#Barra1").hide();//oculta el contenedor de barra de preguntas según su id
-		});//fin función click
-		$("#b2").click(function(){
-			$("#Barra1").show();
-			$("#Barra2").hide();
-		});
-		$("#p1").click(function(){//asigna la función click al enlace según su id para accionar la función
-			$("#Preguntas1").show();//muestra el contenedor de barra de preguntas según su id
-			$(".Preguntas").hide();//oculta los contenedores de barra de preguntas según su class
-		});//fin función click
-		$("#p2").click(function(){//asigna la función click al enlace según su id para accionar la función
-			$(".Preguntas").hide();//oculta los contenedores de barra de preguntas según su class
-			$("#Preguntas2").show();//muestra el contenedor de barra de preguntas según su id
-			$(".Preguntas1").hide();//oculta los contenedores de barra de preguntas según su class
-		});//fin función click
-		$("#p3").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas3").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p4").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas4").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p5").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas5").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p6").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas6").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p7").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas7").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p8").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas8").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p9").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas9").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p10").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas10").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p11").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas11").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p12").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas12").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p13").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas13").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p14").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas14").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p15").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas15").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p16").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas16").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p17").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas17").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p18").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas18").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p19").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas19").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p20").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas20").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p21").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas21").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p22").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas22").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p23").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas23").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p24").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas24").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p25").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas25").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p26").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas26").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p27").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas27").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p28").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas28").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p29").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas29").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p30").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas30").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p31").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas31").show();
-			$(".Preguntas1").hide();
-		});
-		$("#p32").click(function(){
-			$(".Preguntas").hide();
-			$("#Preguntas32").show();
-			$(".Preguntas1").hide();
-		});
-	});//fin función ready
 </script>
 </head>
 <body onload="tiempo(8);"><!--inicia el cronometro según parametro dado el la función-->
@@ -195,7 +23,7 @@
 	<br><br>
 	<progress id="barraProgreso" name="barraProgreso" max="100" value="" ></progress><!--Barra de progreso-->
 </form>
-<form action="" name="cuestionario" method="get" onsubmit="return compararRespuestas(this);">
+<form action="" name="cuestionario" method="" >
 	<div class="Preguntas1" id="Preguntas1"> 
 	<!--contenedor de los enunciados y opciones de respuesta-->
 		<p> 1. Nuestra historia debería enseñarnos ______ muchos errores en la actualidad.</p>	 <!--Item y enunciado de la pregunta -->
@@ -747,7 +575,9 @@
 		<a href="#" id="p32">32.</a>
 	</div>
 	<br>
-	<input type="submit" name="btn" id="btn" value="enviar"><!--botón de enviar activa la funcion de compararRespuestas-->
+	<input type="submit" name="btn" id="btn" value="enviar" onclick="compararRespuestas()"><!--botón de enviar activa la funcion de compararRespuestas-->	
+	<br>
+	<input type="button" name="btn2" id="btn2" value="Siguiente Cuestionario" onclick="despedida()">
 </form>
 </body>
 </html>
