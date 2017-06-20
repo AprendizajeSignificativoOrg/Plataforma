@@ -55,28 +55,113 @@ function imprimeRespuestas(respuestas){
       document.write(i + " . ");
       document.write(respuestas[i] + "<br/>");
     }
-    var resultadoA = 0;
-    var resultadoB = 0;
-    var resultadoC = 0;
-    var resultadoD = 0;
-    var resultadoE = 0;
-    var resultadoF = 0;
 
-    resultadoA = respuestas[1] + respuestas[7] + respuestas[17] + respuestas[21] + respuestas[30] + respuestas[36] + respuestas[37] + respuestas[43] + respuestas[50] + respuestas[55];  
-    resultadoB = respuestas[4] + respuestas[10] + respuestas[18] + respuestas[24] + respuestas[29] + respuestas[35] + respuestas[40] + respuestas[48] + respuestas[53] + respuestas[57];
-    resultadoC = respuestas[2] + respuestas[9] + respuestas[13] + respuestas[19] + respuestas[27] + respuestas[31] + respuestas[38] + respuestas[45] + respuestas[51] + respuestas[60];  
-    resultadoD = respuestas[5] + respuestas[12] + respuestas[15] + respuestas[22] + respuestas[28] + respuestas[32] + respuestas[41] + respuestas[47] + respuestas[54] + respuestas[58];
-    resultadoE = respuestas[3] + respuestas[11] + respuestas[14] + respuestas[20] + respuestas[25] + respuestas[34] + respuestas[39] + respuestas[46] + respuestas[52] + respuestas[56];
-    resultadoF = respuestas[6] + respuestas[8] + respuestas[16] + respuestas[23] + respuestas[26] + respuestas[33] + respuestas[42] + respuestas[44] + respuestas[49] + respuestas[59];
+    var resultados = new Array;
+
+    resultados[1] = respuestas[1] + respuestas[7] + respuestas[17] + respuestas[21] + respuestas[30] + respuestas[36] + respuestas[37] + respuestas[43] + respuestas[50] + respuestas[55];  
+    resultados[2] = respuestas[4] + respuestas[10] + respuestas[18] + respuestas[24] + respuestas[29] + respuestas[35] + respuestas[40] + respuestas[48] + respuestas[53] + respuestas[57];
+    resultados[3] = respuestas[2] + respuestas[9] + respuestas[13] + respuestas[19] + respuestas[27] + respuestas[31] + respuestas[38] + respuestas[45] + respuestas[51] + respuestas[60];  
+    resultados[4] = respuestas[5] + respuestas[12] + respuestas[15] + respuestas[22] + respuestas[28] + respuestas[32] + respuestas[41] + respuestas[47] + respuestas[54] + respuestas[58];
+    resultados[5] = respuestas[3] + respuestas[11] + respuestas[14] + respuestas[20] + respuestas[25] + respuestas[34] + respuestas[39] + respuestas[46] + respuestas[52] + respuestas[56];
+    resultados[6] = respuestas[6] + respuestas[8] + respuestas[16] + respuestas[23] + respuestas[26] + respuestas[33] + respuestas[42] + respuestas[44] + respuestas[49] + respuestas[59];
   
-    document.write("<br/> Resultado A = " + resultadoA + "<br/>");
-    document.write("Resultado B = " + resultadoB + "<br/>");
-    document.write("Resultado C = " + resultadoC + "<br/>");
-    document.write("Resultado D = " + resultadoD + "<br/>");
-    document.write("Resultado E = " + resultadoE + "<br/>");
-    document.write("Resultado F = " + resultadoF + "<br/>");
+    document.write("<br/> Resultado A = " + resultados[1] + "<br/>");
+    document.write("Resultado B = " + resultados[2] + "<br/>");
+    document.write("Resultado C = " + resultados[3] + "<br/>");
+    document.write("Resultado D = " + resultados[4] + "<br/>");
+    document.write("Resultado E = " + resultados[5] + "<br/>");
+    document.write("Resultado F = " + resultados[6] + "<br/>");
+
+    seleccionPruebasEspecificas(resultados);
+
+    resultadosMatrizBaremos(respuestas);
 } 
-     
+
+function seleccionPruebasEspecificas(resultados){
+  var puntajeMayor = 0;
+  var subpruebaMayor = 0;
+  for (i=1; i<7; i++){
+    if (resultados[i]>=puntajeMayor){
+      puntajeMayor = resultados[i];
+      subpruebaMayor = i;
+    } 
+  }
+      switch (subpruebaMayor){
+
+      case 1:
+        document.write("<br/> SUBPRUEBA A: " + puntajeMayor + "<br/>");
+        break;  
+
+      case 2:
+        document.write("<br/> SUBPRUEBA B: " + puntajeMayor + "<br/>");
+        break;  
+
+      case 3:
+        document.write("<br/> SUBPRUEBA C: " + puntajeMayor + "<br/>");
+        break;  
+
+      case 4:
+        document.write("<br/> SUBPRUEBA D: " + puntajeMayor + "<br/>");
+        break;  
+
+      case 5:
+        document.write("<br/> SUBPRUEBA E: " + puntajeMayor + "<br/>");
+        break;  
+
+      case 6:
+        document.write("<br/> SUBPRUEBA F: " + puntajeMayor + "<br/>");
+        break;
+    }
+}
+
+function resultadosMatrizBaremos(respuestas){
+  var matrizBaremos = new Array();
+  creacionTablaBaremosIPUParte1(matrizBaremos);
+
+  var resultados = new Array;
+  for (i=1; i<7; i++){
+    resultados[i]=0;
+  }
+
+  for (i=1; i<61; i++){
+
+    switch (matrizBaremos[i]){
+
+      case 'A':
+        resultados[1] += respuestas[i];
+        break;  
+
+      case 'B':
+        resultados[2] += respuestas[i];
+        break;  
+
+      case 'C':
+        resultados[3] += respuestas[i];
+        break;  
+
+      case 'D':
+        resultados[4] += respuestas[i];
+        break;  
+
+      case 'E':
+        resultados[5] += respuestas[i];
+        break;  
+
+      case 'F':
+        resultados[6] += respuestas[i];
+        break;
+    }
+  }
+   
+  document.write("<br/> Resultado A = " + resultados[1] + "<br/>");
+  document.write("Resultado B = " + resultados[2] + "<br/>");
+  document.write("Resultado C = " + resultados[3] + "<br/>");
+  document.write("Resultado D = " + resultados[4] + "<br/>");
+  document.write("Resultado E = " + resultados[5] + "<br/>");
+  document.write("Resultado F = " + resultados[6] + "<br/>");
+
+  seleccionPruebasEspecificas(resultados);
+}
 
 function identificaContenedorVacio(respuesta, contenedorLleno){
   var numeroRespuesta = cambiaContenedorxValor(respuesta);

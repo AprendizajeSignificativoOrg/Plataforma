@@ -1,6 +1,6 @@
 function creacionTablaBaremosIPUParte1(matrizBaremos){
 	
-	matrizBaremosParte1[0] = "Clave";
+	matrizBaremos[0] = "Clave";
 
 	matrizBaremos[1] = "A";
 	matrizBaremos[2] = "C";

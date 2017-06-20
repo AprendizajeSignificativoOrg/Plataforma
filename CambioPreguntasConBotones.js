@@ -5,7 +5,7 @@
 */
 
 //FUNCIÓN PRINCIPAL: Recibe como parámetro la cantidad de preguntas del cuestionario, para su funcionamiento cada pregunta (o grupo de preguntas) debe estar dentro de un div con class = Preguntas e id = PreguntasX donde "X" es el número de Ítem.   
-function cambioPreguntasBotones(cantidadPreguntas){
+function cambioPreguntasBotones(cantidadPreguntas, contenedorLleno){
 
 	$(".Preguntas").hide();//Oculta los contenedores div de los grupos de preguntas
 
@@ -30,6 +30,7 @@ function cambioPreguntasBotones(cantidadPreguntas){
 		else {
 			$("#anterior").show(); //Muestra botón con id = siguiente.
 		}
+		reiniciarContenedor(contenedorLleno);
 	});
 	
 	$("#anterior").on('click',function(){
@@ -45,17 +46,8 @@ function cambioPreguntasBotones(cantidadPreguntas){
 			$("#siguiente").show();  //Muestra botón con id = siguiente.
 			$("#enviarRespuestas").hide(); //Oculta botón con id = enviarRespuestas
 		}
+		reiniciarContenedor(contenedorLleno);
 	});
- 
-	function obtieneIdSiguientePregunta (pregunta){
-		var cadenaPregunta = new Array ();  //Crea arreglo para guardar split
-   		cadenaPregunta = pregunta.split('s'); //Divide en dos la cadena "pregunta" antes de 's' y después de 's' 
-   		var numeroPregunta = Number(cadenaPregunta[1]); //Convierte cadena a número. 
-		var numeroSiguientePregunta = numeroPregunta + 1; //Suma uno al número para navegar al siguiente ítem.
-		var textoNumeroSiguientePregunta = numeroSiguientePregunta.toString(); //Convierte cadena a número
-		var identificadorSiguientePregunta = "#Preguntas" + textoNumeroSiguientePregunta; //Crea id del siguiente ítem utilizando "textonumeroSiguientepregunta" 
-		return identificadorSiguientePregunta;	
-	}
 	
 	function obtieneIdAnteriorPregunta (pregunta){
 		var cadenaPregunta = new Array (); //Crea arreglo para guardar split
@@ -67,3 +59,45 @@ function cambioPreguntasBotones(cantidadPreguntas){
 		return identificadorAnteriorPregunta;	
 	}
 }
+
+function obtieneIdSiguientePregunta (pregunta){
+	var cadenaPregunta = new Array ();  //Crea arreglo para guardar split
+  	cadenaPregunta = pregunta.split('s'); //Divide en dos la cadena "pregunta" antes de 's' y después de 's' 
+  	var numeroPregunta = Number(cadenaPregunta[1]); //Convierte cadena a número. 
+	var numeroSiguientePregunta = numeroPregunta + 1; //Suma uno al número para navegar al siguiente ítem.
+	var textoNumeroSiguientePregunta = numeroSiguientePregunta.toString(); //Convierte cadena a número
+	var identificadorSiguientePregunta = "#Preguntas" + textoNumeroSiguientePregunta; //Crea id del siguiente ítem utilizando "textonumeroSiguientepregunta" 
+	return identificadorSiguientePregunta;	
+}
+
+function contadorLlenado(contadorLleno){
+	var $preguntaVisible = $('div.Preguntas:visible'); //Captura objeto div de la class = Preguntas (ítem visible en el momento).
+  	var	pregunta = "#" + $preguntaVisible.attr('id'); //Captura en la variable "pregunta" el id del objeto div de la class = Preguntas visible en el momento.
+  	var cadenaPregunta = new Array (); //Crea arreglo para guardar split.
+    cadenaPregunta = pregunta.split('s'); //Divide en dos la cadena "cadenaPregunta" antes de 'a' y después de 'a'
+    var numeroPregunta = Number(cadenaPregunta[1]);//Convierte cadena a número (Obtiene número ítem).
+
+    if (contadorLleno[numeroPregunta]>=5){
+    	cambioPreguntasAutomatico(10);
+    }
+    else{
+    	contadorLleno[numeroPregunta]++;
+    }
+}
+
+function cambioPreguntasAutomatico(cantidadPreguntas){
+	var $preguntaVisible = $('div.Preguntas:visible'); //Captura objeto div de la class = Preguntas (ítem visible en el momento).
+  	var	pregunta = "#" + $preguntaVisible.attr('id'); //Captura en la variable "pregunta" el id del objeto div de la class = Preguntas visible en el momento.
+	var identificadorSiguientePregunta = obtieneIdSiguientePregunta(pregunta); // Con el llamado a la función, captura el ID del siguiente ítem.
+	$(pregunta).hide(); //Oculta el div del ítem visible. 
+	$(identificadorSiguientePregunta).show(); // Muestra el div del siguiente ítem.
+	totalPreguntas = "#Preguntas" + cantidadPreguntas; //Define Id de la última pregunta a partir del valor pasado como parámetro en la función principal.
+	if (identificadorSiguientePregunta == totalPreguntas){ //Muestra el botón enviar respuestas y oculta el botón siguiente en el último ítem. Muestra el botón anterior en los demás casos. 
+		$("#siguiente").hide(); //Oculta boton con id = siguiente
+		$("#enviarRespuestas").show(); //Muestra botón con id = enviarRespuestas.
+	}
+	else {
+		$("#anterior").show(); //Muestra botón con id = siguiente.
+	}
+}
+
