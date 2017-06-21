@@ -1,11 +1,8 @@
 function despedida(){
-	window.location='http://localhost/BADYGS/seriesNumericas/BienvenidaSeriesNumericas.html';
-	
+	window.location='http://localhost/BADYGS/seriesNumericas/BienvenidaSeriesNumericas.html';//función para abrir el siguiente cuesionario
 }
 	//Algoritmo de captura de respuestas
 	var correctas=0;//contador respuestas correctas
-
-
 	function compararRespuestas(){//función principal
 		
 	//comparación de respuestas estudiante y respuesta correcta con contador
@@ -364,9 +361,8 @@ function despedida(){
 		matrizRespuestas[31][2]=arregloRespuestas[31];
 		matrizRespuestas[32][2]=arregloRespuestas[32];
 
-	document.cookie="CorrAV ="+correctas;
+	document.cookie="CorrAV ="+correctas;//creación de cookie con las variables usadas para el puntaje final
 	document.cookie="BareAV ="+baremacion;
 	document.cookie="EsclAV ="+escala;
  	
 	}
-	
