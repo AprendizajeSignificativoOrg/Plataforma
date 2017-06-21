@@ -1,8 +1,8 @@
 //ALGORITMO PASAR PREGUNTAS/BARRA DE PROGRESO/BARRA DE PREGUNTAS
 function mostrar(){
-
 /*Función ready BOTONES
-	pasa pregunta a pregunta por medio de los botones anterior/siguiente*/
+pasa pregunta a pregunta por medio de los botones anterior/siguiente
+muestra el boton enviar al mostrar la última pregunta*/
 	$(document).ready(function(){//acciona la función ready cuando el documento de carga
 	$(".Preguntas").hide();//Oculta los contenedores div solo muestra el primero llamandolos por su class
 	$("#sig").on('click',function(){//asigna función on click al botón por su id para accionarla
@@ -244,6 +244,7 @@ function mostrar(){
 	$("#sig31").on('click',function(){
 		$("#Preguntas31").next().show();
 		$("#Preguntas31").hide();
+		$("#btn").show();//muestra el boton enviar por su id
 	});	
 	$("#ant30").on('click',function(){
 		$("#Preguntas31").prev().show();
@@ -253,15 +254,11 @@ function mostrar(){
 		$("#Preguntas32").prev().show();
 		$("#Preguntas32").hide();
 	});
-	});//fin función ready
-
-
 /* Función ready RADIOBUTTONS- BARRA DE PROGRESO
-	pasa pregunta a pregunta por medio de los radiobuttons
-	cambia el color del enlace de la pregunta que se constesta
-	oculta el boton enviar y lo muestra al contestar la última pregunta
-	cambia el value de progress según la variable de aumento*/
-	$(document).ready(function(){//acciona la función ready cuando el documento de carga
+pasa pregunta a pregunta por medio de los radiobuttons
+cambia el color del enlace de la pregunta que se constesta
+oculta el boton enviar y lo muestra al contestar la última pregunta
+cambia el value de la barra de progreso según la variable de aumento*/
 		$("#btn").hide();//oculta el boton enviar por su id
 		var value=0;//variable de aumento para la barra de progreso
 		$("input[name=pregunta1]").click(function(){//asigna la función click al grupo de radiobuttons llamados por su nombre
@@ -486,19 +483,20 @@ function mostrar(){
 			$("#barraProgreso").val(value);
 			$("#btn").show();//muestra el boton enviar por su id
 		});
-	});//fin función read
-
-
 /*Función BARRA DE PREGUNTAS
-	por medio de enlaces pasa de una pregunta a otra ocultando la actual en pantalla*/
-	$(document).ready(function(){//acciona la función ready cuando el documento de carga
-		$("#Barra2").hide();//oculta el contenedor de la barra de preguntas según su id
-		$("#b1").click(function(){//asigna la función click al enlace según su id para accionar la función
+por medio de enlaces pasa de una pregunta a otra ocultando la actual en pantalla
+muestra el boton enviar al seleccionar la última pregunta*/
+		$("#Barra2").hide();//oculta el contenedor de la barra de preguntas según su id	
+		$("#b1").hover(function(){//asigna la función hover al enlace según su id para accionar la función cuando el cursor se encuentra sobre el
 			$("#Barra2").show();//muestra el contenedor de barra de preguntas según su id
 			$("#Barra1").hide();//oculta el contenedor de barra de preguntas según su id
-		});//fin función click
-		$("#b2").click(function(){
-			$("#Barra1").show();
+		},
+			function(){//acciona la funcion cuando el cursor no se encuentra sobre el
+			$("#Barra1").hide();
+		});//fin función hover
+		$("#b2").hover(function(){
+			$("#Barra1").show();},
+			function(){
 			$("#Barra2").hide();
 		});
 		$("#p1").click(function(){//asigna la función click al enlace según su id para accionar la función
@@ -659,7 +657,7 @@ function mostrar(){
 			$(".Preguntas").hide();
 			$("#Preguntas32").show();
 			$(".Preguntas1").hide();
+			$("#btn").show();//muestra el boton enviar por su id
 		});
 	});//fin función ready
-
 }
