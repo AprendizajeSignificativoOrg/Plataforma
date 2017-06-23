@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Prueba BADYG S</title> 
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="http://localhost/BADYGS/Estilos.css"><!--hoja de estilos documento css-->
+	<script type="text/javascript" src="http://localhost/BADYGS/completarOraciones/RespuestasBADYGSCompletarOraciones.js"></script><!--archivos .js-->
+	<script type="text/javascript" src="http://localhost/BADYGS/Cronometro.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGS/CapturaRespuestas.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGS/completarOraciones/PuntajesBADYGSCompletarOraciones.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGS/CambioPreguntasBADYG.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script><!--link referencia jQuery-->
+<script type="text/javascript">	
+	$(document).ready(mostrar());//llamado función para cambio de preguntas
+</script>
+</head>
+<body onload="tiempo(8);"><!--inicia el cronometro según parametro dado el la función-->
+<h1 align="center">Prueba Completar Oraciones</h1>
+<form name="form" align="right"><!--espacio de cronometro-->
+	<input type="text" size="1" class="form_input" name="minute" disabled>:<!--minutos-->
+	<input type="text" size="1" class="form_input" name="second" disabled><!--segundos-->
+	<br><br>
+	<progress id="barraProgreso" name="barraProgreso" max="100" value="" ></progress><!--Barra de progreso-->
+</form>
+<form action="" name="cuestionario" method="" >
+	<div class="Preguntas1" id="Preguntas1"> 
+	<!--contenedor de los enunciados y opciones de respuesta-->
+		<p> 1. Nuestra historia debería enseñarnos <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg"> muchos errores en la actualidad.</p>	 <!--Item y enunciado de la pregunta -->
+		<input type="radio" name="pregunta1" value="p1"><!--radiobutton de opción de respuesta-->
+		<label>P. a conducir.</label><!--opciones de respuestas-->
+		<input type="radio" name="pregunta1" value="q1">
+		<label>Q. a dirigir.</label>
+		<input type="radio" name="pregunta1" value="r1">
+		<label>R. a constatar.</label>
+		<input type="radio" name="pregunta1" value="s1">
+		<label>S. a evitar.</label>
+		<input type="radio" name="pregunta1" value="t1">
+		<label>T. a cambiar.</label>
+		<br><br><input type="button" name="sig" id="sig" value="Siguiente"><!--botones para pasar pregunta-->
+	</div>
+
+	<div class="Preguntas" id="Preguntas2"> 
+	
+		<p> 2. <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg"> una enfermedad es mejor que tratar de curarla después.</p>	 
+		<input type="radio" name="pregunta2" value="v2">
+		<label>V. Diagnosticar.</label>
+		<input type="radio" name="pregunta2" value="w2">
+		<label>W. Medicar.</label>
+		<input type="radio" name="pregunta2" value="x2">
+		<label>X. Tratar.</label>
+		<input type="radio" name="pregunta2" value="y2">
+		<label>Y. Revisar.</label>
+		<input type="radio" name="pregunta2" value="z2">
+		<label>Z. Prevenir.</label>
+		<br><br><input type="button" name="ant" id="ant" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig2" id="sig2" value="Siguiente"><!--botones para pasar pregunta-->
+	</div>
+
+	<div class="Preguntas" id="Preguntas3"> 
+	
+		<p> 3. El inteligente comprende las cosas y el astuto intuye <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg"> de las personas. </p>	 
+		<input type="radio" name="pregunta3" value="a3">
+		<label>A. el pasado.</label>
+		<input type="radio" name="pregunta3" value="b3">
+		<label>B. la intención.</label>
+		<input type="radio" name="pregunta3" value="c3">
+		<label>C. la ilusión.</label>
+		<input type="radio" name="pregunta3" value="d3">
+		<label>D. el aspecto.</label>
+		<input type="radio" name="pregunta3" value="e3">
+		<label>E. los defectos.</label>
+		<br><br><input type="button" name="ant2" id="ant2" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig3" id="sig3" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas4"> 
+		<p> 4. Practicar un deporte <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg"> una vida más sana.</p>	 
+		<input type="radio" name="pregunta4" value="f4">
+		<label>F. arraiga.</label>
+		<input type="radio" name="pregunta4" value="g4">
+		<label>G. anticipa.</label>
+		<input type="radio" name="pregunta4" value="h4">
+		<label>H. predetermina.</label>
+		<input type="radio" name="pregunta4" value="i4">
+		<label>I. propicia.</label>
+		<input type="radio" name="pregunta4" value="j4">
+		<label>J. selecciona.</label>
+		<br><br><input type="button" name="ant3" id="ant3" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig4" id="sig4" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas5"> 
+		<p> 5. Mostró su disconformidad por el <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg"> confuso seguido en la votación.</p>	 
+		<input type="radio" name="pregunta5" value="k5">
+		<label>K. procedimiento.</label>
+		<input type="radio" name="pregunta5" value="l5">
+		<label>L. resultado.</label>
+		<input type="radio" name="pregunta5" value="m5">
+		<label>M. cambio.</label>
+		<input type="radio" name="pregunta5" value="n5">
+		<label>N. diálogo.</label>
+		<input type="radio" name="pregunta5" value="o5">
+		<label>O. aplazamiento.</label>
+		<br><br><input type="button" name="ant4" id="ant4" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig5" id="sig5" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas6"> 
+		<p> 6. Toda acción humana tiene sus <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg">, como toda causa tiene sus efectos.</p>	 
+		<input type="radio" name="pregunta6" value="p6">
+		<label>P. orígenes.</label>
+		<input type="radio" name="pregunta6" value="q6">
+		<label>Q. límites.</label>
+		<input type="radio" name="pregunta6" value="r6">
+		<label>R. finalidades.</label>
+		<input type="radio" name="pregunta6" value="s6">
+		<label>S. consecuencias.</label>
+		<input type="radio" name="pregunta6" value="t6">
+		<label>T. matices.</label>
+		<br><br><input type="button" name="ant5" id="ant5" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig6" id="sig6" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas7"> 
+		<p> 7. Para poder competir son imprescindibles otros <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg">.</p>	 
+		<input type="radio" name="pregunta7" value="v7">
+		<label>V. esfuerzos.</label>
+		<input type="radio" name="pregunta7" value="w7">
+		<label>W. planteamientos.</label>
+		<input type="radio" name="pregunta7" value="x7">
+		<label>X. rivales.</label>
+		<input type="radio" name="pregunta7" value="y7">
+		<label>Y. ánimos.</label>
+		<input type="radio" name="pregunta7" value="z7">
+		<label>Z. métodos.</label>
+		<br><br><input type="button" name="ant6" id="ant6" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig7" id="sig7" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas8"> 
+		<p> 8. Serios errores en el pasado pueden <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg"> hondas decepciones en el futuro.</p>	 
+		<input type="radio" name="pregunta8" value="a8">
+		<label>A. aumentar.</label>
+		<input type="radio" name="pregunta8" value="b8">
+		<label>B. reproducir.</label>
+		<input type="radio" name="pregunta8" value="c8">
+		<label>C. hilvanar.</label>
+		<input type="radio" name="pregunta8" value="d8">
+		<label>D. decidir.</label>
+		<input type="radio" name="pregunta8" value="e8">
+		<label>E. conllevar.</label>
+		<br><br><input type="button" name="ant7" id="ant7" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig8" id="sig8" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas9"> 
+		<p> 9. Ilusionarnos <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg"> nos impide ver objetivamente la  realidad.</p>	 
+		<input type="radio" name="pregunta9" value="f9">
+		<label>F. antes.</label>
+		<input type="radio" name="pregunta9" value="g9">
+		<label>G. previamente.</label>
+		<input type="radio" name="pregunta9" value="h9">
+		<label>H. en exceso.</label>
+		<input type="radio" name="pregunta9" value="i9">
+		<label>I. siempre.</label>
+		<input type="radio" name="pregunta9" value="j9">
+		<label>J. de lo imposible.</label>
+		<br><br><input type="button" name="ant8" id="ant8" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig9" id="sig9" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas10"> 
+		<p> 10. Una experiencia negativa suele <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg"> intentar repetirla.</p>	 
+		<input type="radio" name="pregunta10" value="k10">
+		<label>K. terminar de.</label>
+		<input type="radio" name="pregunta10" value="l10">
+		<label>L. anticiparnos a.</label>
+		<input type="radio" name="pregunta10" value="m10">
+		<label>M. incitarnos a.</label>
+		<input type="radio" name="pregunta10" value="n10">
+		<label>N. prevenirnos de.</label>
+		<input type="radio" name="pregunta10" value="o10">
+		<label>O. desanimarnos de.</label>
+		<br><br><input type="button" name="ant9" id="ant9" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig10" id="sig10" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas11"> 
+		<p> 11. Reconocer los errores propios es <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg"> de sabiduría.</p>	 
+		<input type="radio" name="pregunta11" value="p11">
+		<label>P. un pozo.</label>
+		<input type="radio" name="pregunta11" value="q11">
+		<label>Q. un talante.</label>
+		<input type="radio" name="pregunta11" value="r11">
+		<label>R. un precedente.</label>
+		<input type="radio" name="pregunta11" value="s11">
+		<label>S. un síntoma.</label>
+		<input type="radio" name="pregunta11" value="t11">
+		<label>T. un aumento.</label>
+		<br><br><input type="button" name="ant10" id="ant10" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig11" id="sig11" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas12"> 
+		<p> 12. Traspasar los límites de <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg"> constituye un delito.</p>	 
+		<input type="radio" name="pregunta12" value="v12">
+		<label>V. lo prudente.</label>
+		<input type="radio" name="pregunta12" value="w12">
+		<label>W. la ilegalidad.</label>
+		<input type="radio" name="pregunta12" value="x12">
+		<label>X. la legalidad.</label>
+		<input type="radio" name="pregunta12" value="y12">
+		<label>Y. lo establecido.</label>
+		<input type="radio" name="pregunta12" value="z12">
+		<label>Z. lo privado.</label>
+		<br><br><input type="button" name="ant11" id="ant11" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig12" id="sig12" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas13"> 
+		<p> 13. Si lo sometemos a <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg"> sabremos qué piensan los asistentes.</p>	 
+		<input type="radio" name="pregunta13" value="a13">
+		<label>A. examen.</label>
+		<input type="radio" name="pregunta13" value="b13">
+		<label>B. decisión.</label>
+		<input type="radio" name="pregunta13" value="c13">
+		<label>C. juicio.</label>
+		<input type="radio" name="pregunta13" value="d13">
+		<label>D. prueba.</label>
+		<input type="radio" name="pregunta13" value="e13">
+		<label>E. debate.</label>
+		<br><br><input type="button" name="ant12" id="ant12" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig13" id="sig13" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas14"> 
+		<p> 14. Es inútil tratar de convencer a un <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg">.</p>	 
+		<input type="radio" name="pregunta14" value="f14">
+		<label>F. ilusionado.</label>
+		<input type="radio" name="pregunta14" value="g14">
+		<label>G. farsante.</label>
+		<input type="radio" name="pregunta14" value="h14">
+		<label>H. precavido.</label>
+		<input type="radio" name="pregunta14" value="i14">
+		<label>I. fanático.</label>
+		<input type="radio" name="pregunta14" value="j14">
+		<label>J. analfabeto.</label>
+		<br><br><input type="button" name="ant13" id="ant13" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig14" id="sig14" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas15"> 
+		<p> 15. Paliar un desastre no suele ser <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg"> para prevenirlo en el futuro.</p>	 
+		<input type="radio" name="pregunta15" value="k15">
+		<label>K. suficiente.</label>
+		<input type="radio" name="pregunta15" value="l15">
+		<label>L. útil.</label>
+		<input type="radio" name="pregunta15" value="m15">
+		<label>M. motivo.</label>
+		<input type="radio" name="pregunta15" value="n15">
+		<label>N. conveniente.</label>
+		<input type="radio" name="pregunta15" value="o15">
+		<label>O. necesario.</label>
+		<br><br><input type="button" name="ant14" id="ant14" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig15" id="sig15" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas16"> 
+		<p> 16. Acerca del pasado nunca podremos hacer <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg">.</p>	 
+		<input type="radio" name="pregunta16" value="p16">
+		<label>P. pronósticos.</label>
+		<input type="radio" name="pregunta16" value="q16">
+		<label>Q. indagaciones.</label>
+		<input type="radio" name="pregunta16" value="r16">
+		<label>R. sondeos.</label>
+		<input type="radio" name="pregunta16" value="s16">
+		<label>S. cálculos.</label>
+		<input type="radio" name="pregunta16" value="t16">
+		<label>T. ciencia.</label>
+		<br><br><input type="button" name="ant15" id="ant15" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig16" id="sig16" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas17"> 
+		<p> 17. <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg"> siempre es consecuencia de un accidente.</p>	 
+		<input type="radio" name="pregunta17" value="v17">
+		<label>V. Una catástrofe.</label>
+		<input type="radio" name="pregunta17" value="w17">
+		<label>W. Un naufragio.</label>
+		<input type="radio" name="pregunta17" value="x17">
+		<label>X. Un sabotaje.</label>
+		<input type="radio" name="pregunta17" value="y17">
+		<label>Y. Un desastre.</label>
+		<input type="radio" name="pregunta17" value="z17">
+		<label>Z. Un alud.</label>
+		<br><br><input type="button" name="ant16" id="ant16" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig17" id="sig17" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas18"> 
+		<p> 18. Las <img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg"> nunca demuestran que lo que cuentan ocurrió históricamente.</p>	 
+		<input type="radio" name="pregunta18" value="a18">
+		<label>A. leyendas.</label>
+		<input type="radio" name="pregunta18" value="b18">
+		<label>B. anécdotas.</label>
+		<input type="radio" name="pregunta18" value="c18">
+		<label>C. biografías.</label>
+		<input type="radio" name="pregunta18" value="d18">
+		<label>D. investigaciones.</label>
+		<input type="radio" name="pregunta18" value="e18">
+		<label>E. novelas.</label>
+		<br><br><input type="button" name="ant17" id="ant17" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig18" id="sig18" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas19"> 
+		<p> 19.<img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg"> del tráfico es un problema de las grandes ciudades modernas.</p>	 
+		<input type="radio" name="pregunta19" value="f19">
+		<label>F. La previsión.</label>
+		<input type="radio" name="pregunta19" value="g19">
+		<label>G. La congestión.</label>
+		<input type="radio" name="pregunta19" value="h19">
+		<label>H. El estudio.</label>
+		<input type="radio" name="pregunta19" value="i19">
+		<label>I. El diseño.</label>
+		<input type="radio" name="pregunta19" value="j19">
+		<label>J. La información.</label>
+		<br><br><input type="button" name="ant18" id="ant18" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig19" id="sig19" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas20"> 
+		<p> 20. Nada físicamente real puede ser tan pequeño que al menos no tenga  <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg">.</p>	 
+		<input type="radio" name="pregunta20" value="k20">
+		<label>K. masa.</label>
+		<input type="radio" name="pregunta20" value="l20">
+		<label>L. exteriorización.</label>
+		<input type="radio" name="pregunta20" value="m20">
+		<label>M. medida.</label>
+		<input type="radio" name="pregunta20" value="n20">
+		<label>N. comprobación.</label>
+		<input type="radio" name="pregunta20" value="o20">
+		<label>O. visibilidad.</label>
+		<br><br><input type="button" name="ant19" id="ant19" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig20" id="sig20" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas21"> 
+		<p> 21. No puede haber diálogo cuando <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg"> no desea hablar.</p>	 
+		<input type="radio" name="pregunta21" value="p21">
+		<label>P. el amigo.</label>
+		<input type="radio" name="pregunta21" value="q21">
+		<label>Q. el superior.</label>
+		<input type="radio" name="pregunta21" value="r21">
+		<label>R. la parte.</label>
+		<input type="radio" name="pregunta21" value="s21">
+		<label>S. el interlocutor.</label>
+		<input type="radio" name="pregunta21" value="t21">
+		<label>T. el negligente.</label>
+		<br><br><input type="button" name="ant20" id="ant20" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig21" id="sig21" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas22"> 
+		<p> 22. Seleccionar equivale a separar lo importante de lo <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg">.</p>	 
+		<input type="radio" name="pregunta22" value="v22">
+		<label>V. necesario.</label>
+		<input type="radio" name="pregunta22" value="w22">
+		<label>W. inseguro.</label>
+		<input type="radio" name="pregunta22" value="x22">
+		<label>X. válido.</label>
+		<input type="radio" name="pregunta22" value="y22">
+		<label>Y. accesorio.</label>
+		<input type="radio" name="pregunta22" value="z22">
+		<label>Z. esencial.</label>
+		<br><br><input type="button" name="ant21" id="ant21" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig22" id="sig22" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas23"> 
+		<p> 23. La exageración es una forma de <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg"> la realidad.</p>	 
+		<input type="radio" name="pregunta23" value="a23">
+		<label>A. falsear.</label>
+		<input type="radio" name="pregunta23" value="b23">
+		<label>B. liberar.</label>
+		<input type="radio" name="pregunta23" value="c23">
+		<label>C. hablar de.</label>
+		<input type="radio" name="pregunta23" value="d23">
+		<label>D. insistir en.</label>
+		<input type="radio" name="pregunta23" value="e23">
+		<label>E. expresar.</label>
+		<br><br><input type="button" name="ant22" id="ant22" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig23" id="sig23" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas24"> 
+		<p> 24. Ningún buen profesional admitiría <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg"> en su trabajo.</p>	 
+		<input type="radio" name="pregunta24" value="f24">
+		<label>F. regateos.</label>
+		<input type="radio" name="pregunta24" value="g24">
+		<label>G. pruebas.</label>
+		<input type="radio" name="pregunta24" value="h24">
+		<label>H. chapuzas.</label>
+		<input type="radio" name="pregunta24" value="i24">
+		<label>I. demoras.</label>
+		<input type="radio" name="pregunta24" value="j24">
+		<label>J. pérdidas.</label>
+		<br><br><input type="button" name="ant23" id="ant23" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig24" id="sig24" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas25"> 
+		<p> 25. Nunca podremos demostrar, por contradictorio, que lo <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg"> sea irracional.</p>	 
+		<input type="radio" name="pregunta25" value="k25">
+		<label>K. demostrado.</label>
+		<input type="radio" name="pregunta25" value="l25">
+		<label>L. racional.</label>
+		<input type="radio" name="pregunta25" value="m25">
+		<label>M. humano.</label>
+		<input type="radio" name="pregunta25" value="n25">
+		<label>N. evidente.</label>
+		<input type="radio" name="pregunta25" value="o25">
+		<label>O. conseguido.</label>
+		<br><br><input type="button" name="ant24" id="ant24" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig25" id="sig25" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas26"> 
+		<p> 26. <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg"> todo aquello que no hacemos en su momento.</p>	 
+		<input type="radio" name="pregunta26" value="p26">
+		<label>P. Deshacemos.</label>
+		<input type="radio" name="pregunta26" value="q26">
+		<label>Q. Aplazamos.</label>
+		<input type="radio" name="pregunta26" value="r26">
+		<label>R. Descuidamos.</label>
+		<input type="radio" name="pregunta26" value="s26">
+		<label>S. Queremos.</label>
+		<input type="radio" name="pregunta26" value="t26">
+		<label>T. Nos agobia.</label>
+		<br><br><input type="button" name="ant25" id="ant25" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig26" id="sig26" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas27"> 
+		<p> 27. La esplendidez esta reñida con <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg">.</p>	 
+		<input type="radio" name="pregunta27" value="v27">
+		<label>V. la antipatía.</label>
+		<input type="radio" name="pregunta27" value="w27">
+		<label>W. la maldad.</label>
+		<input type="radio" name="pregunta27" value="x27">
+		<label>X. el despilfarro.</label>
+		<input type="radio" name="pregunta27" value="y27">
+		<label>Y. el sentido común.</label>
+		<input type="radio" name="pregunta27" value="z27">
+		<label>Z. la avaricia.</label>
+		<br><br><input type="button" name="ant26" id="ant26" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig27" id="sig27" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas28"> 
+		<p> 28. Los <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg"> de un moderno edificio en ruinas, fueron absueltos.</p>	 
+		<input type="radio" name="pregunta28" value="a28">
+		<label>A. albañiles.</label>
+		<input type="radio" name="pregunta28" value="b28">
+		<label>B. dueños.</label>
+		<input type="radio" name="pregunta28" value="c28">
+		<label>C. inquilinos.</label>
+		<input type="radio" name="pregunta28" value="d28">
+		<label>D. ocupantes.</label>
+		<input type="radio" name="pregunta28" value="e28">
+		<label>E. promotores.</label>
+		<br><br><input type="button" name="ant27" id="ant27" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig28" id="sig28" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas29"> 
+		<p> 29. Pertenecer a algún club deportivo <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg"> la práctica efectiva del deporte.</p>	 
+		<input type="radio" name="pregunta29" value="f29">
+		<label>F. atenúa.</label>
+		<input type="radio" name="pregunta29" value="g29">
+		<label>G. realza.</label>
+		<input type="radio" name="pregunta29" value="h29">
+		<label>H. predispone a.</label>
+		<input type="radio" name="pregunta29" value="i29">
+		<label>I. asegura.</label>
+		<input type="radio" name="pregunta29" value="j29">
+		<label>J. aconseja.</label>
+		<br><br><input type="button" name="ant28" id="ant28" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig29" id="sig29" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas30"> 
+		<p> 30. Tener precaución es una manera de <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg"> algunas consecuencias indeseables.</p>	 
+		<input type="radio" name="pregunta30" value="k30">
+		<label>K. sortear.</label>
+		<input type="radio" name="pregunta30" value="l30">
+		<label>L. asumir.</label>
+		<input type="radio" name="pregunta30" value="m30">
+		<label>M. predecir.</label>
+		<input type="radio" name="pregunta30" value="n30">
+		<label>N. aclarar.</label>
+		<input type="radio" name="pregunta30" value="o30">
+		<label>O. valorar.</label>
+		<br><br><input type="button" name="ant29" id="ant29" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig30" id="sig30" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas31"> 
+		<p> 31. Para construir en terreno no urbanizable, los gobernantes deben antes <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg">.</p>	 
+		<input type="radio" name="pregunta31" value="p31">
+		<label>P. prepararlo.</label>
+		<input type="radio" name="pregunta31" value="q31">
+		<label>Q. canalizarlo.</label>
+		<input type="radio" name="pregunta31" value="r31">
+		<label>R. recalificarlo.</label>
+		<input type="radio" name="pregunta31" value="s31">
+		<label>S. preverlo.</label>
+		<input type="radio" name="pregunta31" value="t31">
+		<label>T. urbanizarlo.</label>
+		<br><br><input type="button" name="ant30" id="ant30" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig31" id="sig31" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas32"> 
+		<p> 32. El lastre de errores pasados puede hacernos <img src="smallFlechaBADYG-01.jpg"><img src="smallPeguntaBADYG.jpg"> en el futuro.</p>	 
+		<input type="radio" name="pregunta32" value="v32">
+		<label>V. tranquilos.</label>
+		<input type="radio" name="pregunta32" value="w32">
+		<label>W. fracasar.</label>
+		<input type="radio" name="pregunta32" value="x32">
+		<label>X. deudores.</label>
+		<input type="radio" name="pregunta32" value="y32">
+		<label>Y. más prudentes.</label>
+		<input type="radio" name="pregunta32" value="z32">
+		<label>Z. mejorar.</label>
+		<br><br><input type="button" name="ant31" id="ant31" value="Anterior">
+	</div>
+	<div class="Barra" id="Barra1"> <!--contenedores de barra de preguntas-->
+		<a href="#" id="p1">1.</a><!--Referencias para cambiar de preguntas-->
+		<a href="#" id="p2">2.</a>
+		<a href="#" id="p3">3.</a>
+		<a href="#" id="p4">4.</a>
+		<a href="#" id="p5">5.</a>
+		<a href="#" id="p6">6.</a>
+		<a href="#" id="p7">7.</a>
+		<a href="#" id="p8">8.</a>
+		<a href="#" id="p9">9.</a>
+		<a href="#" id="p10">10.</a>
+		<a href="#" id="p11">11.</a>
+		<a href="#" id="p12">12.</a>
+		<a href="#" id="p13">13.</a>
+		<a href="#" id="p14">14.</a>
+		<a href="#" id="p15">15.</a>
+		<a href="#" id="p16">16.</a>
+		<a href="#" id="b1">&raquo</a><!--Referencias para cambiar de contenedor-->
+	</div>
+	<div class="Barra" id="Barra2">
+		<a href="#" id="b2">&laquo</a>
+		<a href="#" id="p17">17.</a>
+		<a href="#" id="p18">18.</a>
+		<a href="#" id="p19">19.</a>
+		<a href="#" id="p20">20.</a>
+		<a href="#" id="p21">21.</a>
+		<a href="#" id="p22">22.</a>
+		<a href="#" id="p23">23.</a>
+		<a href="#" id="p24">24.</a>
+		<a href="#" id="p25">25.</a>
+		<a href="#" id="p26">26.</a>
+		<a href="#" id="p27">27.</a>
+		<a href="#" id="p28">28.</a>
+		<a href="#" id="p29">29.</a>
+		<a href="#" id="p30">30.</a>
+		<a href="#" id="p31">31.</a>
+		<a href="#" id="p32">32.</a>
+	</div>
+	<br>
+	<input type="submit" name="btn" id="btn" value="enviar" onclick="compararRespuestas()"><!--botón de enviar activa la funcion de compararRespuestas-->	
+	<br><br>
+	<input type="button" name="btn2" id="btn2" value="Siguiente Cuestionario" onclick="despedida()">
+</form>
+</body>
+</html>
