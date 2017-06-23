@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Prueba BADYG S</title> 
+	<link rel="stylesheet" type="text/css" href="http://localhost/BADYGS/Estilos.css"><!--hoja de estilos documento css-->
+	<script type="text/javascript" src="http://localhost/BADYGS/Cronometro.js"></script><!--archivos .js-->
+	<script type="text/javascript" src="http://localhost/BADYGS/CapturaRespuestas.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGS/seriesNumericas/RespuestasBADYGSSeriesNumericas.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGS/seriesNumericas/PuntajeBADYGSSeriesNumericas.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGS/CambioPreguntasBADYG.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> <!--link referencia jQuery-->
+<script type="text/javascript">	
+	$(document).ready(mostrar());//llamado función para cambio de pregunta
+</script>
+</head>
+<body onload="tiempo(10)"><!--inicia el cronometro según parametro dado el la función-->
+<h1 align="center">Prueba Series Numéricas</h1>
+<form name="form" align="right"><!--espacio de cronometro-->
+	<input type="text" size="1" class="form_input" name="minute" disabled>:<!--minutos-->
+	<input type="text" size="1" class="form_input" name="second" disabled><!--segundos-->
+	<br><br>
+	<progress id="barraProgreso" name="barraProgreso" max="100" value="" ></progress><!--Barra de progreso-->
+</form>
+<form action="" name="cuestionario" method="">
+	<div class="Preguntas1" id="Preguntas1"> 
+	<!--contenedor de los enunciados y opciones de respuesta-->
+		<p>1. 5,2 6,3 7,4 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p><!--Item y enunciado de la pregunta -->	 
+		<input type="radio" name="pregunta1" value="f1"><!--radiobutton de opción de respuesta-->
+		<label>F. 9,5.</label><!--opciones de respuestas-->
+		<input type="radio" name="pregunta1" value="g1">
+		<label>G. 8,4.</label>
+		<input type="radio" name="pregunta1" value="h1">
+		<label>H. 8,5.</label>
+		<input type="radio" name="pregunta1" value="i1">
+		<label>I. 7,5.</label>
+		<input type="radio" name="pregunta1" value="j1">
+		<label>J. Otra distinta.</label>
+		<br><br><input type="button" name="sig" id="sig" value="Siguiente"><!--botones para pasar pregunta-->
+	</div>
+
+	<div class="Preguntas" id="Preguntas2"> 
+
+	<p>2. 16 20 22 26 28 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>	 
+		<input type="radio" name="pregunta2" value="k2">
+		<label>K 26.</label>
+		<input type="radio" name="pregunta2" value="l2">
+		<label>L. 34.</label>
+		<input type="radio" name="pregunta2" value="m2">
+		<label>M. 30.</label>
+		<input type="radio" name="pregunta2" value="n2">
+		<label>N. 32.</label>
+		<input type="radio" name="pregunta2" value="o2">
+		<label>O. Otra distinta.</label>
+		<br><br><input type="button" name="ant" id="ant" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig2" id="sig2" value="Siguiente"><!--botones para pasar pregunta-->
+	</div>
+
+	<div class="Preguntas" id="Preguntas3"> 
+
+	<p>3. 50 55 52 57 54 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>	
+	
+		<input type="radio" name="pregunta3" value="p3">
+		<label>P. 56.</label>
+		<input type="radio" name="pregunta3" value="q3">
+		<label>Q. 59.</label>
+		<input type="radio" name="pregunta3" value="r3">
+		<label>R. 51.</label>
+		<input type="radio" name="pregunta3" value="s3">
+		<label>S. 60.</label>
+		<input type="radio" name="pregunta3" value="t3">
+		<label>T. Otra distinta.</label>
+		<br><br><input type="button" name="ant2" id="ant2" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig3" id="sig3" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas4"> 
+
+	<p>4. 6 6 10 10 14 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>		 
+		<input type="radio" name="pregunta4" value="v4">
+		<label>V. 14.</label>
+		<input type="radio" name="pregunta4" value="w4">
+		<label>W. 18.</label>
+		<input type="radio" name="pregunta4" value="x4">
+		<label>X. 16.</label>
+		<input type="radio" name="pregunta4" value="y4">
+		<label>Y. 15.</label>
+		<input type="radio" name="pregunta4" value="z4">
+		<label>Z. Otra distinta.</label>
+		<br><br><input type="button" name="ant3" id="ant3" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig4" id="sig4" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas5"> 
+
+	<p>5. 1&frac12  2 4 4&frac12<!--caracter para fracciones-->  9 9&frac12 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>			 
+		<input type="radio" name="pregunta5" value="a5">
+		<label>A. 18.</label>
+		<input type="radio" name="pregunta5" value="b5">
+		<label>B. 18&frac12.</label>
+		<input type="radio" name="pregunta5" value="c5">
+		<label>C. 10.</label>
+		<input type="radio" name="pregunta5" value="d5">
+		<label>D. 19.</label>
+		<input type="radio" name="pregunta5" value="e5">
+		<label>E. Otra distinta.</label>
+		<br><br><input type="button" name="ant4" id="ant4" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig5" id="sig5" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas6"> 
+
+	<p>6. 10 14 13 17 16 20 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>			 
+		<input type="radio" name="pregunta6" value="f6">
+		<label>F. 21.</label>
+		<input type="radio" name="pregunta6" value="g6">
+		<label>G. 19.</label>
+		<input type="radio" name="pregunta6" value="h6">
+		<label>H. 17.</label>
+		<input type="radio" name="pregunta6" value="i6">
+		<label>I. 24.</label>
+		<input type="radio" name="pregunta6" value="j6">
+		<label>J. Otra distinta.</label>
+		<br><br><input type="button" name="ant5" id="ant5" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig6" id="sig6" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas7"> 
+
+	<p>7. 2 4 8 16 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>		
+		<input type="radio" name="pregunta7" value="k7">
+		<label>K. 20.</label>
+		<input type="radio" name="pregunta7" value="l7">
+		<label>L. 24.</label>
+		<input type="radio" name="pregunta7" value="m7">
+		<label>M. 32.</label>
+		<input type="radio" name="pregunta7" value="n7">
+		<label>N. 18.</label>
+		<input type="radio" name="pregunta7" value="o7">
+		<label>O. Otra distinta.</label>
+		<br><br><input type="button" name="ant6" id="ant6" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig7" id="sig7" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas8"> 
+
+	<p>8.5 7 14 16 32 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>		
+		<input type="radio" name="pregunta8" value="p8">
+		<label>P. 34.</label>
+		<input type="radio" name="pregunta8" value="q8">
+		<label>Q. 64.</label>
+		<input type="radio" name="pregunta8" value="r8">
+		<label>R. 48.</label>
+		<input type="radio" name="pregunta8" value="s8">
+		<label>S. 39.</label>
+		<input type="radio" name="pregunta8" value="t8">
+		<label>T. Otra distinta.</label>
+		<br><br><input type="button" name="ant7" id="ant7" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig8" id="sig8" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas9"> 
+
+	<p>9. 8 20 10 22 12 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>		 
+		<input type="radio" name="pregunta9" value="v9">
+		<label>V. 2.</label>
+		<input type="radio" name="pregunta9" value="w9">
+		<label>W. 6.</label>
+		<input type="radio" name="pregunta9" value="x9">
+		<label>X. 22.</label>
+		<input type="radio" name="pregunta9" value="y9">
+		<label>Y. 24.</label>
+		<input type="radio" name="pregunta9" value="z9">
+		<label>Z. Otra distinta.</label>
+		<br><br><input type="button" name="ant8" id="ant8" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig9" id="sig9" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas10"> 
+		<p>10. 12 10&frac12  14  12&frac12  16 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>
+		 
+		<input type="radio" name="pregunta10" value="a10">
+		<label>A. 14&frac12.</label>
+		<input type="radio" name="pregunta10" value="b10">
+		<label>B. 14.</label>
+		<input type="radio" name="pregunta10" value="c10">
+		<label>C. 18&frac12.</label>
+		<input type="radio" name="pregunta10" value="d10">
+		<label>D. 15&frac12.</label>
+		<input type="radio" name="pregunta10" value="e10">
+		<label>E. Otra distinta.</label>
+		<br><br><input type="button" name="ant9" id="ant9" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig10" id="sig10" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas11"> 
+		<p>11. 10 10 12 12 16 16 22 22 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>
+	 
+		<input type="radio" name="pregunta11" value="f11">
+		<label>F. 32.</label>
+		<input type="radio" name="pregunta11" value="g11">
+		<label>G. 30.</label>
+		<input type="radio" name="pregunta11" value="h11">
+		<label>H. 22.</label>
+		<input type="radio" name="pregunta11" value="i11">
+		<label>I. 28.</label>
+		<input type="radio" name="pregunta11" value="j11">
+		<label>J. Otra distinta.</label>
+		<br><br><input type="button" name="ant10" id="ant10" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig11" id="sig11" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas12"> 
+		<p>12. 32 35 35 38 38 41 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>
+		
+		<input type="radio" name="pregunta12" value="k12">
+		<label>K. 45.</label>
+		<input type="radio" name="pregunta12" value="l12">
+		<label>L. 41.</label>
+		<input type="radio" name="pregunta12" value="m12">
+		<label>M. 44.</label>
+		<input type="radio" name="pregunta12" value="n12">
+		<label>N. 42.</label>
+		<input type="radio" name="pregunta12" value="o12">
+		<label>O. Otra distinta.</label>
+		<br><br><input type="button" name="ant11" id="ant11" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig12" id="sig12" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas13"> 
+		<p>13. 60 40 42 22 24 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>
+			 
+		<input type="radio" name="pregunta13" value="p13">
+		<label>P. 4.</label>
+		<input type="radio" name="pregunta13" value="q13">
+		<label>Q. 12.</label>
+		<input type="radio" name="pregunta13" value="r13">
+		<label>R. 26.</label>
+		<input type="radio" name="pregunta13" value="s13">
+		<label>S. 20.</label>
+		<input type="radio" name="pregunta13" value="t13">
+		<label>T. Otra distinta.</label>
+		<br><br><input type="button" name="ant12" id="ant12" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig13" id="sig13" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas14"> 
+		<p>14. 6,4 7,2 8 8,8 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>
+	 
+		<input type="radio" name="pregunta14" value="v14">
+		<label>V. 9,8.</label>
+		<input type="radio" name="pregunta14" value="w14">
+		<label>W. 9.</label>
+		<input type="radio" name="pregunta14" value="x14">
+		<label>X. 9,6.</label>
+		<input type="radio" name="pregunta14" value="y14">
+		<label>Y. 9,4.</label>
+		<input type="radio" name="pregunta14" value="z14">
+		<label>Z. Otra distinta.</label>
+		<br><br><input type="button" name="ant13" id="ant13" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig14" id="sig14" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas15"> 
+		<p>15.42 21 20 10 9 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>
+	
+		<input type="radio" name="pregunta15" value="a15">
+		<label>A. 4.</label>
+		<input type="radio" name="pregunta15" value="b15">
+		<label>B. 5&frac12.</label>
+		<input type="radio" name="pregunta15" value="c15">
+		<label>C. 5.</label>
+		<input type="radio" name="pregunta15" value="d15">
+		<label>D. 8.</label>
+		<input type="radio" name="pregunta15" value="e15">
+		<label>E. Otra distinta.</label>
+		<br><br><input type="button" name="ant14" id="ant14" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig15" id="sig15" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas16"> 
+		<p>16. 11 11 12 14 17 21 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>
+		 
+		<input type="radio" name="pregunta16" value="f16">
+		<label>F. 26.</label>
+		<input type="radio" name="pregunta16" value="g16">
+		<label>G. 25.</label>
+		<input type="radio" name="pregunta16" value="h16">
+		<label>H. 27.</label>
+		<input type="radio" name="pregunta16" value="i16">
+		<label>I. 22.</label>
+		<input type="radio" name="pregunta16" value="j16">
+		<label>J. Otra distinta.</label>
+		<br><br><input type="button" name="ant15" id="ant15" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig16" id="sig16" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas17"> 
+		<p>17. 61 52 45 40 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>
+		
+		<input type="radio" name="pregunta17" value="k17">
+		<label>K. 38.</label>
+		<input type="radio" name="pregunta17" value="l17">
+		<label>L. 37.</label>
+		<input type="radio" name="pregunta17" value="m17">
+		<label>M. 33.</label>
+		<input type="radio" name="pregunta17" value="n17">
+		<label>N. 35.</label>
+		<input type="radio" name="pregunta17" value="o17">
+		<label>O. Otra distinta.</label>
+		<br><br><input type="button" name="ant16" id="ant16" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig17" id="sig17" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas18"> 
+		<p>18.100 89 79 70 62 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>
+			 
+		<input type="radio" name="pregunta18" value="p18">
+		<label>P. 52.</label>
+		<input type="radio" name="pregunta18" value="q18">
+		<label>Q. 56.</label>
+		<input type="radio" name="pregunta18" value="r18">
+		<label>R. 54.</label>
+		<input type="radio" name="pregunta18" value="s18">
+		<label>S. 50.</label>
+		<input type="radio" name="pregunta18" value="t18">
+		<label>T. Otra distinta.</label>
+		<br><br><input type="button" name="ant17" id="ant17" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig18" id="sig18" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas19"> 
+		<p>19. 1,2 1 1,6 1,4 2 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>
+			 
+		<input type="radio" name="pregunta19" value="v19">
+		<label>V. 2,2.</label>
+		<input type="radio" name="pregunta19" value="w19">
+		<label>W. 1,6.</label>
+		<input type="radio" name="pregunta19" value="X19">
+		<label>X. 2,6.</label>
+		<input type="radio" name="pregunta19" value="y19">
+		<label>Y. 1,8.</label>
+		<input type="radio" name="pregunta19" value="z19">
+		<label>Z. Otra distinta.</label>
+		<br><br><input type="button" name="ant18" id="ant18" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig19" id="sig19" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas20"> 
+		<p>20. 2 7 11 17 21 28 32 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>
+		 
+		<input type="radio" name="pregunta20" value="a20">
+		<label>A. 41.</label>
+		<input type="radio" name="pregunta20" value="b20">
+		<label>B. 42.</label>
+		<input type="radio" name="pregunta20" value="c20">
+		<label>C. 36.</label>
+		<input type="radio" name="pregunta20" value="d20">
+		<label>D. 40.</label>
+		<input type="radio" name="pregunta20" value="e20">
+		<label>E. Otra distinta.</label>
+		<br><br><input type="button" name="ant19" id="ant19" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig20" id="sig20" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas21"> 
+		<p>21. 0,2 0,4 0,8 1 1,4 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>
+		 
+		<input type="radio" name="pregunta21" value="f21">
+		<label>F. 2,2.</label>
+		<input type="radio" name="pregunta21" value="g21">
+		<label>G. 2,8.</label>
+		<input type="radio" name="pregunta21" value="h21">
+		<label>H. 1,6.</label>
+		<input type="radio" name="pregunta21" value="i21">
+		<label>I. 1,8.</label>
+		<input type="radio" name="pregunta21" value="j21">
+		<label>J. Otra distinta.</label>
+		<br><br><input type="button" name="ant20" id="ant20" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig21" id="sig21" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas22"> 
+		<p>22. 2 2 2 2 6 6 6 18 18 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>
+		
+		<input type="radio" name="pregunta22" value="k22">
+		<label>K. 54.</label>
+		<input type="radio" name="pregunta22" value="l22">
+		<label>L. 30.</label>
+		<input type="radio" name="pregunta22" value="m22">
+		<label>M. 18.</label>
+		<input type="radio" name="pregunta22" value="n22">
+		<label>N. 36.</label>
+		<input type="radio" name="pregunta22" value="o22">
+		<label>O. Otra distinta.</label>
+		<br><br><input type="button" name="ant21" id="ant21" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig22" id="sig22" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas23"> 
+		<p>23. 16 15,6 16,8 16,4 17,6 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>
+			 
+		<input type="radio" name="pregunta23" value="p23">
+		<label>P. 17,4.</label>
+		<input type="radio" name="pregunta23" value="q23">
+		<label>Q. 18,8.</label>
+		<input type="radio" name="pregunta23" value="r23">
+		<label>R. 17,2.</label>
+		<input type="radio" name="pregunta23" value="s23">
+		<label>S. 18.</label>
+		<input type="radio" name="pregunta23" value="t23">
+		<label>T. Otra distinta.</label>
+		<br><br><input type="button" name="ant22" id="ant22" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig23" id="sig23" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas24"> 
+		<p>24. 2 8 4 16 8 32 16 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>
+		 
+		<input type="radio" name="pregunta24" value="v24">
+		<label>V. 16.</label>
+		<input type="radio" name="pregunta24" value="w24">
+		<label>W. 64.</label>
+		<input type="radio" name="pregunta24" value="x24">
+		<label>X. 8.</label>
+		<input type="radio" name="pregunta24" value="y24">
+		<label>Y. 48.</label>
+		<input type="radio" name="pregunta24" value="z24">
+		<label>Z. Otra distinta.</label>
+		<br><br><input type="button" name="ant23" id="ant23" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig24" id="sig24" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas25"> 
+		<p>25. 14 18 8 12 2 6 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>
+			 
+		<input type="radio" name="pregunta25" value="a25">
+		<label>A. 10.</label>
+		<input type="radio" name="pregunta25" value="b25">
+		<label>B. -6.</label>
+		<input type="radio" name="pregunta25" value="c25">
+		<label>C. -4.</label>
+		<input type="radio" name="pregunta25" value="d25">
+		<label>D. 0.</label>
+		<input type="radio" name="pregunta25" value="e25">
+		<label>E. Otra distinta.</label>
+		<br><br><input type="button" name="ant24" id="ant24" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig25" id="sig25" value="Siguiente">		
+	</div>
+
+	<div class="Preguntas" id="Preguntas26"> 
+		<p>26. 52 60 30 38 19 27 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>
+			 
+		<input type="radio" name="pregunta26" value="f26">
+		<label>F. 7&frac12.</label>
+		<input type="radio" name="pregunta26" value="g26">
+		<label>G. 34.</label>
+		<input type="radio" name="pregunta26" value="h26">
+		<label>H. 17.</label>
+		<input type="radio" name="pregunta26" value="i26">
+		<label>I. 13&frac12.</label>
+		<input type="radio" name="pregunta26" value="j26">
+		<label>J. Otra distinta.</label>
+		<br><br><input type="button" name="ant25" id="ant25" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig26" id="sig26" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas27"> 
+		<p>27. 25 21 42 39 78 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>
+	
+		<input type="radio" name="pregunta27" value="k27">
+		<label>K. 77.</label>
+		<input type="radio" name="pregunta27" value="l27">
+		<label>L. 75.</label>
+		<input type="radio" name="pregunta27" value="m27">
+		<label>M. 156.</label>
+		<input type="radio" name="pregunta27" value="n27">
+		<label>N. 76.</label>
+		<input type="radio" name="pregunta27" value="o27">
+		<label>O. Otra distinta.</label>
+		<br><br><input type="button" name="ant26" id="ant26" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig27" id="sig27" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas28"> 
+		<p>28. 6 8 14 8 10 18 10<img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>
+		
+		<input type="radio" name="pregunta28" value="p28">
+		<label>P. 18.</label>
+		<input type="radio" name="pregunta28" value="q28">
+		<label>Q. 22.</label>
+		<input type="radio" name="pregunta28" value="r28">
+		<label>R. 14.</label>
+		<input type="radio" name="pregunta28" value="s28">
+		<label>S. 10.</label>
+		<input type="radio" name="pregunta28" value="t28">
+		<label>T. Otra distinta.</label>
+		<br><br><input type="button" name="ant27" id="ant27" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig28" id="sig28" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas29"> 
+		<p>29. 2 36 5 33 9 29 14 24 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>
+			 
+		<input type="radio" name="pregunta29" value="v29">
+		<label>V. 19.</label>
+		<input type="radio" name="pregunta29" value="w29">
+		<label>W. 20.</label>
+		<input type="radio" name="pregunta29" value="x29">
+		<label>X. 18.</label>
+		<input type="radio" name="pregunta29" value="y29">
+		<label>Y. 34.</label>
+		<input type="radio" name="pregunta29" value="z29">
+		<label>Z. Otra distinta.</label>
+		<br><br><input type="button" name="ant28" id="ant28" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig29" id="sig29" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas30"> 
+		<p>30. 320 80 40 10 5 <img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>
+			 
+		<input type="radio" name="pregunta30" value="a30">
+		<label>A. 2&frac12.</label>
+		<input type="radio" name="pregunta30" value="b30">
+		<label>B. 1&frac12.</label>
+		<input type="radio" name="pregunta30" value="c30">
+		<label>C. 1&frac14.</label>
+		<input type="radio" name="pregunta30" value="d30">
+		<label>D. 1.</label>
+		<input type="radio" name="pregunta30" value="e30">
+		<label>E. Otra distinta.</label>
+		<br><br><input type="button" name="ant29" id="ant29" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig30" id="sig30" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas31"> 
+		<p>31. 180 30 6 1&frac12<img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>
+		 
+		<input type="radio" name="pregunta31" value="f31">
+		<label>F. &frac12.</label>
+		<input type="radio" name="pregunta31" value="g31">
+		<label>G. 1.</label>
+		<input type="radio" name="pregunta31" value="h31">
+		<label>H. &frac34.</label>
+		<input type="radio" name="pregunta31" value="i31">
+		<label>I. 0.</label>
+		<input type="radio" name="pregunta31" value="j31">
+		<label>J. Otra distinta.</label>
+		<br><br><input type="button" name="ant30" id="ant30" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig31" id="sig31" value="Siguiente">
+	</div>
+
+	<div class="Preguntas" id="Preguntas32"> 
+		<p>32. 0,1 0,4 0,5 2 2,1<img src="smallFlechaBADYG-01.jpg"><img src="smallPreguntaBADYG-01.jpg"></p>
+		  
+		<input type="radio" name="pregunta32" value="k32">
+		<label>K. 2,2.</label>
+		<input type="radio" name="pregunta32" value="l32">
+		<label>L. 4,2.</label>
+		<input type="radio" name="pregunta32" value="m32">
+		<label>M. 8,4.</label>
+		<input type="radio" name="pregunta32" value="n32">
+		<label>N. 8,2.</label>
+		<input type="radio" name="pregunta32" value="o32">
+		<label>O. Otra distinta.</label>
+		<br><br><input type="button" name="ant31" id="ant31" value="Anterior">
+	</div>
+	<div class="Barra" id="Barra1"><!--contenedores de barra de preguntas-->
+		<a href="#" id="p1">1.</a><!--Referencias para cambiar de preguntas-->
+		<a href="#" id="p2">2.</a>
+		<a href="#" id="p3">3.</a>
+		<a href="#" id="p4">4.</a>
+		<a href="#" id="p5">5.</a>
+		<a href="#" id="p6">6.</a>
+		<a href="#" id="p7">7.</a>
+		<a href="#" id="p8">8.</a>
+		<a href="#" id="p9">9.</a>
+		<a href="#" id="p10">10.</a>
+		<a href="#" id="p11">11.</a>
+		<a href="#" id="p12">12.</a>
+		<a href="#" id="p13">13.</a>
+		<a href="#" id="p14">14.</a>
+		<a href="#" id="p15">15.</a>
+		<a href="#" id="p16">16.</a>
+		<a href="#" id="b1">&raquo</a><!--Referencias para cambiar de contenedor-->
+	</div>
+	<div class="Barra" id="Barra2">
+		<a href="#" id="b2">&laquo<!--caracter para comillas--></a>
+		<a href="#" id="p17">17.</a>
+		<a href="#" id="p18">18.</a>
+		<a href="#" id="p19">19.</a>
+		<a href="#" id="p20">20.</a>
+		<a href="#" id="p21">21.</a>
+		<a href="#" id="p22">22.</a>
+		<a href="#" id="p23">23.</a>
+		<a href="#" id="p24">24.</a>
+		<a href="#" id="p25">25.</a>
+		<a href="#" id="p26">26.</a>
+		<a href="#" id="p27">27.</a>
+		<a href="#" id="p28">28.</a>
+		<a href="#" id="p29">29.</a>
+		<a href="#" id="p30">30.</a>
+		<a href="#" id="p31">31.</a>
+		<a href="#" id="p32">32.</a>
+	</div>
+	<br>
+	<input type="submit" name="btn" id="btn" value="enviar" onclick="compararRespuestas()"><!--botón de enviar activa la funcion de compararRespuestas-->
+	<br><br>
+	<input type="button" name="btn2" id="btn2" value="Siguiente Cuestionario" onclick="despedida()"><!--botón para pasar de cuestionario-->
+</form>
+</body>
+</html>
