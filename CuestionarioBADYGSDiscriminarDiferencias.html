@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prueba BADYG S</title>
+	<link rel="stylesheet" type="text/css" href="http://localhost/BADYGS/Estilos.css"><!--hoja de estilos documento css-->
+	<script type="text/javascript" src="http://localhost/BADYGS/Cronometro.js"></script><!--archivos .js-->
+	<script type="text/javascript" src="http://localhost/BADYGS/discriminarDiferencias/RespuestasBADYGSDiscriminarDiferencias.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGS/CapturaRespuestas.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGS/discriminarDiferencias/PuntajesBADYGSDiscriminarDiferencias.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGS/CambioPreguntasBADYG.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script><!--link referencia jQuery-->
+<script type="text/javascript">	
+	$(document).ready(mostrar());//llamado función para cambio de preguntas
+</script>
+</head>
+<body onload="tiempo(3)"><!--inicia el cronometro según parametro dado el la función-->
+<h1 align="center">Prueba Discriminar Diferencias</h1>
+<form name="form" align="right"><!--espacio de cronometro-->
+	<input type="text" size="1" class="form_input" name="minute" disabled>:<!--minutos-->
+	<input type="text" size="1" class="form_input" name="second" disabled><!--segundos-->
+	<br><br>
+	<progress id="barraProgreso" name="barraProgreso" max="100" value="" ></progress><!--Barra de progreso-->
+</form>
+<form action="" name="cuestionario" method="get">
+	<!--Contenedor de enunciados y opciones de repspuesta-->
+	<div class="Preguntas1" id="Preguntas1"> 
+		<p>1.</p><!--Item y enunciado de la pregunta -->		 
+		<input type="radio" name="pregunta1" value="p1">P<!--radiobutton de opción de respuesta-->
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias1-P.jpg"><!--imagen opciones de respuestas-->
+		<input type="radio" name="pregunta1" value="q1">Q
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias1-Q.jpg">
+		<input type="radio" name="pregunta1" value="r1">R
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias1-R.jpg">
+		<br><br><input type="button" name="sig" id="sig" value="Siguiente"><!--botones para pasar pregunta-->
+	</div>
+	<div class="Preguntas" id="Preguntas2"> 
+		<p>2. </p>		 
+		<input type="radio" name="pregunta2" value="v2">V
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias2-V.jpg">
+		<input type="radio" name="pregunta2" value="w2">W
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias2-W.jpg">
+		<input type="radio" name="pregunta2" value="x2">X
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias2-X.jpg">
+		<br><br><input type="button" name="ant" id="ant" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig2" id="sig2" value="Siguiente"><!--botones para pasar pregunta-->
+	</div>
+	<div class="Preguntas" id="Preguntas3"> 
+		<p>3. </p>		 
+		<input type="radio" name="pregunta3" value="a3">A
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias3-A.jpg">
+		<input type="radio" name="pregunta3" value="b3">B
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias3-B.jpg">
+		<input type="radio" name="pregunta3" value="c3">C
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias3-C.jpg">
+		<br><br><input type="button" name="ant2" id="ant2" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig3" id="sig3" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas4"> 
+		<p>4. </p>		 
+		<input type="radio" name="pregunta4" value="f4">F
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias4-F.jpg">
+		<input type="radio" name="pregunta4" value="g4">G
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias4-G.jpg">
+		<input type="radio" name="pregunta4" value="h4">H
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias4-H.jpg">
+		<br><br><input type="button" name="ant3" id="ant3" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig4" id="sig4" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas5"> 
+		<p>5. </p>		 
+		<input type="radio" name="pregunta5" value="k5">K
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias5-K.jpg">
+		<input type="radio" name="pregunta5" value="l5">L
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias5-L.jpg">
+		<input type="radio" name="pregunta5" value="m5">M
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias5-M.jpg">
+		<br><br><input type="button" name="ant4" id="ant4" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig5" id="sig5" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas6"> 
+		<p>6. </p>		 
+		<input type="radio" name="pregunta6" value="p6">P
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias6-P.jpg">
+		<input type="radio" name="pregunta6" value="q6">Q
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias6-Q.jpg">
+		<input type="radio" name="pregunta6" value="r6">R
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias6-R.jpg">
+		<br><br><input type="button" name="ant5" id="ant5" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig6" id="sig6" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas7"> 
+		<p>7. </p>		 
+		<input type="radio" name="pregunta7" value="v7">V
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias7-V.jpg">
+		<input type="radio" name="pregunta7" value="w7">W
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias7-W.jpg">
+		<input type="radio" name="pregunta7" value="x7">X
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias7-X.jpg">
+		<br><br><input type="button" name="ant6" id="ant6" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig7" id="sig7" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas8"> 
+		<p>8. </p>		 
+		<input type="radio" name="pregunta8" value="a8">A
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias8-A.jpg">
+		<input type="radio" name="pregunta8" value="b8">B
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias8-B.jpg">
+		<input type="radio" name="pregunta8" value="c8">C
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias8-C.jpg">
+		<br><br><input type="button" name="ant7" id="ant7" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig8" id="sig8" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas9"> 
+		<p>9. </p>		 
+		<input type="radio" name="pregunta9" value="f9">F
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias9-F.jpg">
+		<input type="radio" name="pregunta9" value="g9">G
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias9-G.jpg">
+		<input type="radio" name="pregunta9" value="h9">H
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias9-H.jpg">
+		<br><br><input type="button" name="ant8" id="ant8" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig9" id="sig9" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas10"> 
+		<p>10. </p>		 
+		<input type="radio" name="pregunta10" value="k10">K
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias10-K.jpg">
+		<input type="radio" name="pregunta10" value="l10">L
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias10-L.jpg">
+		<input type="radio" name="pregunta10" value="m10">M
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias10-M.jpg">
+		<br><br><input type="button" name="ant9" id="ant9" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig10" id="sig10" value="Siguiente">
+	</div>
+		<div class="Preguntas" id="Preguntas11"> 
+		<p>11. </p>		 
+		<input type="radio" name="pregunta11" value="p11">P
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias11-P.jpg">
+		<input type="radio" name="pregunta11" value="q11">Q
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias11-Q.jpg">
+		<input type="radio" name="pregunta11" value="r11">R
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias11-R.jpg">
+		<br><br><input type="button" name="ant10" id="ant10" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig11" id="sig11" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas12"> 
+		<p>12. </p>		 
+		<input type="radio" name="pregunta12" value="v12">V
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias12-V.jpg">
+		<input type="radio" name="pregunta12" value="w12">W
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias12-W.jpg">
+		<input type="radio" name="pregunta12" value="x12">X
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias12-X.jpg">
+		<br><br><input type="button" name="ant11" id="ant11" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig12" id="sig12" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas13"> 
+		<p>13. </p>		 
+		<input type="radio" name="pregunta13" value="a13">A
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias13-A.jpg">
+		<input type="radio" name="pregunta13" value="b13">B
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias13-B.jpg">
+		<input type="radio" name="pregunta13" value="c13">C
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias13-C.jpg">
+		<br><br><input type="button" name="ant12" id="ant12" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig13" id="sig13" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas14"> 
+		<p>14. </p>		 
+		<input type="radio" name="pregunta14" value="f14">F
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias14-F.jpg">
+		<input type="radio" name="pregunta14" value="g14">G
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias14-G.jpg">
+		<input type="radio" name="pregunta14" value="h14">H
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias14-H.jpg">
+		<br><br><input type="button" name="ant13" id="ant13" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig14" id="sig14" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas15"> 
+		<p>15. </p>		 
+		<input type="radio" name="pregunta15" value="k15">K
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias15-K.jpg">
+		<input type="radio" name="pregunta15" value="l15">L
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias15-L.jpg">
+		<input type="radio" name="pregunta15" value="m15">M
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias15-M.jpg">
+		<br><br><input type="button" name="ant14" id="ant14" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig15" id="sig15" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas16"> 
+		<p>16. </p>		 
+		<input type="radio" name="pregunta16" value="p16">P
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias16-P.jpg">
+		<input type="radio" name="pregunta16" value="q16">Q
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias16-Q.jpg">
+		<input type="radio" name="pregunta16" value="r16">R
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias16-R.jpg">
+		<br><br><input type="button" name="ant15" id="ant15" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig16" id="sig16" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas17"> 
+		<p>17. </p>		 
+		<input type="radio" name="pregunta17" value="v17">V
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias17-W.jpg">
+		<input type="radio" name="pregunta17" value="w17">W
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias17-W.jpg">
+		<input type="radio" name="pregunta17" value="x17">X
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias17-X.jpg">
+		<br><br><input type="button" name="ant16" id="ant16" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig17" id="sig17" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas18"> 
+		<p>18. </p>		 
+		<input type="radio" name="pregunta18" value="a18">A
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias18-A.jpg">
+		<input type="radio" name="pregunta18" value="b18">B
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias18-B.jpg">
+		<input type="radio" name="pregunta18" value="c18">C
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias18-C.jpg">
+		<br><br><input type="button" name="ant17" id="ant17" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig18" id="sig18" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas19"> 
+		<p>19. </p>		 
+		<input type="radio" name="pregunta19" value="f19">F
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias19-F.jpg">
+		<input type="radio" name="pregunta19" value="g19">G
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias19-G.jpg">
+		<input type="radio" name="pregunta19" value="h19">H
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias19-H.jpg">
+		<br><br><input type="button" name="ant18" id="ant18" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig19" id="sig19" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas20"> 
+		<p>20. </p>		 
+		<input type="radio" name="pregunta20" value="k20">K
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias20-K.jpg">
+		<input type="radio" name="pregunta20" value="l20">L
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias20-L.jpg">
+		<input type="radio" name="pregunta20" value="m20">M
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias20-M.jpg">
+		<br><br><input type="button" name="ant19" id="ant19" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig20" id="sig20" value="Siguiente">
+	</div>
+		<div class="Preguntas" id="Preguntas21"> 
+		<p>21. </p>		 
+		<input type="radio" name="pregunta21" value="p21">P
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias21-P.jpg">
+		<input type="radio" name="pregunta21" value="q21">Q
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias21-Q.jpg">
+		<input type="radio" name="pregunta21" value="r21">R
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias21-R.jpg">
+		<br><br><input type="button" name="ant20" id="ant20" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig21" id="sig21" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas22"> 
+		<p>22. </p>		 
+		<input type="radio" name="pregunta22" value="v22">V
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias22-V.jpg">
+		<input type="radio" name="pregunta22" value="w22">W
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias22-W.jpg">
+		<input type="radio" name="pregunta22" value="x22">X
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias22-X.jpg">
+		<br><br><input type="button" name="ant21" id="ant21" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig22" id="sig22" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas23"> 
+		<p>23. </p>		 
+		<input type="radio" name="pregunta23" value="a23">A
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias23-A.jpg">
+		<input type="radio" name="pregunta23" value="b23">B
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias23-B.jpg">
+		<input type="radio" name="pregunta23" value="c23">C
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias23-C.jpg">
+		<br><br><input type="button" name="ant22" id="ant22" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig23" id="sig23" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas24"> 
+		<p>24. </p>		 
+		<input type="radio" name="pregunta24" value="f24">F
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias24-F.jpg">
+		<input type="radio" name="pregunta24" value="g24">G
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias24-G.jpg">
+		<input type="radio" name="pregunta24" value="h24">H
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias24-H.jpg">
+		<br><br><input type="button" name="ant23" id="ant23" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig24" id="sig24" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas25"> 
+		<p>25. </p>		 
+		<input type="radio" name="pregunta25" value="k25">K
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias25-K.jpg">
+		<input type="radio" name="pregunta25" value="l25">L
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias25-L.jpg">
+		<input type="radio" name="pregunta25" value="m25">M
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias25-M.jpg">
+		<br><br><input type="button" name="ant24" id="ant24" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig25" id="sig25" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas26"> 
+		<p>26. </p>		 
+		<input type="radio" name="pregunta26" value="p26">P
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferenciaS26-P.jpg">
+		<input type="radio" name="pregunta26" value="q26">Q
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferenciaS26-Q.jpg">
+		<input type="radio" name="pregunta26" value="r26">R
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferenciaS26-R.jpg">
+		<br><br><input type="button" name="ant25" id="ant25" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig26" id="sig26" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas27"> 
+		<p>27. </p>		 
+		<input type="radio" name="pregunta27" value="v27">V
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias27-V.jpg">
+		<input type="radio" name="pregunta27" value="w27">W
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias27-W.jpg">
+		<input type="radio" name="pregunta27" value="x27">X
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias27-X.jpg">
+		<br><br><input type="button" name="ant26" id="ant26" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig27" id="sig27" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas28"> 
+		<p>28. </p>		 
+		<input type="radio" name="pregunta28" value="a28">A
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias28-A.jpg">
+		<input type="radio" name="pregunta28" value="b28">B
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias28-B.jpg">
+		<input type="radio" name="pregunta28" value="c28">C
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias28-C.jpg">
+		<br><br><input type="button" name="ant27" id="ant27" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig28" id="sig28" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas29"> 
+		<p>29. </p>		 
+		<input type="radio" name="pregunta29" value="f29">F
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias29-F.jpg">
+		<input type="radio" name="pregunta29" value="g29">G
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias29-G.jpg">
+		<input type="radio" name="pregunta29" value="h29">H
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias29-H.jpg">
+		<br><br><input type="button" name="ant28" id="ant28" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig29" id="sig29" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas30"> 
+		<p>30. </p>		 
+		<input type="radio" name="pregunta30" value="k30">K
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias30-K.jpg">
+		<input type="radio" name="pregunta30" value="l30">L
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias30-L.jpg">
+		<input type="radio" name="pregunta30" value="m30">M
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias30-M.jpg">
+		<br><br><input type="button" name="ant29" id="ant29" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig30" id="sig30" value="Siguiente">
+	</div>
+		<div class="Preguntas" id="Preguntas31"> 
+		<p>31. </p>		 
+		<input type="radio" name="pregunta31" value="p31">P
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias31-P.jpg">
+		<input type="radio" name="pregunta31" value="q31">Q
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias31-Q.jpg">
+		<input type="radio" name="pregunta31" value="r31">R
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias31-R.jpg">
+		<br><br><input type="button" name="ant30" id="ant30" value="Anterior">&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp<input type="button" name="sig31" id="sig31" value="Siguiente">
+	</div>
+	<div class="Preguntas" id="Preguntas32"> 
+		<p>32. </p>		 
+		<input type="radio" name="pregunta32" value="v32">V
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias32-V.jpg">
+		<input type="radio" name="pregunta32" value="w32">W
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias32-W.jpg">
+		<input type="radio" name="pregunta32" value="x32">X
+		<img src="http://localhost/BADYGS/discriminarDiferencias/imagenes/sDiscriminarDiferencias32-X.jpg">
+		<br><br><input type="button" name="ant31" id="ant31" value="Anterior">
+	</div>
+	<div class="Barra" id="Barra1"> <!--contenedores de barra de preguntas-->
+		<a href="#" id="p1">1.</a><!--Referencias para cambiar de preguntas-->
+		<a href="#" id="p2">2.</a>
+		<a href="#" id="p3">3.</a>
+		<a href="#" id="p4">4.</a>
+		<a href="#" id="p5">5.</a>
+		<a href="#" id="p6">6.</a>
+		<a href="#" id="p7">7.</a>
+		<a href="#" id="p8">8.</a>
+		<a href="#" id="p9">9.</a>
+		<a href="#" id="p10">10.</a>
+		<a href="#" id="p11">11.</a>
+		<a href="#" id="p12">12.</a>
+		<a href="#" id="p13">13.</a>
+		<a href="#" id="p14">14.</a>
+		<a href="#" id="p15">15.</a>
+		<a href="#" id="p16">16.</a>
+		<a href="#" id="b1">&raquo</a><!--Referencias para cambiar de contenedor-->
+	</div>
+	<div class="Barra" id="Barra2">
+		<a href="#" id="b2">&laquo</a>
+		<a href="#" id="p17">17.</a>
+		<a href="#" id="p18">18.</a>
+		<a href="#" id="p19">19.</a>
+		<a href="#" id="p20">20.</a>
+		<a href="#" id="p21">21.</a>
+		<a href="#" id="p22">22.</a>
+		<a href="#" id="p23">23.</a>
+		<a href="#" id="p24">24.</a>
+		<a href="#" id="p25">25.</a>
+		<a href="#" id="p26">26.</a>
+		<a href="#" id="p27">27.</a>
+		<a href="#" id="p28">28.</a>
+		<a href="#" id="p29">29.</a>
+		<a href="#" id="p30">30.</a>
+		<a href="#" id="p31">31.</a>
+		<a href="#" id="p32">32.</a>
+	</div>
+	<br>
+	<input type="submit" name="btn" id="btn" value="enviar" onclick="compararRespuestas()"><!--botón de enviar activa la funcion de compararRespuestas-->
+	<br><br>
+	<input type="button" name="btn2" id="btn2" value="Ver Resultados" onclick="despedida()">
+</form>
+</body>
+</html>
