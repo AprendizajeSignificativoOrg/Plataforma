@@ -1,0 +1,17 @@
+a {color: #0000FF}
+
+table, td, tr {
+	border: 1px solid black;
+}
+
+.Contenedor { 
+	height:50px; width:720px; z-index:0; float:right;
+}
+
+#log { 
+	color:yellow; background-color:red; margin-bottom:10px; 
+}
+
+.Preguntas {
+	float:left;
+}
