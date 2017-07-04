@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Prueba BADYG S </title>
+	<link rel="stylesheet" type="text/css" href="http://localhost/BADYGS/Estilos.css"><!--hoja de estilos documento css-->
+	<script type="text/javascript" src="http://localhost/BADYGS/memoriaRelatoOral/RespuestasBADYGSMemoriaRelato.js"></script><!--archivos .js-->
+	<script type="text/javascript" src="http://localhost/BADYGS/Cronometro.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGS/CapturaRespuestas.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGS/memoriaRelatoOral/PuntajesBADYGSMemoriaRelato.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGS/CambioPreguntasBADYG.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script><!--link referencia jQuery--> 
+<script type="text/javascript">	
+	$(document).ready(mostrar());//llamado función para cambio de preguntas
+</script>
+</head>
+<body onload="tiempo(7);"><!--inicia el cronometro según parametro dado el la función-->
+<h1 align="center">Prueba Memoria de Relato Oral</h1>
+<form name="form" align="right"><!--espacio de cronometro-->
+	<input type="text" size="1" class="form_input" name="minute" disabled>:<!--minutos-->
+	<input type="text" size="1" class="form_input" name="second" disabled><!--segundos-->
+	<br><br>
+	<progress id="barraProgreso" name="barraProgreso" max="100" value="" ></progress><!--Barra de progreso-->
+</form>
+<form action="" name="cuestionario" method="">
+	<div class="Preguntas" id="Preguntas1">
+	<!--contenedor de las preguntas con enunciado y las respuestas--> 
+	
+		<p> 1. Venus se encuentra de la Tierra…… </p> <!--Item y enunciado de la pregunta -->	 
+		<input type="radio" name="pregunta1" value="f1"><!--radiobutton de opción de respuesta-->
+		<label>F. A 40 millones de Km.</label><!--opciones de respuestas-->
+		<input type="radio" name="pregunta1" value="g1">
+		<label>G. A 80 millones de Km.</label>
+		<input type="radio" name="pregunta1" value="h1">
+		<label>H. A 40 días de vuelo en una nave espacial.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas2"> 
+		<p> 2. Para esos viajes……</p>	 
+		<input type="radio" name="pregunta2" value="k2">
+		<label>K. Se arriesgaría la vida de los astronautas.</label>
+		<input type="radio" name="pregunta2" value="l2">
+		<label>L. No se puede hablar de días, sino de meses.</label>
+		<input type="radio" name="pregunta2" value="m2">
+		<label>M. El tiempo es un impedimento.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas3"> 
+		<p> 3. Los límites de permanencia de los astronautas en el espacio, aún……</p>	 
+		<input type="radio" name="pregunta3" value="p3">
+		<label>P. No permiten aspirar a esos vuelos.</label>
+		<input type="radio" name="pregunta3" value="q3">
+		<label>Q. Están sujetos a limitaciones.</label>
+		<input type="radio" name="pregunta3" value="r3">
+		<label>R. Significan un freno.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas4"> 
+		<p> 4. De momento, para tales vuelos solo se piensa en enviar……</p>	 
+		<input type="radio" name="pregunta4" value="v4">
+		<label>V. Cohetes que puedan retornar solos.</label>
+		<input type="radio" name="pregunta4" value="w4">
+		<label>W. Estaciones espaciales.</label>
+		<input type="radio" name="pregunta4" value="x4">
+		<label>X. Naves espaciales sin tripular.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas5"> 
+		<p> 5. En el año 1960, Rusia fue……</p>	 
+		<input type="radio" name="pregunta5" value="a5">
+		<label>A. La primera en aceptar el reto.</label>
+		<input type="radio" name="pregunta5" value="b5">
+		<label>B. La que comenzó las pruebas.</label>
+		<input type="radio" name="pregunta5" value="c5">
+		<label>C. Quien se anticipó a los demás.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas6">
+		<p> 6. Este primer lanzamiento falló en……</p>	 
+		<input type="radio" name="pregunta6" value="f6">
+		<label>F. Sus últimos instantes.</label>
+		<input type="radio" name="pregunta6" value="g6">
+		<label>G. Su trayectoria.</label>
+		<input type="radio" name="pregunta6" value="h6">
+		<label>H. Su intento de llegar a Venus.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas7"> 
+		<p> 7. ¿Cuánto tiempo estuvo en el espacio y cuántos Km recorrió el segundo intento?</p>	 
+		<input type="radio" name="pregunta7" value="k7">
+		<label>K. 4 meses, más de 200 millones de Km.</label>
+		<input type="radio" name="pregunta7" value="l7">
+		<label>L. 4 meses, más de 100 millones de Km.</label>
+		<input type="radio" name="pregunta7" value="m7">
+		<label>M. 6 meses, 150 millones de Km.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas8"> 
+		<p> 8. Este segundo intento perdió contacto con la Tierra y……</p>	 
+		<input type="radio" name="pregunta8" value="p8">
+		<label>P. No se pudieron restablecer las comunicaciones.</label>
+		<input type="radio" name="pregunta8" value="q8">
+		<label>Q. Pasó muy lejos de su objetivo.</label>
+		<input type="radio" name="pregunta8" value="r8">
+		<label>R. Se perdió en el espacio infinito.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas9"> 
+		<p> 9. Estados Unidos tuvo más éxito por enviar para cada lanzamiento……</p>	 
+		<input type="radio" name="pregunta9" value="v9">
+		<label>V. Dos lanzamientos simultáneos.</label>
+		<input type="radio" name="pregunta9" value="w9">
+		<label>W. Dos naves gemelas.</label>
+		<input type="radio" name="pregunta9" value="x9">
+		<label>X. Naves más sofisticadas.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas10"> 
+		<p> 10. El Mariner II llegó cerca de……</p>	 
+		<input type="radio" name="pregunta10" value="a10">
+		<label>A. La superficie de Venus.</label>
+		<input type="radio" name="pregunta10" value="b10">
+		<label>B. Las lunas de Marte.</label>
+		<input type="radio" name="pregunta10" value="c10">
+		<label>C. De la cara oculta de la Luna.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas11">
+		<p> 11. Después de un vuelo accidentado, el Mariner IV obtuvo una serie de……</p>	 
+		<input type="radio" name="pregunta11" value="f11">
+		<label>F. Espectaculares imágenes.</label>
+		<input type="radio" name="pregunta11" value="g11">
+		<label>G. Fotografías históricas.</label>
+		<input type="radio" name="pregunta11" value="h11">
+		<label>H. Perfectas y numerosas fotografías.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas12"> 
+		<p> 12. En ellas aparecen con toda claridad……</p>	 
+		<input type="radio" name="pregunta12" value="k12">
+		<label>K. Más de 60 cráteres.</label>
+		<input type="radio" name="pregunta12" value="l12">
+		<label>L. Alrededor de 40 cráteres.</label>
+		<input type="radio" name="pregunta12" value="m12">
+		<label>M. Innumerables cráteres.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas13"> 
+		<p> 13. Los diámetros de sus cráteres varían entre……</p>	 
+		<input type="radio" name="pregunta13" value="p13">
+		<label>P. Los 60 y los 100 Km.</label>
+		<input type="radio" name="pregunta13" value="q13">
+		<label>Q. Los 60 y los 5 Km.</label>
+		<input type="radio" name="pregunta13" value="r13">
+		<label>R. Los 120 y los 5 Km.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas14"> 
+		<p> 14. Los Vénera V y VI alcanzaron su objetivo y……</p>	 
+		<input type="radio" name="pregunta14" value="v14">
+		<label>V. Rozaron la superficie de Venus.</label>
+		<input type="radio" name="pregunta14" value="w14">
+		<label>W. Lograron fotografiar Venus.</label>
+		<input type="radio" name="pregunta14" value="x14">
+		<label>X. Lograron hacer impacto en Venus.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas15"> 
+		<p> 15. Al interrumpirse las comunicaciones, los radares registran una altura y presíon de……</p>	 
+		<input type="radio" name="pregunta15" value="a15">
+		<label>A. 20.000 m y 27 atmósferas.</label>
+		<input type="radio" name="pregunta15" value="b15">
+		<label>B. 30.000 m y 37 atmósferas.</label>
+		<input type="radio" name="pregunta15" value="c15">
+		<label>C. 40.000 m y 47 atmósferas.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas16">
+		<p> 16. La presión,posiblemente……</p>	 
+		<input type="radio" name="pregunta16" value="f16">
+		<label>F. Aplastaría las naves.</label>
+		<input type="radio" name="pregunta16" value="g16">
+		<label>G. Trituraría las cápsulas.</label>
+		<input type="radio" name="pregunta16" value="h16">
+		<label>H. Imposibilitaría la supervivencia.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas17"> 
+		<p> 17. Numerosas naves lograron posarse en Marte y realizar……</p>	 
+		<input type="radio" name="pregunta17" value="k17">
+		<label>K. Toda clase de mediciones.</label>
+		<input type="radio" name="pregunta17" value="l17">
+		<label>L. Exhaustivas exploraciones.</label>
+		<input type="radio" name="pregunta17" value="m17">
+		<label>M. Análisis de muestras recogidas en el terreno.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas18"> 
+		<p> 18. Por supuesto, esas naves enviaron……</p>	 
+		<input type="radio" name="pregunta18" value="p18">
+		<label>P. Detalladas fotografías del planeta.</label>
+		<input type="radio" name="pregunta18" value="q18">
+		<label>Q. Nítidas fotografías de su superficie.</label>
+		<input type="radio" name="pregunta18" value="r18">
+		<label>R. Numerosos datos del terreno.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas19"> 
+		<p> 19. De momento, en ese planeta……</p>	 
+		<input type="radio" name="pregunta19" value="v19">
+		<label>V. No parecen existir indicios de vida.</label>
+		<input type="radio" name="pregunta19" value="w19">
+		<label>W. No existe en absoluto rastro de vida.</label>
+		<input type="radio" name="pregunta19" value="x19">
+		<label>X. No se dan condiciones para la vida.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas20"> 
+		<p> 20. El no encontrar vida, ha……</p>	 
+		<input type="radio" name="pregunta20" value="a20">
+		<label>A. Hecho perder interés.</label>
+		<input type="radio" name="pregunta20" value="b20">
+		<label>B. Frenado las investigaciones.</label>
+		<input type="radio" name="pregunta20" value="c20">
+		<label>C. Desanimado la imaginación de muchos escritores.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas21">
+		<p> 21. El conseguir estaciones espaciales tripuladas ha sido……</p>	 
+		<input type="radio" name="pregunta21" value="f21">
+		<label>F. Una ilusión constantemente mantenida.</label>
+		<input type="radio" name="pregunta21" value="g21">
+		<label>G. Otro proyecto largamente acariciado.</label>
+		<input type="radio" name="pregunta21" value="h21">
+		<label>H. Otro intento muy trabajado.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas22"> 
+		<p> 22. Las estaciones espaciales deberán en el futuro servir de……</p>	 
+		<input type="radio" name="pregunta22" value="k22">
+		<label>K. Descanso intermedio y abastecimiento.</label>
+		<input type="radio" name="pregunta22" value="l22">
+		<label>L. Medio para llegar a planetas más lejanos.</label>
+		<input type="radio" name="pregunta22" value="m22">
+		<label>M. Laboratorios espaciales permanentes.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas23"> 
+		<p> 23. También deberán servir de……</p>	 
+		<input type="radio" name="pregunta23" value="p23">
+		<label>P. Almacenes de recambios.</label>
+		<input type="radio" name="pregunta23" value="q23">
+		<label>Q. Taller de reparaciones.</label>
+		<input type="radio" name="pregunta23" value="r23">
+		<label>R. Centro de análisis y experimentación.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas24"> 
+		<p> 24. El 19 de abril de 1971, Rusia……</p>	 
+		<input type="radio" name="pregunta24" value="v24">
+		<label>V. Se adelantó otra vez con su Salyut.</label>
+		<input type="radio" name="pregunta24" value="w24">
+		<label>W. Lanzó su primera estación orbital.</label>
+		<input type="radio" name="pregunta24" value="x24">
+		<label>X. Consiguió otra vez adelantarse.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas25"> 
+		<p> 25. La Salyut tenía forma cilíndrica que, en conjunto……</p>	 
+		<input type="radio" name="pregunta25" value="a25">
+		<label>A. Imitaba a un catalejo desplegado.</label>
+		<input type="radio" name="pregunta25" value="b25">
+		<label>B. Se parecía a un largo telescopio.</label>
+		<input type="radio" name="pregunta25" value="c25">
+		<label>C. Recordaba a un catalejo desplegado.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas26">
+		<p> 26. La Salyut medía, en metros……</p>	 
+		<input type="radio" name="pregunta26" value="f26">
+		<label>F. 20 de longitud por 6 de diámetro.</label>
+		<input type="radio" name="pregunta26" value="g26">
+		<label>G. 8 de longitud por 4 de diámetro.</label>
+		<input type="radio" name="pregunta26" value="h26">
+		<label>H. 10 de longitud por 4 de diámetro.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas27"> 
+		<p> 27. Los astronautas de la Soyut X no pudieron transbordar……</p>	 
+		<input type="radio" name="pregunta27" value="k27">
+		<label>K. Por problemas mecánicos.</label>
+		<input type="radio" name="pregunta27" value="l27">
+		<label>L. Para no agotar reservas de combustible.</label>
+		<input type="radio" name="pregunta27" value="m27">
+		<label>M. A causa de un fallo de la escotilla.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas28"> 
+		<p> 28. Los astronautas de la Soyut XI estuvieron en la nave orbital……</p>	 
+		<input type="radio" name="pregunta28" value="p28">
+		<label>P. 23 días.</label>
+		<input type="radio" name="pregunta28" value="q28">
+		<label>Q. Dos meses.</label>
+		<input type="radio" name="pregunta28" value="r28">
+		<label>R. Dos semanas.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas29"> 
+		<p> 29. Al volver, una válvula debió abrirse y……</p>	 
+		<input type="radio" name="pregunta29" value="v29">
+		<label>V. La nave se desintegró.</label>
+		<input type="radio" name="pregunta29" value="w29">
+		<label>W. Los tres astronautas se asfixiaron.</label>
+		<input type="radio" name="pregunta29" value="x29">
+		<label>X. Los tres astronautas perecieron instantáneamente.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas30"> 
+		<p> 30. La nave Skylab, de los Estados Unidos, tenía alrededor del cuerpo principal……</p>	 
+		<input type="radio" name="pregunta30" value="a30">
+		<label>A. Un módulo con 8 telescopios.</label>
+		<input type="radio" name="pregunta30" value="b30">
+		<label>B. Un cuerpo con 6 telescopios acoplados.</label>
+		<input type="radio" name="pregunta30" value="c30">
+		<label>C. Varios telescopios acoplados.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas31">
+		<p> 31. Tenía instalados también……</p>	 
+		<input type="radio" name="pregunta31" value="f31">
+		<label>F. Paneles para captar luz solar.</label>
+		<input type="radio" name="pregunta31" value="g31">
+		<label>G. Diversos paneles de células fotoeléctricas.</label>
+		<input type="radio" name="pregunta31" value="h31">
+		<label>H. Células fotoeléctricas experimentales.</label>
+	</div>
+
+	<div class="Preguntas" id="Preguntas32"> 
+		<p> 32. La investigación en astronáutica sigue teniendo……</p> 
+		<input type="radio" name="pregunta32" value="k32">
+		<label>K. Aspiraciones sin límite.</label>
+		<input type="radio" name="pregunta32" value="l32">
+		<label>L. Retos continuos y emocionantes.</label>
+		<input type="radio" name="pregunta32" value="m32">
+		<label>M. Infinitos horizontes.</label>
+	</div>
+	<br>
+	<div class="Barra" id="Barra1"> <!--contenedores de barra de preguntas-->
+		<a href="#" id="p1">1.</a><!--Referencias para cambiar de preguntas-->
+		<a href="#" id="p2">2.</a>
+		<a href="#" id="p3">3.</a>
+		<a href="#" id="p4">4.</a>
+		<a href="#" id="p5">5.</a>
+		<a href="#" id="p6">6.</a>
+		<a href="#" id="p7">7.</a>
+		<a href="#" id="p8">8.</a>
+		<a href="#" id="p9">9.</a>
+		<a href="#" id="p10">10.</a>
+		<a href="#" id="p11">11.</a>
+		<a href="#" id="p12">12.</a>
+		<a href="#" id="p13">13.</a>
+		<a href="#" id="p14">14.</a>
+		<a href="#" id="p15">15.</a>
+		<a href="#" id="p16">16.</a>
+		<a href="#" id="b1">&raquo</a><!--Referencias para cambiar de contenedor-->
+	</div>
+	<div class="Barra" id="Barra2">
+		<a href="#" id="b2">&laquo</a>
+		<a href="#" id="p17">17.</a>
+		<a href="#" id="p18">18.</a>
+		<a href="#" id="p19">19.</a>
+		<a href="#" id="p20">20.</a>
+		<a href="#" id="p21">21.</a>
+		<a href="#" id="p22">22.</a>
+		<a href="#" id="p23">23.</a>
+		<a href="#" id="p24">24.</a>
+		<a href="#" id="p25">25.</a>
+		<a href="#" id="p26">26.</a>
+		<a href="#" id="p27">27.</a>
+		<a href="#" id="p28">28.</a>
+		<a href="#" id="p29">29.</a>
+		<a href="#" id="p30">30.</a>
+		<a href="#" id="p31">31.</a>
+		<a href="#" id="p32">32.</a>
+	</div>
+	<br>
+	<input type="submit" name="btn" id="btn" value="enviar" onclick="compararRespuestas()"><!--botón de enviar activa la funcion de compararRespuestas-->
+</form>
+	<div>
+		<br>
+		<button id = "anterior">Anterior</button>
+		<button id = "siguiente">Siguiente</button>
+	</div>
+	<br><br>
+	<input type="button" name="btn2" id="btn2" value="Siguiente Cuestionario" onclick="despedida()">
+</body>
+</html>
