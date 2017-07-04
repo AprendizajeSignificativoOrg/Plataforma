@@ -4,17 +4,17 @@
 	<meta charset="utf-8">
 	<title>Prueba BADYG M</title> 
 	<link rel="stylesheet" type="text/css" href="http://localhost/BADYGM/Estilos.css"><!--hoja de estilos documento css-->
-	<script type="text/javascript" src="http://localhost/BADYGM/Cronometro.js"></script><!--archivos .js-->
-	<script type="text/javascript" src="http://localhost/BADYGM/CapturaRespuestas.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGM/CronometroBADYGM.js"></script><!--archivos .js-->
+	<script type="text/javascript" src="http://localhost/BADYGS/CapturaRespuestas.js"></script>
 	<script type="text/javascript" src="http://localhost/BADYGM/seriesNumericas/RespuestasBADYGMSeriesNumericas.js"></script>
 	<script type="text/javascript" src="http://localhost/BADYGM/seriesNumericas/PuntajesBADYGMSeriesNumericas.js"></script>
-	<script type="text/javascript" src="http://localhost/BADYGM/CambioPreguntasBADYG.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGS/CambioPreguntasBADYG.js"></script>
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script><!--link referencia jQuery-->
 <script type="text/javascript">	
 $(document).ready(mostrar());//llamado función para cambio de preguntas
 </script>
-</head>
-<body onload="tiempo(7)"><!--inicia el cronometro según parametro dado el la función-->
+</head> 
+<body onload="tiempo(0,7)"><!--inicia el cronometro según parametro dado el la función-->
 <h1 align="center">Prueba Series Numéricas</h1>
 <form name="form" align="right"><!--espacio de cronometro-->
 	<input type="text" size="1" class="form_input" name="minute" disabled>:<!--minutos-->
@@ -23,9 +23,9 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 	<progress id="barraProgreso" name="barraProgreso" max="100" value="" ></progress><!--Barra de progreso-->
 </form>
 <form action="" name="cuestionario" method="">
-	<div class="Preguntas1" id="Preguntas1"> 
+	<div class="Preguntas" id="Preguntas1"> 
 	<!--contenedor de los enunciados y opciones de respuesta-->
-		<p>1.</p>		 
+		<p>1. 13 15 17 19 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>		 
 		<input type="radio" name="pregunta1" value="f"><!--Item y enunciado de la pregunta -->
 		<label>F. 18.</label><!--radiobutton de opción de respuesta-->
 		<input type="radio" name="pregunta1" value="g">
@@ -36,12 +36,11 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>I. 20.</label>
 		<input type="radio" name="pregunta1" value="j">
 		<label>J. Otra distinta.</label>
-		<br><br><input type="button" name="sig" id="sig" value="Siguiente"><!--botones para pasar pregunta-->
 	</div>
 
 	<div class="Preguntas" id="Preguntas2"> 
 
-	<p>2.</p>	 
+	<p>2. 23 23 19 19 15 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>	 
 		<input type="radio" name="pregunta2" value="k">
 		<label>K. 14.</label>
 		<input type="radio" name="pregunta2" value="l">
@@ -52,13 +51,11 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>N. 15.</label>
 		<input type="radio" name="pregunta2" value="o">
 		<label>O. Otra distinta.</label>		
-		<br><br><input type="button" name="ant" id="ant" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig2" id="sig2" value="Siguiente"><!--botones para pasar pregunta-->
 	</div>
 
 	<div class="Preguntas" id="Preguntas3"> 
 
-	<p>3.</p>	
+	<p>3. 20 25 30 35 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>	
 	
 		<input type="radio" name="pregunta3" value="p">
 		<label>P. 36.</label>
@@ -70,13 +67,11 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>S. 38.</label>
 		<input type="radio" name="pregunta3" value="t">
 		<label>T. Otra distinta.</label>
-		<br><br><input type="button" name="ant2" id="ant2" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig3" id="sig3" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas4"> 
 
-	<p>4.</p>		 
+	<p>4. 16 13 10 7 4 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>		 
 		<input type="radio" name="pregunta4" value="v">
 		<label>V. 1.</label>
 		<input type="radio" name="pregunta4" value="w">
@@ -87,30 +82,26 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>Y. 2.</label>
 		<input type="radio" name="pregunta4" value="z">
 		<label>Z. Otra distinta.</label>
-		<br><br><input type="button" name="ant3" id="ant3" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig4" id="sig4" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas5"> 
 
-	<p>5.</p>			 
+	<p>5. 4 4&frac12  9 9 9&frac12   19<img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>			 
 		<input type="radio" name="pregunta5" value="a">
 		<label>A. 38.</label>
 		<input type="radio" name="pregunta5" value="b">
-		<label>B. 29 1/2.</label>
+		<label>B. 29&frac12.</label>
 		<input type="radio" name="pregunta5" value="c">
 		<label>C. 20.</label>
 		<input type="radio" name="pregunta5" value="d">
-		<label>D. 19 1/2.</label>
+		<label>D. 19&frac12.</label>
 		<input type="radio" name="pregunta5" value="e">
 		<label>E. Otra distinta.</label>
-		<br><br><input type="button" name="ant4" id="ant4" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig5" id="sig5" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas6"> 
 
-	<p>6.</p>			 
+	<p>6. 1,2 2,3 3,4 4,5 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>			 
 		<input type="radio" name="pregunta6" value="f">
 		<label>F. 4,6.</label>
 		<input type="radio" name="pregunta6" value="g">
@@ -121,13 +112,11 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>I. 6,5.</label>
 		<input type="radio" name="pregunta6" value="j">
 		<label>J. Otra distinta.</label>
-		<br><br><input type="button" name="ant5" id="ant5" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig6" id="sig6" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas7"> 
 
-	<p>7.</p>		
+	<p>7. 4 8 8 16 16 32 32 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>		
 		<input type="radio" name="pregunta7" value="k">
 		<label>K. 48.</label>
 		<input type="radio" name="pregunta7" value="l">
@@ -138,13 +127,11 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>N. 96.</label>
 		<input type="radio" name="pregunta7" value="o">
 		<label>O. Otra distinta.</label>
-		<br><br><input type="button" name="ant6" id="ant6" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig7" id="sig7" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas8"> 
 
-	<p>8.</p>		
+	<p>8. 6,6 7 7,4 7,8 8,2 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>		
 		<input type="radio" name="pregunta8" value="p">
 		<label>P. 8,6.</label>
 		<input type="radio" name="pregunta8" value="q">
@@ -155,13 +142,11 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>S. 9.</label>
 		<input type="radio" name="pregunta8" value="t">
 		<label>T. Otra distinta.</label>
-		<br><br><input type="button" name="ant7" id="ant7" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig8" id="sig8" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas9"> 
 
-	<p>9.</p>		 
+	<p>9. 64 32 16 8 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>		 
 		<input type="radio" name="pregunta9" value="v">
 		<label>V. 0.</label>
 		<input type="radio" name="pregunta9" value="w">
@@ -172,29 +157,25 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>Y. 4.</label>
 		<input type="radio" name="pregunta9" value="z">
 		<label>Z. Otra distinta.</label>
-		<br><br><input type="button" name="ant8" id="ant8" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig9" id="sig9" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas10"> 
-		<p>10.</p>
+		<p>10. 8 6&frac12  6 4&frac12 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>
 		 
 		<input type="radio" name="pregunta10" value="a">
 		<label>A. 4.</label>
 		<input type="radio" name="pregunta10" value="b">
-		<label>B. 1 1/2.</label>
+		<label>B. 1&frac12.</label>
 		<input type="radio" name="pregunta10" value="c">
 		<label>C. 3.</label>
 		<input type="radio" name="pregunta10" value="d">
-		<label>D. 2 1/2.</label>
+		<label>D. 2&frac12.</label>
 		<input type="radio" name="pregunta10" value="e">
 		<label>E. Otra distinta.</label>
-		<br><br><input type="button" name="ant9" id="ant9" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig10" id="sig10" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas11"> 
-		<p>11.</p>
+		<p>11. 2,2 1,8 1,4 1 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>
 	 
 		<input type="radio" name="pregunta11" value="f">
 		<label>F. 0.</label>
@@ -206,12 +187,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>I. 0,8.</label>
 		<input type="radio" name="pregunta11" value="j">
 		<label>J. Otra distinta.</label>
-		<br><br><input type="button" name="ant10" id="ant10" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig11" id="sig11" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas12"> 
-		<p>12.</p>
+		<p>12. 6 12 14 28 30 60 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>
 		
 		<input type="radio" name="pregunta12" value="k">
 		<label>K. 120.</label>
@@ -223,12 +202,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>N. 64.</label>
 		<input type="radio" name="pregunta12" value="o">
 		<label>O. Otra distinta.</label>
-		<br><br><input type="button" name="ant11" id="ant11" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig12" id="sig12" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas13"> 
-		<p>13.</p>
+		<p>13. 24 20 40 36 72 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>
 			 
 		<input type="radio" name="pregunta13" value="p">
 		<label>P. 68.</label>
@@ -240,12 +217,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>S. 144.</label>
 		<input type="radio" name="pregunta13" value="t">
 		<label>T. Otra distinta.</label>
-		<br><br><input type="button" name="ant12" id="ant12" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig13" id="sig13" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas14"> 
-		<p>14.</p>
+		<p>14. 1,1 1,3 1,7 1,9 2,3 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>
 	 
 		<input type="radio" name="pregunta14" value="v">
 		<label>V. 2,6.</label>
@@ -257,12 +232,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>Y. 2,7.</label>
 		<input type="radio" name="pregunta14" value="z">
 		<label>Z. Otra distinta.</label>
-		<br><br><input type="button" name="ant13" id="ant13" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig14" id="sig14" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas15"> 
-		<p>15.</p>
+		<p>15. 2 4 5 10 11 22 23 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>
 	
 		<input type="radio" name="pregunta15" value="a">
 		<label>A. 24.</label>
@@ -274,12 +247,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>D. 12.</label>
 		<input type="radio" name="pregunta15" value="e">
 		<label>E. Otra distinta.</label>
-		<br><br><input type="button" name="ant14" id="ant14" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig15" id="sig15" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas16"> 
-		<p>16.</p>
+		<p>16. 60 40 42 22 24 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>
 		 
 		<input type="radio" name="pregunta16" value="f">
 		<label>F. 4.</label>
@@ -291,12 +262,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>I. 20.</label>
 		<input type="radio" name="pregunta16" value="j">
 		<label>J. Otra distinta.</label>
-		<br><br><input type="button" name="ant15" id="ant15" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig16" id="sig16" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas17"> 
-		<p>17.</p>
+		<p>17. 6,4 7,2 8 8,8<img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>
 		
 		<input type="radio" name="pregunta17" value="k">
 		<label>K. 9,8.</label>
@@ -308,12 +277,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>N. 9,4.</label>
 		<input type="radio" name="pregunta17" value="o">
 		<label>O. Otra distinta.</label>
-		<br><br><input type="button" name="ant16" id="ant16" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig17" id="sig17" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas18"> 
-		<p>18.</p>
+		<p>18. 6 12 10 20 18 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>
 			 
 		<input type="radio" name="pregunta18" value="p">
 		<label>P. 24.</label>
@@ -325,29 +292,25 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>S. 34.</label>
 		<input type="radio" name="pregunta18" value="t">
 		<label>T. Otra distinta.</label>
-		<br><br><input type="button" name="ant17" id="ant17" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig18" id="sig18" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas19"> 
-		<p>19.</p>
+		<p>19. 24 23&frac34  23&frac12  23&frac14  23 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>
 			 
 		<input type="radio" name="pregunta19" value="v">
-		<label>V. 21 1/4.</label>
+		<label>V. 21&frac14.</label>
 		<input type="radio" name="pregunta19" value="w">
 		<label>W. 21.</label>
 		<input type="radio" name="pregunta19" value="X">
-		<label>X. 21 3/4.</label>
+		<label>X. 21&frac34.</label>
 		<input type="radio" name="pregunta19" value="y">
-		<label>Y. 22 3/4.</label>
+		<label>Y. 22&frac34.</label>
 		<input type="radio" name="pregunta19" value="z">
 		<label>Z. Otra distinta.</label>
-		<br><br><input type="button" name="ant18" id="ant18" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig19" id="sig19" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas20"> 
-		<p>20.</p>
+		<p>20. 60 51 43 36 30 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>
 		 
 		<input type="radio" name="pregunta20" value="a">
 		<label>A. 24.</label>
@@ -359,29 +322,25 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>D. 25.</label>
 		<input type="radio" name="pregunta20" value="e">
 		<label>E. Otra distinta.</label>
-		<br><br><input type="button" name="ant19" id="ant19" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig20" id="sig20" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas21"> 
-		<p>21.</p>
+		<p>21. 16 8 12 6 10 5 9 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>
 		 
 		<input type="radio" name="pregunta21" value="f">
-		<label>F. 9 1/2.</label>
+		<label>F. 9&frac12.</label>
 		<input type="radio" name="pregunta21" value="g">
 		<label>G. 9.</label>
 		<input type="radio" name="pregunta21" value="h">
-		<label>H. 4 1/2</label>
+		<label>H. 4&frac12</label>
 		<input type="radio" name="pregunta21" value="i">
 		<label>I. 13.</label>
 		<input type="radio" name="pregunta21" value="j">
 		<label>J. Otra distinta.</label>
-		<br><br><input type="button" name="ant20" id="ant20" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig21" id="sig21" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas22"> 
-		<p>22.</p>
+		<p>22. 6 4,8 3,6 2,4 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>
 		
 		<input type="radio" name="pregunta22" value="k">
 		<label>K. 1,2.</label>
@@ -393,12 +352,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>N. 1.</label>
 		<input type="radio" name="pregunta22" value="o">
 		<label>O. Otra distinta.</label>
-		<br><br><input type="button" name="ant21" id="ant21" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig22" id="sig22" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas23"> 
-		<p>23.</p>
+		<p>23. 6 6 8 8 11 11 15 15 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>
 			 
 		<input type="radio" name="pregunta23" value="p">
 		<label>P. 15.</label>
@@ -410,12 +367,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>S. 21.</label>
 		<input type="radio" name="pregunta23" value="t">
 		<label>T. Otra distinta.</label>
-		<br><br><input type="button" name="ant22" id="ant22" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig23" id="sig23" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas24"> 
-		<p>24.</p>
+		<p>24. 1 10 5 50 25 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>
 		 
 		<input type="radio" name="pregunta24" value="v">
 		<label>V. 2500.</label>
@@ -427,12 +382,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>Y. 12,5.</label>
 		<input type="radio" name="pregunta24" value="z">
 		<label>Z. Otra distinta.</label>
-		<br><br><input type="button" name="ant23" id="ant23" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig24" id="sig24" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas25"> 
-		<p>25.</p>
+		<p>25. 2,1 4,2 8,4 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>
 			 
 		<input type="radio" name="pregunta25" value="a">
 		<label>A. 14,6.</label>
@@ -444,29 +397,25 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>D. 12,6.</label>
 		<input type="radio" name="pregunta25" value="e">
 		<label>E. Otra distinta.</label>
-		<br><br><input type="button" name="ant24" id="ant24" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig25" id="sig25" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas26"> 
-		<p>26.</p>
+		<p>26. 4 12 6 18 9 27 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>
 			 
 		<input type="radio" name="pregunta26" value="f">
 		<label>F. 81.</label>
 		<input type="radio" name="pregunta26" value="g">
 		<label>G. 54.</label>
 		<input type="radio" name="pregunta26" value="h">
-		<label>H. 6 1/4</label>
+		<label>H. 6&frac14</label>
 		<input type="radio" name="pregunta26" value="i">
-		<label>I. 13 1/2.</label>
+		<label>I. 13&frac12.</label>
 		<input type="radio" name="pregunta26" value="j">
 		<label>J. Otra distinta.</label>
-		<br><br><input type="button" name="ant25" id="ant25" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig26" id="sig26" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas27"> 
-		<p>27.</p>
+		<p>27. 7&frac12  15 10 20 15 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>
 	
 		<input type="radio" name="pregunta27" value="k">
 		<label>K. 20.</label>
@@ -478,12 +427,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>N. 30.</label>
 		<input type="radio" name="pregunta27" value="o">
 		<label>O. Otra distinta.</label>
-		<br><br><input type="button" name="ant26" id="ant26" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig27" id="sig27" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas28"> 
-		<p>28.</p>
+		<p>28. 2,5 5 6,5 13 14,5 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>
 		
 		<input type="radio" name="pregunta28" value="p">
 		<label>P. 28.</label>
@@ -495,12 +442,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>S. 17,5.</label>
 		<input type="radio" name="pregunta28" value="t">
 		<label>T. Otra distinta.</label>
-		<br><br><input type="button" name="ant27" id="ant27" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig28" id="sig28" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas29"> 
-		<p>29.</p>
+		<p>29. 3 3 6 5 5 5 15 7 7 7 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>
 			 
 		<input type="radio" name="pregunta29" value="v">
 		<label>V. 28.</label>
@@ -512,29 +457,25 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>Y. 14.</label>
 		<input type="radio" name="pregunta29" value="z">
 		<label>Z. Otra distinta.</label>
-		<br><br><input type="button" name="ant28" id="ant28" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig29" id="sig29" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas30"> 
-		<p>30.</p>
+		<p>30. 2&frac14  3 3&frac14  4&frac12 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>
 			 
 		<input type="radio" name="pregunta30" value="a">
-		<label>A. 5 1/2.</label>
+		<label>A. 5&frac12.</label>
 		<input type="radio" name="pregunta30" value="b">
-		<label>B. 5 3/4.</label>
+		<label>B. 5&frac34.</label>
 		<input type="radio" name="pregunta30" value="c">
-		<label>C. 5 1/4.</label>
+		<label>C. 5&frac14.</label>
 		<input type="radio" name="pregunta30" value="d">
 		<label>D. 5.</label>
 		<input type="radio" name="pregunta30" value="e">
 		<label>E. Otra distinta.</label>
-		<br><br><input type="button" name="ant29" id="ant29" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig30" id="sig30" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas31"> 
-		<p>31.</p>
+		<p>31. 28 20 14 10 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>
 		 
 		<input type="radio" name="pregunta31" value="f">
 		<label>F. 8.</label>
@@ -546,12 +487,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>I. 6.</label>
 		<input type="radio" name="pregunta31" value="j">
 		<label>J. Otra distinta.</label>
-		<br><br><input type="button" name="ant30" id="ant30" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig31" id="sig31" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas32"> 
-		<p>32.</p>
+		<p>32. 3 3 9 8 4 4 16 15 5 5 <img src="smallFlechaBADYG-01.jpg"><img src="mediumPeguntaBADYG-01.jpg"></p>
 		  
 		<input type="radio" name="pregunta32" value="k">
 		<label>K. 10.</label>
@@ -563,8 +502,8 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>N. 5.</label>
 		<input type="radio" name="pregunta32" value="o">
 		<label>O. Otra distinta.</label>
-		<br><br><input type="button" name="ant31" id="ant31" value="Anterior">
 	</div>
+	<br>
 	<div class="Barra" id="Barra1"> <!--contenedores de barra de preguntas-->
 		<a href="#" id="p1">1.</a><!--Referencias para cambiar de preguntas-->
 		<a href="#" id="p2">2.</a>
@@ -582,10 +521,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<a href="#" id="p14">14.</a>
 		<a href="#" id="p15">15.</a>
 		<a href="#" id="p16">16.</a>
-		<a href="#" id="b1">>></a>
+		<a href="#" id="b1">&raquo</a>
 	</div>
 	<div class="Barra" id="Barra2">
-		<a href="#" id="b2"><<</a>
+		<a href="#" id="b2">&laquo</a>
 		<a href="#" id="p17">17.</a>
 		<a href="#" id="p18">18.</a>
 		<a href="#" id="p19">19.</a>
@@ -604,8 +543,13 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<a href="#" id="p32">32.</a>
 	</div>
 	<input type="submit" name="btn" id="btn" value="enviar" onclick="compararRespuestas()"><!--botón de enviar activa la funcion de compararRespuestas-->		
-	<br>
-	<input type="button" name="btn2" id="btn2" value="Siguiente Cuestionario" onclick="despedida()">
 </form>
+	<div>
+		<br>
+		<button id = "anterior">Anterior</button>
+		<button id = "siguiente">Siguiente</button>
+	</div>
+	<br><br>
+	<input type="button" name="btn2" id="btn2" value="Siguiente Cuestionario" onclick="despedida()">
 </body>
 </html>

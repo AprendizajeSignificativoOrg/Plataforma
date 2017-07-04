@@ -5,16 +5,22 @@
 	<title>Prueba BADYG M</title>
 	<link rel="stylesheet" type="text/css" href="http://localhost/BADYGM/analogiasVerbales/Estilo.css"><!--hoja de estilos documento css-->
 	<script type="text/javascript" src="http://localhost/BADYGM/analogiasVerbales/RespuestasBADYGMAnalogiasVerbales.js"></script><!--archivos .js-->
-	<script type="text/javascript" src="http://localhost/BADYGM/Cronometro.js"></script>
-	<script type="text/javascript" src="http://localhost/BADYGM/CapturaRespuestas.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGM/CronometroBADYGM.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGS/CapturaRespuestas.js"></script>
 	<script type="text/javascript" src="http://localhost/BADYGM/analogiasVerbales/PuntajesBADYGMAnalogiasVerbales.js"></script>
-	<script type="text/javascript" src="http://localhost/BADYGM/CambioPreguntasBADYG.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGS/CambioPreguntasBADYG.js"></script>
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> <!--link referencia jQuery-->
 <script type="text/javascript">	
 $(document).ready(mostrar());//llamado función para cambio de preguntas
+var sec=0,min=0;
+/*10*/sec=0;
+	min=6;
+
+/*9	sec=0;
+	min=7;*/
 </script>
 </head>
-<body onload="tiempo(6);"><!--inicia el cronometro según parametro dado el la función-->
+<body onload="tiempo(sec,min);"><!--inicia el cronometro según parametro dado el la función-->
 <h1 align="center"> Prueba Analogias Verbales</h1>
 <form name="form" align="right"><!--espacio de cronometro-->
 	<input type="text" size="1" class="form_input" name="minute" disabled>:<!--minutos-->
@@ -23,9 +29,9 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 	<progress id="barraProgreso" name="barraProgreso" max="100" value="" ></progress><!--Barra de progreso-->
 </form>
 <form action="" name="cuestionario" method="">
-	<div class="Preguntas1" id="Preguntas1"> 
+	<div class="Preguntas" id="Preguntas1"> 
 	<!--contenedor de las preguntas con enunciado y las respuestas-->
-		<p> 1. comida <i>es a</i> hambre <i>como</i> bebida <i>es a</i> _____.</p><!--Item y enunciado de la pregunta -->	 
+		<p> 1. comida <i>es a</i> hambre <i>como</i> bebida <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg">.</p><!--Item y enunciado de la pregunta -->	 
 		<input type="radio" name="pregunta1" value="a"><!--radiobutton de opción de respuesta-->
 		<label>A. sequedad.</label><!--opciones de respuestas-->
 		<input type="radio" name="pregunta1" value="b">
@@ -36,11 +42,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>D. liquido.</label>
 		<input type="radio" name="pregunta1" value="e">
 		<label>E. botella.</label>
-		<br><br><input type="button" name="sig" id="sig" value="Siguiente"><!--botones para pasar pregunta-->
 	</div>
 
 	<div class="Preguntas" id="Preguntas2" > 
-		<p> 2. lluvia <i>es a</i> gota <i>como</i> nieve <i>es a</i> _____.</p>	 
+		<p> 2. lluvia <i>es a</i> gota <i>como</i> nieve <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg">.</p>	 
 		<input type="radio" name="pregunta2" value="f">
 		<label>F. nevada.</label>
 		<input type="radio" name="pregunta2" value="g">
@@ -51,12 +56,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>I. agua.</label>
 		<input type="radio" name="pregunta2" value="j">
 		<label>J. frío.</label>
-		<br><br><input type="button" name="ant" id="ant" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig2" id="sig2" value="Siguiente"><!--botones para pasar pregunta-->
 	</div>
 
 	<div class="Preguntas" id="Preguntas3"> 
-		<p> 3. lejos <i>es a</i> allá <i>como</i> cerca <i>es a</i> _____.</p>	 
+		<p> 3. lejos <i>es a</i> allá <i>como</i> cerca <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg">.</p>	 
 		<input type="radio" name="pregunta3" value="k">
 		<label>K. acá.</label>
 		<input type="radio" name="pregunta3" value="l">
@@ -67,13 +70,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>N. ahí.</label>
 		<input type="radio" name="pregunta3" value="o">
 		<label>O. por aquí.</label>
-		<br><br><input type="button" name="ant2" id="ant2" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig3" id="sig3" value="Siguiente">
 	</div>
 
-
 	<div class="Preguntas" id="Preguntas4"> 
-		<p> 4. decapitado <i>es a</i> cabeza <i>como</i> _____ <i>es a</i> mano.</p>	 
+		<p> 4. decapitado <i>es a</i> cabeza <i>como </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg"> <i>es a</i> mano.</p>	 
 		<input type="radio" name="pregunta4" value="p">
 		<label>P. inválido.</label>
 		<input type="radio" name="pregunta4" value="q">
@@ -84,14 +84,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>S. manco.</label>
 		<input type="radio" name="pregunta4" value="t">
 		<label>T. codo.</label>
-		<br><br><input type="button" name="ant3" id="ant3" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig4" id="sig4" value="Siguiente">
-
 	</div>
 
-
 	<div class="Preguntas" id="Preguntas5"> 
-		<p> 5. barco <i>es a</i> pasajero <i>como</i> hotel <i>es a</i> _____.</p>	 
+		<p> 5. barco <i>es a</i> pasajero <i>como</i> hotel <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg">.</p>	 
 		<input type="radio" name="pregunta5" value="v">
 		<label>V. visitante.</label>
 		<input type="radio" name="pregunta5" value="w">
@@ -102,13 +98,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>Y. vereneante.</label>
 		<input type="radio" name="pregunta5" value="z">
 		<label>Z. huésped.</label>
-		<br><br><input type="button" name="ant4" id="ant4" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig5" id="sig5" value="Siguiente">
 	</div>
-
 	
 	<div class="Preguntas" id="Preguntas6"> 
-		<p> 6. prado <i>es a</i> césped <i>como</i> calle <i>es a</i> _____.</p>	 
+		<p> 6. prado <i>es a</i> césped <i>como</i> calle <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg">.</p>	 
 		<input type="radio" name="pregunta6" value="a">
 		<label>A. carretera.</label>
 		<input type="radio" name="pregunta6" value="b">
@@ -119,12 +112,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>D. peatones.</label>
 		<input type="radio" name="pregunta6" value="e">
 		<label>E. aceras.</label>
-		<br><br><input type="button" name="ant5" id="ant5" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig6" id="sig6" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas7"> 
-		<p> 7. luz <i>es a</i> ceguera <i>como</i> _____ <i>es a</i> sordera.</p>	 
+		<p> 7. luz <i>es a</i> ceguera <i>como </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg"> <i>es a</i> sordera.</p>	 
 		<input type="radio" name="pregunta7" value="f">
 		<label>F. deficiencia.</label>
 		<input type="radio" name="pregunta7" value="g">
@@ -135,12 +126,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>I. orejas.</label>
 		<input type="radio" name="pregunta7" value="j">
 		<label>J. aislamiento.</label>
-		<br><br><input type="button" name="ant6" id="ant6" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig7" id="sig7" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas8"> 
-		<p> 8. ciclista <i>es a</i> _____ <i>como</i> levantador de pesas <i>es a</i> brazos.</p>	 
+		<p> 8. ciclista <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg"> <i>como</i> levantador de pesas <i>es a</i> brazos.</p>	 
 		<input type="radio" name="pregunta8" value="k">
 		<label>K. caderas.</label>
 		<input type="radio" name="pregunta8" value="l">
@@ -151,13 +140,11 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>N. pies.</label>
 		<input type="radio" name="pregunta8" value="o">
 		<label>O. piernas.</label>
-		<br><br><input type="button" name="ant7" id="ant7" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig8" id="sig8" value="Siguiente">
 	</div>
 
 
 	<div class="Preguntas" id="Preguntas9"> 
-		<p> 9. transparente <i>es a</i> claro <i>como</i> _____ <i>es a</i> oscuro.</p>	 
+		<p> 9. transparente <i>es a</i> claro <i>como </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg"> <i>es a</i> oscuro.</p>	 
 		<input type="radio" name="pregunta9" value="p">
 		<label>P. apelmazado.</label>
 		<input type="radio" name="pregunta9" value="q">
@@ -168,12 +155,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>S. opaco.</label>
 		<input type="radio" name="pregunta9" value="t">
 		<label>T. sólido.</label>
-		<br><br><input type="button" name="ant8" id="ant8" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig9" id="sig9" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas10"> 
-		<p> 10. tartamudear <i>es a</i> hablar <i>como</i> tropezar <i>es a</i> _____.</p>	 
+		<p> 10. tartamudear <i>es a</i> hablar <i>como</i> tropezar <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg">.</p>	 
 		<input type="radio" name="pregunta10" value="v">
 		<label>V. caminar.</label>
 		<input type="radio" name="pregunta10" value="w">
@@ -184,13 +169,11 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>Y. obstaculizar.</label>
 		<input type="radio" name="pregunta10" value="z">
 		<label>Z. empujar.</label>
-		<br><br><input type="button" name="ant9" id="ant9" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig10" id="sig10" value="Siguiente">
 	</div>
 
 
 	<div class="Preguntas" id="Preguntas11"> 
-		<p> 11. ingerir <i>es a</i> estómago <i>como</i> inspirar <i>es a</i> _____.</p>	 
+		<p> 11. ingerir <i>es a</i> estómago <i>como</i> inspirar <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg">.</p>	 
 		<input type="radio" name="pregunta11" value="a">
 		<label>A. oxígeno.</label>
 		<input type="radio" name="pregunta11" value="b">
@@ -201,12 +184,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>D. espirar.</label>
 		<input type="radio" name="pregunta11" value="e">
 		<label>E. tráquea.</label>
-		<br><br><input type="button" name="ant10" id="ant10" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig11" id="sig11" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas12"> 
-		<p> 12. cerrar <i>es a</i> _____ <i>como</i> abrir <i>es a</i> facilitar.</p>	 
+		<p> 12. cerrar <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg"> <i>como</i> abrir <i>es a</i> facilitar.</p>	 
 		<input type="radio" name="pregunta12" value="f">
 		<label>F. destapar.</label>
 		<input type="radio" name="pregunta12" value="g">
@@ -217,12 +198,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>I. impedir.</label>
 		<input type="radio" name="pregunta12" value="j">
 		<label>J. dificultar.</label>
-		<br><br><input type="button" name="ant11" id="ant11" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig12" id="sig12" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas13"> 
-		<p> 13. profeta <i>es a</i> futuro <i>como</i> _____ <i>es a</i> pasado.</p>	 
+		<p> 13. profeta <i>es a</i> futuro <i>como </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg"> <i>es a</i> pasado.</p>	 
 		<input type="radio" name="pregunta13" value="k">
 		<label>K. historiador.</label>
 		<input type="radio" name="pregunta13" value="l">
@@ -233,12 +212,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>N. previo.</label>
 		<input type="radio" name="pregunta13" value="o">
 		<label>O. Edad Media.</label>
-		<br><br><input type="button" name="ant12" id="ant12" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig13" id="sig13" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas14"> 
-		<p> 14. planta <i>es a</i> raíces <i>como</i> edificio <i>es a</i> _____.</p>	 
+		<p> 14. planta <i>es a</i> raíces <i>como</i> edificio <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg">.</p>	 
 		<input type="radio" name="pregunta14" value="p">
 		<label>P. muros.</label>
 		<input type="radio" name="pregunta14" value="q">
@@ -249,12 +226,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>S. sótano.</label>
 		<input type="radio" name="pregunta14" value="t">
 		<label>T. paredes.</label>
-		<br><br><input type="button" name="ant13" id="ant13" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig14" id="sig14" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas15"> 
-		<p> 15. constelación <i>es a</i> estrella <i>como</i> archipiélago <i>es a</i> _____.</p>	 
+		<p> 15. constelación <i>es a</i> estrella <i>como</i> archipiélago <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg">.</p>	 
 		<input type="radio" name="pregunta15" value="v">
 		<label>V. bahía.</label>
 		<input type="radio" name="pregunta15" value="w">
@@ -265,12 +240,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>Y. península.</label>
 		<input type="radio" name="pregunta15" value="z">
 		<label>Z. continente.</label>
-		<br><br><input type="button" name="ant14" id="ant14" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig15" id="sig15" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas16"> 
-		<p> 16. escudo <i>es a</i> _____ <i>como</i> lanza <i>es a</i> ataque.</p>	 
+		<p> 16. escudo <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg"> <i>como</i> lanza <i>es a</i> ataque.</p>	 
 		<input type="radio" name="pregunta16" value="a">
 		<label>A. muralla.</label>
 		<input type="radio" name="pregunta16" value="b">
@@ -281,12 +254,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>D. defensa.</label>
 		<input type="radio" name="pregunta16" value="e">
 		<label>E. espera.</label>
-		<br><br><input type="button" name="ant15" id="ant15" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig16" id="sig16" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas17"> 
-		<p> 17. ciudad <i>es a</i> barrio <i>como</i> bosque <i>es a</i> _____.</p>	 
+		<p> 17. ciudad <i>es a</i> barrio <i>como</i> bosque <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg">.</p>	 
 		<input type="radio" name="pregunta17" value="f">
 		<label>F. selva.</label>
 		<input type="radio" name="pregunta17" value="g">
@@ -297,12 +268,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>I. arbusto.</label>
 		<input type="radio" name="pregunta17" value="j">
 		<label>J. arboleda.</label>
-		<br><br><input type="button" name="ant16" id="ant16" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig17" id="sig17" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas18"> 
-		<p> 18. caparazón <i>es a</i> tortuga <i>como</i> _____ <i>es a</i> tronco de árbol.</p>	 
+		<p> 18. caparazón <i>es a</i> tortuga <i>como </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg"> <i>es a</i> tronco de árbol.</p>	 
 		<input type="radio" name="pregunta18" value="k">
 		<label>K. corteza.</label>
 		<input type="radio" name="pregunta18" value="l">
@@ -313,12 +282,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>N. dureza.</label>
 		<input type="radio" name="pregunta18" value="o">
 		<label>O. madera.</label>
-		<br><br><input type="button" name="ant17" id="ant17" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig18" id="sig18" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas19"> 
-		<p> 19. aconsejar <i>es a</i> obligar <i>como</i> proponer <i>es a</i> _____.</p> 
+		<p> 19. aconsejar <i>es a</i> obligar <i>como</i> proponer <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg">.</p> 
 		<input type="radio" name="pregunta19" value="p">
 		<label>P. practicar.</label>
 		<input type="radio" name="pregunta19" value="q">
@@ -329,12 +296,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>S. imponer.</label>
 		<input type="radio" name="pregunta19" value="t">
 		<label>T. pronosticar.</label>
-		<br><br><input type="button" name="ant18" id="ant18" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig19" id="sig19" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas20"> 
-		<p> 20. botánico <i>es a</i> _____ <i>como</i> zoólogo <i>es a</i> fauna.</p>	 
+		<p> 20. botánico <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg"> <i>como</i> zoólogo <i>es a</i> fauna.</p>	 
 		<input type="radio" name="pregunta20" value="v">
 		<label>V. biología.</label>
 		<input type="radio" name="pregunta20" value="w">
@@ -345,12 +310,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>Y. árbol.</label>
 		<input type="radio" name="pregunta20" value="z">
 		<label>Z. bosques.</label>
-		<br><br><input type="button" name="ant19" id="ant19" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig20" id="sig20" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas21"> 
-		<p> 21. corroer <i>es a</i> _____ <i>como</i> restaurar <i>es a</i> conservar.</p>
+		<p> 21. corroer <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg"> <i>como</i> restaurar <i>es a</i> conservar.</p>
 		<input type="radio" name="pregunta21" value="a">
 		<label>A. pasar el tiempo.</label>
 		<input type="radio" name="pregunta21" value="b">
@@ -361,12 +324,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>D. roer.</label>
 		<input type="radio" name="pregunta21" value="e">
 		<label>E. oxidar.</label>
-		<br><br><input type="button" name="ant20" id="ant20" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig21" id="sig21" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas22"> 
-		<p> 22. libro <i>es a</i> _____ <i>como</i> árbol <i>es a</i> corteza.</p>	 
+		<p> 22. libro <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg"> <i>como</i> árbol <i>es a</i> corteza.</p>	 
 		<input type="radio" name="pregunta22" value="f">
 		<label>F. letras.</label>
 		<input type="radio" name="pregunta22" value="g">
@@ -377,12 +338,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>I. hojas.</label>
 		<input type="radio" name="pregunta22" value="j">
 		<label>J. plastificado.</label>
-		<br><br><input type="button" name="ant21" id="ant21" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig22" id="sig22" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas23"> 
-		<p> 23. cuadrado <i>es a</i> _____ <i>como</i> cubo <i>es a</i> volumen.</p>	 
+		<p> 23. cuadrado <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg"> <i>como</i> cubo <i>es a</i> volumen.</p>	 
 		<input type="radio" name="pregunta23" value="k">
 		<label>K. superficie.</label>
 		<input type="radio" name="pregunta23" value="l">
@@ -393,12 +352,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>N. longuitud.</label>
 		<input type="radio" name="pregunta23" value="o">
 		<label>O. líneas rectas.</label>
-		<br><br><input type="button" name="ant22" id="ant22" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig23" id="sig23" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas24"> 
-		<p> 24. rey <i>es a</i> súbdito <i>como</i> alcalde <i>es a</i> _____.</p>	 
+		<p> 24. rey <i>es a</i> súbdito <i>como</i> alcalde <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg">.</p>	 
 		<input type="radio" name="pregunta24" value="p">
 		<label>P. alcaldía.</label>
 		<input type="radio" name="pregunta24" value="q">
@@ -409,12 +366,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>S. trabajador.</label>
 		<input type="radio" name="pregunta24" value="t">
 		<label>T. secretario.</label>
-		<br><br><input type="button" name="ant23" id="ant23" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig24" id="sig24" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas25"> 
-		<p> 25. rodilla <i>es a</i> pie <i>como</i> codo <i>es a</i> _____.</p>	 
+		<p> 25. rodilla <i>es a</i> pie <i>como</i> codo <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg">.</p>	 
 		<input type="radio" name="pregunta25" value="v">
 		<label>V. cuerpo.</label>
 		<input type="radio" name="pregunta25" value="w">
@@ -425,13 +380,11 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>Y. mano.</label>
 		<input type="radio" name="pregunta25" value="z">
 		<label>Z. brazo.</label>
-		<br><br><input type="button" name="ant24" id="ant24" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig25" id="sig25" value="Siguiente">
 	</div>
 
 
 	<div class="Preguntas" id="Preguntas26"> 
-		<p> 26. valla <i>es a</i> cerramiento <i>como</i> dique <i>es a</i> _____.</p>	 
+		<p> 26. valla <i>es a</i> cerramiento <i>como</i> dique <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg">.</p>	 
 		<input type="radio" name="pregunta26" value="a">
 		<label>A. abastecimiento.</label>
 		<input type="radio" name="pregunta26" value="b">
@@ -442,12 +395,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>D. laguna.</label>
 		<input type="radio" name="pregunta26" value="e">
 		<label>E. contención.</label>
-		<br><br><input type="button" name="ant25" id="ant25" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig26" id="sig26" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas27"> 
-		<p> 27. calor <i>es a</i> evaporación <i>como</i> frío <i>es a</i> _____.</p>	 
+		<p> 27. calor <i>es a</i> evaporación <i>como</i> frío <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg">.</p>	 
 		<input type="radio" name="pregunta27" value="f">
 		<label>F. nevada.</label>
 		<input type="radio" name="pregunta27" value="g">
@@ -458,12 +409,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>I. hielo.</label>
 		<input type="radio" name="pregunta27" value="j">
 		<label>J. invierno.</label>
-		<br><br><input type="button" name="ant26" id="ant26" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig27" id="sig27" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas28"> 
-		<p> 28. disputar <i>es a</i> debatir <i>como</i> nítido <i>es a</i> _____.</p>	 
+		<p> 28. disputar <i>es a</i> debatir <i>como</i> nítido <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg">.</p>	 
 		<input type="radio" name="pregunta28" value="k">
 		<label>K. oscuro. </label>
 		<input type="radio" name="pregunta28" value="l">
@@ -474,12 +423,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>N. claro.</label>
 		<input type="radio" name="pregunta28" value="o">
 		<label>O. blanco.</label>
-		<br><br><input type="button" name="ant27" id="ant27" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig28" id="sig28" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas29"> 
-		<p> 29. actor <i>es a</i> teatro <i>como</i> editor <i>es a</i> _____.</p>	 
+		<p> 29. actor <i>es a</i> teatro <i>como</i> editor <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg">.</p>	 
 		<input type="radio" name="pregunta29" value="p">
 		<label>P. enciclopedia.</label>
 		<input type="radio" name="pregunta29" value="q">
@@ -490,12 +437,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>S. librería.</label>
 		<input type="radio" name="pregunta29" value="t">
 		<label>T. novela.</label>
-		<br><br><input type="button" name="ant28" id="ant28" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig29" id="sig29" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas30"> 
-		<p> 30. trágico <i>es a</i> _____ <i>como</i> perder <i>es a</i> ganar.</p>	 
+		<p> 30. trágico <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg"> <i>como</i> perder <i>es a</i> ganar.</p>	 
 		<input type="radio" name="pregunta30" value="v">
 		<label>V. triste.</label>
 		<input type="radio" name="pregunta30" value="w">
@@ -506,12 +451,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>Y. desgracia.</label>
 		<input type="radio" name="pregunta30" value="z">
 		<label>Z. cómico.</label>
-		<br><br><input type="button" name="ant29" id="ant29" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig30" id="sig30" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas31"> 
-		<p> 31. estéril <i>es a</i> _____ <i>como</i> fértil <i>es a</i> supervivencia.</p>	 
+		<p> 31. estéril <i>es a </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg"> <i>como</i> fértil <i>es a</i> supervivencia.</p>	 
 		<input type="radio" name="pregunta31" value="a">
 		<label>A. extinción.</label>
 		<input type="radio" name="pregunta31" value="b">
@@ -522,12 +465,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>D. promoción.</label>
 		<input type="radio" name="pregunta31" value="e">
 		<label>E. aridez.</label>
-		<br><br><input type="button" name="ant30" id="ant30" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig31" id="sig31" value="Siguiente">
 	</div>
 
 	<div class="Preguntas" id="Preguntas32"> 
-		<p> 32. actividad <i>es a</i> movimiento <i>como</i> _____ <i>es a</i> quietud.</p>	 
+		<p> 32. actividad <i>es a</i> movimiento <i>como </i><img src="smallFlechaBADYG-01.jpg"> <img src="smallPeguntaBADYG.jpg"> <i>es a</i> quietud.</p>	 
 		<input type="radio" name="pregunta32" value="f">
 		<label>F. dinamismo.</label>
 		<input type="radio" name="pregunta32" value="g">
@@ -538,8 +479,8 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<label>I. fósil.</label>
 		<input type="radio" name="pregunta32" value="j">
 		<label>J. ajetreo.</label>
-		<br><br><input type="button" name="ant31" id="ant31" value="Anterior">
 	</div>
+	<br>
 	<!--contenedor barra de preguntas-->
 	<div class="Barra" id="Barra1"> <!--contenedores de barra de preguntas-->
 		<a href="#" id="p1">1.</a><!--Referencias para cambiar de preguntas-->
@@ -558,10 +499,10 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<a href="#" id="p14">14.</a>
 		<a href="#" id="p15">15.</a>
 		<a href="#" id="p16">16.</a>
-		<a href="#" id="b1">>></a>
+		<a href="#" id="b1">&raquo</a>
 	</div>
 	<div class="Barra" id="Barra2">
-		<a href="#" id="b2"><<</a>
+		<a href="#" id="b2">&laquo</a>
 		<a href="#" id="p17">17.</a>
 		<a href="#" id="p18">18.</a>
 		<a href="#" id="p19">19.</a>
@@ -580,9 +521,14 @@ $(document).ready(mostrar());//llamado función para cambio de preguntas
 		<a href="#" id="p32">32.</a>
 	</div>
 	<br>
-	<input type="submit" name="btn" id="btn" value="enviar" onclick="compararRespuestas()"><!--botón de enviar activa la funcion de compararRespuestas-->	
-	<br>
-	<input type="button" name="btn2" id="btn2" value="Siguiente Cuestionario" onclick="despedida()">
+	<input type="submit" name="btn" id="btn" value="enviar" onclick="compararRespuestas()"><!--botón activa la función de compararRespuestas-->	
 </form>
+	<div>
+		<br>
+		<button id = "anterior">Anterior</button>
+		<button id = "siguiente">Siguiente</button>
+	</div>
+	<br><br>
+	<input type="button" name="btn2" id="btn2" value="Siguiente Cuestionario" onclick="despedida()"><!--botón para pasar de cuestionario-->
 </body>
 </html>

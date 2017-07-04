@@ -5,16 +5,16 @@
 	<title> Pruebas BADYG M</title>
 	<link rel="stylesheet" type="text/css" href="http://localhost/BADYGM/Estilos.css"><!--hoja de estilos documento css-->
 	<script type="text/javascript" src="http://localhost/BADYGM/memoriaVisualOrtografica/RespuestasBADYGMMemoriaOrtografica.js"></script>
-	<script type="text/javascript" src="http://localhost/BADYGM/Cronometro.js"></script>
-	<script type="text/javascript" src="http://localhost/BADYGM/CapturaRespuestas.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGM/CronometroBADYGM.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGS/CapturaRespuestas.js"></script>
 	<script type="text/javascript" src="http://localhost/BADYGM/memoriaVisualOrtografica/PuntajesBADYGMMemoriaOrtografica.js"></script>
-	<script type="text/javascript" src="http://localhost/BADYGM/CambioPreguntasBADYG.js"></script>
+	<script type="text/javascript" src="http://localhost/BADYGS/CambioPreguntasBADYG.js"></script>
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script><!--link referencia jQuery-->
 <script type="text/javascript">	
 	$(document).ready(mostrar());//llamado función para cambio de preguntas
 </script>
 </head>
-<body onload="tiempo(4);">
+<body onload="tiempo(0,4);">
 <h1 align="center"> Prueba Memoria Visual Ortográfica</h1>
 <form name="form" align="right"><!--espacio de cronometro-->
 	<input type="text" size="1" class="form_input" name="minute" disabled>:<!--minutos-->
@@ -23,7 +23,7 @@
 <progress id="barraProgreso" name="barraProgreso" max="100" value="" ></progress><!--Barra de progreso-->
 </form>
 	<form action="" name="cuestionario" method="">
-		<div class="Preguntas1" id="Preguntas1"> 
+		<div class="Preguntas" id="Preguntas1"> 
 		<!--contenedores de las opciones de respuesta-->
 
 			<p> 1. </p>	 
@@ -33,7 +33,6 @@
 			<label>L. revivir.</label>
 			<input type="radio" name="pregunta1"  value="m">
 			<label>M. alcool.</label>
-		<br><br><input type="button" name="sig" id="sig" value="Siguiente"><!--botones para pasar pregunta-->
 		</div>
 
 		<div class="Preguntas" id="Preguntas2"> 
@@ -44,8 +43,6 @@
 			<label>Q. diván.</label>
 			<input type="radio" name="pregunta2"  value="r">
 			<label>R. hobispo.</label>
-		<br><br><input type="button" name="ant" id="ant" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig2" id="sig2" value="Siguiente"><!--botones para pasar pregunta-->
 		</div>
 
 		<div class="Preguntas" id="Preguntas3"> 
@@ -56,8 +53,6 @@
 			<label>W. venevolencia.</label>
 			<input type="radio" name="pregunta3"  value="x">
 			<label>X. bahía.</label>
-		<br><br><input type="button" name="ant2" id="ant2" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig3" id="sig3" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas4"> 
@@ -68,8 +63,6 @@
 			<label>B. benigno.</label>
 			<input type="radio" name="pregunta4"  value="c">
 			<label>C. halergia.</label>
-		<br><br><input type="button" name="ant3" id="ant3" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig4" id="sig4" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas5"> 
@@ -80,8 +73,6 @@
 			<label>G. flecsible.</label>
 			<input type="radio" name="pregunta5"  value="h">
 			<label>H. carabela.</label>
-		<br><br><input type="button" name="ant4" id="ant4" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig5" id="sig5" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas6"> 
@@ -92,8 +83,6 @@
 			<label>L. vigía.</label>
 			<input type="radio" name="pregunta6"  value="m">
 			<label>M. hospedaje.</label>
-		<br><br><input type="button" name="ant5" id="ant5" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig6" id="sig6" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas7"> 
@@ -104,8 +93,6 @@
 			<label>Q. exclusivo.</label>
 			<input type="radio" name="pregunta7"  value="r">
 			<label>R. estrenar.</label>
-		<br><br><input type="button" name="ant6" id="ant6" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig7" id="sig7" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas8"> 
@@ -116,8 +103,6 @@
 			<label>W. objetibo.</label>
 			<input type="radio" name="pregunta8"  value="x">
 			<label>X. hondo.</label>
-		<br><br><input type="button" name="ant7" id="ant7" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig8" id="sig8" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas9"> 
@@ -128,8 +113,6 @@
 			<label>B. rebés.</label>
 			<input type="radio" name="pregunta9"  value="c">
 			<label>C. jubilarse.</label>
-		<br><br><input type="button" name="ant8" id="ant8" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig9" id="sig9" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas10"> 
@@ -140,8 +123,6 @@
 			<label>G. ondular.</label>
 			<input type="radio" name="pregunta10" value="h" >
 			<label>H. elíptico.</label>
-		<br><br><input type="button" name="ant9" id="ant9" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig10" id="sig10" value="Siguiente">
 		</div>
 		
 		<div class="Preguntas" id="Preguntas11"> 
@@ -152,8 +133,6 @@
 			<label>L. microvio.</label>
 			<input type="radio" name="pregunta11" value="m" >
 			<label>M. joya.</label>
-		<br><br><input type="button" name="ant10" id="ant10" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig11" id="sig11" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas12"> 
@@ -164,8 +143,6 @@
 			<label>Q. lobezno.</label>
 			<input type="radio" name="pregunta12" value="r" >
 			<label>R. bocavulario.</label>
-		<br><br><input type="button" name="ant11" id="ant11" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig12" id="sig12" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas13"> 
@@ -176,8 +153,6 @@
 			<label>W. acceso.</label>
 			<input type="radio" name="pregunta13" value="x" >
 			<label>X. ahogar.</label>
-		<br><br><input type="button" name="ant12" id="ant12" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig13" id="sig13" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas14"> 
@@ -188,8 +163,6 @@
 			<label>B. ardor.</label>
 			<input type="radio" name="pregunta14" value="c" >
 			<label>C. lóvulo.</label>
-		<br><br><input type="button" name="ant13" id="ant13" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig14" id="sig14" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas15"> 
@@ -200,8 +173,6 @@
 			<label>G. cerbeza.</label>
 			<input type="radio" name="pregunta15" value="h" >
 			<label>H. valija.</label>
-		<br><br><input type="button" name="ant14" id="ant14" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig15" id="sig15" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas16"> 
@@ -212,8 +183,6 @@
 			<label>L. divisar.</label>
 			<input type="radio" name="pregunta16" value="m" >
 			<label>M. extraviar.</label>
-		<br><br><input type="button" name="ant15" id="ant15" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig16" id="sig16" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas17"> 
@@ -224,8 +193,6 @@
 			<label>Q. hebanista.</label>
 			<input type="radio" name="pregunta17" value="r" >
 			<label>R. envasar.</label>
-		<br><br><input type="button" name="ant16" id="ant16" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig17" id="sig17" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas18"> 
@@ -236,8 +203,6 @@
 			<label>W. bisabuelo.</label>
 			<input type="radio" name="pregunta18" value="x">
 			<label>X. bálbula.</label>
-		<br><br><input type="button" name="ant17" id="ant17" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig18" id="sig18" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas19"> 
@@ -248,8 +213,6 @@
 			<label>B. biombo.</label>
 			<input type="radio" name="pregunta19" value="c" >
 			<label>C. trivunal.</label>
-		<br><br><input type="button" name="ant18" id="ant18" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig19" id="sig19" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas20"> 
@@ -260,8 +223,6 @@
 			<label>G. ahondar.</label>
 			<input type="radio" name="pregunta20" value="h" >
 			<label>H. abordar.</label>
-		<br><br><input type="button" name="ant19" id="ant19" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig20" id="sig20" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas21"> 
@@ -272,8 +233,6 @@
 			<label>L. innovar.</label>
 			<input type="radio" name="pregunta21" value="m" >
 			<label>M. anhelar.</label>
-		<br><br><input type="button" name="ant20" id="ant20" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig21" id="sig21" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas22"> 
@@ -284,8 +243,6 @@
 			<label>Q. ábil.</label>
 			<input type="radio" name="pregunta22" value="r" >
 			<label>R. encaje.</label>
-		<br><br><input type="button" name="ant21" id="ant21" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig22" id="sig22" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas23"> 
@@ -296,8 +253,6 @@
 			<label>W. arpa.</label>
 			<input type="radio" name="pregunta23" value="x" >
 			<label>X. halcón</label>
-		<br><br><input type="button" name="ant22" id="ant22" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig23" id="sig23" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas24"> 
@@ -308,8 +263,6 @@
 			<label>B. diversidad.</label>
 			<input type="radio" name="pregunta24" value="c" >
 			<label>C. desbán.</label>
-		<br><br><input type="button" name="ant23" id="ant23" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig24" id="sig24" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas25"> 
@@ -320,8 +273,6 @@
 			<label>G. cabidad.</label>
 			<input type="radio" name="pregunta25" value="h" >
 			<label>H. balanvolea.</label>
-		<br><br><input type="button" name="ant24" id="ant24" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig25" id="sig25" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas26"> 
@@ -332,8 +283,6 @@
 			<label>L. imagen.</label>
 			<input type="radio" name="pregunta26" value="m" >
 			<label>M. pingajo.</label>
-		<br><br><input type="button" name="ant25" id="ant25" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig26" id="sig26" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas27"> 
@@ -344,8 +293,6 @@
 			<label>Q. divergente.</label>
 			<input type="radio" name="pregunta27" value="r" >
 			<label>R. javalí.</label>
-		<br><br><input type="button" name="ant26" id="ant26" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig27" id="sig27" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas28"> 
@@ -356,8 +303,6 @@
 			<label>W. olgazán.</label>
 			<input type="radio" name="pregunta28" value="x" >
 			<label>X. obesidad.</label>
-		<br><br><input type="button" name="ant27" id="ant27" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig28" id="sig28" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas29"> 
@@ -368,8 +313,6 @@
 			<label>B. clavija.</label>
 			<input type="radio" name="pregunta29" value="c" >
 			<label>C. homnívoro.</label>
-		<br><br><input type="button" name="ant28" id="ant28" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig29" id="sig29" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas30"> 
@@ -380,8 +323,6 @@
 			<label>G. expirar.</label>
 			<input type="radio" name="pregunta30" value="h" >
 			<label>H. malhechor.</label>
-		<br><br><input type="button" name="ant29" id="ant29" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig30" id="sig30" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas31"> 
@@ -392,8 +333,6 @@
 			<label>L. través.</label>
 			<input type="radio" name="pregunta31" value="m" >
 			<label>M. divorcio.</label>
-		<br><br><input type="button" name="ant30" id="ant30" value="Anterior">&nbsp&nbsp&nbsp&nbsp
-		&nbsp&nbsp<input type="button" name="sig31" id="sig31" value="Siguiente">
 		</div>
 
 		<div class="Preguntas" id="Preguntas32"> 
@@ -404,8 +343,8 @@
 			<label>Q. esquibar.</label>
 			<input type="radio" name="pregunta32" value="r" >
 			<label>R. haba.</label>
-		<br><br><input type="button" name="ant31" id="ant31" value="Anterior">
 		</div>
+		<br>
 		<!--contenedores barra de respuestas-->
 	<div class="Barra" id="Barra1"> <!--contenedores de barra de preguntas-->
 		<a href="#" id="p1">1.</a><!--Referencias para cambiar de preguntas-->
@@ -424,10 +363,10 @@
 		<a href="#" id="p14">14.</a>
 		<a href="#" id="p15">15.</a>
 		<a href="#" id="p16">16.</a>
-		<a href="#" id="b1">>></a>
+		<a href="#" id="b1">&raquo</a>
 	</div>
 	<div class="Barra" id="Barra2">
-		<a href="#" id="b2"><<</a>
+		<a href="#" id="b2">&laquo</a>
 		<a href="#" id="p17">17.</a>
 		<a href="#" id="p18">18.</a>
 		<a href="#" id="p19">19.</a>
@@ -447,8 +386,13 @@
 	</div>
 	<br>
 		<input type="submit" name="btn" id="btn" value="enviar" onclick="compararRespuestas()"><!--botón de enviar activa la funcion de compararRespuestas-->
-	<br>
-	<input type="button" name="btn2" id="btn2" value="Siguiente Cuestionario" onclick="despedida()">
 	</form>
+	<div>
+		<br>
+		<button id = "anterior">Anterior</button>
+		<button id = "siguiente">Siguiente</button>
+	</div>
+	<br><br>
+	<input type="button" name="btn2" id="btn2" value="Siguiente Cuestionario" onclick="despedida()">
 	</body>
 </html>
