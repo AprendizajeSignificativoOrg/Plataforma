@@ -5,261 +5,60 @@ pasa pregunta a pregunta por medio de los botones anterior/siguiente
 muestra el boton enviar al mostrar la última pregunta*/
 	$(document).ready(function(){//acciona la función ready cuando el documento de carga
 	$(".Preguntas").hide();//Oculta los contenedores div solo muestra el primero llamandolos por su class
-	$("#sig").on('click',function(){//asigna función on click al botón por su id para accionarla
-		$("#Preguntas1").next().show();//muestra el contenedor siguiente al actual llamandolo por la id del actual
-		$("#Preguntas1").hide();//oculta el contenedor actual por su id
-	});//fin función on click
-	$("#sig2").on('click',function(){
-		$("#Preguntas2").next().show();
-		$("#Preguntas2").hide();
+	$("#Preguntas1").show();
+	$("#anterior").hide();
+	$("#btn").hide();+
+	$("#siguiente").on('click',function(){
+		var preguntaVisible=$('div.Preguntas:visible');
+		var pregunta="#"+preguntaVisible.attr('id');
+		var identificadorSiguiente=obtieneSiguiente(pregunta);
+		$(pregunta).hide();
+		$(identificadorSiguiente).show();
+		if (identificadorSiguiente=="#Preguntas32") {
+			$("#siguiente").hide();
+			$("#btn").show();
+		} else {
+			$("#anterior").show();
+		}
 	});
-	$("#ant").on('click',function(){
-		$("#Preguntas2").prev().show();
-		$("#Preguntas2").hide();
+	$("#anterior").on('click',function(){
+		var preguntaVisible=$('div.Preguntas:visible');
+		var pregunta="#"+preguntaVisible.attr('id');
+		var identificadorAnterior=obtieneAnterior(pregunta);
+		$(pregunta).hide();
+		$(identificadorAnterior).show();
+		if (identificadorAnterior=="#Preguntas1") {
+			$("#anterior").hide();
+		} else {
+			$("#siguiente").show();
+			$("#btn").hide();
+		}
 	});
-	$("#sig3").on('click',function(){
-		$("#Preguntas3").next().show();
-		$("#Preguntas3").hide();
-	});
-	$("#ant2").on('click',function(){
-		$("#Preguntas3").prev().show();
-		$("#Preguntas3").hide();
-	});
-	$("#sig4").on('click',function(){
-		$("#Preguntas4").next().show();
-		$("#Preguntas4").hide();
-	});
-	$("#ant3").on('click',function(){
-		$("#Preguntas4").prev().show();
-		$("#Preguntas4").hide();
-	});
-	$("#sig5").on('click',function(){
-		$("#Preguntas5").next().show();
-		$("#Preguntas5").hide();
-	});
-	$("#ant4").on('click',function(){
-		$("#Preguntas5").prev().show();
-		$("#Preguntas5").hide();
-	});
-	$("#sig6").on('click',function(){
-		$("#Preguntas6").next().show();
-		$("#Preguntas6").hide();
-	});
-	$("#ant5").on('click',function(){
-		$("#Preguntas6").prev().show();
-		$("#Preguntas6").hide();
-	});
-	$("#sig7").on('click',function(){
-		$("#Preguntas7").next().show();
-		$("#Preguntas7").hide();
-	});
-	$("#ant6").on('click',function(){
-		$("#Preguntas7").prev().show();
-		$("#Preguntas7").hide();
-	});
-	$("#sig8").on('click',function(){
-		$("#Preguntas8").next().show();
-		$("#Preguntas8").hide();
-	});
-	$("#ant7").on('click',function(){
-		$("#Preguntas8").prev().show();
-		$("#Preguntas8").hide();
-	});
-	$("#sig9").on('click',function(){
-		$("#Preguntas9").next().show();
-		$("#Preguntas9").hide();
-	});
-	$("#ant8").on('click',function(){
-		$("#Preguntas9").prev().show();
-		$("#Preguntas9").hide();
-	});
-	$("#sig10").on('click',function(){
-		$("#Preguntas10").next().show();
-		$("#Preguntas10").hide();
-	});
-	$("#ant9").on('click',function(){
-		$("#Preguntas10").prev().show();
-		$("#Preguntas10").hide();
-	});
-	$("#sig11").on('click',function(){
-		$("#Preguntas11").next().show();
-		$("#Preguntas11").hide();
-	});
-	$("#ant10").on('click',function(){
-		$("#Preguntas11").prev().show();
-		$("#Preguntas11").hide();
-	});
-	$("#sig12").on('click',function(){
-		$("#Preguntas12").next().show();
-		$("#Preguntas12").hide();
-	});
-	$("#ant11").on('click',function(){
-		$("#Preguntas12").prev().show();
-		$("#Preguntas12").hide();
-	});
-	$("#sig13").on('click',function(){
-		$("#Preguntas13").next().show();
-		$("#Preguntas13").hide();
-	});
-	$("#ant12").on('click',function(){
-		$("#Preguntas13").prev().show();
-		$("#Preguntas13").hide();
-	});
-	$("#sig14").on('click',function(){
-		$("#Preguntas14").next().show();
-		$("#Preguntas14").hide();
-	});
-	$("#ant13").on('click',function(){
-		$("#Preguntas14").prev().show();
-		$("#Preguntas14").hide();
-	});
-	$("#sig15").on('click',function(){
-		$("#Preguntas15").next().show();
-		$("#Preguntas15").hide();
-	});
-	$("#ant14").on('click',function(){
-		$("#Preguntas15").prev().show();
-		$("#Preguntas15").hide();
-	});
-	$("#sig16").on('click',function(){
-		$("#Preguntas16").next().show();
-		$("#Preguntas16").hide();
-	});
-	$("#ant15").on('click',function(){
-		$("#Preguntas16").prev().show();
-		$("#Preguntas16").hide();
-	});
-	$("#sig17").on('click',function(){
-		$("#Preguntas17").next().show();
-		$("#Preguntas17").hide();
-	});
-	$("#ant16").on('click',function(){
-		$("#Preguntas17").prev().show();
-		$("#Preguntas17").hide();
-	});
-	$("#sig18").on('click',function(){
-		$("#Preguntas18").next().show();
-		$("#Preguntas18").hide();
-	});
-	$("#ant17").on('click',function(){
-		$("#Preguntas18").prev().show();
-		$("#Preguntas18").hide();
-	});
-	$("#sig19").on('click',function(){
-		$("#Preguntas19").next().show();
-		$("#Preguntas19").hide();
-	});
-	$("#ant18").on('click',function(){
-		$("#Preguntas19").prev().show();
-		$("#Preguntas19").hide();
-	});
-	$("#sig20").on('click',function(){
-		$("#Preguntas20").next().show();
-		$("#Preguntas20").hide();
-	});
-	$("#ant19").on('click',function(){
-		$("#Preguntas20").prev().show();
-		$("#Preguntas20").hide();
-	});
-	$("#sig21").on('click',function(){
-		$("#Preguntas21").next().show();
-		$("#Preguntas21").hide();
-	});
-	$("#ant20").on('click',function(){
-		$("#Preguntas21").prev().show();
-		$("#Preguntas21").hide();
-	});
-	$("#sig22").on('click',function(){
-		$("#Preguntas22").next().show();
-		$("#Preguntas22").hide();
-	});
-	$("#ant21").on('click',function(){
-		$("#Preguntas22").prev().show();
-		$("#Preguntas22").hide();
-	});
-	$("#sig23").on('click',function(){
-		$("#Preguntas23").next().show();
-		$("#Preguntas23").hide();
-	});
-	$("#ant22").on('click',function(){
-		$("#Preguntas23").prev().show();
-		$("#Preguntas23").hide();
-	});
-	$("#sig24").on('click',function(){
-		$("#Preguntas24").next().show();
-		$("#Preguntas24").hide();
-	});
-	$("#ant23").on('click',function(){
-		$("#Preguntas24").prev().show();
-		$("#Preguntas24").hide();
-	});
-	$("#sig25").on('click',function(){
-		$("#Preguntas25").next().show();
-		$("#Preguntas25").hide();
-	});
-	$("#ant24").on('click',function(){
-		$("#Preguntas25").prev().show();
-		$("#Preguntas25").hide();
-	});
-	$("#sig26").on('click',function(){
-		$("#Preguntas26").next().show();
-		$("#Preguntas26").hide();
-	});
-	$("#ant25").on('click',function(){
-		$("#Preguntas26").prev().show();
-		$("#Preguntas26").hide();
-	});
-	$("#sig27").on('click',function(){
-		$("#Preguntas27").next().show();
-		$("#Preguntas27").hide();
-	});
-	$("#ant26").on('click',function(){
-		$("#Preguntas27").prev().show();
-		$("#Preguntas27").hide();
-	});
-	$("#sig28").on('click',function(){
-		$("#Preguntas28").next().show();
-		$("#Preguntas28").hide();
-	});
-	$("#ant27").on('click',function(){
-		$("#Preguntas28").prev().show();
-		$("#Preguntas28").hide();
-	});
-	$("#sig29").on('click',function(){
-		$("#Preguntas29").next().show();
-		$("#Preguntas29").hide();
-	});	
-	$("#ant28").on('click',function(){
-		$("#Preguntas29").prev().show();
-		$("#Preguntas29").hide();
-	});
-	$("#sig30").on('click',function(){
-		$("#Preguntas30").next().show();
-		$("#Preguntas30").hide();
-	});
-	$("#ant29").on('click',function(){
-		$("#Preguntas30").prev().show();
-		$("#Preguntas30").hide();
-	});
-	$("#sig31").on('click',function(){
-		$("#Preguntas31").next().show();
-		$("#Preguntas31").hide();
-		$("#btn").show();//muestra el boton enviar por su id
-	});	
-	$("#ant30").on('click',function(){
-		$("#Preguntas31").prev().show();
-		$("#Preguntas31").hide();
-	});	
-	$("#ant31").on('click',function(){
-		$("#Preguntas32").prev().show();
-		$("#Preguntas32").hide();
-	});
+	function obtieneAnterior(pregunta){
+		var cadenaPregunta=new Array();
+		cadenaPregunta=pregunta.split('s');
+		var numeroPregunta=Number(cadenaPregunta[1]);
+		var numeroAnterior=numeroPregunta-1;
+		var textoNumeroAnterior=numeroAnterior.toString();
+		var identificadorAnterior="#Preguntas"+textoNumeroAnterior;
+		return identificadorAnterior;
+	}
+	function obtieneSiguiente(pregunta){
+		var cadenaPregunta=new Array();
+		cadenaPregunta=pregunta.split('s');
+		var numeroPregunta=Number(cadenaPregunta[1]);
+		var numeroSiguiente=numeroPregunta+1;
+		var textoNumeroSiguiente=numeroSiguiente.toString();
+		var identificadorSiguiente="#Preguntas"+textoNumeroSiguiente;
+		return identificadorSiguiente;
+	}
+	
+
 /* Función ready RADIOBUTTONS- BARRA DE PROGRESO
 pasa pregunta a pregunta por medio de los radiobuttons
 cambia el color del enlace de la pregunta que se constesta
 oculta el boton enviar y lo muestra al contestar la última pregunta
 cambia el value de la barra de progreso según la variable de aumento*/
-		$("#btn").hide();//oculta el boton enviar por su id
 		var value=0;//variable de aumento para la barra de progreso
 		$("input[name=pregunta1]").click(function(){//asigna la función click al grupo de radiobuttons llamados por su nombre
 			$("#p1").css("color","#14BB08");//asigna color al enlace cuando un rb es seleccionado
@@ -489,10 +288,10 @@ muestra el boton enviar al seleccionar la última pregunta*/
 		$("#Barra2").hide();//oculta el contenedor de la barra de preguntas según su id	
 		$("#b1").hover(function(){//asigna la función hover al enlace según su id para accionar la función cuando el cursor se encuentra sobre el
 			$("#Barra2").show();//muestra el contenedor de barra de preguntas según su id
-			$("#Barra1").hide();//oculta el contenedor de barra de preguntas según su id
+			$("#Barra1").hide();
 		},
 			function(){//acciona la funcion cuando el cursor no se encuentra sobre el
-			$("#Barra1").hide();
+			$("#Barra1").hide();//oculta el contenedor de barra de preguntas según su id
 		});//fin función hover
 		$("#b2").hover(function(){
 			$("#Barra1").show();},
@@ -500,164 +299,133 @@ muestra el boton enviar al seleccionar la última pregunta*/
 			$("#Barra2").hide();
 		});
 		$("#p1").click(function(){//asigna la función click al enlace según su id para accionar la función
-			$("#Preguntas1").show();//muestra el contenedor de barra de preguntas según su id
 			$(".Preguntas").hide();//oculta los contenedores de barra de preguntas según su class
+			$("#Preguntas1").show();//muestra el contenedor de barra de preguntas según su id
 		});//fin función click
 		$("#p2").click(function(){//asigna la función click al enlace según su id para accionar la función
 			$(".Preguntas").hide();//oculta los contenedores de barra de preguntas según su class
 			$("#Preguntas2").show();//muestra el contenedor de barra de preguntas según su id
-			$(".Preguntas1").hide();//oculta los contenedores de barra de preguntas según su class
 		});//fin función click
 		$("#p3").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas3").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p4").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas4").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p5").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas5").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p6").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas6").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p7").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas7").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p8").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas8").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p9").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas9").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p10").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas10").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p11").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas11").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p12").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas12").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p13").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas13").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p14").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas14").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p15").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas15").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p16").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas16").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p17").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas17").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p18").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas18").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p19").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas19").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p20").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas20").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p21").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas21").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p22").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas22").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p23").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas23").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p24").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas24").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p25").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas25").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p26").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas26").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p27").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas27").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p28").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas28").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p29").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas29").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p30").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas30").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p31").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas31").show();
-			$(".Preguntas1").hide();
-		});
+			});
 		$("#p32").click(function(){
 			$(".Preguntas").hide();
 			$("#Preguntas32").show();
-			$(".Preguntas1").hide();
-			$("#btn").show();//muestra el boton enviar por su id
+				$("#btn").show();//muestra el boton enviar por su id
 		});
 	});//fin función ready
 }
